@@ -1,0 +1,323 @@
+{
+  "summary": "本集股癌分享對美股與台股的操作策略，認為美股走勢類似去年3-4月Liberation Day前的破底格局，正在提高現金水位等待可能的大跌機會。產業面深入討論玻璃基板（Glass Core Substrate）的發展時程，認為量產要等2027-2028年。另外反駁市場用Google KV Cache壓縮技術看空記憶體的論述，認為是錯殺。",
+  "macro_views": [
+    {
+      "topic": "美股走勢與風險",
+      "view": "NASDAQ持續破底，走勢越來越像去年3-4月Liberation Day前的狀態，可能出現中東地緣政治引發的大跌事件。目前策略是反彈時減碼，等待更好的加碼時機。",
+      "stance": "看空"
+    },
+    {
+      "topic": "台股風險",
+      "view": "台股部位水位打得很高，美股水位降低。若美股出現全面破底或地緣政治升溫，台股難以幸免。強勢股若跌破關鍵均線也會賣出。",
+      "stance": "中立"
+    },
+    {
+      "topic": "CAPEX過高對科技巨頭的影響",
+      "view": "市場開始擔憂科技巨頭花太多CAPEX在AI上，ROI不確定，可能擠壓現金流。相較之下蘋果因未大量投入CAPEX而表現相對強勢。",
+      "stance": "看空"
+    },
+    {
+      "topic": "中東地緣政治風險",
+      "view": "美國大兵正大幅向中東進擊，可能演變成全面戰爭。打起來瞬間可能大跌，但之後可能一路漲。這是潛在的黑天鵝事件。",
+      "stance": "看空"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "蘋果",
+      "ticker": "AAPL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "蘋果開放第三方AI模型串接Siri，扮演AI時代收過路費角色。切入中低價手機與筆電打進教育市場，不用砸大量CAPEX即可受益AI投資。近期股價相對強勢。已加大部位。",
+      "quote": "蘋果去切這些中低價的筆電跟手機我認為是很棒的一個策略，加大蘋果的一些部位...反而蘋果因為沒有砸這麼多錢所以算是在這一波是相對強勢的"
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "買了蠻多Marvell，雖然是第三次挑戰（前兩次失敗），但目前在美股科技股中技術線型還算不錯，屬於相對強勢標的。",
+      "quote": "我就買了蠻多Mario因為其實前面我跟大家講就Mario在後面應該會有一些展過雖然這是我大概第三次挑戰它吧前面兩次挑戰它呢都是鯊魚而歸都沒有成功但它現在算是可能在美股的就是這種技術線型還長得還蠻不錯的東西"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "中立",
+      "reason": "NVIDIA也在破底持續往下，不會在前面橫很久然後破底的地方做加碼。提到NVIDIA的Quantum、Spectrum出貨數字超級亂。費曼架構尚未採用玻璃基板。",
+      "quote": "像是什麼NVIDIA都已經是也在破底都在持續的往下那我自己是比較不會想要在這種就它前面橫很久然後現在開始破底的地方去做加碼"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "中立",
+      "reason": "也在破底持續往下。但在玻璃基板方面走得較快，與日本凸版在新加坡合資產線，Tomahawk第八代預計採用玻璃基板。",
+      "quote": "像是什麼AlphaGo或是就是BlockCon AVGO那或者像是什麼NVIDIA都已經是也在破底都在持續的往下"
+    },
+    {
+      "name": "Intel",
+      "ticker": "INTC",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "在玻璃基板領域走得最前面，數年前就找台系夥伴開發。EMIB封裝方式被Google TPU V9採用。在日本展會展出Glass Core Substrate搭配EMIB的方案。",
+      "quote": "在玻璃方面走的比較前面的應該就是英特爾就英特爾早在數年前就已經有去找一些台系的夥伴一起去開發"
+    },
+    {
+      "name": "特斯拉",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "看空",
+      "reason": "股價像一坨大便。TERRAFAB在財務上是累贅，類似META當年搞元宇宙的transition階段，看不太到後面要搞什麼。",
+      "quote": "特斯拉的股價最近真的他媽像一坨大便...他要去搞那個TERRAFAB的一些看法最主要是我覺得在財務上面一定是一個累贅"
+    },
+    {
+      "name": "Google（Alphabet）",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "TPU V9（HomoFish）因晶片過大無法在CoWoS上執行，轉用Intel EMIB封裝。另外Google的KV Cache壓縮技術被市場拿來殺記憶體股，股癌認為是市場耍白癡。",
+      "quote": "Google的HomoFish因為那整個晶片是變得很大一顆...所以他就是沒有辦法在Coast上面去做執行所以怎麼樣呢他們就轉去EMIB"
+    },
+    {
+      "name": "Palantir",
+      "ticker": "PLTR",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "作為被錯殺後快速站回的軟體股例子被提及。",
+      "quote": "以這個軟體股來講像是Parenteer Cloudflare其實都很快就站回去"
+    },
+    {
+      "name": "Cloudflare",
+      "ticker": "NET",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "被提及兩次：一次是比喻蘋果在AI時代像便宜版Cloudflare收過路費；另一次是作為軟體股被錯殺後快速站回的例子。",
+      "quote": "它有點類似像是Cloudflare這樣的一個角色只是非常便宜的Cloudflare它可以去做收取過路費的行為"
+    },
+    {
+      "name": "CrowdStrike",
+      "ticker": "CRWD",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "軟體股錯殺後有反彈，但又被Anthropic事件再次打下去。",
+      "quote": "CrossStrike其實也是有反彈只是當然最近又被Enthrobio殺下去就再一次市場就是反正就出一個東西然後就把大家都打下去"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "用META從元宇宙transition到AI的案例來類比特斯拉TERRAFAB可能的走勢。",
+      "quote": "我感覺他有點像之前META的那個Transition階段就是他要去搞那種元宇宙然後那時候不是股價底要爛掉嗎"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "在玻璃基板方面目前只用Glass Carrier，CoPoS用Panel做。尚未使用Glass Interposer。若台積電大量採用玻璃，代表題材已成真。",
+      "quote": "在TSM的話他們有一個Corpus那這Corpus是使用Panel那目前我們應該是還沒有看到它會使用Glass Interposer"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "光通走得非常好，手上有加碼光設備。但故意等回檔再聊，避免追高。正在研究CW Laser、Optical Engines數量及NVIDIA Quantum/Spectrum出貨數字。",
+      "reason_detail": "股癌表示等光通回檔時再詳細分享，目前數字超級亂但方向正確。"
+    },
+    {
+      "name": "玻璃基板（Glass Core Substrate / TGV）",
+      "stance": "中立",
+      "reason": "長期看好但時間還太早。量產要等2027中到2028年，GCS/TGV放量時程明確。目前Intel和Broadcom走較快，台積電尚未大量採用。市場可能提早反映但要注意時間差。",
+      "reason_detail": "與CPO類似，市場情緒好時可能提早2-3年佈局，但產業面量產確實還要等。"
+    },
+    {
+      "name": "記憶體",
+      "stance": "看多",
+      "reason": "反駁Google KV Cache壓縮技術殺記憶體的論述，認為是市場耍白癡。壓縮技術不是新東西，且符合Jevons Paradox（效率提升反而增加用量）。但股價已漲好幾倍，不幫股價做背書。",
+      "reason_detail": "產業面需求不會因壓縮技術消失，但台系記憶體廠被通殺是錯殺。"
+    },
+    {
+      "name": "軟體股",
+      "stance": "中立",
+      "reason": "過去被AI取代論打壓，但Palantir、Cloudflare等快速站回。市場常犯非A即B的錯誤，整包通殺後真正有料的會最快反彈。",
+      "reason_detail": "作為市場常犯錯的案例被提及，真金不怕火煉。"
+    },
+    {
+      "name": "光設備",
+      "stance": "看多",
+      "reason": "手上有光設備且走勢非常好，持續加碼到部位偏高。",
+      "reason_detail": "股癌提到光設備走得非常好，因機械化操作持續加碼。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "Mario",
+      "interpretation": "指Marvell（MRVL），股癌常用的暱稱",
+      "stance": "看多",
+      "quote": "我就買了蠻多Mario因為其實前面我跟大家講就Mario在後面應該會有一些展過雖然這是我大概第三次挑戰它吧前面兩次挑戰它呢都是鯊魚而歸都沒有成功但它現在算是可能在美股的就是這種技術線型還長得還蠻不錯的東西就已經是很少了",
+      "candidates": [
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "股癌一貫用Mario指稱Marvell，本集提到第三次挑戰、前兩次失敗、技術線型不錯，符合MRVL近期走勢"
+        }
+      ]
+    },
+    {
+      "term": "光設備",
+      "interpretation": "光通訊設備相關個股，可能指光通訊族群中的設備廠商",
+      "stance": "看多",
+      "quote": "像手上的一些光設備那光設備又走得非常的好那或者說最近市場上的一個新話題有玻璃的這個GlassCore那他也是走的極好所以你就知道一直加碼因為走的好東西一直加碼然後發現說這個部位還是打得有點太慢",
+      "candidates": [
+        {
+          "name": "京鼎",
+          "ticker": "3413",
+          "market": "TW",
+          "reason": "逐字稿提到光設備走勢好且持續加碼，京鼎為光通訊設備供應鏈之一，近期走勢強勁"
+        },
+        {
+          "name": "辛耘",
+          "ticker": "3583",
+          "market": "TW",
+          "reason": "辛耘為半導體/光通設備廠，可能受惠於光通訊產業擴產"
+        },
+        {
+          "name": "萬潤",
+          "ticker": "6187",
+          "market": "TW",
+          "reason": "萬潤為光通訊相關設備廠商，可能是光設備候選之一"
+        }
+      ]
+    },
+    {
+      "term": "Coast / COPOS / Corpus",
+      "interpretation": "指台積電的CoWoS（Chip on Wafer on Substrate）先進封裝技術，以及CoPoS（用Panel做的更大尺寸版本）",
+      "stance": "僅提及",
+      "quote": "像Coast的話他可以做到3.3個Reticle Size也就是3.3個光照尺寸...在TSM的話他們有一個Corpus那這Corpus是使用Panel那目前我們應該是還沒有看到它會使用Glass Interposer",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "CoWoS和CoPoS都是台積電的先進封裝技術，逐字稿語音辨識為Coast/Corpus"
+        }
+      ]
+    },
+    {
+      "term": "超級標股三鈦石",
+      "interpretation": "可能指某台股標的，其膠帶產品用於防止CoWoS封裝翹曲（Warpage）",
+      "stance": "僅提及",
+      "quote": "像台積電這邊的解方就是透過一些膠帶那於是像那個超級標股三鈦石它的膠帶就是用來防止Warpage的那只是後來用玻璃可能就是可以避免掉這些Warpage",
+      "candidates": [
+        {
+          "name": "晟鈦",
+          "ticker": "3229",
+          "market": "TW",
+          "reason": "語音辨識「三鈦石」可能是「晟鈦」，晟鈦生產特殊膠帶用於半導體製程，符合逐字稿描述的防翹曲膠帶"
+        }
+      ]
+    },
+    {
+      "term": "BlockCon / BlockCom",
+      "interpretation": "指Broadcom（AVGO），語音辨識誤差",
+      "stance": "僅提及",
+      "quote": "有另外一家走比較快的廠商就是Broadcom那Broadcom目前在新加坡跟日本的凸版他們有合資了一個這個產線...像是Tomahawk Tomahawk 6跟7的話目前我們只有了解到他們其實都有拿玻璃去做測試",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿後文直接提到Broadcom及其Tomahawk交換機產品線，確認BlockCon即為Broadcom"
+        }
+      ]
+    },
+    {
+      "term": "HomoFish",
+      "interpretation": "指Google TPU V9的代號，可能為Ironwood或其他內部代號的語音辨識誤差",
+      "stance": "僅提及",
+      "quote": "像Google的HomoFish因為那整個晶片是變得很大一顆他除了這個本身的ASICS之外那還有一些HBM然後還有一些Iodine所以他變得很大那所以他就是沒有辦法在Coast上面去做執行所以怎麼樣呢他們就轉去EMIB",
+      "candidates": [
+        {
+          "name": "Google (Alphabet)",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "逐字稿明確提到是Google的TPU V9，HomoFish為其代號，因晶片過大轉用Intel EMIB封裝"
+        }
+      ]
+    },
+    {
+      "term": "NQ / NetStack",
+      "interpretation": "NQ指NASDAQ期貨（NQ futures），NetStack可能也是指NASDAQ相關指數",
+      "stance": "看空",
+      "quote": "昨天晚上NASDAQ的期貨又跌到了大概23200多點左右所以就是往下了2.3%...特別是NetStack又再一次破底我現在的感受啦我現在的感受是它已經有點像去年3、4月那個Liberation Day",
+      "candidates": []
+    },
+    {
+      "term": "CW Laser / Optical Engines",
+      "interpretation": "CW Laser指連續波雷射器，Optical Engines指光引擎，都是光通訊核心元件，股癌正在研究其出貨數量",
+      "stance": "看多",
+      "quote": "這禮拜花蠻多時間跟身邊的朋友在對可能像這個CW Laser或是Optical Engines的數量那以及像是NVIDIA的Quantum跟Spectrum到底是出了幾台因為我們發現說那個數字其實超級亂",
+      "candidates": [
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "聯亞為CW Laser（連續波雷射）供應商，直接對應逐字稿提到的CW Laser數量研究"
+        },
+        {
+          "name": "華星光",
+          "ticker": "4979",
+          "market": "TW",
+          "reason": "華星光為光通訊元件廠，可能涉及Optical Engines相關供應"
+        }
+      ]
+    },
+    {
+      "term": "TERRAFAB",
+      "interpretation": "指特斯拉的自建晶片製造/IDM計畫，語音可能是指Tesla的某個內部製造項目",
+      "stance": "看空",
+      "quote": "他要去搞那個TERRAFAB的一些看法最主要是我覺得在財務上面一定是一個累贅那當然有可能真的給他搞起來後面因為IDM的關係然後他可以省下一些成本",
+      "candidates": [
+        {
+          "name": "特斯拉",
+          "ticker": "TSLA",
+          "market": "US",
+          "reason": "TERRAFAB為特斯拉自建製造的計畫，股癌認為財務上是累贅"
+        }
+      ]
+    },
+    {
+      "term": "GlassCore / 玻璃基板相關台系設備廠",
+      "interpretation": "Broadcom在新加坡與凸版合資產線中有台系設備廠參與，也有台系夥伴與Intel合作開發",
+      "stance": "看多",
+      "quote": "那這個產線也是有台系的設備廠會在裡面去做一些輸出...英特爾早在數年前就已經有去找一些台系的夥伴一起去開發",
+      "candidates": [
+        {
+          "name": "均華",
+          "ticker": "6640",
+          "market": "TW",
+          "reason": "均華為半導體封裝設備廠，可能參與玻璃基板相關設備供應"
+        },
+        {
+          "name": "辛耘",
+          "ticker": "3583",
+          "market": "TW",
+          "reason": "辛耘為濕製程設備廠，逐字稿提到TGV製程需要濕式蝕刻，與辛耘業務直接相關"
+        },
+        {
+          "name": "台玻",
+          "ticker": "1802",
+          "market": "TW",
+          "reason": "台玻為玻璃製造商，可能切入玻璃基板材料供應"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP648 _ 🦆",
+  "analyzed_at": "2026-03-29T00:11:17.323260",
+  "transcript_chars": 22486
+}
