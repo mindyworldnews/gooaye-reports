@@ -1,0 +1,287 @@
+{
+  "summary": "本集股癌回顧自己做節目的心路歷程與投資方法論的演變，接著評論NVIDIA GTC發表會的內容（包括CPU Solution、LPU、Spectrum等），討論SRAM相關題材的誤解與華邦電/愛普的潛在機會，並提到ASIC陣營中Meta砍單、Microsoft產能受限、Google可能新增第三家Design House（暗示Marvell）等產業動態。",
+  "macro_views": [
+    {
+      "topic": "降息與估值天花板",
+      "view": "部分股票（如銅類股、NVIDIA）的估值可能已經被市場定價完畢，若沒有降息或降息預期，股價可能難以再推高",
+      "stance": "中立"
+    },
+    {
+      "topic": "漲價題材疲乏",
+      "view": "市場對漲價題材已經麻木，即使確認漲價幅度大，股價也不一定有顯著反應，例如被動元件國巨只動一下，其他預期大噴的都沒動",
+      "stance": "看空"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "GTC展示全方位AI Factory解方，包括CPU Solution、LPU、GPU、ASIC、Interconnect，越來越像Total Solution供應商，長期領先角色不變。但短期股價反應可能像蘋果發表會一樣，好消息已被預期",
+      "quote": "有7個晶片有5種Rack...可以把NVIDIA直接定義成為是一個AI Factory的Supplier...越來越看越喜歡這家公司"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到NVIDIA的LPU第三代以前在三星做，V4之後才到台積電，且產能不足給不出來；也提到N2產能擴張不夠積極，影響Microsoft ASIC訂單",
+      "quote": "就算它想要有很多的量 其實現在TSM是給不出來的...N2這邊基本上它並沒有擴的超級積極"
+    },
+    {
+      "name": "華邦電",
+      "ticker": "2344",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "有Cube產品可當L3 cache使用，概念接近SRAM；客戶傳聞是AMD，屬於歪打正著的SRAM題材受惠者",
+      "quote": "華邦電是這邊是有一個東西叫Cube...基本上它可以當成是L3 cache去做使用...華邦電的話是有聽朋友講說它的客戶好像是AMD"
+    },
+    {
+      "name": "愛普",
+      "ticker": "6531",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "有Very High Bandwidth Memory（Z-HBM）產品，概念類似挑戰HBM，垂直堆疊在晶片上，屬於客製化產品需要客戶包產能，也是歪打正著的SRAM題材受惠者",
+      "quote": "在愛普這邊的very high bandwidth memory就是所謂的要去挑戰HBM的東西...Z軸垂直的直接疊在晶片上面的那個也是一個類似的概念"
+    },
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "春田漲價確認後，國巨只動了一下就沒繼續，說明漲價題材市場已經麻木",
+      "quote": "我們在可能三四個禮拜前就跟大家說春田要漲價 然後春田真的就漲價了 但是你看那些被動元件 像國巨只有動一下"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "中立",
+      "reason": "在ASIC陣營中被認為除NVIDIA外最有競爭力，但部分客戶（如Meta）有砍單調整",
+      "quote": "目前看得出來在市場上比較有競爭力的除了老黃之外然後可能就是Broadcom...好在它現在客戶的Portfolio是越來越大"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "market": "US",
+      "stance": "中立",
+      "reason": "ASIC有砍單，部分模型延遲推出，但同時裁員可能提升營業利潤，AI確實有效，一正一反",
+      "quote": "在Meta的ASIC上面應該在前幾集有跟大家提到他們其實是應該有一些砍單的狀況出現...Meta它自己最近也在做一些裁員"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "market": "US",
+      "stance": "中立",
+      "reason": "ASIC（Maia下一代）想下台積電N2但拿不到產能，且過去一陣子股價表現不太好",
+      "quote": "Microsoft它的ASIC的話是有遇到它是要不太到產能的一個狀態...N2這邊基本上它並沒有擴的超級積極所以它不一定拿得到"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "作為Google ASIC的現有Design House之一被提及（MTK跟Broadcom）",
+      "quote": "本來是MTK跟Broadcom然後它現在可能想要再拉另外一家"
+    },
+    {
+      "name": "美光",
+      "ticker": "MU",
+      "market": "US",
+      "stance": "中立",
+      "reason": "財報前大家已知道數字很好，出來後股價不一定往預期方向走，後來又跑上來",
+      "quote": "像鎂光的然後這個財報數字也是啦就我在財報前也是跟朋友討論說是不是要先走一點...這美光後來又跑上來"
+    },
+    {
+      "name": "群聯",
+      "ticker": "8299",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "有低價庫存可持續受惠，不會是一次性爆發而是多次性",
+      "quote": "群聯或者是威剛什麼的就我們理解它當然庫存就是說用完就沒了只是可能都還是有蠻多庫存可以去做使用的所以它不會是一次性它可能是多次性"
+    },
+    {
+      "name": "威剛",
+      "ticker": "3260",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "與群聯同理，有低價庫存可多次性受惠",
+      "quote": "群聯或者是威剛什麼的就我們理解它當然庫存就是說用完就沒了只是可能都還是有蠻多庫存可以去做使用的"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "在接下來幾年確定有漂亮成長性，27-28年會絕地大放量，即使這波沒動沒修正，仍是非常好的去處，可維持很高的P ratio"
+    },
+    {
+      "name": "SRAM/Pseudo SRAM相關",
+      "stance": "中立",
+      "reason": "市場炒的SRAM類股是美麗的誤會（實為Pseudo SRAM非真正SRAM），但部分公司歪打正著有類似概念的產品線可能受惠"
+    },
+    {
+      "name": "ASIC陣營",
+      "stance": "中立",
+      "reason": "Meta砍單、Microsoft拿不到產能，但Google可能新增第三家Design House，後面會有新變局"
+    },
+    {
+      "name": "被動元件/漲價題材",
+      "stance": "看空",
+      "reason": "漲價確認但市場已麻木，國巨只動一下其他都沒動，漲價題材短期可能無法有效推動股價"
+    },
+    {
+      "name": "記憶體族群",
+      "stance": "看多",
+      "reason": "1月業績大爆發的公司有低價庫存可多次使用，不會是一次性爆發"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "光",
+      "interpretation": "光通訊族群",
+      "stance": "看多",
+      "quote": "我還是會認為說像光因為在接下來的幾年我們都是可以確定它會有一個非常漂亮的成長性那在27、28年的時候會絕地大放量所以它應該都還是可以作用很高的一個P ratio所以如果說像這波沒有動然後沒有修正的話光應該都還是一個非常好的去處",
+      "candidates": [
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "光通訊族群核心成員，股癌提到27-28年絕地大放量，與光通訊長期擴產趨勢吻合"
+        },
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "光通訊雷射元件廠，屬於光通訊族群核心"
+        },
+        {
+          "name": "華星光",
+          "ticker": "4979",
+          "market": "TW",
+          "reason": "光通訊收發模組廠，屬於光通訊族群"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "光通訊龍頭，27-28年大放量的描述與CPO/光通訊產業擴張吻合"
+        },
+        {
+          "name": "Applied Optoelectronics",
+          "ticker": "AAOI",
+          "market": "US",
+          "reason": "光通訊收發模組廠，屬於光通訊族群"
+        }
+      ]
+    },
+    {
+      "term": "M開頭那一家",
+      "interpretation": "Marvell（MRVL），Google ASIC可能新增的第三家Design House",
+      "stance": "中立",
+      "quote": "在Google這邊它除了本來的兩個Design House之外它是想要再額外再加一個也就是說本來是MTK跟Broadcom然後它現在可能想要再拉另外一家那另外一家是誰其實應該都非常好猜了反正就是M開頭那一家那M開頭那一家有可能看一下後面風向我們還要再測一下可是已經有聽到一些風聲",
+      "candidates": [
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "股癌說M開頭、Google想新增的第三家ASIC Design House，排除已有的MTK後，市場上M開頭且具備ASIC設計能力的公司就是Marvell；且股癌提到過去壓這檔多次賠錢（騙感情），符合MRVL過去股價波動大的特徵"
+        }
+      ]
+    },
+    {
+      "term": "銅的類股",
+      "interpretation": "銅相關概念股，股癌自己持有的部位",
+      "stance": "中立",
+      "quote": "包含說像我自己手上有一些銅的類股銅的類股也在思考這件事情就是說有機會就是我們一般想像的那個估值的成數可能就是說要等到降息的時候才可以把那個東西再一次的推上去",
+      "candidates": [
+        {
+          "name": "第一銅",
+          "ticker": "2009",
+          "market": "TW",
+          "reason": "銅相關概念股，但逐字稿未明確指出是哪一檔"
+        }
+      ]
+    },
+    {
+      "term": "某公司的子公司要出socket",
+      "interpretation": "台系公司子公司即將推出NVIDIA相關socket產品",
+      "stance": "看多",
+      "quote": "像最近就在講說一些socket那可能有台系的某公司的子公司要出那就是立刻就拉上去了所以代表還是很有效",
+      "candidates": [
+        {
+          "name": "嘉澤",
+          "ticker": "3533",
+          "market": "TW",
+          "reason": "嘉澤為台系socket/連接器大廠，且其母公司或關係企業在NVIDIA供應鏈中有角色，符合股癌描述的socket題材立刻拉上去的情境"
+        }
+      ]
+    },
+    {
+      "term": "春田",
+      "interpretation": "村田製作所（Murata），被動元件大廠，股癌慣用的諧音/簡稱",
+      "stance": "僅提及",
+      "quote": "我們在可能三四個禮拜前就跟大家說春田要漲價然後春田真的就漲價了但是你看那些被動元件像國巨只有動一下可是其他的我們以為會大噴的都沒有動",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "被動元件龍頭，股癌直接提到春田漲價後國巨只動一下"
+        }
+      ]
+    },
+    {
+      "term": "那個做散熱的/知名散熱廠",
+      "interpretation": "台灣散熱廠創業故事",
+      "stance": "僅提及",
+      "quote": "像台灣的一些知名散熱廠就是他在某個地方做一做之後然後發現說我東西應該是可以做得更好價格更有競爭力就出來",
+      "candidates": [
+        {
+          "name": "雙鴻",
+          "ticker": "3324",
+          "market": "TW",
+          "reason": "台灣知名散熱廠，創辦人從其他公司出來創業的故事為業界知名案例"
+        },
+        {
+          "name": "奇鋐",
+          "ticker": "3017",
+          "market": "TW",
+          "reason": "台灣散熱大廠，也是散熱族群代表"
+        }
+      ]
+    },
+    {
+      "term": "調高價格公司/掛號300的",
+      "interpretation": "股癌之前節目討論過的某家被調高掛號費到300元的公司，從員工留言語境看是醫療或健康相關",
+      "stance": "僅提及",
+      "quote": "我是那間被調高價格公司掛號300的員工...調那麼高是要我們公司做到七四一四的",
+      "candidates": [
+        {
+          "name": "大樹",
+          "ticker": "6469",
+          "market": "TW",
+          "reason": "股癌提到該公司報價翻倍、後面EPS可觀，且員工提到掛號300與做到7414（諧音去死一死，形容累死），結合先前節目脈絡可能是連鎖藥局/醫療通路相關"
+        }
+      ]
+    },
+    {
+      "term": "致勝的案子",
+      "interpretation": "智盛（Chih Sheng），台股公司，與台積電CoWoS相關訂單的故事",
+      "stance": "僅提及",
+      "quote": "機會就是留給準備好的人好像跟大家分享那個致勝的案子嘛...那都是傻傻的在那邊開發啦",
+      "candidates": [
+        {
+          "name": "智盛",
+          "ticker": null,
+          "market": "TW",
+          "reason": "逐字稿前段提到智盛遇到神秘客戶（TSM）開案Co-Ops相關訂單的故事，此處再次引用同一案例，語音辨識將智盛聽成致勝"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP645 | 🎱",
+  "analyzed_at": "2026-04-01T17:37:17.442913",
+  "transcript_chars": 21916
+}

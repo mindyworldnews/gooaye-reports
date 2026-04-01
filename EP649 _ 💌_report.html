@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP649 | 💌</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-04-01</div>
+    <h1>EP649 | 💌</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌分享近期操作心態，認為台股強於美股，台股反彈後可能進入多頭迴盪格局，但美股僅視為死貓跳。重點討論NVIDIA投資Marvell的戰略意義，認為NVIDIA主要目標是搶Broadcom的ASIC周邊市場，並分析NVLink Fusion生態系對各廠商的影響。同時提醒油價與VIX仍在高檔，不宜使用槓桿，應控制部位大小。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">MRVL</span><span class="quick-tag bullish">ALAB</span><span class="quick-tag vague">COHR</span><span class="quick-tag vague">LITE</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「BlockCon」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">指Broadcom（博通），股癌習慣用的諧音/暱稱</p>
+          <blockquote>「我會認為說他的劍指是BlockCon 最主要是要去打BlockCon 那去拉這些快樂好朋友 像是可能Marvel 或是L-chip或是MTK...就即便可能BlockCon他假設在NVIDIA沒有去做這麼多有的沒有的嘗試之前他可以拿到的餅是一個拳頭這麼大個」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 上下文明確討論NVIDIA vs Broadcom在ASIC市場的競爭，BlockCon是Broadcom的諧音，且提到博通也有對應的解決方案與NVIDIA競爭</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「L-chip」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指聯發科旗下或Alchip（世芯-KY）等ASIC設計服務公司，在NVLink Fusion聯盟中被NVIDIA拉攏的夥伴</p>
+          <blockquote>「那去拉這些快樂好朋友 像是可能Marvel 或是L-chip或是MTK 各種什麼NVIDIA Fusion的活動 把你們做在一起」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3661" data-cand-name="世芯-KY" data-cand-market="TW"><code class="ticker">3661</code><a href="https://tw.stock.yahoo.com/quote/3661" target="_blank" title="開啟 3661 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">世芯-KY</span><span class="cand-reason"> — L-chip（Alchip）是ASIC設計服務公司，被列為NVLink Fusion聯盟成員之一，與Marvell、MTK並列為NVIDIA拉攏的小夥伴對抗Broadcom</span><button class="wl-btn wl-btn-sm" data-ticker="3661" data-name="世芯-KY" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「XDR Labs」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指Astera Labs（ALAB），股癌的諧音/口語說法</p>
+          <blockquote>「這個結盟是不是對XDR Labs的產品需求會造成問題 我跟你講現在就是每個東西都會跑去打XDR Labs跟Cradle...包含像我自己的話我到現在都還是有Alab的一個持股」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="ALAB" data-cand-name="Astera Labs" data-cand-market="US"><code class="ticker">ALAB</code><a href="https://finance.yahoo.com/quote/ALAB" target="_blank" title="開啟 ALAB K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Astera Labs</span><span class="cand-reason"> — 上下文直接提到持有Alab持股，且討論其Leo產品在Memory pooling的角色，XDR Labs明確就是Astera Labs</span><button class="wl-btn wl-btn-sm" data-ticker="ALAB" data-name="Astera Labs" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「發哥」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">指聯發科（MediaTek），台股常見暱稱</p>
+          <blockquote>「舅舅發哥 發哥你到底怎麼啦...發哥在後面的TPU還是有它的發揮的空間 但沒有辦法嘛 就是網通也差 可能TV的表現也不好 手機也不太好...但是AI的夢想還是擺在那邊」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — 發哥是聯發科的經典暱稱，上下文討論其在Google TPU roadmap中的角色（Humu Fish代號），以及網通、TV、手機業務表現不佳</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「光」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指光通訊族群，包含光纖、光模組、CPO等相關標的</p>
+          <blockquote>「市場現在就是要光通 所以跑去買光就真的很舒服 那估值可以無限上修 那反而是跟就是傳統的傳輸相關的東西一直被壓縮...像前一波的一個沙盤 那時候我自己就跑進去撈了一些光通嘛」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="COHR" data-cand-name="Coherent" data-cand-market="US"><code class="ticker">COHR</code><a href="https://finance.yahoo.com/quote/COHR" target="_blank" title="開啟 COHR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Coherent</span><span class="cand-reason"> — 這集明確提到NVIDIA投資Coherent和Lumentum兩個光通全包，Coherent是光通訊龍頭</span><button class="wl-btn wl-btn-sm" data-ticker="COHR" data-name="Coherent" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="LITE" data-cand-name="Lumentum" data-cand-market="US"><code class="ticker">LITE</code><a href="https://finance.yahoo.com/quote/LITE" target="_blank" title="開啟 LITE K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Lumentum</span><span class="cand-reason"> — 這集明確提到NVIDIA投資Coherent跟Lumenton（Lumentum），兩個光通全包</span><button class="wl-btn wl-btn-sm" data-ticker="LITE" data-name="Lumentum" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Cradle」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">可能指某個高速傳輸相關標的，與Astera Labs並列被市場打壓</p>
+          <blockquote>「我跟你講現在就是每個東西都會跑去打XDR Labs跟Cradle 就大家就是想到都覺得要去踹這兩個一腳 因為這兩個東西算是前面高速傳輸最夯的標的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="CRDO" data-cand-name="Credo Technology" data-cand-market="US"><code class="ticker">CRDO</code><a href="https://finance.yahoo.com/quote/CRDO" target="_blank" title="開啟 CRDO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Credo Technology</span><span class="cand-reason"> — Cradle發音接近Credo，且被與Astera Labs並列為高速傳輸最夯標的，Credo是做高速連接解決方案的公司，與Astera Labs同屬高速傳輸族群</span><button class="wl-btn wl-btn-sm" data-ticker="CRDO" data-name="Credo Technology" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「茂達被陳泰銘買下去」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指國巨集團（陳泰銘）收購茂達電子的事件，股癌拿來類比NVIDIA投資Marvell</p>
+          <blockquote>「我覺得其實這個有點類似說那時候看到茂達被陳泰銘買下去一樣 就是我覺得某個程度上自己在蠻高興的 就代表說其實NVIDIA也看到這樣的一個機會」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6138" data-cand-name="茂達" data-cand-market="TW"><code class="ticker">6138</code><a href="https://tw.stock.yahoo.com/quote/6138" target="_blank" title="開啟 6138 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">茂達</span><span class="cand-reason"> — 直接點名茂達被陳泰銘（國巨集團）收購，用來類比大公司看到同樣的產業機會而做出投資決策</span><button class="wl-btn wl-btn-sm" data-ticker="6138" data-name="茂達" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Humu Fish / Karina Fish」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">Google TPU roadmap中的代號，Humu Fish對應MTK（聯發科），Karina Fish原本認為是Broadcom但已從roadmap消失</p>
+          <blockquote>「去稍微看一下Google的roadmap 它以前有一個叫Karina Fish 那另外一個叫Humu Fish 然後我們就發現說Karina Fish不見了...所以是Humu Fish還在 在TPU的VE9的roadmap上面 然後Karina Fish不見了」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — 股癌明確說Humu Fish是MTK的，仍在Google TPU VE9 roadmap上</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — Karina Fish原本是Broadcom的代號但已從roadmap消失，股癌不確定是否被Mirop代號取代</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="MRVL" data-name="Marvell" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Marvell</span>
+            <span class="card-meta"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">NVIDIA宣布投資2B並針對NVLink Fusion合作，股癌本身持有Marvell，看好其在Google TPU晶片及交換機的發展。但也提醒Jim Cramer喊ALL IN MRVL後可能渣男傷人心，需觀察。</p>
+          <blockquote>「大家應該有看到MARVEL的新聞出來 就說NVIDIA要投資他兩個B 那要跟他在後面去針對NVLink Fusion去做更多的一個合作...我自己押注的理由...最主要就是我知道他在Google做進去幾顆晶片」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="NVDA" data-name="NVIDIA" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">NVIDIA</span>
+            <span class="card-meta"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">討論NVIDIA投資Marvell的戰略意義，認為NVIDIA手上現金太多需要找地方放，戰略上是要搶Broadcom在ASIC周邊的市場，透過NVLink Fusion、CPU、NIC、DPU、Switch等產品線插旗。</p>
+          <blockquote>「他真的就是錢太多去買東西而已...他一定是有想去做一些戰略的佈局...我會認為說他的劍指是BlockCon 最主要是要去打BlockCon」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="AVGO" data-name="Broadcom" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Broadcom</span>
+            <span class="card-meta"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">股癌認為NVIDIA的NVLink Fusion生態系主要劍指Broadcom，但強調市場是藍海不是紅海，即使被分食市場份額，整體餅變大後Broadcom仍能維持漂亮成長性。</p>
+          <blockquote>「我會認為說他的劍指是BlockCon 最主要是要去打BlockCon...就即便可能BlockCon他假設在NVIDIA沒有去做這麼多有的沒有的嘗試之前他可以拿到的餅是一個拳頭這麼大個...還是比本來的餅大很多」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="ALAB" data-name="Astera Labs" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Astera Labs</span>
+            <span class="card-meta"><code class="ticker">ALAB</code><a href="https://finance.yahoo.com/quote/ALAB" target="_blank" title="開啟 ALAB K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="ALAB" data-name="Astera Labs" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">股癌自己持有Alab，認為市場過度打壓高速傳輸標的，但Marvell和Astera Labs其實不在同一賽道，一個是host side一個是GPU side可以共存。Memory pooling across VMs方面Leo是受惠產品。</p>
+          <blockquote>「其實包含像我自己的話我到現在都還是有Alab的一個持股...他們並不是打在同一個賽道上面...一個是host side一個是GPU side 所以他們應該是說不同層級之間可以去做一個共生」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="2454" data-name="聯發科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯發科</span>
+            <span class="card-meta"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">提到MTK在NVLink Fusion聯盟中是NVIDIA拉攏的夥伴之一，也在Google TPU的roadmap中有角色（Humu Fish代號對應MTK）。但網通差、TV不好、手機也不太好，受壓抑，AI夢想仍在。</p>
+          <blockquote>「舅舅發哥 發哥你到底怎麼啦...發哥在後面的TPU還是有它的發揮的空間 但沒有辦法嘛 就是網通也差 可能TV的表現也不好 手機也不太好...但是AI的夢想還是擺在那邊」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="6208" data-name="日揚" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">日揚</span>
+            <span class="card-meta"><code class="ticker">6208</code><a href="https://tw.stock.yahoo.com/quote/6208" target="_blank" title="開啟 6208 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="6208" data-name="日揚" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">聽眾留言提到女兒的6208績效突破100%，股癌未表達任何看法。</p>
+          <blockquote>「讓我女兒的6208績效突破100%」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="AMD" data-name="AMD" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">AMD</span>
+            <span class="card-meta"><code class="ticker">AMD</code><a href="https://finance.yahoo.com/quote/AMD" target="_blank" title="開啟 AMD K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AMD" data-name="AMD" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">股癌認為最該去買/投資Marvell的應該是AMD，因為AMD缺ASIC這一塊，但最終是NVIDIA先得點。</p>
+          <blockquote>「其實我心中覺得最該去買Marvel的去投資Marvel的應該是AMD AMD缺這一塊 但最後一面就是由NVIDIA先持得點」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>光通訊</strong><span class="sector-reason"> — 股癌提到市場現在就是要光通，買光就很舒服，估值可以無限上修。自己也有配置光通標的，前一波沙盤時撈了光通，出現50%、60%甚至100%的漲幅。NVIDIA也投資了Coherent和Lumentum兩個光通全包。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>ASIC</strong><span class="sector-reason"> — Hyperscaler持續推進自己的ASIC，NVIDIA透過NVLink Fusion插旗ASIC周邊市場，雖不提供ASIC本身但所有外圍連結都有。整體ASIC市場是藍海，各家都能吃飽。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>玻璃基板</strong><span class="sector-reason"> — 上集提到的玻璃基板題材，經查證後確認需一年半到兩年才會放量，設備提早拉貨也要半年後才有營收貢獻，偏向未來題材。但不排除像CPO一樣提早被市場拉上去。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>高速傳輸（Retimer等）</strong><span class="sector-reason"> — 股癌認為傳統傳輸相關標的被市場過度打壓，Astera Labs和Marvell被人人喊打，但實際上不同層級可以共存，等市場環境改變後論述也會跟著改變。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">中東局勢與油價</div>
+          <div><span class="badge bearish">📉 看空</span><span class="macro-view"> 雖然伊朗釋出和談訊號，但美軍仍在當地、遠月油價也未下跌，市場並未完全相信會和談。油價維持高檔就要小心，不宜上槓桿。油價只要不再突破新高就沒問題，若突破新高則維持保守。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">台股 vs 美股強弱</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 台股回踩重要均線後強勢反彈，若持續創高就是多頭迴盪格局；美股則只是死貓跳加人道走廊，整個盤已走空，反彈後若均線下壓再跌，可能還有一波大的。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">波動率（VIX）</div>
+          <div><span class="badge bearish">📉 看空</span><span class="macro-view"> VIX仍在高位震盪，波動率未死絕前要維持高警戒狀態。VIX跳上去時做越多決定越受傷，等波動率死絕再降低警戒。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">清明連假操作策略</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 長期觀點是待在市場越久越好，但自己因部位太滿，趁反彈做調節降水位，不用槓桿，維持純現股姿態。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>
