@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP650 | 🦄</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-04-09</div>
+    <h1>EP650 | 🦄</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌主要討論三大主題：一、CPU在Agentic AI時代的重要性大幅提升，開始佈局AMD、Intel等CPU相關標的；二、中東戰爭導致鋁廠被炸，鋁價突破波段新高，關注鋁相關供應鏈與被動元件漲價題材；三、分享對中東局勢、油價與塑化股的看法，以及投資心態與策略的討論。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">AMD</span><span class="quick-tag bullish">INTC</span><span class="quick-tag bullish">ARM</span><span class="quick-tag bullish">NVDA</span><span class="quick-tag bullish">3533</span><span class="quick-tag vague">6257</span><span class="quick-tag vague">MRVL</span><span class="quick-tag vague">2327</span><span class="quick-tag vague">2492</span><span class="quick-tag vague">鋁相關供應鏈</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「R」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指ARM Holdings，在討論CPU相關標的時與Intel、AMD並列提及</p>
+          <blockquote>「像是R像是Intel像是AMD他們算是在美股市場裡面是相對比較硬的東西...如果你今天轉頭看一下台灣的話你看一下3533佳澤他就是跟CPU Socket是高度相關的一個標的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="ARM" data-cand-name="ARM Holdings" data-cand-market="US"><code class="ticker">ARM</code><a href="https://finance.yahoo.com/quote/ARM" target="_blank" title="開啟 ARM K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">ARM Holdings</span><span class="cand-reason"> — 上下文討論CPU族群，後文專門分析ARM伺服器市佔從5%成長到20-25%，且提到AWS Graviton、Google Axion等ARM架構CPU，與R的位置完全吻合</span><button class="wl-btn wl-btn-sm" data-ticker="ARM" data-name="ARM Holdings" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「光通」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">光通訊族群，在美股中與CPU並列為目前走勢相對較好的族群</p>
+          <blockquote>「就是在美股就像說像光通然後或像是CPU他們現在是走得相對比較好那所以有可能他們就是帶有一些故事性」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6257" data-cand-name="矽格" data-cand-market="TW"><code class="ticker">6257</code><a href="https://tw.stock.yahoo.com/quote/6257" target="_blank" title="開啟 6257 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">矽格</span><span class="cand-reason"> — 這集後段股癌提到6257與光通或Marvell後段相關，最近蠻多人在看</span><button class="wl-btn wl-btn-sm" data-ticker="6257" data-name="矽格" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="MRVL" data-cand-name="Marvell" data-cand-market="US"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Marvell</span><span class="cand-reason"> — 這集提到6257是光通或MARVEL的後段，MARVEL應為Marvell，光通訊晶片大廠</span><button class="wl-btn wl-btn-sm" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「MARVEL的後段」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指Marvell（MRVL）的後段封測/供應鏈，語音辨識將Marvell聽成MARVEL</p>
+          <blockquote>「6257其實最近蠻多人在看的就是他是光通或是說像MARVEL的後段那這個最近確實像那個棋棒一樣被綁在一起大家一起來看」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6257" data-cand-name="矽格" data-cand-market="TW"><code class="ticker">6257</code><a href="https://tw.stock.yahoo.com/quote/6257" target="_blank" title="開啟 6257 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">矽格</span><span class="cand-reason"> — 股癌直接點名6257與MARVEL（Marvell）後段封測相關，矽格為半導體封測廠</span><button class="wl-btn wl-btn-sm" data-ticker="6257" data-name="矽格" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="MRVL" data-cand-name="Marvell" data-cand-market="US"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Marvell</span><span class="cand-reason"> — MARVEL為語音辨識誤植，實際指光通訊/AI晶片大廠Marvell</span><button class="wl-btn wl-btn-sm" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「彈電、鋁電」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">鉭質電解電容（鉭電）與鋁質電解電容（鋁電），被動元件的一種，目前市場上缺貨</p>
+          <blockquote>「像是這個碳電那或者說像是鋁電都是目前在市場上面是算是可以被歸類在跟記憶體一樣缺貨的東西...我們現在看到很缺的可能像是彈電或是鋁電相關的被動元件在後面有機會在接下來的代數會由MLCC去取代它的功能」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2327" data-cand-name="國巨" data-cand-market="TW"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">國巨</span><span class="cand-reason"> — 台灣最大被動元件廠，生產MLCC及各類被動元件，股癌提到被動元件族群因NVIDIA BOM表流出而被拉出去佈局</span><button class="wl-btn wl-btn-sm" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2492" data-cand-name="華新科" data-cand-market="TW"><code class="ticker">2492</code><a href="https://tw.stock.yahoo.com/quote/2492" target="_blank" title="開啟 2492 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華新科</span><span class="cand-reason"> — 台灣主要被動元件廠，生產MLCC等，股癌提到被動元件漲價與缺貨題材</span><button class="wl-btn wl-btn-sm" data-ticker="2492" data-name="華新科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「VR的Bomb Cost / Bomb表」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">應為NVIDIA新平台的BOM Cost / BOM表（Bill of Materials，物料清單），語音辨識將BOM聽成Bomb</p>
+          <blockquote>「在NVIDIA這邊因為他們已經這個VR的Bomb Cost然後以及可能這個Bomb表都已經有跑到市場上面去所以大家確實也是有往這個方向去看待像一些被動元件就直接拉出去因為大家注意到說他竟然可以拿下這麼多的料」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2327" data-cand-name="國巨" data-cand-market="TW"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">國巨</span><span class="cand-reason"> — 股癌提到NVIDIA BOM表流出後被動元件族群直接被拉出去，國巨為被動元件龍頭</span><button class="wl-btn wl-btn-sm" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2492" data-cand-name="華新科" data-cand-market="TW"><code class="ticker">2492</code><a href="https://tw.stock.yahoo.com/quote/2492" target="_blank" title="開啟 2492 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華新科</span><span class="cand-reason"> — 被動元件大廠，BOM表顯示用料多，市場開始佈局被動元件方向</span><button class="wl-btn wl-btn-sm" data-ticker="2492" data-name="華新科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「旅店的價格」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">應為「鋁的價格」或被動元件相關原物料價格，語音辨識將「鋁電」或「鋁的」聽成「旅店」</p>
+          <blockquote>「但現在又重新的去關注他跟注意就是因為看到這個旅店的價格持續的走上去那如果說最後面又再出一些事件的催化直接噴出去的話在需求可能是維持固定然後跟快速增加的一個狀況之下」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2327" data-cand-name="國巨" data-cand-market="TW"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">國巨</span><span class="cand-reason"> — 前後文在討論被動元件佈局與漲價題材，「旅店」應為「鋁電」的語音辨識誤植，鋁電價格持續走高帶動被動元件關注</span><button class="wl-btn wl-btn-sm" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「塑化股/塑化骨」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">台灣塑化類股，如台塑集團等</p>
+          <blockquote>「我注意到我身邊有蠻多朋友是跑去買了塑化骨因為他們認為說這樣塑化骨的邏輯是因為在過去像台灣的塑化骨之所以會完全的被中國給虐殺是因為中國這裡他們可以從伊朗這邊獲得便宜的石油」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="1301" data-cand-name="台塑" data-cand-market="TW"><code class="ticker">1301</code><a href="https://tw.stock.yahoo.com/quote/1301" target="_blank" title="開啟 1301 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">台塑</span><span class="cand-reason"> — 台灣最大塑化公司，股癌提到塑化股因中東戰爭可能切斷伊朗對中國廉價石油供應而受惠的邏輯</span><button class="wl-btn wl-btn-sm" data-ticker="1301" data-name="台塑" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="6505" data-cand-name="台塑化" data-cand-market="TW"><code class="ticker">6505</code><a href="https://tw.stock.yahoo.com/quote/6505" target="_blank" title="開啟 6505 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">台塑化</span><span class="cand-reason"> — 台塑集團煉油化工公司，直接受惠於石油供應鏈變化</span><button class="wl-btn wl-btn-sm" data-ticker="6505" data-name="台塑化" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="1326" data-cand-name="台化" data-cand-market="TW"><code class="ticker">1326</code><a href="https://tw.stock.yahoo.com/quote/1326" target="_blank" title="開啟 1326 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">台化</span><span class="cand-reason"> — 台塑集團成員，塑化類股代表</span><button class="wl-btn wl-btn-sm" data-ticker="1326" data-name="台化" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="1303" data-cand-name="南亞" data-cand-market="TW"><code class="ticker">1303</code><a href="https://tw.stock.yahoo.com/quote/1303" target="_blank" title="開啟 1303 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">南亞</span><span class="cand-reason"> — 台塑集團成員，塑化類股代表</span><button class="wl-btn wl-btn-sm" data-ticker="1303" data-name="南亞" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「麗莎素」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">AMD執行長Lisa Su（蘇姿丰），語音辨識將Lisa Su音譯為「麗莎素」</p>
+          <blockquote>「我有看到麗莎素也就是AMD的這個執行長她有提到說在Agentive的工作流裡面AI agent執行大量的任務它其實都是傳統的CPU的任務」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AMD" data-cand-name="AMD" data-cand-market="US"><code class="ticker">AMD</code><a href="https://finance.yahoo.com/quote/AMD" target="_blank" title="開啟 AMD K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">AMD</span><span class="cand-reason"> — 股癌直接說明「麗莎素也就是AMD的這個執行長」，指Lisa Su</span><button class="wl-btn wl-btn-sm" data-ticker="AMD" data-name="AMD" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「網綠」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">可能指「原物料」相關標的，在討論若戰爭持續惡化時的佈局方向，語音辨識可能誤植</p>
+          <blockquote>「那你又必須要去做多一些東西的話就手上的部位可能多單太少那我可能會選擇網綠相關的一些標的去觀察看看」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="鋁相關供應鏈" data-cand-market="TW"><span class="market-tag">TW</span> <span class="cand-name">鋁相關供應鏈</span><span class="cand-reason"> — 前後文一直在討論鋁價上漲、原物料相關佈局作為戰爭hedge，「網綠」可能是語音辨識誤植，指鋁（原物料）相關標的</span></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="AMD" data-name="AMD" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">AMD</span>
+            <span class="card-meta"><code class="ticker">AMD</code><a href="https://finance.yahoo.com/quote/AMD" target="_blank" title="開啟 AMD K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AMD" data-name="AMD" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">CPU在Agentic AI時代重要性大增，AMD執行長Lisa Su確認agent工作流大量使用CPU任務，AMD持續吃掉Intel市佔，成長性更好。已開始佈局。</p>
+          <blockquote>「像是R像是Intel像是AMD他們算是在美股市場裡面是相對比較硬的東西...如果今天要看CPU的話應該還是會先回到去看AMD跟Intel」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="INTC" data-name="Intel" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Intel</span>
+            <span class="card-meta"><code class="ticker">INTC</code><a href="https://finance.yahoo.com/quote/INTC" target="_blank" title="開啟 INTC K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="INTC" data-name="Intel" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">Intel CFO承認錯估CPU需求，Xeon 6產能absolutely constraint（缺貨），且在NVIDIA DGX/NVL8的Host CPU上有一席之地，可望與AMD一起受惠。</p>
+          <blockquote>「在Intel的CFO這邊有看到他講說Misjudge the pace of demand...Xeon 6呢目前的產能是absolutely constraint就是掉缺的」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="ARM" data-name="ARM Holdings" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">ARM Holdings</span>
+            <span class="card-meta"><code class="ticker">ARM</code><a href="https://finance.yahoo.com/quote/ARM" target="_blank" title="開啟 ARM K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="ARM" data-name="ARM Holdings" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">ARM伺服器市佔從2018年低於5%成長到2025年20-25%，在HyperScaler中佔比達50%，AWS Graviton、Google Axion、Azure Cobalt等都使用ARM架構CPU。</p>
+          <blockquote>「ARM的伺服器市佔率從大概2018年的時候是低於5%到現在2025年是已經跑到20%到25%...特別在一些ASIC方面也有很多的應用」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="NVDA" data-name="NVIDIA" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">NVIDIA</span>
+            <span class="card-meta"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">Jensen提到未來會有更多獨立CPU部署，NVIDIA自身有Vera Ruby平台（88核ARM架構+自研Olympus核心），也算CPU相關類股。但因純度不高，不是CPU題材首選。BOM表已流出，帶動被動元件族群。</p>
+          <blockquote>「在NVIDIA這邊Jensen也有提到說未來會有更多獨立的CPU的部署...它本身是有Vera的CPU那Vera的CPU看起來也是有獲得客戶的一個採用」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="3533" data-name="嘉澤" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">嘉澤</span>
+            <span class="card-meta"><code class="ticker">3533</code><a href="https://tw.stock.yahoo.com/quote/3533" target="_blank" title="開啟 3533 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="3533" data-name="嘉澤" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">與CPU Socket高度相關，在台股中屬於相對強勢的標的，作為CPU趨勢在台股的觀察指標。</p>
+          <blockquote>「你看一下3533佳澤他就是跟CPU Socket是高度相關的一個標的那這些東西都算是相對強勢」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="6257" data-name="矽格" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">矽格</span>
+            <span class="card-meta"><code class="ticker">6257</code><a href="https://tw.stock.yahoo.com/quote/6257" target="_blank" title="開啟 6257 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="6257" data-name="矽格" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">聽眾留言提到的標的，股癌提到最近蠻多人在看，與光通訊或Marvell後段相關，像旗幟一樣被綁在一起關注。</p>
+          <blockquote>「6257其實最近蠻多人在看的就是他是光通或是說像MARVEL的後段那這個最近確實像那個棋棒一樣被綁在一起大家一起來看」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="8069" data-name="元太" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">元太</span>
+            <span class="card-meta"><code class="ticker">8069</code><a href="https://tw.stock.yahoo.com/quote/8069" target="_blank" title="開啟 8069 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="8069" data-name="元太" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">聽眾持有並大幅虧損的標的，股癌表示目前市場上沒有看到電子紙相關的催化或題材，認為此時持有比較奇怪。</p>
+          <blockquote>「你問我覺得很怪因為我怎麼知道你買的東西是什麼...如果說好你跟我一樣是題材型的買進者的話那你現在買這個超怪因為我並沒有在市場上看到任何與這相關的催化或是題材」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>CPU相關族群</strong><span class="sector-reason"> — Agentic AI時代CPU從配角變瓶頸，AMD/Intel/NVIDIA三家CEO/CFO均確認趨勢。CPU在agent工作流佔延遲50-90%，Intel Xeon 6缺貨，可能出現類似HBM的供需緊張。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>光通訊</strong><span class="sector-reason"> — 股癌提到在美股中光通跟CPU目前走得相對比較好，帶有故事性。形容光通是sky is the limit，大家都可以做無限想像。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>鋁相關供應鏈</strong><span class="sector-reason"> — 中東兩家鋁廠被炸，鋁價突破波段新高，中東供應約十幾%全球產量。鋁在市場上非常被需要，可能傳導至鋁箔、鋁電被動元件漲價。作為戰爭風險的hedge佈局。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>被動元件</strong><span class="sector-reason"> — NVIDIA最新BOM表流出，市場注意到用料量大，開始往被動元件方向佈局。加上鋁電/鉭電缺貨，短期有漲價題材。但長期（三年）可能被MLCC取代，本益比空間有限。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>塑化股</strong><span class="sector-reason"> — 身邊朋友在佈局，邏輯是中東戰爭若切斷伊朗對中國的廉價石油供應，台灣塑化股可能受惠。但股癌自認塑化離自己太遠，沒有親自佈局，屬事件財/時機財。</span></div>
+<div class="sector-chip bearish"><span class="badge bearish">📉 看空</span> <strong>電子紙</strong><span class="sector-reason"> — 目前市場上沒有看到電子紙相關的催化或題材，認為現在沒有買進的理由。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">中東戰爭與油價</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 美國攻擊伊朗有其戰略合理性，類似預防性行動。短期油價維持高檔，若持續突破新高可能導致訂單終止與較大回檔，但目前仍視為大格局多頭回檔。若油價持續破高則會調整策略。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">AI產業趨勢：從GPU到CPU</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> Agentic AI時代CPU重要性大幅提升，CPU在推論工作流中佔總延遲50-90%，已從配角變為瓶頸。AMD、Intel、NVIDIA三家CEO/CFO都確認此趨勢。CPU可能出現類似過去HBM/SSD的意外缺貨漲價。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">整體市場看法</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 市場波動大，美股比台股更難操作。目前仍視為大格局多頭的回檔，但若持續破底加上油價破高，會修改策略。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

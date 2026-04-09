@@ -1,0 +1,283 @@
+{
+  "summary": "本集股癌主要討論三大主題：一、CPU在Agentic AI時代的重要性大幅提升，開始佈局AMD、Intel等CPU相關標的；二、中東戰爭導致鋁廠被炸，鋁價突破波段新高，關注鋁相關供應鏈與被動元件漲價題材；三、分享對中東局勢、油價與塑化股的看法，以及投資心態與策略的討論。",
+  "macro_views": [
+    {
+      "topic": "中東戰爭與油價",
+      "view": "美國攻擊伊朗有其戰略合理性，類似預防性行動。短期油價維持高檔，若持續突破新高可能導致訂單終止與較大回檔，但目前仍視為大格局多頭回檔。若油價持續破高則會調整策略。",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI產業趨勢：從GPU到CPU",
+      "view": "Agentic AI時代CPU重要性大幅提升，CPU在推論工作流中佔總延遲50-90%，已從配角變為瓶頸。AMD、Intel、NVIDIA三家CEO/CFO都確認此趨勢。CPU可能出現類似過去HBM/SSD的意外缺貨漲價。",
+      "stance": "看多"
+    },
+    {
+      "topic": "整體市場看法",
+      "view": "市場波動大，美股比台股更難操作。目前仍視為大格局多頭的回檔，但若持續破底加上油價破高，會修改策略。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "market": "US",
+      "stance": "看多",
+      "reason": "CPU在Agentic AI時代重要性大增，AMD執行長Lisa Su確認agent工作流大量使用CPU任務，AMD持續吃掉Intel市佔，成長性更好。已開始佈局。",
+      "quote": "像是R像是Intel像是AMD他們算是在美股市場裡面是相對比較硬的東西...如果今天要看CPU的話應該還是會先回到去看AMD跟Intel"
+    },
+    {
+      "name": "Intel",
+      "ticker": "INTC",
+      "market": "US",
+      "stance": "看多",
+      "reason": "Intel CFO承認錯估CPU需求，Xeon 6產能absolutely constraint（缺貨），且在NVIDIA DGX/NVL8的Host CPU上有一席之地，可望與AMD一起受惠。",
+      "quote": "在Intel的CFO這邊有看到他講說Misjudge the pace of demand...Xeon 6呢目前的產能是absolutely constraint就是掉缺的"
+    },
+    {
+      "name": "ARM Holdings",
+      "ticker": "ARM",
+      "market": "US",
+      "stance": "看多",
+      "reason": "ARM伺服器市佔從2018年低於5%成長到2025年20-25%，在HyperScaler中佔比達50%，AWS Graviton、Google Axion、Azure Cobalt等都使用ARM架構CPU。",
+      "quote": "ARM的伺服器市佔率從大概2018年的時候是低於5%到現在2025年是已經跑到20%到25%...特別在一些ASIC方面也有很多的應用"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "Jensen提到未來會有更多獨立CPU部署，NVIDIA自身有Vera Ruby平台（88核ARM架構+自研Olympus核心），也算CPU相關類股。但因純度不高，不是CPU題材首選。BOM表已流出，帶動被動元件族群。",
+      "quote": "在NVIDIA這邊Jensen也有提到說未來會有更多獨立的CPU的部署...它本身是有Vera的CPU那Vera的CPU看起來也是有獲得客戶的一個採用"
+    },
+    {
+      "name": "嘉澤",
+      "ticker": "3533",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "與CPU Socket高度相關，在台股中屬於相對強勢的標的，作為CPU趨勢在台股的觀察指標。",
+      "quote": "你看一下3533佳澤他就是跟CPU Socket是高度相關的一個標的那這些東西都算是相對強勢"
+    },
+    {
+      "name": "矽格",
+      "ticker": "6257",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "聽眾留言提到的標的，股癌提到最近蠻多人在看，與光通訊或Marvell後段相關，像旗幟一樣被綁在一起關注。",
+      "quote": "6257其實最近蠻多人在看的就是他是光通或是說像MARVEL的後段那這個最近確實像那個棋棒一樣被綁在一起大家一起來看"
+    },
+    {
+      "name": "元太",
+      "ticker": "8069",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "聽眾持有並大幅虧損的標的，股癌表示目前市場上沒有看到電子紙相關的催化或題材，認為此時持有比較奇怪。",
+      "quote": "你問我覺得很怪因為我怎麼知道你買的東西是什麼...如果說好你跟我一樣是題材型的買進者的話那你現在買這個超怪因為我並沒有在市場上看到任何與這相關的催化或是題材"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "CPU相關族群",
+      "stance": "看多",
+      "reason": "Agentic AI時代CPU從配角變瓶頸，AMD/Intel/NVIDIA三家CEO/CFO均確認趨勢。CPU在agent工作流佔延遲50-90%，Intel Xeon 6缺貨，可能出現類似HBM的供需緊張。"
+    },
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "股癌提到在美股中光通跟CPU目前走得相對比較好，帶有故事性。形容光通是sky is the limit，大家都可以做無限想像。"
+    },
+    {
+      "name": "鋁相關供應鏈",
+      "stance": "看多",
+      "reason": "中東兩家鋁廠被炸，鋁價突破波段新高，中東供應約十幾%全球產量。鋁在市場上非常被需要，可能傳導至鋁箔、鋁電被動元件漲價。作為戰爭風險的hedge佈局。"
+    },
+    {
+      "name": "被動元件",
+      "stance": "看多",
+      "reason": "NVIDIA最新BOM表流出，市場注意到用料量大，開始往被動元件方向佈局。加上鋁電/鉭電缺貨，短期有漲價題材。但長期（三年）可能被MLCC取代，本益比空間有限。"
+    },
+    {
+      "name": "塑化股",
+      "stance": "中立",
+      "reason": "身邊朋友在佈局，邏輯是中東戰爭若切斷伊朗對中國的廉價石油供應，台灣塑化股可能受惠。但股癌自認塑化離自己太遠，沒有親自佈局，屬事件財/時機財。"
+    },
+    {
+      "name": "電子紙",
+      "stance": "看空",
+      "reason": "目前市場上沒有看到電子紙相關的催化或題材，認為現在沒有買進的理由。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "R",
+      "interpretation": "指ARM Holdings，在討論CPU相關標的時與Intel、AMD並列提及",
+      "stance": "看多",
+      "quote": "像是R像是Intel像是AMD他們算是在美股市場裡面是相對比較硬的東西...如果你今天轉頭看一下台灣的話你看一下3533佳澤他就是跟CPU Socket是高度相關的一個標的",
+      "candidates": [
+        {
+          "name": "ARM Holdings",
+          "ticker": "ARM",
+          "market": "US",
+          "reason": "上下文討論CPU族群，後文專門分析ARM伺服器市佔從5%成長到20-25%，且提到AWS Graviton、Google Axion等ARM架構CPU，與R的位置完全吻合"
+        }
+      ]
+    },
+    {
+      "term": "光通",
+      "interpretation": "光通訊族群，在美股中與CPU並列為目前走勢相對較好的族群",
+      "stance": "看多",
+      "quote": "就是在美股就像說像光通然後或像是CPU他們現在是走得相對比較好那所以有可能他們就是帶有一些故事性",
+      "candidates": [
+        {
+          "name": "矽格",
+          "ticker": "6257",
+          "market": "TW",
+          "reason": "這集後段股癌提到6257與光通或Marvell後段相關，最近蠻多人在看"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "這集提到6257是光通或MARVEL的後段，MARVEL應為Marvell，光通訊晶片大廠"
+        }
+      ]
+    },
+    {
+      "term": "MARVEL的後段",
+      "interpretation": "指Marvell（MRVL）的後段封測/供應鏈，語音辨識將Marvell聽成MARVEL",
+      "stance": "僅提及",
+      "quote": "6257其實最近蠻多人在看的就是他是光通或是說像MARVEL的後段那這個最近確實像那個棋棒一樣被綁在一起大家一起來看",
+      "candidates": [
+        {
+          "name": "矽格",
+          "ticker": "6257",
+          "market": "TW",
+          "reason": "股癌直接點名6257與MARVEL（Marvell）後段封測相關，矽格為半導體封測廠"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "MARVEL為語音辨識誤植，實際指光通訊/AI晶片大廠Marvell"
+        }
+      ]
+    },
+    {
+      "term": "彈電、鋁電",
+      "interpretation": "鉭質電解電容（鉭電）與鋁質電解電容（鋁電），被動元件的一種，目前市場上缺貨",
+      "stance": "看多",
+      "quote": "像是這個碳電那或者說像是鋁電都是目前在市場上面是算是可以被歸類在跟記憶體一樣缺貨的東西...我們現在看到很缺的可能像是彈電或是鋁電相關的被動元件在後面有機會在接下來的代數會由MLCC去取代它的功能",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "台灣最大被動元件廠，生產MLCC及各類被動元件，股癌提到被動元件族群因NVIDIA BOM表流出而被拉出去佈局"
+        },
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "台灣主要被動元件廠，生產MLCC等，股癌提到被動元件漲價與缺貨題材"
+        }
+      ]
+    },
+    {
+      "term": "VR的Bomb Cost / Bomb表",
+      "interpretation": "應為NVIDIA新平台的BOM Cost / BOM表（Bill of Materials，物料清單），語音辨識將BOM聽成Bomb",
+      "stance": "看多",
+      "quote": "在NVIDIA這邊因為他們已經這個VR的Bomb Cost然後以及可能這個Bomb表都已經有跑到市場上面去所以大家確實也是有往這個方向去看待像一些被動元件就直接拉出去因為大家注意到說他竟然可以拿下這麼多的料",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "股癌提到NVIDIA BOM表流出後被動元件族群直接被拉出去，國巨為被動元件龍頭"
+        },
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "被動元件大廠，BOM表顯示用料多，市場開始佈局被動元件方向"
+        }
+      ]
+    },
+    {
+      "term": "旅店的價格",
+      "interpretation": "應為「鋁的價格」或被動元件相關原物料價格，語音辨識將「鋁電」或「鋁的」聽成「旅店」",
+      "stance": "看多",
+      "quote": "但現在又重新的去關注他跟注意就是因為看到這個旅店的價格持續的走上去那如果說最後面又再出一些事件的催化直接噴出去的話在需求可能是維持固定然後跟快速增加的一個狀況之下",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "前後文在討論被動元件佈局與漲價題材，「旅店」應為「鋁電」的語音辨識誤植，鋁電價格持續走高帶動被動元件關注"
+        }
+      ]
+    },
+    {
+      "term": "塑化股/塑化骨",
+      "interpretation": "台灣塑化類股，如台塑集團等",
+      "stance": "中立",
+      "quote": "我注意到我身邊有蠻多朋友是跑去買了塑化骨因為他們認為說這樣塑化骨的邏輯是因為在過去像台灣的塑化骨之所以會完全的被中國給虐殺是因為中國這裡他們可以從伊朗這邊獲得便宜的石油",
+      "candidates": [
+        {
+          "name": "台塑",
+          "ticker": "1301",
+          "market": "TW",
+          "reason": "台灣最大塑化公司，股癌提到塑化股因中東戰爭可能切斷伊朗對中國廉價石油供應而受惠的邏輯"
+        },
+        {
+          "name": "台塑化",
+          "ticker": "6505",
+          "market": "TW",
+          "reason": "台塑集團煉油化工公司，直接受惠於石油供應鏈變化"
+        },
+        {
+          "name": "台化",
+          "ticker": "1326",
+          "market": "TW",
+          "reason": "台塑集團成員，塑化類股代表"
+        },
+        {
+          "name": "南亞",
+          "ticker": "1303",
+          "market": "TW",
+          "reason": "台塑集團成員，塑化類股代表"
+        }
+      ]
+    },
+    {
+      "term": "麗莎素",
+      "interpretation": "AMD執行長Lisa Su（蘇姿丰），語音辨識將Lisa Su音譯為「麗莎素」",
+      "stance": "僅提及",
+      "quote": "我有看到麗莎素也就是AMD的這個執行長她有提到說在Agentive的工作流裡面AI agent執行大量的任務它其實都是傳統的CPU的任務",
+      "candidates": [
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "market": "US",
+          "reason": "股癌直接說明「麗莎素也就是AMD的這個執行長」，指Lisa Su"
+        }
+      ]
+    },
+    {
+      "term": "網綠",
+      "interpretation": "可能指「原物料」相關標的，在討論若戰爭持續惡化時的佈局方向，語音辨識可能誤植",
+      "stance": "看多",
+      "quote": "那你又必須要去做多一些東西的話就手上的部位可能多單太少那我可能會選擇網綠相關的一些標的去觀察看看",
+      "candidates": [
+        {
+          "name": "鋁相關供應鏈",
+          "ticker": null,
+          "market": "TW",
+          "reason": "前後文一直在討論鋁價上漲、原物料相關佈局作為戰爭hedge，「網綠」可能是語音辨識誤植，指鋁（原物料）相關標的"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP650 | 🦄",
+  "analyzed_at": "2026-04-09T11:28:19.159624",
+  "transcript_chars": 21549
+}
