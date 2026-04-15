@@ -1,3 +1,307 @@
 ============================================================ 
 Start: 2026/04/11 �g�� 17:30:01.29 
 ============================================================ 
+warning: in the working copy of 'analyze.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'fetch_podcast.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'requirements.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'run.bat', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'setup_scheduler.bat', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'setup_scheduler.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'transcribe.py', LF will be replaced by CRLF the next time Git touches it
+[main e464993] update reports 2026-04-11 18:02
+ 55 files changed, 2509 insertions(+), 2 deletions(-)
+ create mode 100644 "EP652 _ \360\237\220\270_report.html"
+ create mode 100644 "EP652 _ \360\237\220\270_report.json"
+ create mode 100644 __pycache__/analyze.cpython-314.pyc
+ create mode 100644 __pycache__/fetch_podcast.cpython-314.pyc
+ create mode 100644 __pycache__/transcribe.cpython-314.pyc
+ create mode 100644 analyze.py
+ create mode 100644 fetch_podcast.py
+ create mode 100644 "input/EP624 _ \360\237\216\245.mp3"
+ create mode 100644 "input/EP625 _ \360\237\247\270.mp3"
+ create mode 100644 "input/EP626 _ \360\237\225\267\357\270\217.mp3"
+ create mode 100644 "input/EP627 _ \360\237\252\270.mp3"
+ create mode 100644 "input/EP628 _ \360\237\215\221.mp3"
+ create mode 100644 "input/EP629 _ \342\217\263.mp3"
+ create mode 100644 "input/EP630 _ \342\255\220.mp3"
+ create mode 100644 "input/EP631 _ \360\237\216\201.mp3"
+ create mode 100644 "input/EP632 _ \342\235\204\357\270\217.mp3"
+ create mode 100644 "input/EP633 _ \360\237\252\242.mp3"
+ create mode 100644 "input/EP634 _ \360\237\221\273.mp3"
+ create mode 100644 "input/EP635 _ \360\237\214\264.mp3"
+ create mode 100644 "input/EP636 _ \360\237\220\232.mp3"
+ create mode 100644 "input/EP637 _ \360\237\246\226.mp3"
+ create mode 100644 "input/EP638 _ \360\237\220\210\342\200\215\342\254\233.mp3"
+ create mode 100644 "input/EP639 _ \360\237\220\227.mp3"
+ create mode 100644 "input/EP640 _ \360\237\220\210.mp3"
+ create mode 100644 "input/EP641 _ \360\237\222\245.mp3"
+ create mode 100644 "input/EP642 _ \360\237\220\247.mp3"
+ create mode 100644 "input/EP643 _ \360\237\246\212.mp3"
+ create mode 100644 "input/EP644 _ \360\237\246\207.mp3"
+ create mode 100644 "input/EP645 _ \360\237\216\261.mp3"
+ create mode 100644 "input/EP646 _ \360\237\246\231.mp3"
+ create mode 100644 "input/EP647 _ \360\237\215\254.mp3"
+ create mode 100644 "input/EP648 _ \360\237\246\206.mp3"
+ create mode 100644 "input/EP649 _ \360\237\222\214.mp3"
+ create mode 100644 "input/EP650 _ \360\237\246\204.mp3"
+ create mode 100644 input/EP651 _ One for all.mp3
+ create mode 100644 "input/EP652 _ \360\237\220\270.mp3"
+ create mode 100644 main.py
+ create mode 100644 output/downloaded.json
+ create mode 100644 output/transcribed.json
+ create mode 100644 "output/transcripts/EP644 _ \360\237\246\207.txt"
+ create mode 100644 "output/transcripts/EP645 _ \360\237\216\261.txt"
+ create mode 100644 "output/transcripts/EP646 _ \360\237\246\231.txt"
+ create mode 100644 "output/transcripts/EP647 _ \360\237\215\254.txt"
+ create mode 100644 "output/transcripts/EP648 _ \360\237\246\206.txt"
+ create mode 100644 "output/transcripts/EP649 _ \360\237\222\214.txt"
+ create mode 100644 "output/transcripts/EP650 _ \360\237\246\204.txt"
+ create mode 100644 output/transcripts/EP651 _ One for all.txt
+ create mode 100644 "output/transcripts/EP652 _ \360\237\220\270.txt"
+ create mode 100644 requirements.txt
+ create mode 100644 run.bat
+ create mode 100644 run.log
+ create mode 100644 setup_scheduler.bat
+ create mode 100644 setup_scheduler.ps1
+ create mode 100644 transcribe.py
+To https://github.com/mindyworldnews/gooaye-reports.git
+   d7f7bc7..e464993  main -> main
+C:\Users\User\AppData\Local\Programs\Python\Python314\Lib\site-packages\anthropic\_compat.py:48: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.typing import (
+股癌 Podcast 分析工具
+執行時間：2026-04-11 17:30
+
+==================================================
+步驟 1：抓取最新集數
+==================================================
+取得 RSS feed URL...
+RSS: https://feeds.soundon.fm/podcasts/954689a5-3096-43a4-a80b-7810b219cef3.xml
+
+解析集數（2026-03-14 之後，最多 30 集）...
+
+集數：EP652 | 🐸
+發布：2026-04-11T08:14:13+00:00
+  [下載] EP652 | 🐸
+         URL: https://rss.soundon.fm/rssf/954689a5-3096-43a4-a80b-7810b219cef3/feedurl/3a7ba4a...
+         完成，大小：47.3 MB
+
+集數：EP651 | One for all
+發布：2026-04-08T07:52:19+00:00
+  [跳過] 已下載：EP651 | One for all
+
+集數：EP650 | 🦄
+發布：2026-04-04T08:06:48+00:00
+  [跳過] 已下載：EP650 | 🦄
+
+集數：EP649 | 💌
+發布：2026-04-01T07:30:08+00:00
+  [跳過] 已下載：EP649 | 💌
+
+集數：EP648 | 🦆
+發布：2026-03-28T08:00:40+00:00
+  [跳過] 已下載：EP648 | 🦆
+
+集數：EP647 | 🍬
+發布：2026-03-25T07:56:37+00:00
+  [跳過] 已下載：EP647 | 🍬
+
+集數：EP646 | 🦙
+發布：2026-03-21T07:38:00+00:00
+  [跳過] 已下載：EP646 | 🦙
+
+集數：EP645 | 🎱
+發布：2026-03-18T08:00:21+00:00
+  [跳過] 已下載：EP645 | 🎱
+
+集數：EP644 | 🦇
+發布：2026-03-14T07:09:27+00:00
+  [跳過] 已下載：EP644 | 🦇
+
+==================================================
+步驟 2：轉錄逐字稿
+==================================================
+
+集數：EP652 | 🐸
+  [轉錄] EP652 _ 🐸.mp3
+         檔案大小：47.3 MB
+         檔案 > 24MB，將分段轉錄...
+         切成 3 段（每段約 20 分鐘）...
+         轉錄第 1/3 段...
+         轉錄第 2/3 段...
+         轉錄第 3/3 段...
+         完成，字數：22620 字
+
+集數：EP651 | One for all
+  [轉錄] EP651 _ One for all.mp3
+         檔案大小：46.1 MB
+         檔案 > 24MB，將分段轉錄...
+         切成 3 段（每段約 20 分鐘）...
+         轉錄第 1/3 段...
+         轉錄第 2/3 段...
+         轉錄第 3/3 段...
+         完成，字數：21475 字
+
+集數：EP650 | 🦄
+  [轉錄] EP650 _ 🦄.mp3
+         檔案大小：45.2 MB
+         檔案 > 24MB，將分段轉錄...
+         切成 3 段（每段約 20 分鐘）...
+         轉錄第 1/3 段...
+         轉錄第 2/3 段...
+         轉錄第 3/3 段...
+         完成，字數：21504 字
+
+集數：EP649 | 💌
+  [轉錄] EP649 _ 💌.mp3
+         檔案大小：46.5 MB
+         檔案 > 24MB，將分段轉錄...
+         切成 3 段（每段約 20 分鐘）...
+         轉錄第 1/3 段...
+         轉錄第 2/3 段...
+         轉錄第 3/3 段...
+         完成，字數：22623 字
+
+集數：EP648 | 🦆
+  [轉錄] EP648 _ 🦆.mp3
+         檔案大小：44.9 MB
+         檔案 > 24MB，將分段轉錄...
+         切成 3 段（每段約 20 分鐘）...
+         轉錄第 1/3 段...
+         轉錄第 2/3 段...
+         轉錄第 3/3 段...
+         完成，字數：22479 字
+
+集數：EP647 | 🍬
+  [轉錄] EP647 _ 🍬.mp3
+         檔案大小：45.9 MB
+         檔案 > 24MB，將分段轉錄...
+         切成 3 段（每段約 20 分鐘）...
+         轉錄第 1/3 段...
+         轉錄第 2/3 段...
+         轉錄第 3/3 段...
+         完成，字數：22861 字
+
+集數：EP646 | 🦙
+  [轉錄] EP646 _ 🦙.mp3
+         檔案大小：48.0 MB
+         檔案 > 24MB，將分段轉錄...
+         切成 3 段（每段約 20 分鐘）...
+         轉錄第 1/3 段...
+         轉錄第 2/3 段...
+         轉錄第 3/3 段...
+         完成，字數：22507 字
+
+集數：EP645 | 🎱
+  [轉錄] EP645 _ 🎱.mp3
+         檔案大小：46.6 MB
+         檔案 > 24MB，將分段轉錄...
+         切成 3 段（每段約 20 分鐘）...
+         轉錄第 1/3 段...
+         轉錄第 2/3 段...
+         轉錄第 3/3 段...
+         完成，字數：21971 字
+
+集數：EP644 | 🦇
+  [轉錄] EP644 _ 🦇.mp3
+         檔案大小：46.8 MB
+         檔案 > 24MB，將分段轉錄...
+         切成 3 段（每段約 20 分鐘）...
+         轉錄第 1/3 段...
+         轉錄第 2/3 段...
+         轉錄第 3/3 段...
+         完成，字數：21862 字
+
+==================================================
+步驟 3：分析股票標的
+==================================================
+
+集數：EP652 | 🐸
+  [分析] EP652 _ 🐸.txt
+         逐字稿長度：22620 字
+         完成！找到 11 個股票標的
+
+集數：EP651 | One for all
+  [跳過] 已有分析報告：EP651 _ One for all_report.json
+
+集數：EP650 | 🦄
+  [跳過] 已有分析報告：EP650 _ 🦄_report.json
+
+集數：EP649 | 💌
+  [跳過] 已有分析報告：EP649 _ 💌_report.json
+
+集數：EP648 | 🦆
+  [跳過] 已有分析報告：EP648 _ 🦆_report.json
+
+集數：EP647 | 🍬
+  [跳過] 已有分析報告：EP647 _ 🍬_report.json
+
+集數：EP646 | 🦙
+  [跳過] 已有分析報告：EP646 _ 🦙_report.json
+
+集數：EP645 | 🎱
+  [跳過] 已有分析報告：EP645 _ 🎱_report.json
+
+集數：EP644 | 🦇
+  [跳過] 已有分析報告：EP644 _ 🦇_report.json
+
+主頁面：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\index.html
+[git] 已 push：update reports 2026-04-11 18:02
+
+==================================================
+分析完成！
+==================================================
+
+  ✓ EP652 | 🐸
+    摘要：本集股癌分享美股第二季終於回正，主要受惠於光通訊與CPU族群走強。重點討論CPU在Agentic AI時代的需求爆發（引用Amazon AWS Graviton...
+    📈 看多：2327, MRVL, AMZN
+    📉 看空：TSLA
+    報告：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\EP652 _ 🐸_report.html
+
+  ✓ EP651 | One for all
+    摘要：本集股癌分享了參加林哲瑄退役儀式的感動經歷，並討論了市場近況：台股表現強勁、美股反彈力道大，關注美伊局勢與油價走向。投資面重點包括Intel與Tesla Ter...
+    📈 看多：INTC, MRVL, AMD, 006208
+    📉 看空：TSLA
+    報告：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\EP651 _ One for all_report.html
+
+  ✓ EP650 | 🦄
+    摘要：本集股癌主要討論三大主題：一、CPU在Agentic AI時代的重要性大幅提升，開始佈局AMD、Intel等CPU相關標的；二、中東戰爭導致鋁廠被炸，鋁價突破波...
+    📈 看多：AMD, INTC, ARM, NVDA, 3533
+    報告：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\EP650 _ 🦄_report.html
+
+  ✓ EP649 | 💌
+    摘要：本集股癌分享近期操作心態，認為台股強於美股，台股反彈後可能進入多頭迴盪格局，但美股僅視為死貓跳。重點討論NVIDIA投資Marvell的戰略意義，認為NVIDI...
+    📈 看多：MRVL, ALAB
+    報告：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\EP649 _ 💌_report.html
+
+  ✓ EP648 _ 🦆
+    摘要：本集股癌分享對美股與台股的操作策略，認為美股走勢類似去年3-4月Liberation Day前的破底格局，正在提高現金水位等待可能的大跌機會。產業面深入討論玻璃...
+    📈 看多：AAPL, MRVL
+    📉 看空：TSLA
+    報告：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\EP648 _ 🦆_report.html
+
+  ✓ EP647 _ 🍬
+    摘要：本集股癌主要分享AI工具在投資實務中的應用心得，認為AI是漸進式提升而非顛覆性取代。市場觀點方面，他維持區間盤看法，持續加碼光通訊相關持股，並關注CPU作為新題...
+    📈 看多：NET, PLTR, SpaceX, AMD
+    報告：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\EP647 _ 🍬_report.html
+
+  ✓ EP646 _ 🦙
+    摘要：本集股癌分享參加投資公司聚會的心得，討論了美國數據中心缺電、SMR、散熱趨勢、光通訊作為AI 2.0的投資方向，以及記憶體（美光）利多不漲的現象。他認為當前AI...
+    📈 看多：6451
+    報告：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\EP646 _ 🦙_report.html
+
+  ✓ EP645 | 🎱
+    摘要：本集股癌回顧自己做節目的心路歷程與投資方法論的演變，接著評論NVIDIA GTC發表會的內容（包括CPU Solution、LPU、Spectrum等），討論S...
+    📈 看多：NVDA, 2344, 6531, 8299, 3260
+    報告：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\EP645 _ 🎱_report.html
+
+  ✓ EP644 | 🦇
+    摘要：本集股癌主要討論記憶體族群（旺宏/NOR Flash/eMMC）的強勢表現、美光即將公布財報可能毛利率達80%+、GTC前光通訊題材的風險提醒，以及美股可能破底...
+    📈 看多：2337, MU, TSLA, PLTR, NET, CRWD, 3105
+    📉 看空：ADBE, CRM
+    報告：Z:\我的雲端硬碟\ClaudeWorkspace\tools\股癌分析器\EP644 _ 🦇_report.html
+End: 2026/04/11 �g�� 18:11:15.76 
+ 
+============================================================ 
+Start: 2026/04/15 �g�T 17:30:01.21 
+============================================================ 

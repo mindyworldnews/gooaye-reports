@@ -1,0 +1,405 @@
+{
+  "summary": "本集股癌主要討論台積電估值空間、聯發科在AI晶片（Google TPU相關V8/V9）的布局與成長潛力、Marvell獲Google晶片設計訂單的最新消息、被動元件漲價趨勢，以及個人美股持股配置（CPU類股、Marvell、光通訊、Cloudflare、Tesla）。整體看法偏多，認為AI仍是藍海市場，多頭行情應積極把握。",
+  "macro_views": [
+    {
+      "topic": "AI產業資本支出與需求",
+      "view": "AI市場仍是藍海，GPU、ASIC、CPU需求都非常高，供應鏈持續緊張。台積電產能僅能滿足Google約四成需求，後續有上修空間。Token（AI算力）長期會越來越便宜，短期因產能瓶頸價格反彈。",
+      "stance": "看多"
+    },
+    {
+      "topic": "台股多頭行情",
+      "view": "目前是搶錢行情，手上想買的太多、資金太少。行情好到懷疑人生，各路標的持續向前衝，應好好把握多頭。",
+      "stance": "看多"
+    },
+    {
+      "topic": "中東地緣政治（伊朗事件）",
+      "view": "伊朗事件影響已鈍化，只要油價不再創新高，就視為鈍化。市場已消化此風險。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "今年EPS預估90幾元，明年130-140元，給20倍本益比可看到2800元。目前2080元仍有上檔空間，在AI peer中不算貴。Google需求台積電僅能滿足約四成，後續有上修機會。",
+      "quote": "明年的話目前市場是已經有給到大概130甚至有些人是給到140塊左右的一個EPS，那不多就給它20倍的一個成數就好，所以你看到2800應該都不是一個太誇張的數字"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "與Google合作V8（Zebrafish）和V9（Humafish）兩顆TPU相關晶片，投片量預期數百萬顆以上，下一代有機會達五六百萬顆。三到四年內AI可能貢獻超過一半EPS。相較高通，AI純度更高，可能觸動re-rate行情。",
+      "quote": "發哥在後面他可能在AI的一個exposure就會非常高...有望在後面甚至會有機會在三年到四年內是貢獻超過發哥一半以上的EPS都會是來自於AI"
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "中立",
+      "reason": "確認獲得Google兩顆晶片設計訂單（一顆與TPU inference相關代號TIA，一顆與memory process相關）。但具體數字太遠，短期利多已出，若股價不繼續走可能會被調出持股。第三次遠征已把前兩次虧損討回。",
+      "quote": "Marvell因為它的利多就是我買的利多已經出來了，所以如果這邊它沒有繼續走的話，它很快就會掉出我的主要持股"
+    },
+    {
+      "name": "Broadcom（博通）",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "作為Google TPU晶片代客設計的對照組提及，與聯發科模式不同（博通是全權設計+採購HBM，ASP較高）。Marvell消息出來後博通股價未受明顯衝擊，顯示AI是藍海市場。",
+      "quote": "觀察一下當MARVEL的消息出來之後，有沒有影響到BlockCon或者說MTK的一個價格，就會知道說那市場對這個東西是不是恐懼的，但看起來是還好"
+    },
+    {
+      "name": "高通",
+      "ticker": "QCOM",
+      "market": "US",
+      "stance": "看空",
+      "reason": "與聯發科相比，AI純度較低。有朋友表示若是避險基金經理會考慮多聯發科空高通的配對交易。",
+      "quote": "如果他今天是Hedge Fund Manager的話，他會考慮去多發哥跟空高通"
+    },
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "被動元件龍頭已創歷史新高，太陽誘電全系列漲價為催化劑，MLCC、電感、磁珠、鋁電容均漲價。若全球性缺貨確立，族群有機會整包啟動。",
+      "quote": "這次看起來像國巨是已經創歷史新高，那終於上去了"
+    },
+    {
+      "name": "Intel",
+      "ticker": "INTC",
+      "market": "US",
+      "stance": "看多",
+      "reason": "為目前主要持股之一，歸類在CPU類股投資中。認為CPU需求意外爆發，ARM Based與通用CPU都供不應求。",
+      "quote": "CPU的話我是買Intel ARM然後跟這個AMD"
+    },
+    {
+      "name": "ARM",
+      "ticker": "ARM",
+      "market": "US",
+      "stance": "看多",
+      "reason": "目前主要持股之一，歸類在CPU類股。大量ARM Based Custom Made CPU開始加單，CPU demand超級高。",
+      "quote": "CPU的話我是買Intel ARM然後跟這個AMD"
+    },
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "market": "US",
+      "stance": "看多",
+      "reason": "目前主要持股之一，歸類在CPU類股投資。",
+      "quote": "CPU的話我是買Intel ARM然後跟這個AMD"
+    },
+    {
+      "name": "Lumentum",
+      "ticker": "LITE",
+      "market": "US",
+      "stance": "看多",
+      "reason": "光通訊持股之一，買蠻多的。想等光通訊回檔再分享數字但一直不掉。",
+      "quote": "光通也買蠻多的，像Nomentum跟Coherent"
+    },
+    {
+      "name": "Coherent",
+      "ticker": "COHR",
+      "market": "US",
+      "stance": "看多",
+      "reason": "光通訊持股之一，買蠻多的。",
+      "quote": "光通也買蠻多的，像Nomentum跟Coherent"
+    },
+    {
+      "name": "Cloudflare",
+      "ticker": "NET",
+      "market": "US",
+      "stance": "看多",
+      "reason": "目前主要持股之一，買蠻多的。",
+      "quote": "那Cloudflare也買蠻多的"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "目前主要持股之一，買蠻多的。",
+      "quote": "還有Tesla也買蠻多的"
+    },
+    {
+      "name": "啟碁",
+      "ticker": "6285",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "SpaceX Starlink大客戶訂單金額約佔下市值的一半。除衛星外還有LCOS光交換器故事，但貢獻較慢。早在一月底就已分享此趨勢。",
+      "quote": "6285奇蹟確實是在他的大客戶SpaceX的Starlink這邊拿到了很多訂單，那數字確實是差不多落在你講的這個位置"
+    },
+    {
+      "name": "創意",
+      "ticker": "3443",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提及創意也是做Google相關晶片，且有壓到（獲利），作為對比Marvell早期Maple未放量的案例。",
+      "quote": "可是像創意就有壓到，就創意一樣是去做Google的東西，這個我就有吃到它"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "被動元件",
+      "stance": "看多",
+      "reason": "太陽誘電全系列漲價（MLCC、電感、磁珠、電容），鋁電容/SP-CAP缺貨緊俏，部分ODM已被漲價。國巨創歷史新高。若CPU需求爆發帶動全供應鏈，有機會產生結構性缺貨。需觀察全球族群（村田、TDK、Vishay、KEMET）是否整包啟動。"
+    },
+    {
+      "name": "CPU相關類股",
+      "stance": "看多",
+      "reason": "GPU和ASIC之外，CPU需求也超級高。Agentic AI需要CPU才能跑，ARM Based Custom Made CPU大量加單，供應鏈會再次被甩動。"
+    },
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "個人持有光通訊部位（Lumentum、Coherent），想等回檔再分享數字但一直不掉。Google OCS相關光通類股屬於Google Family，有表現機會。"
+    },
+    {
+      "name": "Google供應鏈（Google Family）",
+      "stance": "看多",
+      "reason": "Google CAPEX維持高水準，AI收益正向。不管是晶片設計（聯發科、Marvell、博通）、後段封裝、OCS光通訊，整包Google Family後面都有表現機會。"
+    },
+    {
+      "name": "高速傳輸",
+      "stance": "看多",
+      "reason": "最近高速傳輸股票直接飆出去，在前面下跌時市場用錯誤敘事嚇人，實際上AI是藍海市場，大家都能獲得對應市場。",
+      "quote": "像最近高速傳輸的股票其實蠻多也都直接屌射出去"
+    },
+    {
+      "name": "設備股/散裝物",
+      "stance": "中立",
+      "reason": "個人近期有減碼設備和散裝物類持股，不是因為形態不好，而是漲太慢，需要資金去買更強的標的。被當成提款機。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "發哥",
+      "interpretation": "聯發科（MediaTek）",
+      "stance": "看多",
+      "quote": "像發哥他在往下破之後就立刻有資金再加入然後把它往上拉，那進來的資金我覺得他們就不是在買手機相關的股市，他們在買的東西都是跟發哥在AI裡面的投入就是有很大的一個關聯性",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "股癌直接用「發哥」指稱，並詳細討論其與Google合作的V8/V9晶片、Zebrafish/Humafish代號，以及與博通、高通的比較"
+        }
+      ]
+    },
+    {
+      "term": "G社",
+      "interpretation": "Google",
+      "stance": "看多",
+      "quote": "那發哥目前跟G社的合作呢，我們看得到就是有兩顆啦，那一顆就是V8一顆就是V9",
+      "candidates": [
+        {
+          "name": "Alphabet (Google)",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "股癌用G社指稱Google，後續詳細討論Google的TPU、CAPEX、與聯發科和Marvell的合作關係"
+        }
+      ]
+    },
+    {
+      "term": "BlockCon",
+      "interpretation": "Broadcom（博通）",
+      "stance": "僅提及",
+      "quote": "觀察一下當MARVEL的消息出來之後，有沒有影響到BlockCon或者說MTK的一個價格，就會知道說那市場對這個東西是不是恐懼的",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "語音辨識將Broadcom轉為BlockCon，上下文明確討論博通作為Google TPU晶片全權設計商的角色，與聯發科模式對比"
+        }
+      ]
+    },
+    {
+      "term": "太陽右電",
+      "interpretation": "太陽誘電（Taiyo Yuden，日本被動元件大廠）",
+      "stance": "僅提及",
+      "quote": "太陽右電去做漲價，那它漲價的東西基本上已經像那種全系列的產品線都去動了，它用的理由是說一些什麼貴金屬什麼金銀的漲價",
+      "candidates": [
+        {
+          "name": "太陽誘電（Taiyo Yuden）",
+          "ticker": null,
+          "market": "其他",
+          "reason": "語音辨識將太陽誘電轉為太陽右電，上下文明確是被動元件漲價的發起者，全系列MLCC、電感、磁珠、電容都漲價"
+        }
+      ]
+    },
+    {
+      "term": "春田、佑電、TDK",
+      "interpretation": "日本被動元件大廠：村田（Murata）、佑電（可能是太陽誘電或另一家）、TDK",
+      "stance": "僅提及",
+      "quote": "以日本來講的話就是春田、佑電、TDK，這個都是要持續的看著",
+      "candidates": [
+        {
+          "name": "村田製作所（Murata）",
+          "ticker": null,
+          "market": "其他",
+          "reason": "語音辨識將村田轉為春田，上下文是被動元件國際族群觀察指標，村田為全球最大MLCC廠商"
+        },
+        {
+          "name": "TDK",
+          "ticker": null,
+          "market": "其他",
+          "reason": "股癌直接提及TDK，作為日本被動元件族群觀察指標之一"
+        }
+      ]
+    },
+    {
+      "term": "Vichy...KN",
+      "interpretation": "美國被動元件廠商Vishay和KEMET",
+      "stance": "僅提及",
+      "quote": "美國的話就像是Vichy然後或是像那個KN這一檔，也是要稍微的去盯",
+      "candidates": [
+        {
+          "name": "Vishay Intertechnology",
+          "ticker": "VSH",
+          "market": "US",
+          "reason": "語音辨識將Vishay轉為Vichy，上下文是美國被動元件族群觀察指標"
+        },
+        {
+          "name": "KEMET (Yageo子公司)",
+          "ticker": null,
+          "market": "US",
+          "reason": "KN可能指KEMET，已被國巨併購但仍為美國被動元件觀察標的。也可能是KN指其他代號"
+        }
+      ]
+    },
+    {
+      "term": "Mario",
+      "interpretation": "Marvell Technology",
+      "stance": "看多",
+      "quote": "在昨天開始有很多的外媒大量去報導說可能在Google這邊會引入Mario作為他們在晶片設計的一個新的partner",
+      "candidates": [
+        {
+          "name": "Marvell Technology",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "語音辨識將Marvell轉為Mario，上下文明確是Google引入的新晶片設計夥伴，與MTK和Broadcom並列討論"
+        }
+      ]
+    },
+    {
+      "term": "災辦裡面的IPT",
+      "interpretation": "載板（ABF基板）裡面的IPD（Integrated Passive Device）或相關封裝技術",
+      "stance": "僅提及",
+      "quote": "或者是現在可能去討論在災辦裡面的IPT，這個也都是跟Google是相關的東西",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "語音辨識將載板轉為災辦，上下文討論Google TPU相關封裝技術，欣興為主要ABF載板供應商"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "載板廠之一，與Google TPU封裝相關"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "載板廠之一，與Google TPU封裝相關"
+        }
+      ]
+    },
+    {
+      "term": "光通",
+      "interpretation": "光通訊族群",
+      "stance": "看多",
+      "quote": "像前面跟大家聊說我想要等到光通整個掉下來之後然後再講光通的一些數字我們了解到的狀況，可是它就是都不會掉下來，所以也不好跟大家分享",
+      "candidates": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "market": "US",
+          "reason": "股癌在本集明確提及Lumentum為其光通訊持股之一"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "股癌在本集明確提及Coherent為其光通訊持股之一"
+        }
+      ]
+    },
+    {
+      "term": "MACO",
+      "interpretation": "低軌衛星相關的衛星板/PCB廠商",
+      "stance": "僅提及",
+      "quote": "我們發現說MACO你做一堆衛星板怎麼不用漲，結果後來MACO直接快速的翻倍",
+      "candidates": [
+        {
+          "name": "台光電",
+          "ticker": "2383",
+          "market": "TW",
+          "reason": "MACO可能是語音辨識誤轉，上下文是做衛星板的PCB/CCL相關廠商，台光電為高頻CCL供應商，與衛星板相關"
+        },
+        {
+          "name": "聯茂",
+          "ticker": "6213",
+          "market": "TW",
+          "reason": "聯茂為CCL廠商，可能涉及衛星板材料供應"
+        }
+      ]
+    },
+    {
+      "term": "國劇",
+      "interpretation": "國巨法說會/業績發表",
+      "stance": "看多",
+      "quote": "在我們節目的發出的同時這個國劇可能正在發表，所以我們之後再來看一下國劇講什麼，然後就可以知道說這個族群後面可能會有一些更明確的展望",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "語音辨識將國巨轉為國劇，上下文是國巨正在發表（法說會），討論被動元件族群展望"
+        }
+      ]
+    },
+    {
+      "term": "1米T",
+      "interpretation": "1 Micron T（可能指Google TPU未來製程或封裝相關技術規格）",
+      "stance": "僅提及",
+      "quote": "蠻多人去研究TPU在未來是有機會用到的這個1米T嘛，然後外加可能會用到TGV",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "上下文討論Google TPU未來製程/封裝技術，台積電為主要代工廠"
+        }
+      ]
+    },
+    {
+      "term": "TGV",
+      "interpretation": "Through Glass Via（玻璃通孔技術），先進封裝技術",
+      "stance": "僅提及",
+      "quote": "蠻多人去研究TPU在未來是有機會用到的這個1米T嘛，然後外加可能會用到TGV，這個也是市場裡面就是大家注意到過去很多標股都是圍繞這邊產生",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "TGV為先進封裝技術，台積電為主要推進者"
+        }
+      ]
+    },
+    {
+      "term": "梅古拉",
+      "interpretation": "Mega紅K（大型紅色K線），指伊朗事件期間的大跌K棒",
+      "stance": "中立",
+      "quote": "特別是我看到梅古拉這樣的一個K，我覺得後面都算是鈍化，就只要你的油價不要再過新高，對我來說都叫做鈍化",
+      "candidates": []
+    }
+  ],
+  "episode_title": "EP653 | 🕊️",
+  "analyzed_at": "2026-04-15T17:35:25.658866",
+  "transcript_chars": 22471
+}
