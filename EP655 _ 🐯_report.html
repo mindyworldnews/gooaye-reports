@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP655 | 🐯</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-04-22</div>
+    <h1>EP655 | 🐯</h1>
+  </div>
+
+  <div class='summary-box'><p>股癌分享4月行情回顧，感嘆身邊交易者績效驚人（月報酬50%甚至翻倍），自己雖表現不錯但相對感到壓力。討論了Marvell的MPU（代號Carmel）正式曝光、MTK綁定Intel先進封裝的潛在風險，以及當前市場過熱下的操作心態——持續追強勢股但要注意風控，並宣布Marvell和CPU相關標的追蹤「case close」。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">2454</span><span class="quick-tag bullish">MRVL</span><span class="quick-tag bullish">4919</span><span class="quick-tag bullish">AAOI</span><span class="quick-tag bullish">2330</span><span class="quick-tag vague">AVGO</span><span class="quick-tag vague">COHR</span><span class="quick-tag vague">三星電機 (Samsung Electro-Mechanics)</span><span class="quick-tag vague">VSH</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「AlphaGo就是BlockCom」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指Broadcom（博通），股癌用「AlphaGo」可能是指Google的ASIC晶片代號，「BlockCom」是Broadcom的口誤/諧音</p>
+          <blockquote>「我們對於可能像是AlphaGo就是BlockCom，然後或者是像是MTK聯發科的一個評價，我就覺得這個應該是沒有關係的，因為市場裡面的餅太大了，那所以他多一家進來分，那其實簡單來講在Google的角度時你們三家都還是可以吃到很飽」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 逐字稿上下文明確討論Google的三家ASIC供應商（Broadcom、MTK、Marvell），BlockCom是Broadcom的語音辨識誤差，AlphaGo可能是Google ASIC晶片的某個代號</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「HomoFish、ZebraFish」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">Google自研ASIC晶片的代號（TPU系列），HomoFish可能是較新一代，ZebraFish是另一代</p>
+          <blockquote>「MTK的這樣的HomoFish或是ZebraFish的話他是有辦法知道的...Google這邊是決定要在HomoFish的時候是要走到E-MIB去封裝」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — 逐字稿明確提到MTK的HomoFish/ZebraFish量是可以估算的，且Google選擇用Intel E-MIB封裝HomoFish，直接影響MTK出貨</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — Google ASIC三大供應商之一，與HomoFish/ZebraFish屬同一Google TPU供應鏈</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="MRVL" data-cand-name="Marvell" data-cand-market="US"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Marvell</span><span class="cand-reason"> — 逐字稿提到Marvell也要做Google相關的東西，是三家供應商之一</span><button class="wl-btn wl-btn-sm" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「Carmel」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">Marvell為Google開發的MPU（Memory Process Unit）晶片代號，定位為NVIDIA LPU的競爭對手</p>
+          <blockquote>「他的代號是叫做Carmel，那這個Carmel目前我們去看他的話，我從幾個source這邊來看，他的量目前沒有太大，但應該確定就是會是LPU的一個對手，那會由Marvel這邊操刀」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="MRVL" data-cand-name="Marvell" data-cand-market="US"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Marvell</span><span class="cand-reason"> — 逐字稿明確說Carmel由Marvell操刀，是MPU產品，對標NVIDIA的LPU</span><button class="wl-btn wl-btn-sm" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「E-MIB」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">Intel的先進封裝技術（Embedded Multi-die Interconnect Bridge），Google選擇用此技術封裝HomoFish，而非台積電的CoWoS</p>
+          <blockquote>「Google這邊是決定要在HomoFish的時候是要走到E-MIB去封裝，那只是E-MIB我們現在在我們的角度看就是說他還是有可能會雷掉...不排除可能他們有注意到一些跡象或是說台積電可能可以去保證更多的產能的話他是有可能會移回來QoS系列去做封裝」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2330" data-cand-name="台積電" data-cand-market="TW"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">台積電</span><span class="cand-reason"> — 逐字稿提到如果Intel E-MIB出問題，Google可能移回台積電CoWoS封裝</span><button class="wl-btn wl-btn-sm" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「CPU」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">此處並非指一般的中央處理器，而是股癌持有的某檔美股標的代號/簡稱，與Marvell並列為已獲利了結的大倉位持股</p>
+          <blockquote>「像是Marvell或像是CPU就自己的持股的一些變動...像最近可能Marvell CPU就都是大倉...像是Marvel或是CPU我認為都是case close」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="COHR" data-cand-name="Coherent" data-cand-market="US"><code class="ticker">COHR</code><a href="https://finance.yahoo.com/quote/COHR" target="_blank" title="開啟 COHR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Coherent</span><span class="cand-reason"> — 後文QA段落提到Lumentum跟Coherent是光通訊持股，但CPU作為代號更可能指其他標的。不過逐字稿中未提供更明確線索，無法確定</span><button class="wl-btn wl-btn-sm" data-ticker="COHR" data-name="Coherent" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「夭折金母」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">語音辨識誤差，可能指某檔台股ETF（如元大台灣價值高息00940或類似的高股息ETF），上下文是描述有人直接把錢放進去槓滿，每天穩定槓3%</p>
+          <blockquote>「有些人他就直接把錢放進去夭折金母那一邊，然後想說我這個就槓滿就好了，那他的績效也都超好，他每天就穩定的槓錢就3%」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="00940" data-cand-name="元大台灣價值高息" data-cand-market="ETF"><code class="ticker">00940</code><a href="https://tw.stock.yahoo.com/quote/00940" target="_blank" title="開啟 00940 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">ETF</span> <span class="cand-name">元大台灣價值高息</span><span class="cand-reason"> — 上下文提到高股息ETF封裝潮、投信買盤推升股價的類似環境，且「夭折金母」可能是某檔近期熱門ETF的語音誤識</span><button class="wl-btn wl-btn-sm" data-ticker="00940" data-name="元大台灣價值高息" data-market="ETF" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「三泰寺」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">語音辨識可能有誤，指某檔台股新櫃股，股癌產業朋友40幾塊推薦，買入後在400多塊賣掉</p>
+          <blockquote>「三泰寺是自己一個產業上的朋友，那他後來有去交易室了，只是這位他40幾塊就跟我講，所以那時候就買了不少，然後到400多的時候賣掉，像三泰寺大家看一下」</blockquote>
+          
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「正美」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">可能指某檔台股新櫃股，股癌70幾塊建倉，一兩百塊時賣掉絕大多數，後來繼續大漲</p>
+          <blockquote>「再來就是正美，正美的話70幾塊去建蠻多倉的，然後後來大概在一兩百塊的時候就丟掉了絕大多數，大家看一下它正美是多少」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="正美" data-cand-market="TW"><span class="market-tag">TW</span> <span class="cand-name">正美</span><span class="cand-reason"> — 逐字稿提到名稱「正美」但未提供代號，可能是正美豐業或其他，無法確定代號故填null</span></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「韓國的SAMCO」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指三星電機（Samsung Electro-Mechanics），韓國被動元件大廠，語音辨識誤差</p>
+          <blockquote>「被動元件的話這個日本的，然後像韓國的SAMCO，大家可以看一下那個三星電擊直接射到爛掉」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="三星電機 (Samsung Electro-Mechanics)" data-cand-market="其他"><span class="market-tag">其他</span> <span class="cand-name">三星電機 (Samsung Electro-Mechanics)</span><span class="cand-reason"> — 逐字稿直接說「三星電擊」即三星電機，韓國被動元件龍頭，語音辨識將SEMCO誤寫為SAMCO</span></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「VShake」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指Vishay Intertechnology，美國被動元件大廠，語音辨識誤差</p>
+          <blockquote>「美國的VShake或是相關的被動元件其實全部也都是走得非常好」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="VSH" data-cand-name="Vishay Intertechnology" data-cand-market="US"><code class="ticker">VSH</code><a href="https://finance.yahoo.com/quote/VSH" target="_blank" title="開啟 VSH K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Vishay Intertechnology</span><span class="cand-reason"> — 上下文討論美國被動元件股，VShake是Vishay的語音誤識</span><button class="wl-btn wl-btn-sm" data-ticker="VSH" data-name="Vishay Intertechnology" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「光通」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">光通訊族群，股癌表示前面已大漲，等修正才要再聊，不想在高點推薦扛責任</p>
+          <blockquote>「像前面光通會講說我等到他修正我才要跟他聊，因為我不想要去扛說什麼他在高點聊光通，明明我們可能在第一檔就一直在講」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="LITE" data-cand-name="Lumentum" data-cand-market="US"><code class="ticker">LITE</code><a href="https://finance.yahoo.com/quote/LITE" target="_blank" title="開啟 LITE K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Lumentum</span><span class="cand-reason"> — QA段落明確提到Lumentum和Coherent是光通訊持股，漲超多但近期橫盤</span><button class="wl-btn wl-btn-sm" data-ticker="LITE" data-name="Lumentum" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="COHR" data-cand-name="Coherent" data-cand-market="US"><code class="ticker">COHR</code><a href="https://finance.yahoo.com/quote/COHR" target="_blank" title="開啟 COHR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Coherent</span><span class="cand-reason"> — QA段落明確提到：「GR說你去看一下Lumitum跟Coherent那是一個漲超多的標的但這陣子可能稍微橫一下」</span><button class="wl-btn wl-btn-sm" data-ticker="COHR" data-name="Coherent" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「電感廠」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">某檔新櫃電感股，從100多元直接衝到1000多元，股癌用來形容當前行情的瘋狂程度</p>
+          <blockquote>「今天就看到一個電感廠他真的超屌，他直接上去就他好像本來是開100多吧然後直接衝到1000多塊去，就是你真的會在心中覺得說我到底看了什麼東西」</blockquote>
+          
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="2454" data-name="聯發科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯發科</span>
+            <span class="card-meta"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">MTK直接兩根漲停，表現很好。HomoFish/ZebraFish的量是可以估算的。但提醒潛在風險：MTK表現高度綁定Intel良率，因為Google的HomoFish選擇走E-MIB封裝，若Intel出包會影響MTK出貨顆數</p>
+          <blockquote>「像MTK直接兩根漲停，這個是媽的想都不敢想的事情...MTK他的表現可能會高度綁定Intel他的良率的狀態，因為Google這邊是決定要在HomoFish的時候是要走到E-MIB去封裝」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="MRVL" data-name="Marvell" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Marvell</span>
+            <span class="card-meta"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">MPU（代號Carmel）已在Information和Reuters公佈，確定是LPU的對手，由Marvell操刀。但量目前不大，實際獲利數字無法推估。宣布此標的追蹤case close，前面已用大倉位操作獲利</p>
+          <blockquote>「Marvel的相關的討論在這一波算是已經完全的見爆了...他的代號是叫做Carmel，目前我們去看他的話，他的量目前沒有太大，但應該確定就是會是LPU的一個對手」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="AVGO" data-name="Broadcom" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Broadcom</span>
+            <span class="card-meta"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">在討論Google ASIC供應商時以「AlphaGo就是BlockCom」提及，認為市場餅夠大，多一家供應商不影響其評價</p>
+          <blockquote>「我們對於可能像是AlphaGo就是BlockCom，然後或者是像是MTK聯發科的一個評價，我就覺得這個應該是沒有關係的，因為市場裡面的餅太大了」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="4919" data-name="新唐" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">新唐</span>
+            <span class="card-meta"><code class="ticker">4919</code><a href="https://tw.stock.yahoo.com/quote/4919" target="_blank" title="開啟 4919 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="4919" data-name="新唐" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">最近股價大噴，市場關注其BMC業務。股癌指出兩年前節目就講過新唐打進CSP的BMC，但當時MCU本業太爛沒人理，現在大家看到信驊破萬才注意到，屬於資訊領先市場的案例</p>
+          <blockquote>「大家看一下那個NUVOTEN 4919最近碰到爛掉，然後你就看身邊朋友在那邊傳說他打進去BMC，你就回聽一下兩年前的節目，我們就講說他打進去CSP的BMC」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="5274" data-name="信驊" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">信驊</span>
+            <span class="card-meta"><code class="ticker">5274</code><a href="https://tw.stock.yahoo.com/quote/5274" target="_blank" title="開啟 5274 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="5274" data-name="信驊" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到信驊破萬作為市場關注BMC題材的參照點，帶動新唐等相關標的被關注</p>
+          <blockquote>「現在大家就在吵這個故事，看到信華破萬，覺得說NUVOTEN也可以看一下」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="AAOI" data-name="Applied Optoelectronics (AOI)" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Applied Optoelectronics (AOI)</span>
+            <span class="card-meta"><code class="ticker">AAOI</code><a href="https://finance.yahoo.com/quote/AAOI" target="_blank" title="開啟 AAOI K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AAOI" data-name="Applied Optoelectronics (AOI)" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">回應聽眾提問，早期就在節目聊過這家公司，很多投資圈的人在起噴前被洗掉，因為股價波動太大。認為是「把報酬留給相信他的人」的標的，也是台灣人的國民制服股</p>
+          <blockquote>「AOI是一個就是我們也算是蠻早就在跟大家聊這家公司...投資圈的人就有理解絕大多數我們自己身邊的都是在他最後面起噴那一段之前都被洗掉」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2303" data-name="聯電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯電</span>
+            <span class="card-meta"><code class="ticker">2303</code><a href="https://tw.stock.yahoo.com/quote/2303" target="_blank" title="開啟 2303 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2303" data-name="聯電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">回應聽眾提問，過去曾提到UMC未來報酬可能不錯，最近確實有漲，作為「每個標的都有其表現時刻」的案例</p>
+          <blockquote>「我不是有跟他講說就是很難講，搞不好未來的某個時間軸UMC的報酬會跑得不錯，UMC最近確實是有射到」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="2330" data-name="台積電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台積電</span>
+            <span class="card-meta"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">自稱長期股東，回顧2022年說台積電好會被罵，現在才證明是對的。也提到Google封裝有可能移回台積電CoWoS</p>
+          <blockquote>「回聽一下2022節目，那時候講台積電好是要被罵的，是要被罵的，就代表說你不懂投資...我自己本身也是台積電長期的股東」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="0050" data-name="元大台灣50" data-market="ETF">
+          <div class="card-header">
+            <span class="stock-name">元大台灣50</span>
+            <span class="card-meta"><code class="ticker">0050</code><a href="https://tw.stock.yahoo.com/quote/0050" target="_blank" title="開啟 0050 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">ETF</span><button class="wl-btn" data-ticker="0050" data-name="元大台灣50" data-market="ETF" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">作為相信市場共識的投資方式的案例，用市值加權等於相信市場判斷</p>
+          <blockquote>「其實你去買0050或是00620，某個程度上你就是去相信市場共識的一個結果」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="" data-name="Intel" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Intel</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">Google選擇用Intel的E-MIB先進封裝做HomoFish，但股癌擔心Intel良率可能出問題，若出包會影響MTK出貨</p>
+          <blockquote>「Google這邊是決定要在HomoFish的時候是要走到E-MIB去封裝...E-MIB我們現在在我們的角度看就是說他還是有可能會雷掉」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>光通訊</strong><span class="sector-reason"> — 前面已經大漲過，股癌表示等修正才要再聊，不想在高點扛推薦責任。Lumentum和Coherent漲超多但近期橫盤，很多持有者坐不住產生FOMO</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>新櫃股/小型股</strong><span class="sector-reason"> — 行情極度瘋狂，300多支標的中單日漲10-20%的幾十檔，有電感廠從100多衝到1000多。股癌自己也買了不少新櫃股，但部分已提早獲利了結</span></div>
+<div class="sector-chip bearish"><span class="badge bearish">📉 看空</span> <strong>台灣記憶體</strong><span class="sector-reason"> — 相對已經軟掉，但韓股和美股的記憶體股仍然非常強勢，形成國際落差</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>被動元件</strong><span class="sector-reason"> — 日本、韓國SAMCO（三星電機）、美國Vishay等國際被動元件股都噴出，台股被動元件也在歷史新高但走得較慢，股癌選擇直接加入日股</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>ASIC/客製化晶片</strong><span class="sector-reason"> — Google ASIC供應鏈有三家供應商（Broadcom、MTK、Marvell），但市場餅太大，三家加起來都無法滿足需求</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">台股大盤行情</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 台股一個月漲6000點，行情極度瘋狂，認為市場長期不錯但短期已經到了「派對不知何時結束」的狀態，提醒過得太舒服後面懲罰會很重，但不要預判高點在哪</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">NASDAQ/美股</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> NASDAQ近期噴出，之前大家罵美股垃圾時就預期會有驚喜，現在果然很強，與台股輪流表現</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">台灣GDP與股市關係</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 引述朋友說法，台灣市場GDP加8%，股市噴成這樣不算特別意外</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">市場過熱風險</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 新櫃股300多支標的中，單日漲10-20%以上的就幾十檔，有些漲到停牌，電感廠從100多直接衝到1000多，行情已經到了不需要分析能力只需要膽識和額度就能賺錢的階段，暗示泡沫風險</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

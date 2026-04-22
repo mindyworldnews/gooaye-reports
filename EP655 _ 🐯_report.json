@@ -1,0 +1,313 @@
+{
+  "summary": "股癌分享4月行情回顧，感嘆身邊交易者績效驚人（月報酬50%甚至翻倍），自己雖表現不錯但相對感到壓力。討論了Marvell的MPU（代號Carmel）正式曝光、MTK綁定Intel先進封裝的潛在風險，以及當前市場過熱下的操作心態——持續追強勢股但要注意風控，並宣布Marvell和CPU相關標的追蹤「case close」。",
+  "macro_views": [
+    {
+      "topic": "台股大盤行情",
+      "view": "台股一個月漲6000點，行情極度瘋狂，認為市場長期不錯但短期已經到了「派對不知何時結束」的狀態，提醒過得太舒服後面懲罰會很重，但不要預判高點在哪",
+      "stance": "看多"
+    },
+    {
+      "topic": "NASDAQ/美股",
+      "view": "NASDAQ近期噴出，之前大家罵美股垃圾時就預期會有驚喜，現在果然很強，與台股輪流表現",
+      "stance": "看多"
+    },
+    {
+      "topic": "台灣GDP與股市關係",
+      "view": "引述朋友說法，台灣市場GDP加8%，股市噴成這樣不算特別意外",
+      "stance": "看多"
+    },
+    {
+      "topic": "市場過熱風險",
+      "view": "新櫃股300多支標的中，單日漲10-20%以上的就幾十檔，有些漲到停牌，電感廠從100多直接衝到1000多，行情已經到了不需要分析能力只需要膽識和額度就能賺錢的階段，暗示泡沫風險",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "MTK直接兩根漲停，表現很好。HomoFish/ZebraFish的量是可以估算的。但提醒潛在風險：MTK表現高度綁定Intel良率，因為Google的HomoFish選擇走E-MIB封裝，若Intel出包會影響MTK出貨顆數",
+      "quote": "像MTK直接兩根漲停，這個是媽的想都不敢想的事情...MTK他的表現可能會高度綁定Intel他的良率的狀態，因為Google這邊是決定要在HomoFish的時候是要走到E-MIB去封裝"
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "MPU（代號Carmel）已在Information和Reuters公佈，確定是LPU的對手，由Marvell操刀。但量目前不大，實際獲利數字無法推估。宣布此標的追蹤case close，前面已用大倉位操作獲利",
+      "quote": "Marvel的相關的討論在這一波算是已經完全的見爆了...他的代號是叫做Carmel，目前我們去看他的話，他的量目前沒有太大，但應該確定就是會是LPU的一個對手"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "在討論Google ASIC供應商時以「AlphaGo就是BlockCom」提及，認為市場餅夠大，多一家供應商不影響其評價",
+      "quote": "我們對於可能像是AlphaGo就是BlockCom，然後或者是像是MTK聯發科的一個評價，我就覺得這個應該是沒有關係的，因為市場裡面的餅太大了"
+    },
+    {
+      "name": "新唐",
+      "ticker": "4919",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "最近股價大噴，市場關注其BMC業務。股癌指出兩年前節目就講過新唐打進CSP的BMC，但當時MCU本業太爛沒人理，現在大家看到信驊破萬才注意到，屬於資訊領先市場的案例",
+      "quote": "大家看一下那個NUVOTEN 4919最近碰到爛掉，然後你就看身邊朋友在那邊傳說他打進去BMC，你就回聽一下兩年前的節目，我們就講說他打進去CSP的BMC"
+    },
+    {
+      "name": "信驊",
+      "ticker": "5274",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到信驊破萬作為市場關注BMC題材的參照點，帶動新唐等相關標的被關注",
+      "quote": "現在大家就在吵這個故事，看到信華破萬，覺得說NUVOTEN也可以看一下"
+    },
+    {
+      "name": "Applied Optoelectronics (AOI)",
+      "ticker": "AAOI",
+      "market": "US",
+      "stance": "看多",
+      "reason": "回應聽眾提問，早期就在節目聊過這家公司，很多投資圈的人在起噴前被洗掉，因為股價波動太大。認為是「把報酬留給相信他的人」的標的，也是台灣人的國民制服股",
+      "quote": "AOI是一個就是我們也算是蠻早就在跟大家聊這家公司...投資圈的人就有理解絕大多數我們自己身邊的都是在他最後面起噴那一段之前都被洗掉"
+    },
+    {
+      "name": "聯電",
+      "ticker": "2303",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "回應聽眾提問，過去曾提到UMC未來報酬可能不錯，最近確實有漲，作為「每個標的都有其表現時刻」的案例",
+      "quote": "我不是有跟他講說就是很難講，搞不好未來的某個時間軸UMC的報酬會跑得不錯，UMC最近確實是有射到"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "自稱長期股東，回顧2022年說台積電好會被罵，現在才證明是對的。也提到Google封裝有可能移回台積電CoWoS",
+      "quote": "回聽一下2022節目，那時候講台積電好是要被罵的，是要被罵的，就代表說你不懂投資...我自己本身也是台積電長期的股東"
+    },
+    {
+      "name": "元大台灣50",
+      "ticker": "0050",
+      "market": "ETF",
+      "stance": "僅提及",
+      "reason": "作為相信市場共識的投資方式的案例，用市值加權等於相信市場判斷",
+      "quote": "其實你去買0050或是00620，某個程度上你就是去相信市場共識的一個結果"
+    },
+    {
+      "name": "Intel",
+      "ticker": null,
+      "market": "US",
+      "stance": "中立",
+      "reason": "Google選擇用Intel的E-MIB先進封裝做HomoFish，但股癌擔心Intel良率可能出問題，若出包會影響MTK出貨",
+      "quote": "Google這邊是決定要在HomoFish的時候是要走到E-MIB去封裝...E-MIB我們現在在我們的角度看就是說他還是有可能會雷掉"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "光通訊",
+      "stance": "中立",
+      "reason": "前面已經大漲過，股癌表示等修正才要再聊，不想在高點扛推薦責任。Lumentum和Coherent漲超多但近期橫盤，很多持有者坐不住產生FOMO"
+    },
+    {
+      "name": "新櫃股/小型股",
+      "stance": "看多",
+      "reason": "行情極度瘋狂，300多支標的中單日漲10-20%的幾十檔，有電感廠從100多衝到1000多。股癌自己也買了不少新櫃股，但部分已提早獲利了結"
+    },
+    {
+      "name": "台灣記憶體",
+      "stance": "看空",
+      "reason": "相對已經軟掉，但韓股和美股的記憶體股仍然非常強勢，形成國際落差",
+      "quote": "台灣的記憶體已經看得出來說他是相對就軟掉了，那可是如果你今天看韓股的或是美股的其實很多都還是非常強勢"
+    },
+    {
+      "name": "被動元件",
+      "stance": "看多",
+      "reason": "日本、韓國SAMCO（三星電機）、美國Vishay等國際被動元件股都噴出，台股被動元件也在歷史新高但走得較慢，股癌選擇直接加入日股",
+      "quote": "被動元件的話這個日本的，然後像韓國的SAMCO...美國的VShake或是相關的被動元件其實全部也都是走得非常好，但台股的其實台股的也是在歷史新高的位置他就是走得比較慢一點"
+    },
+    {
+      "name": "ASIC/客製化晶片",
+      "stance": "看多",
+      "reason": "Google ASIC供應鏈有三家供應商（Broadcom、MTK、Marvell），但市場餅太大，三家加起來都無法滿足需求"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "AlphaGo就是BlockCom",
+      "interpretation": "指Broadcom（博通），股癌用「AlphaGo」可能是指Google的ASIC晶片代號，「BlockCom」是Broadcom的口誤/諧音",
+      "stance": "僅提及",
+      "quote": "我們對於可能像是AlphaGo就是BlockCom，然後或者是像是MTK聯發科的一個評價，我就覺得這個應該是沒有關係的，因為市場裡面的餅太大了，那所以他多一家進來分，那其實簡單來講在Google的角度時你們三家都還是可以吃到很飽",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿上下文明確討論Google的三家ASIC供應商（Broadcom、MTK、Marvell），BlockCom是Broadcom的語音辨識誤差，AlphaGo可能是Google ASIC晶片的某個代號"
+        }
+      ]
+    },
+    {
+      "term": "HomoFish、ZebraFish",
+      "interpretation": "Google自研ASIC晶片的代號（TPU系列），HomoFish可能是較新一代，ZebraFish是另一代",
+      "stance": "看多",
+      "quote": "MTK的這樣的HomoFish或是ZebraFish的話他是有辦法知道的...Google這邊是決定要在HomoFish的時候是要走到E-MIB去封裝",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "逐字稿明確提到MTK的HomoFish/ZebraFish量是可以估算的，且Google選擇用Intel E-MIB封裝HomoFish，直接影響MTK出貨"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "Google ASIC三大供應商之一，與HomoFish/ZebraFish屬同一Google TPU供應鏈"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "逐字稿提到Marvell也要做Google相關的東西，是三家供應商之一"
+        }
+      ]
+    },
+    {
+      "term": "Carmel",
+      "interpretation": "Marvell為Google開發的MPU（Memory Process Unit）晶片代號，定位為NVIDIA LPU的競爭對手",
+      "stance": "看多",
+      "quote": "他的代號是叫做Carmel，那這個Carmel目前我們去看他的話，我從幾個source這邊來看，他的量目前沒有太大，但應該確定就是會是LPU的一個對手，那會由Marvel這邊操刀",
+      "candidates": [
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "逐字稿明確說Carmel由Marvell操刀，是MPU產品，對標NVIDIA的LPU"
+        }
+      ]
+    },
+    {
+      "term": "E-MIB",
+      "interpretation": "Intel的先進封裝技術（Embedded Multi-die Interconnect Bridge），Google選擇用此技術封裝HomoFish，而非台積電的CoWoS",
+      "stance": "中立",
+      "quote": "Google這邊是決定要在HomoFish的時候是要走到E-MIB去封裝，那只是E-MIB我們現在在我們的角度看就是說他還是有可能會雷掉...不排除可能他們有注意到一些跡象或是說台積電可能可以去保證更多的產能的話他是有可能會移回來QoS系列去做封裝",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "逐字稿提到如果Intel E-MIB出問題，Google可能移回台積電CoWoS封裝"
+        }
+      ]
+    },
+    {
+      "term": "CPU",
+      "interpretation": "此處並非指一般的中央處理器，而是股癌持有的某檔美股標的代號/簡稱，與Marvell並列為已獲利了結的大倉位持股",
+      "stance": "看多",
+      "quote": "像是Marvell或像是CPU就自己的持股的一些變動...像最近可能Marvell CPU就都是大倉...像是Marvel或是CPU我認為都是case close",
+      "candidates": [
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "後文QA段落提到Lumentum跟Coherent是光通訊持股，但CPU作為代號更可能指其他標的。不過逐字稿中未提供更明確線索，無法確定"
+        }
+      ]
+    },
+    {
+      "term": "夭折金母",
+      "interpretation": "語音辨識誤差，可能指某檔台股ETF（如元大台灣價值高息00940或類似的高股息ETF），上下文是描述有人直接把錢放進去槓滿，每天穩定槓3%",
+      "stance": "僅提及",
+      "quote": "有些人他就直接把錢放進去夭折金母那一邊，然後想說我這個就槓滿就好了，那他的績效也都超好，他每天就穩定的槓錢就3%",
+      "candidates": [
+        {
+          "name": "元大台灣價值高息",
+          "ticker": "00940",
+          "market": "ETF",
+          "reason": "上下文提到高股息ETF封裝潮、投信買盤推升股價的類似環境，且「夭折金母」可能是某檔近期熱門ETF的語音誤識"
+        }
+      ]
+    },
+    {
+      "term": "三泰寺",
+      "interpretation": "語音辨識可能有誤，指某檔台股新櫃股，股癌產業朋友40幾塊推薦，買入後在400多塊賣掉",
+      "stance": "僅提及",
+      "quote": "三泰寺是自己一個產業上的朋友，那他後來有去交易室了，只是這位他40幾塊就跟我講，所以那時候就買了不少，然後到400多的時候賣掉，像三泰寺大家看一下",
+      "candidates": []
+    },
+    {
+      "term": "正美",
+      "interpretation": "可能指某檔台股新櫃股，股癌70幾塊建倉，一兩百塊時賣掉絕大多數，後來繼續大漲",
+      "stance": "僅提及",
+      "quote": "再來就是正美，正美的話70幾塊去建蠻多倉的，然後後來大概在一兩百塊的時候就丟掉了絕大多數，大家看一下它正美是多少",
+      "candidates": [
+        {
+          "name": "正美",
+          "ticker": null,
+          "market": "TW",
+          "reason": "逐字稿提到名稱「正美」但未提供代號，可能是正美豐業或其他，無法確定代號故填null"
+        }
+      ]
+    },
+    {
+      "term": "韓國的SAMCO",
+      "interpretation": "指三星電機（Samsung Electro-Mechanics），韓國被動元件大廠，語音辨識誤差",
+      "stance": "看多",
+      "quote": "被動元件的話這個日本的，然後像韓國的SAMCO，大家可以看一下那個三星電擊直接射到爛掉",
+      "candidates": [
+        {
+          "name": "三星電機 (Samsung Electro-Mechanics)",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿直接說「三星電擊」即三星電機，韓國被動元件龍頭，語音辨識將SEMCO誤寫為SAMCO"
+        }
+      ]
+    },
+    {
+      "term": "VShake",
+      "interpretation": "指Vishay Intertechnology，美國被動元件大廠，語音辨識誤差",
+      "stance": "看多",
+      "quote": "美國的VShake或是相關的被動元件其實全部也都是走得非常好",
+      "candidates": [
+        {
+          "name": "Vishay Intertechnology",
+          "ticker": "VSH",
+          "market": "US",
+          "reason": "上下文討論美國被動元件股，VShake是Vishay的語音誤識"
+        }
+      ]
+    },
+    {
+      "term": "光通",
+      "interpretation": "光通訊族群，股癌表示前面已大漲，等修正才要再聊，不想在高點推薦扛責任",
+      "stance": "中立",
+      "quote": "像前面光通會講說我等到他修正我才要跟他聊，因為我不想要去扛說什麼他在高點聊光通，明明我們可能在第一檔就一直在講",
+      "candidates": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "market": "US",
+          "reason": "QA段落明確提到Lumentum和Coherent是光通訊持股，漲超多但近期橫盤"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "QA段落明確提到：「GR說你去看一下Lumitum跟Coherent那是一個漲超多的標的但這陣子可能稍微橫一下」"
+        }
+      ]
+    },
+    {
+      "term": "電感廠",
+      "interpretation": "某檔新櫃電感股，從100多元直接衝到1000多元，股癌用來形容當前行情的瘋狂程度",
+      "stance": "僅提及",
+      "quote": "今天就看到一個電感廠他真的超屌，他直接上去就他好像本來是開100多吧然後直接衝到1000多塊去，就是你真的會在心中覺得說我到底看了什麼東西",
+      "candidates": []
+    }
+  ],
+  "episode_title": "EP655 | 🐯",
+  "analyzed_at": "2026-04-22T17:35:43.815329",
+  "transcript_chars": 21774
+}
