@@ -1,0 +1,213 @@
+{
+  "summary": "本集股癌重點討論金管會調高投信單一類股持股上限至25%對台積電的重大利多影響，認為將有大量資金湧入台積電，並分享自己大幅調整持股、重倉買進台積電的決策。此外也更新了CPU類股全面噴發、Google TPU第八代（8T/8I）由聯發科與Broadcom設計的產業觀察，以及MTK連續漲停的表現。",
+  "macro_views": [
+    {
+      "topic": "金管會調高投信持股上限政策",
+      "view": "金管會將投信單一類股持股上限從10%調高至25%，實質上是為台積電量身設計的政策，將釋放大量投信資金買進台積電，可能推動台股指數進一步上漲，甚至帶動外資因台股市值增大而增加配置",
+      "stance": "看多"
+    },
+    {
+      "topic": "美股半導體市場",
+      "view": "美股半導體相關類股持續噴發，CPU類股因Intel財報不錯且將漲價而全面上漲，市場整體非常好",
+      "stance": "看多"
+    },
+    {
+      "topic": "CPU在AI伺服器的配置比例",
+      "view": "市場有小作文想把CPU與GPU配置喊到1:1，但實際觀察大約是2G:1C或4G:1C，不會是1:1，提醒不要因為這些誇大說法在高點追進",
+      "stance": "中立"
+    },
+    {
+      "topic": "類股輪動預期",
+      "view": "因投信需賣出中小型股來騰資金買台積電，預期短期內中小型股可能被大量拋售，但等資金調整完成後，這些被超賣的標的可能出現強力反彈的補漲機會",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "金管會調高投信持股上限至25%，等於解開台積電封印，估計投信需買進10萬張以上。以明年EPS共識140元、給20倍PE計算目標價2800元。台積電在AI factory地位無可取代，且相對其他AI股仍便宜，是事件驅動型的政策大利多",
+      "quote": "這個法規你可以簡單的把它視為說它是為台積電給設計的...等於是解開了台積電的一個封印...你媽的狂尻台積電狂買...我比較大部位的買是在禮拜五"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "Google TPU第八代8T（Zebrafish）確認由聯發科設計（Training端），Training佔比可能比Inference多一點但趨近1:1，後續量能可觀。短短時間內三根漲停，表現超出預期。風險在於Intel封裝若出問題（但那是很久以後的事）",
+      "quote": "TPU的8T跟8I...8T跟8I代表的東西是Zebrafish跟Sunfish...Trending是這個MediaTek...MTK之後的一系列表現...在禮拜五又一個漲停了...短短的一段時間內我們看到它三更漲停"
+    },
+    {
+      "name": "英特爾",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "財報數字不錯且後續要漲價，帶動CPU類股全面噴發，但提醒不要在噴了幾十趴之後因為看到小作文就衝進去，短期有受傷風險",
+      "quote": "CPU的類股全面是噴出去因為英特爾開出來的數字是還蠻不錯的而且後面也要開始漲價...不要說什麼你現在看到這些東西然後在什麼英特爾噴個他媽幾十趴衝進去"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "Google TPU第八代8I（Sunfish）由Broadcom設計（Inference端），股癌原本以為Training是Broadcom做的，後來發現搞反了",
+      "quote": "我本來一直以為說Trending是Avago是Broadcom去做的那Inference才是MTK...後來才知道說原來Trending是這個MediaTek"
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到Marvel打了第三次才成功打贏，暗示股價經歷多次嘗試突破後終於成功，邏輯與之前壓的方向類似",
+      "quote": "就像是Marvel可能上去打了第三次才成功打贏但其實前面你壓住的東西跟這次的那個邏輯都是蠻類似的"
+    },
+    {
+      "name": "元大台灣50",
+      "ticker": "0050",
+      "market": "ETF",
+      "stance": "看多",
+      "reason": "建議一般人以0050或006208作為配置主軸，比單押個股保守",
+      "quote": "一般人你盡量以這個006208或是0050作為你配置的一個主軸"
+    },
+    {
+      "name": "富邦台50",
+      "ticker": "006208",
+      "market": "ETF",
+      "stance": "看多",
+      "reason": "同上，建議作為指數投資的配置主軸",
+      "quote": "一般人你盡量以這個006208或是0050作為你配置的一個主軸"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "CPU類股",
+      "stance": "看多",
+      "reason": "Agentic AI需要CPU，Intel財報好且將漲價帶動全面噴發，趨勢可能剛啟動有機會走蠻遠，但短期追高有風險，市場已有過度吹捧CPU配置比例的小作文出現"
+    },
+    {
+      "name": "Google TPU供應鏈",
+      "stance": "看多",
+      "reason": "TPU第八代8T/8I正式發表，Training由聯發科、Inference由Broadcom設計，兩者佔比趨近1:1，量能可觀"
+    },
+    {
+      "name": "中小型股/元件股",
+      "stance": "看空",
+      "reason": "投信為騰資金買台積電，短期內可能大量拋售中小型持股，形成垃圾盤。但中長期在資金調整完成後可能出現補漲機會"
+    },
+    {
+      "name": "美股半導體",
+      "stance": "看多",
+      "reason": "整體持續噴發，目前沒有特別要說的負面因素，等後面有新變化再做更新"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "CPU類股",
+      "interpretation": "AI伺服器中CPU相關供應鏈，因Agentic AI需要CPU而受惠，包括Intel及其相關供應鏈",
+      "stance": "看多",
+      "quote": "CPU的類股全面是噴出去因為英特爾開出來的數字是還蠻不錯的而且後面也要開始漲價...你現在要去推Agentic AI就需要用到CPU...這個CPU的趨勢目前看得出來說它有機會只是一個剛啟動",
+      "candidates": [
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "market": "US",
+          "reason": "逐字稿明確提到英特爾財報不錯且將漲價，是CPU類股噴發的主要催化劑"
+        },
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "market": "US",
+          "reason": "CPU類股全面噴發，AMD作為另一大CPU廠商是最直接的受惠者，逐字稿提到RM（AMD）也在噴"
+        }
+      ]
+    },
+    {
+      "term": "RM",
+      "interpretation": "AMD（超微），股癌用簡稱提到的CPU相關股票",
+      "stance": "看多",
+      "quote": "不要說什麼你現在看到這些東西然後在什麼英特爾噴個他媽幾十趴衝進去或是RM衝進去因為你看到這些小文章就有機會會在短期內受傷",
+      "candidates": [
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "market": "US",
+          "reason": "在CPU類股討論脈絡中與Intel並列提及，RM為AMD的簡稱，且上下文是在警告不要因為CPU小作文在高點追進"
+        }
+      ]
+    },
+    {
+      "term": "台積氣",
+      "interpretation": "台積電以外的台股加權指數成分股，用來做空對沖台積電多頭部位的工具（如台股期貨或台股ETF空單）",
+      "stance": "看空",
+      "quote": "他在第一瞬間就是他也是尻了滿手TSM然後他去空台積氣...你去做多台積電然後你去空台積氣等於說你是去做多台積電並空X台積電以外的標的",
+      "candidates": [
+        {
+          "name": "台灣加權指數期貨",
+          "ticker": null,
+          "market": "TW",
+          "reason": "股癌解釋這是long TSM / short 除了台積電以外的標的，即做多台積電同時空台股期貨的long-short策略"
+        }
+      ]
+    },
+    {
+      "term": "小鬼谷、草尾盆的各種元件",
+      "interpretation": "中小型元件股，泛指交易圈喜歡操作的非權值股標的",
+      "stance": "看空",
+      "quote": "去玩一些那種什麼小鬼谷然後那種中小型的草尾盆的各種元件然後是非常強大可是最近真的算是非常的有共識就是蠻多人都認為說要去加台積電",
+      "candidates": [
+        {
+          "name": "中小型被動元件/散熱/光通訊等元件股",
+          "ticker": null,
+          "market": "TW",
+          "reason": "逐字稿脈絡是交易圈過去偏好操作中小型元件股，現在共識轉向台積電，暗示這些中小型股可能被拋售"
+        }
+      ]
+    },
+    {
+      "term": "Zebrafish跟Sunfish",
+      "interpretation": "Google TPU第八代的兩款晶片代號，8T（Training）= Zebrafish由聯發科設計，8I（Inference）= Sunfish由Broadcom設計",
+      "stance": "看多",
+      "quote": "TPU的8T跟8I已經是發表出來了...8T跟8I代表的東西是Zebrafish跟Sunfish也就是從聯發科然後跟從Broadcom這邊去做設計的",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "逐字稿明確指出Zebrafish（8T/Training）由MediaTek設計"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿明確指出Sunfish（8I/Inference）由Broadcom設計"
+        }
+      ]
+    },
+    {
+      "term": "Humafish",
+      "interpretation": "Google TPU第九代的晶片代號，股癌表示老聽眾已經很熟悉，用來強調節目對TPU供應鏈的追蹤已經領先市場很多",
+      "stance": "僅提及",
+      "quote": "這個老聽眾也是非常耳熟能詳我們都已經聊到Humafish去了那個是他媽第九代的東西那第八代的東西就是Zebra跟Sunfish",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "既然第八代Training由MTK設計，第九代TPU供應鏈大概率也與MTK相關"
+        }
+      ]
+    },
+    {
+      "term": "硬木的ETF",
+      "interpretation": "主動型ETF，指近期台灣市場大量新發行的主動式管理ETF，源源不絕吸引資金",
+      "stance": "僅提及",
+      "quote": "現在還有很多新的硬木的ETF嘛一堆人都在買嘛現在整個市場大家超愛這種主動型ETF所以其實一直有源源不絕的資金進來",
+      "candidates": []
+    }
+  ],
+  "episode_title": "EP656 | 🍇",
+  "analyzed_at": "2026-04-25T17:35:26.033596",
+  "transcript_chars": 22277
+}

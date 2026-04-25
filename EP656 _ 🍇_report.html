@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP656 | 🍇</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-04-25</div>
+    <h1>EP656 | 🍇</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌重點討論金管會調高投信單一類股持股上限至25%對台積電的重大利多影響，認為將有大量資金湧入台積電，並分享自己大幅調整持股、重倉買進台積電的決策。此外也更新了CPU類股全面噴發、Google TPU第八代（8T/8I）由聯發科與Broadcom設計的產業觀察，以及MTK連續漲停的表現。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">2330</span><span class="quick-tag bullish">2454</span><span class="quick-tag bullish">英特爾</span><span class="quick-tag bullish">0050</span><span class="quick-tag bullish">006208</span><span class="quick-tag vague">INTC</span><span class="quick-tag vague">AMD</span><span class="quick-tag vague">台灣加權指數期貨</span><span class="quick-tag vague">中小型被動元件/散熱/光通訊等元件股</span><span class="quick-tag vague">AVGO</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「CPU類股」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">AI伺服器中CPU相關供應鏈，因Agentic AI需要CPU而受惠，包括Intel及其相關供應鏈</p>
+          <blockquote>「CPU的類股全面是噴出去因為英特爾開出來的數字是還蠻不錯的而且後面也要開始漲價...你現在要去推Agentic AI就需要用到CPU...這個CPU的趨勢目前看得出來說它有機會只是一個剛啟動」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="INTC" data-cand-name="Intel" data-cand-market="US"><code class="ticker">INTC</code><a href="https://finance.yahoo.com/quote/INTC" target="_blank" title="開啟 INTC K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Intel</span><span class="cand-reason"> — 逐字稿明確提到英特爾財報不錯且將漲價，是CPU類股噴發的主要催化劑</span><button class="wl-btn wl-btn-sm" data-ticker="INTC" data-name="Intel" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="AMD" data-cand-name="AMD" data-cand-market="US"><code class="ticker">AMD</code><a href="https://finance.yahoo.com/quote/AMD" target="_blank" title="開啟 AMD K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">AMD</span><span class="cand-reason"> — CPU類股全面噴發，AMD作為另一大CPU廠商是最直接的受惠者，逐字稿提到RM（AMD）也在噴</span><button class="wl-btn wl-btn-sm" data-ticker="AMD" data-name="AMD" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「RM」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">AMD（超微），股癌用簡稱提到的CPU相關股票</p>
+          <blockquote>「不要說什麼你現在看到這些東西然後在什麼英特爾噴個他媽幾十趴衝進去或是RM衝進去因為你看到這些小文章就有機會會在短期內受傷」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AMD" data-cand-name="AMD" data-cand-market="US"><code class="ticker">AMD</code><a href="https://finance.yahoo.com/quote/AMD" target="_blank" title="開啟 AMD K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">AMD</span><span class="cand-reason"> — 在CPU類股討論脈絡中與Intel並列提及，RM為AMD的簡稱，且上下文是在警告不要因為CPU小作文在高點追進</span><button class="wl-btn wl-btn-sm" data-ticker="AMD" data-name="AMD" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bearish">
+          <div class="vague-header">
+            <span class="vague-term">「台積氣」</span>
+            <span class="badge bearish">📉 看空</span>
+          </div>
+          <p class="vague-interp">台積電以外的台股加權指數成分股，用來做空對沖台積電多頭部位的工具（如台股期貨或台股ETF空單）</p>
+          <blockquote>「他在第一瞬間就是他也是尻了滿手TSM然後他去空台積氣...你去做多台積電然後你去空台積氣等於說你是去做多台積電並空X台積電以外的標的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="台灣加權指數期貨" data-cand-market="TW"><span class="market-tag">TW</span> <span class="cand-name">台灣加權指數期貨</span><span class="cand-reason"> — 股癌解釋這是long TSM / short 除了台積電以外的標的，即做多台積電同時空台股期貨的long-short策略</span></div></div>
+        </div>
+
+        <div class="vague-card bearish">
+          <div class="vague-header">
+            <span class="vague-term">「小鬼谷、草尾盆的各種元件」</span>
+            <span class="badge bearish">📉 看空</span>
+          </div>
+          <p class="vague-interp">中小型元件股，泛指交易圈喜歡操作的非權值股標的</p>
+          <blockquote>「去玩一些那種什麼小鬼谷然後那種中小型的草尾盆的各種元件然後是非常強大可是最近真的算是非常的有共識就是蠻多人都認為說要去加台積電」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="中小型被動元件/散熱/光通訊等元件股" data-cand-market="TW"><span class="market-tag">TW</span> <span class="cand-name">中小型被動元件/散熱/光通訊等元件股</span><span class="cand-reason"> — 逐字稿脈絡是交易圈過去偏好操作中小型元件股，現在共識轉向台積電，暗示這些中小型股可能被拋售</span></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「Zebrafish跟Sunfish」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">Google TPU第八代的兩款晶片代號，8T（Training）= Zebrafish由聯發科設計，8I（Inference）= Sunfish由Broadcom設計</p>
+          <blockquote>「TPU的8T跟8I已經是發表出來了...8T跟8I代表的東西是Zebrafish跟Sunfish也就是從聯發科然後跟從Broadcom這邊去做設計的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — 逐字稿明確指出Zebrafish（8T/Training）由MediaTek設計</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 逐字稿明確指出Sunfish（8I/Inference）由Broadcom設計</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Humafish」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">Google TPU第九代的晶片代號，股癌表示老聽眾已經很熟悉，用來強調節目對TPU供應鏈的追蹤已經領先市場很多</p>
+          <blockquote>「這個老聽眾也是非常耳熟能詳我們都已經聊到Humafish去了那個是他媽第九代的東西那第八代的東西就是Zebra跟Sunfish」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — 既然第八代Training由MTK設計，第九代TPU供應鏈大概率也與MTK相關</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「硬木的ETF」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">主動型ETF，指近期台灣市場大量新發行的主動式管理ETF，源源不絕吸引資金</p>
+          <blockquote>「現在還有很多新的硬木的ETF嘛一堆人都在買嘛現在整個市場大家超愛這種主動型ETF所以其實一直有源源不絕的資金進來」</blockquote>
+          
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="2330" data-name="台積電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台積電</span>
+            <span class="card-meta"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">金管會調高投信持股上限至25%，等於解開台積電封印，估計投信需買進10萬張以上。以明年EPS共識140元、給20倍PE計算目標價2800元。台積電在AI factory地位無可取代，且相對其他AI股仍便宜，是事件驅動型的政策大利多</p>
+          <blockquote>「這個法規你可以簡單的把它視為說它是為台積電給設計的...等於是解開了台積電的一個封印...你媽的狂尻台積電狂買...我比較大部位的買是在禮拜五」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="2454" data-name="聯發科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯發科</span>
+            <span class="card-meta"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">Google TPU第八代8T（Zebrafish）確認由聯發科設計（Training端），Training佔比可能比Inference多一點但趨近1:1，後續量能可觀。短短時間內三根漲停，表現超出預期。風險在於Intel封裝若出問題（但那是很久以後的事）</p>
+          <blockquote>「TPU的8T跟8I...8T跟8I代表的東西是Zebrafish跟Sunfish...Trending是這個MediaTek...MTK之後的一系列表現...在禮拜五又一個漲停了...短短的一段時間內我們看到它三更漲停」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="" data-name="英特爾" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">英特爾</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">財報數字不錯且後續要漲價，帶動CPU類股全面噴發，但提醒不要在噴了幾十趴之後因為看到小作文就衝進去，短期有受傷風險</p>
+          <blockquote>「CPU的類股全面是噴出去因為英特爾開出來的數字是還蠻不錯的而且後面也要開始漲價...不要說什麼你現在看到這些東西然後在什麼英特爾噴個他媽幾十趴衝進去」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="AVGO" data-name="Broadcom" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Broadcom</span>
+            <span class="card-meta"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">Google TPU第八代8I（Sunfish）由Broadcom設計（Inference端），股癌原本以為Training是Broadcom做的，後來發現搞反了</p>
+          <blockquote>「我本來一直以為說Trending是Avago是Broadcom去做的那Inference才是MTK...後來才知道說原來Trending是這個MediaTek」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="MRVL" data-name="Marvell" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Marvell</span>
+            <span class="card-meta"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到Marvel打了第三次才成功打贏，暗示股價經歷多次嘗試突破後終於成功，邏輯與之前壓的方向類似</p>
+          <blockquote>「就像是Marvel可能上去打了第三次才成功打贏但其實前面你壓住的東西跟這次的那個邏輯都是蠻類似的」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="0050" data-name="元大台灣50" data-market="ETF">
+          <div class="card-header">
+            <span class="stock-name">元大台灣50</span>
+            <span class="card-meta"><code class="ticker">0050</code><a href="https://tw.stock.yahoo.com/quote/0050" target="_blank" title="開啟 0050 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">ETF</span><button class="wl-btn" data-ticker="0050" data-name="元大台灣50" data-market="ETF" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">建議一般人以0050或006208作為配置主軸，比單押個股保守</p>
+          <blockquote>「一般人你盡量以這個006208或是0050作為你配置的一個主軸」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="006208" data-name="富邦台50" data-market="ETF">
+          <div class="card-header">
+            <span class="stock-name">富邦台50</span>
+            <span class="card-meta"><code class="ticker">006208</code><a href="https://tw.stock.yahoo.com/quote/006208" target="_blank" title="開啟 006208 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">ETF</span><button class="wl-btn" data-ticker="006208" data-name="富邦台50" data-market="ETF" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">同上，建議作為指數投資的配置主軸</p>
+          <blockquote>「一般人你盡量以這個006208或是0050作為你配置的一個主軸」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>CPU類股</strong><span class="sector-reason"> — Agentic AI需要CPU，Intel財報好且將漲價帶動全面噴發，趨勢可能剛啟動有機會走蠻遠，但短期追高有風險，市場已有過度吹捧CPU配置比例的小作文出現</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>Google TPU供應鏈</strong><span class="sector-reason"> — TPU第八代8T/8I正式發表，Training由聯發科、Inference由Broadcom設計，兩者佔比趨近1:1，量能可觀</span></div>
+<div class="sector-chip bearish"><span class="badge bearish">📉 看空</span> <strong>中小型股/元件股</strong><span class="sector-reason"> — 投信為騰資金買台積電，短期內可能大量拋售中小型持股，形成垃圾盤。但中長期在資金調整完成後可能出現補漲機會</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>美股半導體</strong><span class="sector-reason"> — 整體持續噴發，目前沒有特別要說的負面因素，等後面有新變化再做更新</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">金管會調高投信持股上限政策</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 金管會將投信單一類股持股上限從10%調高至25%，實質上是為台積電量身設計的政策，將釋放大量投信資金買進台積電，可能推動台股指數進一步上漲，甚至帶動外資因台股市值增大而增加配置</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">美股半導體市場</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 美股半導體相關類股持續噴發，CPU類股因Intel財報不錯且將漲價而全面上漲，市場整體非常好</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">CPU在AI伺服器的配置比例</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 市場有小作文想把CPU與GPU配置喊到1:1，但實際觀察大約是2G:1C或4G:1C，不會是1:1，提醒不要因為這些誇大說法在高點追進</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">類股輪動預期</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 因投信需賣出中小型股來騰資金買台積電，預期短期內中小型股可能被大量拋售，但等資金調整完成後，這些被超賣的標的可能出現強力反彈的補漲機會</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>
