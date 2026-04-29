@@ -1,0 +1,227 @@
+{
+  "summary": "本集股癌主要討論台積電近期走勢受外資賣壓影響未能一波突破，中小型股與大型權值股之間的資金輪動現象，以及記憶體、被動元件族群轉強。此外深入分析Intel後段封裝良率達90%的重要產業發現，對聯發科及相關EMIB供應鏈的影響，並評論OpenAI與立訊合作AI手機的前景持保守態度。",
+  "macro_views": [
+    {
+      "topic": "台股資金輪動",
+      "view": "台積電強勢時中小型股會被吸走資金而走弱，台積電橫盤時中小型股又會復活，目前進入混沌局面，難以判斷資金會持續在權值股還是中小型股",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI產能需求",
+      "view": "目前AI產能仍然極度短缺，馬斯克說大家非常缺產能是正確的，除非看到AI有明顯反轉，否則產能有多少客戶就會投多少",
+      "stance": "看多"
+    },
+    {
+      "topic": "槓桿與市場風險",
+      "view": "近期很多券商開始晴天收傘，不讓客戶續約質押或融資，代表大家都在借錢買股票，行情反轉時可能會很可怕，但目前尚未看到立即風險",
+      "stance": "中立"
+    },
+    {
+      "topic": "CPU市場火熱",
+      "view": "Meta簽下Multi-Billion Dollar合約向AWS採購大量Graviton5，CPU需求供不應求，台系CPU相關供應鏈全部動起來",
+      "stance": "看多"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "認為台積電上限不在2330，但短期受外資大量賣壓（單日賣1.8萬到2萬多張）壓制，需等外資賣壓結束再判斷，長期仍看好",
+      "quote": "我會覺得說這兩個東西的上限應該都不是在這邊，只是說因為現在在籌碼方面就是外資最後面是站在賣方，他就是決定要賣了"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "前面已經射出去，Goldman Sachs喊目標價2454，認為上限不止於此。重點關注接下來法說會是否給更多提示，若有提示資金會往這方向投入",
+      "quote": "我覺得重點是看一下接下來聯發科的法書會不會去給更多的提示，那如果說有出現的話，那其實我們的資金一般就會往這個方向去投"
+    },
+    {
+      "name": "旺宏",
+      "ticker": "2337",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "法說會上老闆轉為超級利多態度，MLC NAND漲價漂亮，NOR價格也不錯，記憶體族群集體表態轉強",
+      "quote": "在旺宏的法書上面基本上老闆是直接轉為超級利多，旺宏的產品線確實蠻多是有很漂亮的漲價，特別是MLC NAND的這一塊，那Nord的價格也是還蠻不錯的"
+    },
+    {
+      "name": "Intel",
+      "ticker": "INTC",
+      "market": "US",
+      "stance": "看多",
+      "reason": "後段封裝Assembly良率已拉到90%，雖比台積電差但已可量產，市場多數人尚不知情。短期前段製程困難，但可視為專業後段封裝廠，有機會吸引更多封裝訂單",
+      "quote": "Intel在後段的封裝Assembly這邊它的良率已經有拉到90%了，90%的封裝良率絕對是已經可以量產了，這個數字我本來一開始知道的時候我就已經算是蠻震驚的"
+    },
+    {
+      "name": "AP Memory",
+      "ticker": null,
+      "market": "TW",
+      "stance": "看多",
+      "reason": "做Intel載板裡面的IPD（埋入式被動電容），受益於Intel EMIB封裝相關供應鏈動能",
+      "quote": "像之前有跟大家聊過這家公司AP Memory，它就是在做Intel的宅版裡面的IPD，就是埋在宅版裡面的被動式電容"
+    },
+    {
+      "name": "高通",
+      "ticker": "QCOM",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "與MediaTek共同供應OpenAI手機晶片，一顆120美元",
+      "quote": "它的那個手機的chip呢是由高通跟MediaTek去勾引，那我稍微去問一下身邊的朋友，他們講說一顆是120美元"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "記憶體",
+      "stance": "看多",
+      "reason": "前面軟了很久，趁這波直接集體表態轉強，旺宏法說轉超級利多，MLC NAND、NOR漲價明顯，DDR3/DDR4也有排擠效應帶動的漲價"
+    },
+    {
+      "name": "被動元件（台股）",
+      "stance": "看多",
+      "reason": "禮拜二趁機表態跳出去，之前Underperform海外被動元件很多，日本和韓國被動元件公司已經射出去，基本面考察證明漲價趨勢正確，台股有機會跟上"
+    },
+    {
+      "name": "Intel EMIB相關供應鏈",
+      "stance": "看多",
+      "reason": "Intel後段封裝良率達90%可量產，市場上MTK、Google、Intel英米相關標的都非常強勢，整個族群一起動"
+    },
+    {
+      "name": "CPU相關供應鏈",
+      "stance": "看多",
+      "reason": "Meta簽大單採購AWS Graviton5，CPU供不應求，台系CPU相關供應鏈全部動起來，連消費級CPU Chain也開始動"
+    },
+    {
+      "name": "光通訊",
+      "stance": "中立",
+      "reason": "禮拜一台積電強勢時中小股崩跌，一堆光通訊出現跌停，但禮拜二台積電不再進攻後中小又轉強，屬於資金輪動下的波動"
+    },
+    {
+      "name": "AI手機/消費設備",
+      "stance": "看空",
+      "reason": "OpenAI與立訊合作的AI手機，認為要取代iPhone很難，立訊品質與鴻海有差距，前有AiPin失敗案例，手機使用習慣很難改變，市場小作文算的數字不可信"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "載板廠/載板端",
+      "interpretation": "ABF/BT基板製造商，這集特指為Intel EMIB封裝供應載板的廠商",
+      "stance": "僅提及",
+      "quote": "因為很多人是從載板端這邊去Check，因為它的載板是要去做它的英米封裝嘛，那載板這邊因為蠻多的分析師或是一些買方，他們都有辦法直接透過台系或是像日系的一些載板廠商，然後去確認到說它其實for Intel的載板目前他們是在買電容的那一塊這個良率是不太好",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "台系載板大廠，股癌提到分析師透過台系載板廠商確認Intel載板良率資訊"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "台系載板大廠，與Intel封裝供應鏈相關"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "台系載板廠商，可能涉及Intel EMIB載板供應"
+        }
+      ]
+    },
+    {
+      "term": "韓國的三口",
+      "interpretation": "韓國三星電機（Samsung Electro-Mechanics），被動元件大廠",
+      "stance": "看多",
+      "quote": "如果說你去觀察一下海外的被動元件包含我們跟大家提的日本的這個幾大有名的被動元件公司，或是像是韓國的三口是直接整個射出去",
+      "candidates": [
+        {
+          "name": "Samsung Electro-Mechanics",
+          "ticker": null,
+          "market": "其他",
+          "reason": "股癌提到韓國被動元件公司直接射出去，三星電機是韓國最大的被動元件（MLCC）製造商，語音辨識將「三星」聽成「三口」"
+        }
+      ]
+    },
+    {
+      "term": "玉三家",
+      "interpretation": "此處在CPU段落指Intel、ARM、AMD三大CPU廠商",
+      "stance": "僅提及",
+      "quote": "除了這個玉三家，就蠻多人家手上都會買，你如果你要買CPU的話，可能就Intel、ARM然後跟AMD",
+      "candidates": [
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "market": "US",
+          "reason": "股癌在CPU討論中直接說明玉三家就是Intel、ARM、AMD"
+        },
+        {
+          "name": "ARM Holdings",
+          "ticker": "ARM",
+          "market": "US",
+          "reason": "股癌直接點名CPU三家之一"
+        },
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "market": "US",
+          "reason": "股癌直接點名CPU三家之一"
+        }
+      ]
+    },
+    {
+      "term": "英米/EMIB",
+      "interpretation": "Intel的EMIB（Embedded Multi-die Interconnect Bridge）封裝技術",
+      "stance": "看多",
+      "quote": "Intel在後段的封裝Assembly這邊它的良率已經有拉到90%了...因為它的載板是要去做它的英米封裝嘛...如果你英米產出來的狀況是不錯，你的市場的表現是好的話，那有機會會不會有其他客戶也跑來",
+      "candidates": [
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "market": "US",
+          "reason": "EMIB是Intel自家的封裝技術，股癌認為良率達90%是重大正面發現"
+        }
+      ]
+    },
+    {
+      "term": "力訊/立訊",
+      "interpretation": "立訊精密（Luxshare），中國EMS代工廠，OpenAI AI手機的製造夥伴",
+      "stance": "中立",
+      "quote": "OpenAI跟立訊精密要去做所謂的原生AI消費設備...它的夥伴是力訊，然後這個力訊呢嚴格上來說它跟鴻海比起來那個等級還是有差啦，所以那個品質要直接去挑戰到iPhone我覺得是比較困難",
+      "candidates": [
+        {
+          "name": "立訊精密",
+          "ticker": null,
+          "market": "其他",
+          "reason": "股癌明確提到OpenAI與立訊精密合作做AI手機，語音辨識將立訊聽成力訊，認為其品質與鴻海有差距"
+        }
+      ]
+    },
+    {
+      "term": "消費級的CPU Chain也動起來",
+      "interpretation": "消費級CPU相關供應鏈，市場在賭伺服器CPU排擠消費級產能的故事",
+      "stance": "中立",
+      "quote": "蠻有趣的是一些消費級的CPU Chain也動起來，這個我覺得它是有點像是在賭...Intel他已經有在他的會議裡面有明白的表示說總之就是他們要把他的產能輸出給就是以這個伺服器為主，所以有機會就是在消費級這邊會產生一些排擠的現象",
+      "candidates": [
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "market": "US",
+          "reason": "股癌提到Intel在電話會議中表示要將產能優先給伺服器，可能排擠消費級"
+        }
+      ]
+    },
+    {
+      "term": "姚池金母/搖池基姆",
+      "interpretation": "指近期台股非常紅的主動型ETF經理人或其管理的ETF產品",
+      "stance": "中立",
+      "quote": "最近搖池基姆這類主動型ETF還是紅到發紫...老實說以台股的狀態來講像今年非常紅的是主動型ETF嘛",
+      "candidates": []
+    }
+  ],
+  "episode_title": "EP657 | 🐫",
+  "analyzed_at": "2026-04-29T17:35:49.093762",
+  "transcript_chars": 22187
+}
