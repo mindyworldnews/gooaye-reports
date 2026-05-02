@@ -1,0 +1,330 @@
+{
+  "summary": "股癌本集討論五月行情展望，認為四月漲勢過於瘋狂，預期後續將出現像樣的回檔。重點分析了AI時代軟體股的投資邏輯，包括Atlassian、Cloudflare、CrowdStrike、Palantir、Salesforce等公司的前景判斷，並深入討論台積電先進封裝與聯發科、Google TPU（5921/5922）的後段封裝路線選擇，以及聯發科（發哥）法說後市場對其ASIC業務的樂觀預期。",
+  "macro_views": [
+    {
+      "topic": "五月台股行情展望",
+      "view": "四月漲勢太瘋狂，預期後續會有像樣的回檔出現，時間點不確定（五月初到六月中都有可能），提醒投資人做好準備",
+      "stance": "看空"
+    },
+    {
+      "topic": "AI對軟體產業的影響",
+      "view": "市場過度悲觀地認為SaaS會被AI取代，但Atlassian等公司財報證明seat數仍在擴張。具備深度整合、顧問性質、客戶數據綁定的軟體公司較難被取代，coding速度變快不代表軟體工程師不需要",
+      "stance": "中立"
+    },
+    {
+      "topic": "美國科技巨頭（Google、微軟）前景",
+      "view": "過去市場擔心巨頭花大錢做模型卻無法回收、軟體層面被競爭，但財報數字證明AI確實在幫這些公司賺錢、帶來新產品線機會，之前的悲觀論述是bullshit",
+      "stance": "看多"
+    },
+    {
+      "topic": "記憶體產業基本面",
+      "view": "從美光、Sandisk到蘋果法說都交叉驗證記憶體缺貨至2027、合約價Q2/Q3仍有上漲空間，基本面沒問題，但台灣記憶體股因題材太多導致資金分散、股價反應偏慢",
+      "stance": "看多"
+    },
+    {
+      "topic": "台灣經濟與股市資金面",
+      "view": "台灣經濟成長率回到前段班，題材太多反而導致部分族群股價走不出去，因為市場有太多選擇",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "引用黃仁勳訪問觀點，GPU與ASIC並存、晶片整體供不應求，Google/Amazon仍是NVIDIA大客戶，不存在誰取代誰的問題",
+      "quote": "晶片整體是供不應求的 所以並沒有誰會把誰踩掉這樣子的一個劇本在短期內會發生...他們自己本身都還是輝達的大客戶"
+    },
+    {
+      "name": "Palantir",
+      "ticker": "PLTR",
+      "market": "US",
+      "stance": "看多",
+      "reason": "具備硬體結合、催值整合、大量FDE部署的knowhow，AI時代反而讓其顧問式商業模式成為利多，因為需要大量人力處理客戶數據，AI短時間難以取代",
+      "quote": "像以前大家去嘴Palantir是喜歡去嘴它說啊它根本就不是軟體公司它是一個顧問公司...沒有想到在AI時代反而這樣子的一個商業模式變成是一個利多"
+    },
+    {
+      "name": "Cloudflare",
+      "ticker": "NET",
+      "market": "US",
+      "stance": "看多",
+      "reason": "列為AI時代較難被搞到的三家軟體公司之一，屬於股癌自己喜歡且認為在AI時代有防禦性的持股",
+      "quote": "像剛剛前面我自己喜歡的這三家公司我就覺得說他們比較屬於說就是在AI時代應該是比較難以被搞到的東西"
+    },
+    {
+      "name": "CrowdStrike",
+      "ticker": "CRWD",
+      "market": "US",
+      "stance": "看多",
+      "reason": "列為AI時代較難被搞到的三家軟體公司之一，多次在Anthropic產品發表會後出來闢謠表示AI是工具而非威脅",
+      "quote": "像是Palantir的那個Alex Carp然後跟這個Cloudflare或是說Cloudstrike也多次在像前面Anthropic的產品發表會之後然後就出來去闢謠說這些東西其實對我們來講它是我們的工具"
+    },
+    {
+      "name": "Atlassian",
+      "ticker": "TEAM",
+      "market": "US",
+      "stance": "中立",
+      "reason": "不是股癌持股也不會持有，但財報意外優於預期、seat數呈expansion而非縮減，打臉SaaS末日論。公司老闆早就說沒那麼慘但市場不信，結果財報證明",
+      "quote": "Alessian的財報...它意外的繳出很多讓大家嚇到的數據...它的那個seed是expansion的...大家都說SARSpocalypse那這些SARS的seed都會縮掉...結果他交出了一個財報"
+    },
+    {
+      "name": "Salesforce",
+      "ticker": "CRM",
+      "market": "US",
+      "stance": "中立",
+      "reason": "Benioff是厲害的創辦人且會談地，已導入AgentForce和Headless架構轉型，David Sachs提到Founder掌舵的公司在快速變動時代較有優勢，可能在下一波輪動中帶出機會",
+      "quote": "Salesforce這樣子的公司它其實沒有到慘這邊已經算是我自己心目中的Neutral...Benioff我覺得他是一個厲害的創辦人那特別是也很會談地"
+    },
+    {
+      "name": "Adobe",
+      "ticker": "ADBE",
+      "market": "US",
+      "stance": "看空",
+      "reason": "初階應用被AI生圖工具搶走客戶，估值被打壓合理，但專業客製化應用仍有空間。股癌認為用戶一定會掉一些，價格被壓下去合理，但跌到夠便宜時可能會是機會",
+      "quote": "Adobe我自己心中也覺得說它有機會會BBQ...確實是在一些比較初階的應用上就全部都被AI拿走了...我認為說他們可能價格被壓下去是還蠻合理的"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "討論先進封裝CoWoS產能與Google TPU後段封裝路線，前台積高層加入聯發科可能增加後段留在台積電的機率。TPU 5921的CoWoS從40K拉到150-180K",
+      "quote": "5921目前我們看得到的數字是他在這個先進封裝的Cohost這邊一開始是一個40K然後到隔一年是會直接拉到...大概是落在150到180K之間"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "法說後市場極度樂觀，從手機論述轉成AI後市場非常買單，有券商報告EPS喊到近400。股癌認為偏樂觀但打八折也有機會到，ASIC市佔率2027年預估10-15%",
+      "quote": "發哥自己預估在27年ASIC的市佔率會拉到10到15%...有些券商報告就都直接敢這樣子寫了...我們本來在心目中覺得是很誇張的劇本結果竟然有券商報告敢把它寫出來"
+    },
+    {
+      "name": "Intel",
+      "ticker": "INTC",
+      "market": "US",
+      "stance": "中立",
+      "reason": "EMIB良率意外不錯、股價噴到看不懂，但過去常在關鍵節點出包。股癌已持有但不會加碼，甚至想找機會賣出",
+      "quote": "Intel最近老實講也是噴到我自己已經是有點那種看不懂的狀態就是不可能再去做加碼甚至會想要去把它找到機會要開始丟出來"
+    },
+    {
+      "name": "Google (Alphabet)",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "財報數字打臉之前的悲觀論述，TPU外銷是Cloud策略一環，Search被取代論在股價轉強後不攻自破",
+      "quote": "像Google轉強我相信就不會有人這樣子講了就像可能前陣子大家講說Google Search沒有人會用那因為那時候它在跌嘛"
+    },
+    {
+      "name": "微軟",
+      "ticker": "MSFT",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提及過去市場不看好Google和微軟因為AI模型競爭燒錢且軟體可能被取代，但財報證明這些擔憂是過度的",
+      "quote": "蠻多人講說就手上不要去拿Google跟不要去拿微軟的一個主因是因為他們本身就是一個就是AI的模型夠強大之後可能可以取代它軟體的其中一個對象"
+    },
+    {
+      "name": "美光",
+      "ticker": "MU",
+      "market": "US",
+      "stance": "看多",
+      "reason": "在記憶體討論中提到美光在下雪時被看空、喊破底做頭，結果直接驚喜噴漲，作為記憶體基本面好的佐證",
+      "quote": "你看一下那個前面的眉光也是在下雪的時候一堆人說什麼破底做頭就直接驚喜屌噴"
+    },
+    {
+      "name": "蘋果",
+      "ticker": "AAPL",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "蘋果電話會議中提到後面幾季記憶體成本會持續上漲，作為記憶體缺貨的交叉驗證",
+      "quote": "在可能最新的這個蘋果的電話會議也再次跟你講那後面的幾個Q記憶體的成本就是有機會會跑到大家看得到的一個樣子"
+    },
+    {
+      "name": "研華",
+      "ticker": "2395",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "在邊緣運算討論中提到之前被稱為「邊緣人股票」但後來股價動起來",
+      "quote": "你就是前面那個跑來問我那個研華的那個嗎研華跟元太然後我直接說邊緣人股票結果後來這兩個黨媽直接給我動起來"
+    },
+    {
+      "name": "元太",
+      "ticker": "8069",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "與研華一起被提到是「邊緣人股票」，之後股價動起來",
+      "quote": "研華跟元太然後我直接說邊緣人股票結果後來這兩個黨媽直接給我動起來"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "SaaS/軟體股",
+      "stance": "中立",
+      "reason": "市場過度悲觀認為AI會取代SaaS，但Atlassian財報打臉。具備深度整合、客戶數據綁定的軟體公司（Cloudflare、CrowdStrike、Palantir）在AI時代有防禦性，下一波輪動可能由軟體股帶出"
+    },
+    {
+      "name": "記憶體",
+      "stance": "看多",
+      "reason": "缺貨到2027、合約價Q2/Q3持續上漲、蘋果法說確認成本壓力，各方交叉驗證基本面好。但台灣記憶體股因市場題材太多導致股價反應偏慢"
+    },
+    {
+      "name": "ASIC晶片",
+      "stance": "看多",
+      "reason": "GPU與ASIC並存而非互相取代，聯發科法說預估2027年ASIC市佔10-15%，券商甚至喊更高，AI晶片整體供不應求"
+    },
+    {
+      "name": "先進封裝",
+      "stance": "看多",
+      "reason": "台積電CoWoS產能持續擴張，Google TPU 5921從40K拉到150-180K，前台積封裝大將加入聯發科可能讓更多後段留在台積電體系"
+    },
+    {
+      "name": "邊緣運算",
+      "stance": "中立",
+      "reason": "方向合理（低延遲、省流量），但近期沒有特別的催化劑。AIPC被證明華而不實，Google TPU外銷給客戶自建機房算某種程度的邊緣運算，未來界線會越來越模糊"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "老黃",
+      "interpretation": "NVIDIA CEO 黃仁勳（Jensen Huang），本集大量引用其最新訪問內容",
+      "stance": "看多",
+      "quote": "今天早上的時候我看到一個NVIDIA Jensen Huang的訪問...老黃今天去做一個這個校正回歸然後讓大家稍微的震驚一點我覺得這個是好事情",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "逐字稿明確提到「NVIDIA Jensen Huang的訪問」，後續多次以「老黃」稱呼，討論其對AI取代工作的看法、coding需求不會消失等觀點"
+        }
+      ]
+    },
+    {
+      "term": "發哥",
+      "interpretation": "聯發科（MediaTek），台股投資人對聯發科的常見暱稱",
+      "stance": "看多",
+      "quote": "注意到發哥自己預估在27年ASIC的市佔率會拉到10到15%...發哥真的在過去一陣子是已經漲了很多了...從可能本來手機的一個論述轉成AI之後市場非常的買單",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "逐字稿提到「發哥的法說內容」、「MediaTek這邊」、ASIC市佔率預估、手機轉AI論述，明確指向聯發科"
+        }
+      ]
+    },
+    {
+      "term": "GG",
+      "interpretation": "台積電（TSMC），台股投資人常用暱稱",
+      "stance": "看多",
+      "quote": "聯發科後面他想要在GG這邊去獲得更多的產能吧想要去有更多封裝的結合之類",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "前後文討論聯發科要在台積電獲得更多封裝產能，GG是台積電的常用代稱，且逐字稿中同時提到TSM（台積電美股代號）"
+        }
+      ]
+    },
+    {
+      "term": "5921/5922",
+      "interpretation": "Google TPU晶片代號，5921為現行版本（V8），5922為下一代（V9/Humifish）",
+      "stance": "看多",
+      "quote": "TPU的那兩顆大家應該已經倒背乳流...反正就是V8跟V9那一個是叫5921一個是叫5922...5921目前我們看得到的數字是他在這個先進封裝的Cohost這邊一開始是一個40K然後到隔一年是會直接拉到...150到180K之間",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "5921前段後段都在台積電做，5922前段在台積電、後段路線未定（台積電CoWoS或Intel EMIB），討論核心是封裝訂單歸屬"
+        },
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "market": "US",
+          "reason": "5922的後段可能跑到Intel的EMIB，但良率和過去出包歷史讓市場擔憂，Google有backup plan"
+        },
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "聯發科是Google TPU的ASIC設計夥伴，前台積封裝大將加入聯發科與5922後段封裝路線選擇直接相關"
+        }
+      ]
+    },
+    {
+      "term": "眉光",
+      "interpretation": "美光（Micron），語音辨識將「美光」誤聽為「眉光」",
+      "stance": "看多",
+      "quote": "你看一下那個前面的眉光也是在下雪的時候一堆人說什麼破底做頭就直接驚喜屌噴",
+      "candidates": [
+        {
+          "name": "Micron（美光）",
+          "ticker": "MU",
+          "market": "US",
+          "reason": "上下文在討論記憶體股，提到「下雪時被看空、破底做頭、結果驚喜噴漲」，完全符合美光近期走勢"
+        }
+      ]
+    },
+    {
+      "term": "Alessian",
+      "interpretation": "Atlassian（TEAM），語音辨識將公司名稱拼寫錯誤",
+      "stance": "中立",
+      "quote": "最近看到Alessian的財報...它意外的繳出很多讓大家嚇到的數據...它的那個seed是expansion的...它算是在市場裡面跟那個CHECK一樣就是大家都覺得說你一定會死掉的東西",
+      "candidates": [
+        {
+          "name": "Atlassian",
+          "ticker": "TEAM",
+          "market": "US",
+          "reason": "討論SaaS公司財報，提到seat數expansion打臉市場悲觀預期，Atlassian是近期財報超預期的SaaS代表公司"
+        }
+      ]
+    },
+    {
+      "term": "Cohost/CoWoS",
+      "interpretation": "台積電的CoWoS（Chip on Wafer on Substrate）先進封裝技術，語音辨識誤聽",
+      "stance": "看多",
+      "quote": "5921目前我們看得到的數字是他在這個先進封裝的Cohost這邊一開始是一個40K...一條線其實就還是會想要留在Cohost或是說Cohost裡面去做",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "CoWoS是台積電獨有的先進封裝技術，逐字稿討論Google TPU在CoWoS的產能從40K拉到150-180K"
+        }
+      ]
+    },
+    {
+      "term": "e-MIB/e-MIBT",
+      "interpretation": "Intel的EMIB（Embedded Multi-die Interconnect Bridge）封裝技術",
+      "stance": "中立",
+      "quote": "走到5922也就是Humifish的時候呢那目前的一個共識是他的前段會在台積電那邊做那可是他的後段呢就會跑到Intel的e-MIB那邊去做",
+      "candidates": [
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "market": "US",
+          "reason": "EMIB是Intel的封裝技術，逐字稿討論Google TPU 5922後段可能採用Intel EMIB，但良率問題是市場關注焦點"
+        }
+      ]
+    },
+    {
+      "term": "聯聯五靈",
+      "interpretation": "0050（元大台灣50 ETF）或類似的大盤型ETF，語音辨識可能誤聽「零零五零」",
+      "stance": "僅提及",
+      "quote": "就算你沒有在做交易的人只是把部位放在可能聯聯五靈啊台積電什麼的那大家的成績都是非常的好",
+      "candidates": [
+        {
+          "name": "元大台灣50",
+          "ticker": "0050",
+          "market": "ETF",
+          "reason": "上下文說「沒有在做交易的人只是放著」搭配台積電，0050是最常見的被動投資標的，語音辨識可能將「零零五零」聽成「聯聯五靈」"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP658 | 🪿",
+  "analyzed_at": "2026-05-02T17:36:06.243329",
+  "transcript_chars": 22881
+}
