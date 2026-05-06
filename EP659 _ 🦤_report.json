@@ -1,0 +1,344 @@
+{
+  "summary": "本集股癌主要討論被動元件產業供需趨緊的趨勢驗證（國巨AI事實大會、新倉店交期拉長），以及CPU/ASIC類股成為市場當紅主題（AMD法說上修Server CPU、聯發科大漲）。他也提到目前維持高槓桿搭行情，但會在出現長黑K時調整，並開始思考下一階段可能輪動到被AI排擠而超跌的優質軟體股（如CrowdStrike、Palantir、Cloudflare）。",
+  "macro_views": [
+    {
+      "topic": "台股大盤估值與走勢",
+      "view": "大盤已到四萬點，斜率極高，短期可能需要盤整，但回檔後應很快反彈。之前估算TSM的2027 EPS可支撐四萬點，現在已到，五萬點還算不到，維持且戰且走的態度。",
+      "stance": "中立"
+    },
+    {
+      "topic": "券商晴天收傘/市場槓桿警訊",
+      "view": "台灣人大量借錢炒股，券商已開始限縮信用額度，這是過熱訊號，提醒大家要小心，知足常樂。",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI對軟體產業的衝擊",
+      "view": "企業確實將IT預算轉向AI伺服器，部分軟體公司受害，但不能一竿子打翻所有軟體股。財務數字好的軟體公司可能是被錯殺，後面有翻轉機會。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "陳泰明舉辦AI事實大會帶動股價，被動元件供需趨緊驗證了過去幾個月的產業判斷。",
+      "quote": "Pierre Chen也就是國巨的陳董陳泰明他搞了一個AI事實大會，然後在上面大吹猛吹一頓，那整個這個國巨走起來嘛，那相關的一些被動元件都全體的轉強"
+    },
+    {
+      "name": "新倉店（新唐）",
+      "ticker": "4919",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "出貨交期拉長通知信，市場解讀為後續可能漲價，直接漲停。",
+      "quote": "今天也看到新倉店有一個這個出貨交期拉長的通知信，他並不是一個漲價信，可是市場就很買單，就直接給他一個漲停"
+    },
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "market": "US",
+      "stance": "看多",
+      "reason": "法說會上修Server CPU TAM至120B、年增>35%，有信心拿下Server CPU超過50% market share，AI Data Center營收2027年達tens of billions。",
+      "quote": "AMD這邊在法說會有一些重大的訊號，包含說他們去上修了Server CPU...從原本的一個估算調到2023年他們是估120B年增是大於35%...有信心可以拿下Server CPU超過50%的一個Market Share"
+    },
+    {
+      "name": "Intel",
+      "ticker": "INTC",
+      "market": "US",
+      "stance": "看多",
+      "reason": "法說中提到Agentic AI跟推理工作負載結構性推升CPU需求，呼應CPU產業趨勢。",
+      "quote": "也呼應到Intel法說裡面所說到，就是Agentic AI跟Twiddly的工作負載，結構性的推升了CPU的一個需求"
+    },
+    {
+      "name": "創意",
+      "ticker": "3443",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "與Google高度相關的ASIC，Google Chain動起來時已提早反映。",
+      "quote": "GUC啦3443那個算是大家都已經知道，因為它跟Google高度相關嘛，所以當Google在動Google Chain在動起來的時候，它已經提早動起來"
+    },
+    {
+      "name": "世芯-KY",
+      "ticker": "3661",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "高度綁定Amazon的Trainium，今天直接漲停。雖然之前覺得是老飯新炒，但股價表態後還是追回來買了。",
+      "quote": "LCHIP就3661也是直接漲停的，那3661的故事是比較綁定應該說高度綁定Amazon的Trenium...我就直接開始學狗叫因為我還是買啦"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "今年最大意外，多根漲停拉到3000多塊，但認為已充分預期後面狀態，不會再加大部位。市場預估打太滿，目前主要做IO和Memory Buffer，尚未看到在Mainchip有東西。",
+      "quote": "聯發科可能算是我今年最大的一個意外啦...MediaTek一次反映到3000多塊去的話不知道在我心中就會覺得說它算是非常充分的已經先去預期後面的一些狀態了"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "中立",
+      "reason": "GPU老大停下來盤整，讓其他零組件和小弟們發揮。除了GPU比較沒有利器之外其他都在動。",
+      "quote": "老大NV是停下來在那邊，然後讓其他小弟們或是各種零組件可以去做發揮"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "在AI category中與NVIDIA一樣耀眼，但交易在便宜的估值（20倍左右），相較光通訊股交易在兩三年後100倍，顯得非常便宜。",
+      "quote": "台積電他嚴格上來說在整個AI的category裡面其實他跟NVIDIA一樣他們都是屬於說在業界非常耀眼的存在但他們卻是交易在一個便宜的數字"
+    },
+    {
+      "name": "Palantir",
+      "ticker": "PLTR",
+      "market": "US",
+      "stance": "看多",
+      "reason": "財報開出後提到No AI Slop Zone概念，FDE扮演降低AI垃圾資訊的角色。雖然股價仍在水下，但相較其他跌40-70%的軟體股，撐得住。",
+      "quote": "Palantir他開了一個財報...他們現在要去搞一個類似說No AI Slop Zone...像我們節目去提到自己喜歡的Crossfire或是Parentier...它可能是已經跌掉40%、50%甚至是有跌掉60%、70%的那他們是相對撐得住的"
+    },
+    {
+      "name": "CrowdStrike",
+      "ticker": "CRWD",
+      "market": "US",
+      "stance": "看多",
+      "reason": "股癌特別喜歡的軟體股之一，相較其他軟體股跌幅大，撐得住，如果財務數字持續OK，後面可能有機會。",
+      "quote": "我特別喜歡的Crossfire或是Parentier或是這個Cloudflare就是他們在過去一陣子其實像Early Today有兩家是正的"
+    },
+    {
+      "name": "Cloudflare",
+      "ticker": "NET",
+      "market": "US",
+      "stance": "看多",
+      "reason": "股癌特別喜歡的軟體股之一，相對抗跌，後面若AI排擠論述翻轉可能有機會。",
+      "quote": "我特別喜歡的Crossfire或是Parentier或是這個Cloudflare就是他們在過去一陣子其實像Early Today有兩家是正的"
+    },
+    {
+      "name": "環球晶",
+      "ticker": "6488",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "矽晶圓週期應該開始要上去了，但目前排在二軍，不是首選。昨天法說講的不是特別好。",
+      "quote": "環球晶雖然昨天講的不是特別好，但整體來看就是戲精元的一個週期應該開始要上去了，只是這就不會是首選它是排在後面的一個選擇"
+    },
+    {
+      "name": "世界先進",
+      "ticker": "5347",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "成熟製程廠房還沒蓋好東西就賣掉了，利用率超高，但不是首選，排在二軍。",
+      "quote": "Vanguard就是世界先進，世界先進它在最近的一次對外的說法也是顯示了它一些廠房它是在做那個成熟製程的...它可能還沒有蓋好然後東西都賣掉了它的那個利用率也是超級高的"
+    },
+    {
+      "name": "訊芯-KY",
+      "ticker": "6451",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "聽眾提到一買就跌30%，但股癌認為有底子和題材兜底，買貴幾十塊是小事。",
+      "quote": "唯一買的台股6451一買就跌30%，不過我覺得還好，感覺有底子和題材兜底，那如果最終爆噴的話買貴幾十塊小事情"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "被動元件（MLCC、鋁電容、鉭電容等）",
+      "stance": "看多",
+      "reason": "供需越來越緊，特別是高階貨超級緊。國巨AI大會、新唐交期拉長都是驗證。高階貨由三星電機、村田主導，台系受惠於訂單排擠效應。類似2017-2018的缺貨敘事但不一定會重演同等級行情。"
+    },
+    {
+      "name": "CPU相關（Server CPU）",
+      "stance": "看多",
+      "reason": "AMD上修Server CPU TAM、Intel法說確認Agentic AI推升CPU需求，CPU已成為市場當紅炸子雞。幾個月前沒人看好CPU，現在已是核心主題。"
+    },
+    {
+      "name": "ASIC",
+      "stance": "看多",
+      "reason": "台股ASIC全面動起來，創意（Google）、世芯（Amazon）都漲停。大市值ASIC只交易在30倍左右，相較光通訊交易在100倍顯得便宜。"
+    },
+    {
+      "name": "光通訊",
+      "stance": "中立",
+      "reason": "過去噴很兇但最近開始回檔，有些光通訊股交易在兩三年後的100倍，估值偏高。"
+    },
+    {
+      "name": "SaaS/軟體股",
+      "stance": "看多",
+      "reason": "被AI排擠論述打壓，很多跌40-70%，但財務數字好的可能是錯殺。目前不會介入，等手上一軍標的軟掉橫盤後，可能會輪動過去。類似CPU在轉強前也沒人看好。"
+    },
+    {
+      "name": "工業電腦",
+      "stance": "看空",
+      "reason": "採購議價能力不如五哥十哥，料拿不贏人家，記憶體和板子都變貴，做Server但財務狀況後面有機會爆雷。"
+    },
+    {
+      "name": "矽晶圓",
+      "stance": "中立",
+      "reason": "週期應該開始要上去了，但排在二軍，不是當前首選。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "新倉店",
+      "interpretation": "語音辨識誤認，根據上下文（出貨交期拉長通知信、漲停、被動元件脈絡），最可能指被動元件相關廠商",
+      "stance": "看多",
+      "quote": "今天也看到新倉店有一個這個出貨交期拉長的通知信，他並不是一個漲價信，可是市場就很買單，就直接給他一個漲停，但出貨的交期拉長當然就可能代表說後面就有機會會看到一些漲價的可能性",
+      "candidates": [
+        {
+          "name": "信昌電",
+          "ticker": "6173",
+          "market": "TW",
+          "reason": "信昌電是被動元件廠（鋁質電解電容），且名稱發音接近「新倉店」（信昌電），在被動元件交期拉長的脈絡下吻合，且當天確實有漲停表現"
+        }
+      ]
+    },
+    {
+      "term": "戲精元",
+      "interpretation": "語音辨識誤認，結合前後文提到「環球晶」和「矽晶圓週期」，指的是矽晶圓（silicon wafer）產業",
+      "stance": "中立",
+      "quote": "像那個戲精元 環球晶雖然昨天講的不是特別好，但整體來看就是戲精元的一個週期應該開始要上去了，只是這就不會是首選它是排在後面的一個選擇",
+      "candidates": [
+        {
+          "name": "環球晶",
+          "ticker": "6488",
+          "market": "TW",
+          "reason": "逐字稿直接提到環球晶，且討論矽晶圓週期開始上行"
+        },
+        {
+          "name": "台勝科",
+          "ticker": "3532",
+          "market": "TW",
+          "reason": "台勝科為矽晶圓廠，與環球晶同屬矽晶圓族群"
+        },
+        {
+          "name": "合晶",
+          "ticker": "6182",
+          "market": "TW",
+          "reason": "合晶為矽晶圓廠，同屬矽晶圓週期受惠標的"
+        }
+      ]
+    },
+    {
+      "term": "五哥十哥",
+      "interpretation": "指台灣主要的伺服器/代工大廠（如廣達、緯創、英業達等），因採購規模大有議價能力，做AI伺服器即便毛利不高也能持續賺錢",
+      "stance": "僅提及",
+      "quote": "所以那些五哥十哥他去做AI伺服器即便那個毛利數字沒有這麼高可是他至少可以確保就一直賺錢，那你那種採購利益沒有人家強的你現在又要去買那種貴聲聲的記憶體然後現在板子又變貴",
+      "candidates": [
+        {
+          "name": "廣達",
+          "ticker": "2382",
+          "market": "TW",
+          "reason": "廣達為台灣AI伺服器代工龍頭，是五哥之一"
+        },
+        {
+          "name": "緯創",
+          "ticker": "3231",
+          "market": "TW",
+          "reason": "緯創為AI伺服器代工大廠，是五哥之一"
+        },
+        {
+          "name": "英業達",
+          "ticker": "2356",
+          "market": "TW",
+          "reason": "英業達為伺服器代工廠，是五哥之一"
+        },
+        {
+          "name": "仁寶",
+          "ticker": "2324",
+          "market": "TW",
+          "reason": "仁寶為代工大廠，是五哥之一"
+        },
+        {
+          "name": "和碩",
+          "ticker": "4938",
+          "market": "TW",
+          "reason": "和碩為代工大廠，是五哥之一"
+        }
+      ]
+    },
+    {
+      "term": "Crossfire",
+      "interpretation": "語音辨識誤認CrowdStrike為Crossfire，根據上下文提到自己喜歡的軟體股，與Palantir、Cloudflare並列",
+      "stance": "看多",
+      "quote": "我特別喜歡的Crossfire或是Parentier或是這個Cloudflare就是他們在過去一陣子其實像Early Today有兩家是正的只是它Parentier還是負的還是在水下",
+      "candidates": [
+        {
+          "name": "CrowdStrike",
+          "ticker": "CRWD",
+          "market": "US",
+          "reason": "CrowdStrike是股癌長期喜歡的資安軟體股，發音接近Crossfire，且與Palantir、Cloudflare並列為他偏好的軟體標的"
+        }
+      ]
+    },
+    {
+      "term": "光通",
+      "interpretation": "光通訊族群，股癌提到過去噴很兇但最近開始回檔，有些交易在兩三年後100倍估值",
+      "stance": "中立",
+      "quote": "就像過去噴很兇的一些光通最近開始出現一些回檔，而這些光通股其實有些是交易在兩三年後的100倍，簡單來說市場都願意去買這種東西了",
+      "candidates": [
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "光通訊族群代表廠商，近期漲幅大"
+        },
+        {
+          "name": "華星光",
+          "ticker": "4979",
+          "market": "TW",
+          "reason": "光通訊族群，近期估值被拉高"
+        },
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "光通訊族群，本集聽眾留言也提到6451"
+        }
+      ]
+    },
+    {
+      "term": "NICN",
+      "interpretation": "語音辨識可能誤認，根據上下文提到「市場本來認為你就是死定了」、「被AI排擠」但財務數字顛覆想像，可能指某家被認為會被AI取代但業績仍好的軟體公司",
+      "stance": "看多",
+      "quote": "像我們上次有稍微的提一下NICN即便這家公司並不是自己有在觀察或是有佈局的東西，可是它開出來的數字是顛覆市場想像的，因為市場本來認為說你就是死定了",
+      "candidates": [
+        {
+          "name": "Nice Ltd",
+          "ticker": "NICE",
+          "market": "US",
+          "reason": "NICE是企業軟體公司（客服/聯絡中心解決方案），過去被認為會被AI取代，但若財報數字好則可能是錯殺，發音接近NICN"
+        }
+      ]
+    },
+    {
+      "term": "正美、三太四",
+      "interpretation": "語音辨識可能有誤，股癌提到新櫃股票中有買在很便宜位置但後來噴出去的例子",
+      "stance": "僅提及",
+      "quote": "像那個正美正美有買超級便宜的或是說三太四也買超級便宜的可是後來整個噴出去的時候那個部位一定都是慢慢地降低嘛",
+      "candidates": [
+        {
+          "name": "無法確認",
+          "ticker": null,
+          "market": "TW",
+          "reason": "語音辨識模糊，無法從上下文確認具體標的，可能是興櫃/上櫃的被動元件或CPU相關個股"
+        }
+      ]
+    },
+    {
+      "term": "春田",
+      "interpretation": "語音辨識誤認，指日本被動元件大廠村田製作所（Murata），在高階MLCC市場為全球龍頭",
+      "stance": "僅提及",
+      "quote": "高階貨的話台系可能就不一定碰得到，就是要把麥克風交給不管是韓國的三星電機然後或者是在日本的春田他們是老大",
+      "candidates": [
+        {
+          "name": "Murata Manufacturing（村田製作所）",
+          "ticker": "6981",
+          "market": "其他",
+          "reason": "日本被動元件龍頭，與三星電機並列為高階MLCC領導廠商，「春田」為村田的語音辨識誤認"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP659 | 🦤",
+  "analyzed_at": "2026-05-06T17:36:23.564561",
+  "transcript_chars": 23102
+}
