@@ -1,0 +1,278 @@
+{
+  "summary": "本集股癌主要討論被動元件（MLCC、鋁電容、電阻、電感）的漲價循環，認為供需失衡將持續擴大，並分析了Google TPU晶片（Block/Sunfish）的下一代發展對載板產業的影響。同時分享了對當前市場多頭輪動的看法，認為回檔屬健康修正而非崩盤，強勢族群仍在，老AI題材未來仍有機會。",
+  "macro_views": [
+    {
+      "topic": "台股大盤走勢",
+      "view": "目前的修正是多頭市場中的正常輪動與漲多拉回，不認為是全面崩盤。只要市場中還有強勢股存在，就不需過度悲觀。資金輪動是健康的，比萬物齊漲更讓人放心。",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI投資持續性",
+      "view": "唯一會讓市場出大事的情境是AI投資突然停止，但目前沒有看到這個跡象。這是所有半導體/元件題材的共同弱點。",
+      "stance": "看多"
+    },
+    {
+      "topic": "通膨與資產效應",
+      "view": "整體經濟成長與通膨環境下，投資人雖然資產增加，但購買力提升感受有限。指數投資主要是抗通膨、跟著經濟成長。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "愛普（APMEMORY）",
+      "ticker": "6531",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "以愛普為例說明，市場一度不喜歡的標的，在Google TPU成為焦點後，因其integrated passive device（埋在載板裡的電容）再次被市場關注，股價又回來了。用來說明被市場冷落的老AI標的未來仍有機會。",
+      "quote": "前陣子有聊一家公司叫APMEMORY就是愛普，那像這家公司他也是在那一段時間就不知道為什麼就市場就不喜歡他，可是後來當這個Google的TPU變成是舞台正中央的時候"
+    },
+    {
+      "name": "Astera Labs",
+      "ticker": "ALAB",
+      "market": "US",
+      "stance": "看多",
+      "reason": "用Astera Labs作為光通訊族群回檔後又噴回新高的經典案例，告訴聽眾不要因為短期回檔就放棄，強調其從100塊跌下來後又大漲的走勢值得記住。",
+      "quote": "像以前我們蠻常聊到的一家公司Astralabs...大家可以回頭看一下他跌到100塊然後現在噴到多少錢，那你要記得那個感覺就是他從上面掉下來的那一段時間大家是怎麼說他的"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "提到台積電技術論壇與光通訊的討論，認為台積電不會打擊光通廠商，市場只是短期影響。同時稱讚台積電有紀律的擴產策略，不會因客戶喊缺就大擴產，有助避免泡沫化。",
+      "quote": "台積電也是這樣子就是有紀律的擴展，它並沒有去因為美國的大客戶跟他說晶片不夠每個人都在挨說晶片不夠我就去大擴產"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "認為NVIDIA仍按自己的roadmap推進，目前這一代量產可能沒用到市場預期的某產品，但後面會出現。毛利率低谷可能只是短暫一兩季就會回升。",
+      "quote": "這個NVIDIA它其實根本就還是按照自己的roadmap在推進，它只是這一代的量產可能沒有用到本來大家認為會出來的某一個產品...毛利率的低谷就只是短暫的一兩季然後後面就會回升"
+    },
+    {
+      "name": "聯發科（MediaTek）",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "在討論Google TPU晶片代號時提到，V7/V8/V9世代中MediaTek與另一家各做一邊（Zebrafish對Sunfish），用來說明Google ASIC供應鏈的佈局。",
+      "quote": "我們知道可能在V7或是說V8 V9應該都是有MediaTek然後跟Block.com是一人去做一邊，所以就在說像這個Zebrafish對應的就是Sunfish"
+    },
+    {
+      "name": "蜜望實（通路商）",
+      "ticker": "8043",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到蜜旺時（通路商）出來表示被動元件高階料號已出現斷供情形，報價不報或交期拉長，作為被動元件供需緊張的佐證。",
+      "quote": "蜜旺時也就是說通路商有出來表示說他們已經看到這個被動元件特別一些高階料號其實就已經有出現斷供的情形，本來就是要嘛是報價就不報了要嘛就是交期可能拉得很長"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "被動元件（MLCC、鋁電容、電阻、電感）",
+      "stance": "看多",
+      "reason": "Panasonic已發漲價通知（對部分客戶），市場上大廠開始到現貨市場掃貨，通路商確認高階料號已斷供。漲價將持續延續並蔓延到Tier 2替代料廠商。目前主要廠商未大規模擴產，供需失衡將持續。判斷這是一個上升循環而非一次性事件。"
+    },
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "雖然近期股價偏軟，但認為這不是真正的軟掉，光通市場成長性極好。台積電論壇提到光通相關內容不會打擊光通廠商，那都是短期影響。未來會再回來聊光通，目前只是資金輪動暫時離開。"
+    },
+    {
+      "name": "老AI（載板、封裝等）",
+      "stance": "看多",
+      "reason": "目前市場不喜歡老AI題材，資金撤離，但產品線上仍有新故事。Google下一代晶片（大顆Sunfish，雙拼在載板上）類似蘋果Ultra晶片做法，對載板廠有新的需求。這些被市場當提款機的標的，未來仍有機會被重新拉回舞台中央。"
+    },
+    {
+      "name": "軟體股",
+      "stance": "看多",
+      "reason": "提到軟體股開始轉強，用來說明市場輪動的信號。如果利空消息出來打不下去，就代表底部已到。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "Block.com",
+      "interpretation": "指Google的自研ASIC晶片部門/產品線（TPU相關），逐字稿中討論的是Google TPU各代晶片代號（Zebrafish、Sunfish、Humufish、Icefish等魚類代號），其中一條線由MediaTek做、另一條由Block.com做。",
+      "stance": "僅提及",
+      "quote": "我們知道可能在V7或是說V8 V9應該都是有MediaTek然後跟Block.com是一人去做一邊，所以就在說像這個Zebrafish對應的就是Sunfish，然後在下一代的Humufish然後對應的那一條魚不見了",
+      "candidates": [
+        {
+          "name": "Google（Alphabet）",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "逐字稿明確討論的是Google TPU晶片的各代產品代號，Block.com是Google自研ASIC的其中一條產品線代稱"
+        }
+      ]
+    },
+    {
+      "term": "大顆的Sunfish（雙拼在載板上）",
+      "interpretation": "Google下一代TPU ASIC晶片的一個變體，將兩片晶片雙拼在一個載板（substrate）上，類似蘋果Ultra晶片的做法。這對載板廠商是新的商機。",
+      "stance": "看多",
+      "quote": "雖然可能在Sunfish之後你沒有看到阿康的下一代晶片的推出，但是應該會有一個比較大顆的Sunfish...它就是把兩片晶片去雙拼，那根據我們的判斷應該是把它拼在一個Substrate就把它拼在一個載板上面，所以它的玩法其實有一點像是蘋果的Ultra晶片",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "逐字稿提到晶片雙拼在載板上，載板廠是直接受惠者。欣興是台灣最大ABF載板廠，且股癌過去多次在老AI/載板話題中提及"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "南電為台灣主要ABF載板廠，Google TPU新設計需要更大的載板承載雙拼晶片，南電是主要供應商之一"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "景碩為載板廠之一，逐字稿明確提到載板（substrate）是這個新晶片設計的關鍵，載板廠均可能受惠"
+        }
+      ]
+    },
+    {
+      "term": "阿康",
+      "interpretation": "指Broadcom（博通），在Google TPU供應鏈中負責其中一條ASIC晶片線的設計/製造。逐字稿語境是討論Block.com（Google自研線）旁邊的另一條線少了下一代晶片。",
+      "stance": "僅提及",
+      "quote": "雖然可能在Sunfish之後你沒有看到阿康的下一代晶片的推出，但是應該會有一個比較大顆的Sunfish",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "Broadcom是Google TPU ASIC的主要設計合作夥伴，逐字稿中「阿康」的語音對應Broadcom的音譯簡稱，且上下文討論的是Google TPU兩條晶片線其中一條的代工方"
+        }
+      ]
+    },
+    {
+      "term": "老AI",
+      "interpretation": "指AI供應鏈中較早期被炒作的族群，如載板、封裝、CoWoS相關廠商，相對於近期的新題材（如被動元件、光通訊），這些是市場已經輪動過、目前被當成提款機的標的。",
+      "stance": "看多",
+      "quote": "因為我們知道說現在老AI是市場裡面大家比較是不喜歡的東西大家想要去閃躲，但只要我們持續看到在產品線上面就像載板你還是有新的故事存在",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "逐字稿中老AI與載板直接連結，提到載板有新故事（Google雙拼晶片），欣興是最具代表性的載板廠"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "載板廠為老AI的核心族群，南電是主要ABF載板供應商"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "景碩也是載板族群的一員，屬於老AI範疇"
+        }
+      ]
+    },
+    {
+      "term": "Panasonic漲價",
+      "interpretation": "日本Panasonic（松下）的被動元件部門對部分客戶發出漲價通知，作為被動元件產業漲價循環的領頭指標。Panasonic將產能轉向高階AI用料，低階料號不再願意以低價供應。",
+      "stance": "看多",
+      "quote": "這個漲價性不是對所有的客戶發，它有對部分的客戶發...這個漲價其實看起來就是勢在必行，這其實就是發生在Panasonic身上的一件事情，我就是要賣我要的價格",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "逐字稿提到Panasonic漲價後Tier 1和Tier 2替代料廠商都有機會跟漲，國巨是台灣最大被動元件廠，為直接受惠的Tier 1廠商"
+        },
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "華新科為台灣主要MLCC廠商，屬被動元件Tier 1，在Panasonic漲價帶動下有跟漲機會"
+        }
+      ]
+    },
+    {
+      "term": "光設備",
+      "interpretation": "光通訊設備相關標的，股癌提到前陣子自己有投入資金買光設備類股票，但後來資金已經移動到其他地方。",
+      "stance": "僅提及",
+      "quote": "像前陣子我自己在聊一些光設備的時候，就是因為我就是他媽車進去，那當我今天錢沒有在那，我可能重心也不會在那",
+      "candidates": [
+        {
+          "name": "京鼎",
+          "ticker": "3413",
+          "market": "TW",
+          "reason": "光通訊設備廠商，股癌過去節目中曾討論光通設備相關標的，京鼎為可能候選之一"
+        },
+        {
+          "name": "揚明光",
+          "ticker": "3504",
+          "market": "TW",
+          "reason": "光學設備廠商，但本集未提供足夠線索確認具體是哪家"
+        }
+      ]
+    },
+    {
+      "term": "玻璃機版",
+      "interpretation": "玻璃基板（glass substrate），用於取代傳統有機載板的新技術，股癌提到之前有聊過但後來沒再追蹤，被網友誤解為出貨後不聊了。",
+      "stance": "僅提及",
+      "quote": "前陣子就很煩因為我曾經跟大家聊玻璃機版，其實那時候真的就是有看到一些玻璃機版的東西，那後來我就沒有聊了，然後就有看到在一些網絡論壇就有些人會講說你看他一定是出完貨了",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "欣興有投入玻璃基板技術開發，為台灣載板廠中最積極布局玻璃基板的公司"
+        }
+      ]
+    },
+    {
+      "term": "衛星",
+      "interpretation": "低軌衛星相關族群，股癌提到年初有聊過衛星且仍然看好，但交易已經move on到新族群。",
+      "stance": "看多",
+      "quote": "像我們可能在年初的時候聊衛星嘛，你說衛星到現在有沒有不看好，沒有，絕對都是看好，可是我們的交易也是會move on，我們會去找新的族群",
+      "candidates": [
+        {
+          "name": "昇達科",
+          "ticker": "3491",
+          "market": "TW",
+          "reason": "低軌衛星地面站相關廠商，股癌過去在衛星話題中曾提及的標的之一"
+        },
+        {
+          "name": "啟碁",
+          "ticker": "6285",
+          "market": "TW",
+          "reason": "啟碁為衛星通訊設備供應商，屬低軌衛星族群"
+        },
+        {
+          "name": "AST SpaceMobile",
+          "ticker": "ASTS",
+          "market": "US",
+          "reason": "股癌過去多次在低軌衛星話題中提及ASTS"
+        }
+      ]
+    },
+    {
+      "term": "那個達瑞歐/阿摩迪達瑞歐/Amphibian老闆",
+      "interpretation": "指Citadel創辦人Ken Griffin或更可能是指Palantir的Alex Karp，但根據「Amphibian」和「末日言論」的描述，最可能是指Bridgewater（橋水基金）創辦人Ray Dalio，股癌音譯為「達瑞歐」。他常發表末日/悲觀言論。",
+      "stance": "看空（對Dalio的觀點持反面態度）",
+      "quote": "達瑞歐什麼阿摩迪達瑞歐，我連名字都記不起來，反正就是那個Amphibian老闆整天在那邊末日言論，我真的不太喜歡他，他如果再出來狂放雷放不下去你就知道說抵到了",
+      "candidates": []
+    },
+    {
+      "term": "integrated passive device（埋在載板裡的電容）",
+      "interpretation": "指愛普（AP Memory/APMEMORY）的產品，用於Google TPU中的嵌入式被動元件技術。Google TPU大量曝光後，市場重新關注這項技術。",
+      "stance": "看多",
+      "quote": "因為大家知道說他的那個東西就是埋在載板裡面的電容，反正就是他們稱為integrated passive device，那像這個東西就是因為Google的大量的曝光大家注意到，就是再一次這個事情又回來",
+      "candidates": [
+        {
+          "name": "愛普",
+          "ticker": "6531",
+          "market": "TW",
+          "reason": "逐字稿明確提到「一家公司叫APMEMORY就是愛普」，其產品為integrated passive device，受惠於Google TPU需求"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP663 | 🦘",
+  "analyzed_at": "2026-05-20T17:43:31.580754",
+  "transcript_chars": 22322
+}
