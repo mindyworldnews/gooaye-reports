@@ -1,0 +1,349 @@
+{
+  "summary": "本集股癌重點討論Anthropic轉盈對AI硬體投資的正面意義、Google與Blackstone合作推TPU Cluster對供應鏈的影響，以及被動元件（MLCC、鋁電容）全面噴射的行情分析，強調高壓MLCC、牛角電容等真正供需失衡的品項才是回檔後應聚焦的標的。",
+  "macro_views": [
+    {
+      "topic": "AI投資持續性",
+      "view": "Anthropic轉盈與馬斯克Colossus One快速回本，證明AI硬體投資有明確回報，打臉AI泡沫論者，硬體投資只會更大不會縮減",
+      "stance": "看多"
+    },
+    {
+      "topic": "產能搶奪戰",
+      "view": "晶圓代工、記憶體、光通訊、甚至電子零組件都將成為戰略物資，各家CSP不計代價搶產能，類似軍備競賽將蔓延到更多零組件領域",
+      "stance": "看多"
+    },
+    {
+      "topic": "原物料通膨循環",
+      "view": "銅價、PVC等原物料持續上漲，加上AI需求帶動零組件漲價，可能形成通膨循環，直到AI大幅投資放緩才會停止",
+      "stance": "中立"
+    },
+    {
+      "topic": "台灣房市",
+      "view": "房市偏冷，資金都跑到股市，加上房貸取得困難（銀行要求帳上千萬才能貸），需等政府放水才會再啟動",
+      "stance": "看空"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "漢唐",
+      "ticker": "2404",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "營收好、獲利好、毛利還提升，股價終究會還公道，只是時間問題。回應聽眾提問時表示看好基本面，禮拜五也漲了",
+      "quote": "漢唐的股東應該都很好奇說營收這麼好獲利這麼好毛利還Tick上來怎麼不會漲他不是禮拜五就漲了嗎...你公司只要持續的營運都好的話你股價終究會還你公道"
+    },
+    {
+      "name": "Google (Alphabet)",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "與Blackstone合作推TPU Cluster外銷，TPU自用與外銷比例已達3:1，外銷成長速度超出市場預期，對Google供應鏈是大利多",
+      "quote": "Google跟Blackstone他們合作要去搞TPU Cluster TPU Cloud...TPU在將來大概是3比1就是說3是自用那1是外銷所以這個數字其實拉得非常快"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "作為產能瓶頸的核心，各家搶產能壓力越來越大。引用Gavin Baker說法：若TSM產能全開，NVIDIA營收會更好，目前晶圓代工是AI發展的限制器",
+      "quote": "如果TSM今天是產能全開的話就是他真的就是跟你拼了然後大擴廠那其實NVIDIA的營收數字會好更多...目前晶圓代工廠或是說這些晶片業者的某個程度上他們是一種限制器"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "提到NVIDIA包下雷射產能卡位對手、Vera Ruby換代將帶動零組件需求大增，GB300最大潮將至",
+      "quote": "NVIDIA它是去包下一些雷射的產能...因為我把產能全部包下來你就買不到對手就買不到...在Viva Ruby換代之後...GB300的最大潮是重疊到的"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到聯發科被處置，有很多法人打電話抗議",
+      "quote": "像最近其實那個什麼聯發科跟那個建策一個是上去一個是下去但都是有處置那其實我了解就是有蠻多法人都打電話去幹人家"
+    },
+    {
+      "name": "建策",
+      "ticker": null,
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "與聯發科一起被提到有處置，一個上去一個下去",
+      "quote": "像最近其實那個什麼聯發科跟那個建策一個是上去一個是下去但都是有處置"
+    },
+    {
+      "name": "Intel",
+      "ticker": "INTC",
+      "market": "US",
+      "stance": "中立",
+      "reason": "目前只有後段表現相對好，但市場可能會敦促Intel加快前段進度，甚至給錢讓它趕快把東西做出來",
+      "quote": "大家可能會去敦促Intel趕快把東西做出來就即便他可能目前只有後段的表現會是相對好一點那前段說不定大家就是給你錢趕快做"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "被動元件（MLCC、鋁電容、電感、電阻、通路商）",
+      "stance": "看多",
+      "reason": "全面噴射行情，高壓MLCC（AI用）、牛角電容（Snap-in鋁電容）供需嚴重失衡，47微法拉已缺到爆炸，22微法拉也開始缺。回檔後應聚焦真正缺貨的高階品項，而非跟風的消費級產品"
+    },
+    {
+      "name": "功率元件/功率半導體",
+      "stance": "看多",
+      "reason": "AI晶片功耗越來越大，PowerRack用量變大，高密度機櫃旁的Power櫃裡有很多市場還未充分關注的賺錢機會，SP-CAP等也受惠"
+    },
+    {
+      "name": "Google TPU供應鏈",
+      "stance": "看多",
+      "reason": "TPU外銷比例快速成長到3:1（自用:外銷），與Blackstone合作推Neo Cloud形式的TPU Cluster，相關供應鏈將持續受惠"
+    },
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "NVIDIA已包下部分雷射產能卡位對手，光通訊零組件開始出現包廠搶產能的現象，成為戰略物資之一"
+    },
+    {
+      "name": "晶圓代工",
+      "stance": "看多",
+      "reason": "產能是AI發展的瓶頸與限制器，各家CSP搶產能壓力越來越大，可能出現加價包產線的情況"
+    },
+    {
+      "name": "NVIDIA相關Neo Cloud業者",
+      "stance": "中立",
+      "reason": "Google TPU Cluster的競爭可能稍微壓制偏向NVIDIA的Neo Cloud業者的估值，雖然營收獲利成長性仍好但估值可能受壓"
+    },
+    {
+      "name": "無塵室/建廠股",
+      "stance": "看多",
+      "reason": "股癌回應聽眾時暗示：前面喊破喉嚨不漲，時間到了就突然噴出去，會不會產物或建廠股後來變超兇也不一定"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "被動元件",
+      "interpretation": "MLCC、鋁電容、電感、電阻等被動元件族群，股癌手上持有且部分進入處置股",
+      "stance": "看多",
+      "quote": "手上的被動元件在過去的一陣子甚至有出現跌停那跌停你也沒有辦法賣你也不會想賣甚至就反而變成是加碼了因為我來都來了我也套在裡面不能動那我知道大家恐慌亂燒我就加碼然後加碼加一加又再繼續噴出去了",
+      "candidates": [
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "台灣主要MLCC/被動元件廠，股癌提到手上被動元件部位進入處置股（關20分鐘），華新科近期符合處置條件"
+        },
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "台灣被動元件龍頭，股癌提到被動元件全面噴射且有處置，國巨為最大標的"
+        },
+        {
+          "name": "立隆電",
+          "ticker": "2472",
+          "market": "TW",
+          "reason": "鋁電容廠商，股癌特別強調鋁電容（牛角電容/Snap-in）供需失衡，立隆電為台灣主要鋁電容廠"
+        },
+        {
+          "name": "禾伸堂",
+          "ticker": "3026",
+          "market": "TW",
+          "reason": "被動元件通路/高壓MLCC相關，股癌提到被動元件通路商也全部漲停"
+        },
+        {
+          "name": "尚茂",
+          "ticker": "8291",
+          "market": "TW",
+          "reason": "聽眾留言直接提到8291，股癌也念出來，且提到處置制度相關討論，暗示這檔也在處置中"
+        }
+      ]
+    },
+    {
+      "term": "高壓MLCC廠商（開法會說沒漲價的）",
+      "interpretation": "台灣某高壓MLCC廠商，在法說會上表示目前沒漲價但不排除跟著業界領頭羊漲價，隔天照樣漲停",
+      "stance": "看多",
+      "quote": "台灣有一些高壓MLCC的廠商蠻有趣的他竟然在他的對外的說法裡面表示他們目前是沒有漲價但他們不排除會跟著業界的領頭羊一起漲價...結果沒想到隔天照樣漲停非常的兇猛",
+      "candidates": [
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "台灣主要高壓MLCC廠商之一，近期有法說會且符合描述中開法會後隔天漲停的情境"
+        },
+        {
+          "name": "禾伸堂",
+          "ticker": "3026",
+          "market": "TW",
+          "reason": "台灣高壓MLCC相關廠商，也可能是對外表示暫未漲價的候選"
+        }
+      ]
+    },
+    {
+      "term": "春田跟SENCO",
+      "interpretation": "被動元件（MLCC/電容）的國際大廠，47微法拉產品在這兩家已缺到爆炸",
+      "stance": "看多",
+      "quote": "47麥已經是缺到爆炸了那個不用講了就是在春田跟SENCO這邊那在22麥可能有這樣的一個情形",
+      "candidates": [
+        {
+          "name": "村田製作所 (Murata)",
+          "ticker": null,
+          "market": "其他",
+          "reason": "「春田」應為語音辨識誤判，實際指日本村田(Murata)，全球最大MLCC廠商，股癌提到47微法拉在此缺貨"
+        },
+        {
+          "name": "三星電機 (Samsung Electro-Mechanics)",
+          "ticker": null,
+          "market": "其他",
+          "reason": "「SENCO」可能指三星電機(SEMCO)，全球第二大MLCC廠商，語音辨識略有偏差"
+        }
+      ]
+    },
+    {
+      "term": "日本的CHEMICAL",
+      "interpretation": "日本化學/電容相關公司，禮拜五大漲10幾%",
+      "stance": "僅提及",
+      "quote": "像他們那個什麼江海股份最近也噴嘛做電容的那像禮拜五日本的CHEMICAL就在噴了10幾%很恐怖就是噴爆",
+      "candidates": [
+        {
+          "name": "日本化學工業 (Nippon Chemi-Con)",
+          "ticker": null,
+          "market": "其他",
+          "reason": "日本主要鋁電容廠商Nippon Chemi-Con，股癌提到上下文都在討論電容（鋁電容/牛角電容），且稱其為「日本的CHEMICAL」，最可能指Nippon Chemi-Con"
+        }
+      ]
+    },
+    {
+      "term": "江海股份",
+      "interpretation": "中國電容廠商，近期股價也大漲",
+      "stance": "僅提及",
+      "quote": "因為他們也注意到這個東西不一樣像他們那個什麼江海股份最近也噴嘛做電容的",
+      "candidates": [
+        {
+          "name": "江海股份",
+          "ticker": null,
+          "market": "其他",
+          "reason": "中國A股鋁電容廠商，股癌直接點名，用來佐證全球電容需求火熱的論據"
+        }
+      ]
+    },
+    {
+      "term": "隔壁的櫃子/PowerRack",
+      "interpretation": "AI伺服器機櫃旁的電源供應櫃（Power Rack），因高密度運算導致電源元件被拉出來放到隔壁櫃，裡面有很多市場未充分關注的零組件商機",
+      "stance": "看多",
+      "quote": "它整個機櫃變成是高密度所以它一些Power的東西它是拉出來放到隔壁的那個櫃子裡面那隔壁那個櫃子裡面有很多賺錢的機會這是我目前發現就是隔壁的櫃子裡面有很多東西是目前市場上未必有花很多精力去看的",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "被動元件龍頭，高壓MLCC、SP-CAP等Power相關元件供應商"
+        },
+        {
+          "name": "立隆電",
+          "ticker": "2472",
+          "market": "TW",
+          "reason": "鋁電容（牛角電容）廠商，PowerRack中大量使用鋁電容"
+        },
+        {
+          "name": "朋程",
+          "ticker": "8255",
+          "market": "TW",
+          "reason": "功率半導體廠商，股癌提到功率元件/功率半導體受惠於Power用量增大"
+        },
+        {
+          "name": "強茂",
+          "ticker": "2481",
+          "market": "TW",
+          "reason": "功率半導體廠商，受惠於AI伺服器電源模組需求"
+        }
+      ]
+    },
+    {
+      "term": "Vera Ruby / Viva Ruby / GB300",
+      "interpretation": "NVIDIA下一代產品平台（Vera Rubin），換代將帶動零組件需求大增，GB300為其中關鍵產品",
+      "stance": "看多",
+      "quote": "應該是要在Vera Ruby換代的時候才會發生但市場已經提早發現所以大家提早先衝...GB300的最大潮是重疊到的所以有可能有一些拉貨就會導致這樣的一個變化",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "Vera Rubin為NVIDIA下一代AI晶片平台，GB300為其相關產品"
+        }
+      ]
+    },
+    {
+      "term": "CSP",
+      "interpretation": "Cloud Service Providers（雲端服務供應商），如Google、Amazon、Microsoft、Meta等，股癌提到他們開「glitch」模式不計代價採購",
+      "stance": "看多",
+      "quote": "CSP他們是開勾glitch然後在做這種採購他不計代價在買的所以他一個人就可以抵不知道就是可能一萬個消費者吧",
+      "candidates": [
+        {
+          "name": "Google (Alphabet)",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "本集重點討論Google與Blackstone合作推TPU Cluster，為CSP代表"
+        },
+        {
+          "name": "Amazon",
+          "ticker": "AMZN",
+          "market": "US",
+          "reason": "主要CSP之一"
+        },
+        {
+          "name": "Microsoft",
+          "ticker": "MSFT",
+          "market": "US",
+          "reason": "主要CSP之一"
+        },
+        {
+          "name": "Meta",
+          "ticker": "META",
+          "market": "US",
+          "reason": "主要CSP之一"
+        }
+      ]
+    },
+    {
+      "term": "馬斯克的Colossus One",
+      "interpretation": "馬斯克（xAI/Grok）建造的AI超級運算中心Colossus，因Grok發展不順而將算力出租，1-2年即可回本",
+      "stance": "僅提及",
+      "quote": "馬斯克的Grok後來的發展是沒有這麼的順利所以他選擇把他的算力出租出去所以他的Colossus One算了一下他鉅額的一個投資竟然可以在大概1年到2年之間就回本",
+      "candidates": [
+        {
+          "name": "Tesla",
+          "ticker": "TSLA",
+          "market": "US",
+          "reason": "馬斯克相關企業，Colossus為xAI/Grok的算力基礎設施"
+        }
+      ]
+    },
+    {
+      "term": "無塵室/建廠股/產物",
+      "interpretation": "無塵室工程與建廠相關公司，股癌暗示可能是下一波輪動標的",
+      "stance": "看多",
+      "quote": "會不會後來什麼產物或是一些相關的建廠股後來就變超兇的不一定但是我是相信說反正你公司只要持續的營運都好的話你股價終究會還你公道",
+      "candidates": [
+        {
+          "name": "漢唐",
+          "ticker": "2404",
+          "market": "TW",
+          "reason": "股癌直接回應漢唐股東的提問，且稱營收好獲利好毛利提升，暗示建廠股可能輪到"
+        },
+        {
+          "name": "帆宣",
+          "ticker": "6196",
+          "market": "TW",
+          "reason": "無塵室/半導體建廠工程主要廠商之一"
+        },
+        {
+          "name": "亞翔",
+          "ticker": "6139",
+          "market": "TW",
+          "reason": "無塵室工程廠商"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP664 | 🐟",
+  "analyzed_at": "2026-05-23T17:36:35.022399",
+  "transcript_chars": 22087
+}
