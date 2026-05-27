@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP665 | 🌸</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-05-27</div>
+    <h1>EP665 | 🌸</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌主要討論被動元件族群持續噴出、SpaceX即將IPO的投資佈局策略，以及對SpaceX未來可能發展衛星AI運算（Neo Cloud）的大膽預測。此外也提到台積電分紅爭議、機器人題材、載板族群表現，並分享個人生活近況與聽眾Q&amp;A。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">2327</span><span class="quick-tag bullish">SpaceX</span><span class="quick-tag vague">VSH</span><span class="quick-tag vague">VPG</span><span class="quick-tag vague">3037</span><span class="quick-tag vague">8046</span><span class="quick-tag vague">3189</span><span class="quick-tag vague">2492</span><span class="quick-tag vague">3324</span><span class="quick-tag vague">3017</span><span class="quick-tag vague">6230</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「國劇」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指國巨（2327），語音辨識將「國巨」誤轉為「國劇」</p>
+          <blockquote>「在今天的國劇的一個對外的說明上面也是有提到說他們的BB Ratio數字是拉上去了，然後現在在一些特規品的品項好像是拉到90%的一個駕動率，然後在標準品也是80幾%的一個駕動率」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2327" data-cand-name="國巨" data-cand-market="TW"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">國巨</span><span class="cand-reason"> — 上下文明確討論被動元件族群，提到BB Ratio、稼動率、2018年毛利率60幾%等數據，這些都是國巨的經典指標。後文也提到「春田」（華新科的語音誤轉）作為對照。</span><button class="wl-btn wl-btn-sm" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「春田」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指華新科（2492），語音辨識將公司名誤轉</p>
+          <blockquote>「一般來講我們就直接用2018去做一個類比，2018最高的時候國巨的毛利率是摸到60幾，你也可以看一下春田，看一下其他公司，他們毛利大概最高是摸到什麼數字」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2492" data-cand-name="華新科" data-cand-market="TW"><code class="ticker">2492</code><a href="https://tw.stock.yahoo.com/quote/2492" target="_blank" title="開啟 2492 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華新科</span><span class="cand-reason"> — 上下文在討論被動元件族群2018年高峰的毛利率對照，華新科是被動元件大廠，與國巨並列為2018年被動元件超級循環的代表公司。</span><button class="wl-btn wl-btn-sm" data-ticker="2492" data-name="華新科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「V-Shake / VPG / 江海」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">全球被動元件同業，用來佐證被動元件缺貨是全球性趨勢而非人為炒作</p>
+          <blockquote>「如果下去看一下可能世界各地的一些被動元件，你看一下V-Shake，你看一下VPG，或者說你看一下中國的江海，他也是在做電容的，你看一下日本的，那當然就是不是說什麼每天大家都一直噴，可是整體趨勢都一直在往上」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="VSH" data-cand-name="Vishay Intertechnology" data-cand-market="US"><code class="ticker">VSH</code><a href="https://finance.yahoo.com/quote/VSH" target="_blank" title="開啟 VSH K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Vishay Intertechnology</span><span class="cand-reason"> — 「V-Shake」應為語音辨識誤轉Vishay，全球被動元件大廠，股癌用來說明全球趨勢向上。</span><button class="wl-btn wl-btn-sm" data-ticker="VSH" data-name="Vishay Intertechnology" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="VPG" data-cand-name="VPG (Vishay Precision Group)" data-cand-market="US"><code class="ticker">VPG</code><a href="https://finance.yahoo.com/quote/VPG" target="_blank" title="開啟 VPG K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">VPG (Vishay Precision Group)</span><span class="cand-reason"> — 股癌直接提到VPG，精密電阻/感測器廠商，從Vishay分拆出來的被動元件相關公司。</span><button class="wl-btn wl-btn-sm" data-ticker="VPG" data-name="VPG (Vishay Precision Group)" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「載板」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">ABF/BT載板族群，包括欣興、南電、景碩等</p>
+          <blockquote>「那其實市場上很多東西都在動，像載板就不要講了，就是它還是整天在那邊噴嘛」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3037" data-cand-name="欣興" data-cand-market="TW"><code class="ticker">3037</code><a href="https://tw.stock.yahoo.com/quote/3037" target="_blank" title="開啟 3037 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">欣興</span><span class="cand-reason"> — 載板三雄之一，股癌提到載板整天在噴，且前文提到自己操作載板有加碼，聽眾Q&amp;A也提到操作載板。</span><button class="wl-btn wl-btn-sm" data-ticker="3037" data-name="欣興" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="8046" data-cand-name="南電" data-cand-market="TW"><code class="ticker">8046</code><a href="https://tw.stock.yahoo.com/quote/8046" target="_blank" title="開啟 8046 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">南電</span><span class="cand-reason"> — 載板三雄之一，載板族群整體被提及持續噴出。</span><button class="wl-btn wl-btn-sm" data-ticker="8046" data-name="南電" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3189" data-cand-name="景碩" data-cand-market="TW"><code class="ticker">3189</code><a href="https://tw.stock.yahoo.com/quote/3189" target="_blank" title="開啟 3189 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">景碩</span><span class="cand-reason"> — 載板三雄之一，載板族群整體被提及持續噴出。</span><button class="wl-btn wl-btn-sm" data-ticker="3189" data-name="景碩" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「坦電容」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">鉭電容（Tantalum Capacitor），因鉭是爭議金屬導致供需緊張、價格上漲</p>
+          <blockquote>「什麼坦電容因為這個是現在事實上非常需要的一個東西，可是坦又是一個爭議金屬，所以就變成可能就是在供需方面是已經有些地方會斷供了，那價格上漲更不要提了，可是有什麼東西可以取代坦電容」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2327" data-cand-name="國巨" data-cand-market="TW"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">國巨</span><span class="cand-reason"> — 股癌提到MLCC或鋁電容可能取代鉭電容，國巨為全球MLCC大廠，直接受惠於鉭電容轉單需求。</span><button class="wl-btn wl-btn-sm" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2492" data-cand-name="華新科" data-cand-market="TW"><code class="ticker">2492</code><a href="https://tw.stock.yahoo.com/quote/2492" target="_blank" title="開啟 2492 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華新科</span><span class="cand-reason"> — 華新科也是被動元件（含MLCC）廠商，鉭電容替代趨勢下的潛在受惠者。</span><button class="wl-btn wl-btn-sm" data-ticker="2492" data-name="華新科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Pentier」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指Palantir（PLTR），語音辨識誤轉</p>
+          <blockquote>「類似說那時候Pentier上的時候也是直接先買再說，那當然先買再說然後後來掉下去心中都會有一些狐疑，但總之就是你要一個reference你一定要先卡位」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="PLTR" data-cand-name="Palantir" data-cand-market="US"><code class="ticker">PLTR</code><a href="https://finance.yahoo.com/quote/PLTR" target="_blank" title="開啟 PLTR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Palantir</span><span class="cand-reason"> — 股癌用Palantir IPO時先買再說的經驗，類比SpaceX IPO的策略。Pentier為語音辨識對Palantir的誤轉。</span><button class="wl-btn wl-btn-sm" data-ticker="PLTR" data-name="Palantir" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「前面有捏住軟蛋的」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指之前大跌時有忍住沒賣、甚至加碼的投資人，「軟蛋」指下跌時想賣的恐懼心態</p>
+          <blockquote>「那像前面有捏住軟蛋的這波就特別爽，那老實講我們也不是知道說這波就是會這樣噴，真的不知道，所以像你回聽就可能兩三集以前的節目我都會直接跟他講那個某程度上都是一種賭」</blockquote>
+          
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「那個做散熱的」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">散熱族群相關廠商，股癌提到衛星AI伺服器需要超大散熱片，能通過驗證的散熱廠商將受惠</p>
+          <blockquote>「那散熱雖然在最近的台股裡面表現是比較不好的，可是他們這些可以去過驗證的，你知道他如果今天是到軌道伺服器上面去做散熱片的話，他那一片是超級大的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3324" data-cand-name="雙鴻" data-cand-market="TW"><code class="ticker">3324</code><a href="https://tw.stock.yahoo.com/quote/3324" target="_blank" title="開啟 3324 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">雙鴻</span><span class="cand-reason"> — 散熱龍頭廠商之一，股癌提到散熱廠若能通過衛星軌道伺服器驗證，散熱片會超級大，帶來巨額收入。</span><button class="wl-btn wl-btn-sm" data-ticker="3324" data-name="雙鴻" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3017" data-cand-name="奇鋐" data-cand-market="TW"><code class="ticker">3017</code><a href="https://tw.stock.yahoo.com/quote/3017" target="_blank" title="開啟 3017 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">奇鋐</span><span class="cand-reason"> — 散熱三雄之一，伺服器散熱主要供應商，衛星AI伺服器散熱為潛在受惠方向。</span><button class="wl-btn wl-btn-sm" data-ticker="3017" data-name="奇鋐" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="6230" data-cand-name="尼得科超眾" data-cand-market="TW"><code class="ticker">6230</code><a href="https://tw.stock.yahoo.com/quote/6230" target="_blank" title="開啟 6230 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">尼得科超眾</span><span class="cand-reason"> — 散熱三雄之一，若衛星AI伺服器散熱需求起來，為潛在受惠廠商。</span><button class="wl-btn wl-btn-sm" data-ticker="6230" data-name="尼得科超眾" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="2327" data-name="國巨" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">國巨</span>
+            <span class="card-meta"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">BB Ratio數字拉上去，特規品稼動率拉到90%，標準品也80幾%，數字越來越好。可用2018年毛利率60幾%作為類比參考，測算未來EPS與目標價。</p>
+          <blockquote>「在今天的國劇的一個對外的說明上面也是有提到說他們的BB Ratio數字是拉上去了，然後現在在一些特規品的品項好像是拉到90%的一個駕動率，然後在標準品也是80幾%的一個駕動率」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="" data-name="SpaceX" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">SpaceX</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">即將IPO，不管估值多少都會先上車卡位。認為Starlink是印鈔機但不是重點，未來衛星AI運算（Neo Cloud）才是刷估值的sexy故事。一開始先卡一半倉位，後面再增持。</p>
+          <blockquote>「SpaceX他們要開始去做這個IPO了，那以我自己的看法就是反而不管你估出來的價格怎麼樣我都一定會先上車一點，然後先上車一點去插旗之後接下來再看說要怎麼樣去調整」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="TSLA" data-name="特斯拉" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">特斯拉</span>
+            <span class="card-meta"><code class="ticker">TSLA</code><a href="https://finance.yahoo.com/quote/TSLA" target="_blank" title="開啟 TSLA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="TSLA" data-name="特斯拉" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">會降低Tesla持股來換倉SpaceX。認為Tesla已經從電動車出貨量故事轉向能源、Optimus、自駕等新敘事，馬斯克公司變化太快，壓的故事未必是最終發酵的。</p>
+          <blockquote>「同時會去降低一點可能像Tesla的持股，因為對我來講反而我就壓住馬斯克的一個故事，那馬斯克的公司有趣就在於說它的變化真的很快」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="2330" data-name="台積電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台積電</span>
+            <span class="card-meta"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">分紅慘案引起員工不滿，越賺越多但分紅比例下降。雖然身邊朋友狂罵，但在台灣沒有更好選擇，公司說長期會越來越多，建議正向思考忍耐。</p>
+          <blockquote>「台積電的一個分紅慘案，大家覺得說分紅也太小氣了吧，怎麼越賺越多錢分紅越配越少...在台灣的話老實講好像也沒有什麼別的更好的選擇」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2454" data-name="聯發科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯發科</span>
+            <span class="card-meta"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">用MediaTek前幾年軟掉但現在靠AI動能直接噴出，作為長期持有忍耐等待的正面案例。</p>
+          <blockquote>「類似說MediaTek可能在前面的幾年大家覺得說好像是軟掉了，可是現在因為AI的動能你看又直接出去了」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="NVDA" data-name="NVIDIA" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">NVIDIA</span>
+            <span class="card-meta"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">舉例說明投資公司會改變，最早買NVIDIA是買顯示卡，現在顯示卡已經包成Edge業務。也提到當初推GB/Operon時大家說不可能，但最終人定勝天靠資本硬幹過去。</p>
+          <blockquote>「其實我們最早在買NVIDIA的時候都是在買它的顯示卡，可是它現在竟然已經把顯示卡跟其他的東西包一包變成是Edge的一個業務」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="PLTR" data-name="Palantir" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Palantir</span>
+            <span class="card-meta"><code class="ticker">PLTR</code><a href="https://finance.yahoo.com/quote/PLTR" target="_blank" title="開啟 PLTR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="PLTR" data-name="Palantir" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">用Palantir上市時直接先買再說作為類比SpaceX IPO策略的案例，先買後來掉下去心中會狐疑但重點是先卡位。</p>
+          <blockquote>「類似說那時候Pentier上的時候也是直接先買再說，那當然先買再說然後後來掉下去心中都會有一些狐疑」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="0050" data-name="0050（元大台灣50）" data-market="ETF">
+          <div class="card-header">
+            <span class="stock-name">0050（元大台灣50）</span>
+            <span class="card-meta"><code class="ticker">0050</code><a href="https://tw.stock.yahoo.com/quote/0050" target="_blank" title="開啟 0050 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">ETF</span><button class="wl-btn" data-ticker="0050" data-name="0050（元大台灣50）" data-market="ETF" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到即便沒有認真選股，光買0050很多人也賺翻了，超過年薪。</p>
+          <blockquote>「即便你沒有很認真在那邊考選股，你看你光是買個0.50，其實一堆人也都是學翻了，都超過自己的年薪了」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>被動元件</strong><span class="sector-reason"> — 整組噴出，國巨BB Ratio拉升、稼動率提高，全球同業（Vishay、VPG、中國江海、日本廠商）趨勢都往上，確認不是人為小炒作而是全球性缺貨。可用2018年高峰做類比測算目標價。鉭電容因爭議金屬缺貨漲價，MLCC和鋁電容可能做替代。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>載板（ABF/BT基板）</strong><span class="sector-reason"> — 整天在噴，表現持續強勁。股癌提到自己有加碼相關持股，5月表現比4月更好。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>衛星（AI運算方向）</strong><span class="sector-reason"> — SpaceX IPO在即，衛星AI運算是新的想像空間。供應鏈已有蛛絲馬跡，散熱片、太陽能板、特殊材料等都有機會受惠。與過去單純Starlink設備不同，這次關注的是衛星上的AI數據中心。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>機器人</strong><span class="sector-reason"> — 很多機器人類股在噴且被觀處置。雖然營收佔比只有2%，但明年可能10%代表5倍成長，股癌表示很喜歡這種題材。如果手上沒有其他正在噴的標的，會想介入。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>散熱</strong><span class="sector-reason"> — 近期台股表現較差，但衛星AI伺服器需要超大散熱片，能過驗證的廠商未來可能有巨額收入。目前看是本夢比但長期有機會。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>Neo Cloud（算力出租）</strong><span class="sector-reason"> — 過去不太看好（擔心折舊風險），但AI伺服器折舊時間比預期長且算力還在漲價，顛覆想像。如果換成衛星上的Neo Cloud包裝，興致大開，認為非常有機會。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">整體台股行情</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 市場持續噴出，沒有什麼特別好評論的，行情很好，很多人資產大幅增長，甚至有人準備離職。建議珍惜這波行情帶來的獲利。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">AI運算需求與衛星數據中心</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 馬斯克可能將SpaceX發展為Neo Cloud概念，在衛星上部署AI伺服器做算力出租，雖然目前看似本夢比，但AI時代讓大家敢當Believer，技術難題可以靠資本力量硬推過去。預估2028下半或2029上半可能開始有題材發酵。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">槓桿與投資紀律</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 強調先用現股做好再考慮槓桿，不要什麼都不會就信貸融資亂壓，要先驗證自己的trade record再加大部位。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>
