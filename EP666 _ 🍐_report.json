@@ -1,0 +1,406 @@
+{
+  "summary": "本集股癌討論被動元件族群的供需變化，指出市場過度聚焦MLCC而忽略鋁電容等更缺貨的品項，並分析老AI（ODM/OEM）股的復辟與軟體股全面爆發的趨勢。他認為當前是百花齊放的多頭格局，並分享對AI軟體應用層未來發展的看法，強調業務能力與資料取得將成為軟體公司的核心競爭力。",
+  "macro_views": [
+    {
+      "topic": "台股多頭格局",
+      "view": "目前是非常漂亮的多頭，百花齊放，市場資金充沛。雖然融資增加速度很快，但前面時不時的壓力測試回檔是健康的，後面就算有殺也不會是青天霹靂等級。只要沒有突然的瘋狂升息或國際事件，滿地都是好東西。",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI產業週期輪動",
+      "view": "AI投資從Infra到Application的大小波循環正在演進。2023-2024先演一次小波（硬體→軟體），2025光通訊最亮眼，2026資金重新回到老AI ODM/OEM及軟體股，是大波週期的展開。軟體公司從C-based轉Token-based計費後，營收獲利會越開越好。",
+      "stance": "看多"
+    },
+    {
+      "topic": "券商不限用途借款額度管控",
+      "view": "自己90%資金在處置股中，券商不放額度，無法加碼。認為這是老天幫做風控，不會再去搬更多錢，接受現狀。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "鴻海",
+      "ticker": "2317",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "老AI復辟代表之一，禮拜五直接鎖漲停，與廣達一起帶動ODM/OEM族群。認為這些公司成績一直都有，只是之前資金不在這邊。",
+      "quote": "禮拜五我們看到像鴻海跟廣達都直接鎖漲停嘛...後面搞不好有機會可以看到一個首富賽跑"
+    },
+    {
+      "name": "廣達",
+      "ticker": "2382",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "與鴻海同為老AI復辟代表，鎖漲停。其營收獲利一直都有，只是之前市場不喜歡推PE估值。",
+      "quote": "禮拜五我們看到像鴻海跟廣達都直接鎖漲停嘛...它的成績都一直有它營收跟獲利一直都有只是就是市場不喜歡它"
+    },
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "陳泰銘成為台灣首富，被提及作為首富賽跑的參與者之一。被動元件龍頭。",
+      "quote": "因為陳泰銘剛成為台灣首富嘛...後面搞不好有機會可以看到一個首富賽跑"
+    },
+    {
+      "name": "Astera Labs",
+      "ticker": "ALAB",
+      "market": "US",
+      "stance": "看多",
+      "reason": "以此為例說明不要在股票低迷時亂diss，之前在地上時一堆人改口看壞，現在漲到300塊，質疑那些見風轉舵的人如何自洽邏輯。",
+      "quote": "像前面那個Astralabs在地上的時候也是一堆人你前面都說他好的時候突然間就全部改口了那現在300塊請問你怎麼去自洽你的邏輯"
+    },
+    {
+      "name": "Salesforce",
+      "ticker": "CRM",
+      "market": "US",
+      "stance": "看多",
+      "reason": "搞了正式上record high的buyback，用行動證明公司價值。狂買自己股票。",
+      "quote": "像Salesforce他媽的搞了一個正式上record high的一個buyback他就狂買股票你們覺得我公司很爛是不是媽的老子狂買"
+    },
+    {
+      "name": "ServiceNow",
+      "ticker": "NOW",
+      "market": "US",
+      "stance": "看多",
+      "reason": "老闆跟大家講外面的AI末日論述全部講錯，公司在非常大的順風上面，靠成績證明。",
+      "quote": "像是ServiceNow的老闆也是跟大家講說就是外面的那些AI論述呢就是全部都是講錯的啦其實他的公司是在一個非常大的順風上面"
+    },
+    {
+      "name": "Snowflake",
+      "ticker": "SNOW",
+      "market": "US",
+      "stance": "看多",
+      "reason": "最近財報開出極好成績，證明AI是幫軟體加分而非扣分。",
+      "quote": "最近像是什麼Octa或是Snowflake都是開出極好的成績那就告訴大家說其實AI是幫這些軟體去做加分"
+    },
+    {
+      "name": "Okta",
+      "ticker": "OKTA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "與Snowflake同列，開出極好成績，證明軟體股受益於AI。",
+      "quote": "最近像是什麼Octa或是Snowflake都是開出極好的成績那就告訴大家說其實AI是幫這些軟體去做加分"
+    },
+    {
+      "name": "DELL Technologies",
+      "ticker": "DELL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "成績開得很好，營收增速佳，是帶動老AI復辟的催化劑之一。但認為業內人士不覺得太意外，因為大家都知道很好。",
+      "quote": "很多人說是因為DELL的成績開得很好它的營收的增速怎麼樣在我們的角度...其實大家不會覺得這是一個非常意外的成績"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "聽眾提問關於發哥與TeraFab合作消息，股癌表示目前沒聽到太多細節，如果收到情報再分享。",
+      "quote": "怎麼看發哥有可能跟TeraFab合作的消息...TeraFab合作消息我這邊目前是沒有聽說到太多細節啦"
+    },
+    {
+      "name": "華新科",
+      "ticker": "2492",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "聽眾提問中提到華新科在法說會表示持續擴產，股癌解釋擴產不等於利空，要看時間點。",
+      "quote": "華新科跟光潔等台灣被動廠商也在法說會表示會持續擴產那被動族群的股價怎麼還是一直噴呢"
+    },
+    {
+      "name": "美光",
+      "ticker": "MU",
+      "market": "US",
+      "stance": "中立",
+      "reason": "以美光擴產新聞為例，說明擴產不代表一定要看空，要看擴的是什麼。美光擴的是Niche Market，跟消費級和伺服器等級無關。",
+      "quote": "像美光擴的那個它是一個Niche Market那一個很小的應用它其實跟消費級跟伺服器等級那是沒有關係的但很多人看到擴產就覺得說啊不行了"
+    },
+    {
+      "name": "IGV ETF",
+      "ticker": "IGV",
+      "market": "ETF",
+      "stance": "看多",
+      "reason": "直接拉出很高的漲幅，視為資金表態往軟體方向，後面資金有可能往軟體方向跑。",
+      "quote": "像你現在就很明確的看到你看那個像IGV這個ETF...你看它直接拉出一個這麼高的一個帕數這在我們的眼中就視為是一個表態"
+    },
+    {
+      "name": "Palantir",
+      "ticker": "PLTR",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "作為2023-2024軟體股大噴的代表案例，從20幾噴到100多。",
+      "quote": "像那時候Pentier是20幾直接噴到100多那Cloudflare什麼FanBay、Cloudstrike就是一堆軟體都直接射出去"
+    },
+    {
+      "name": "Cloudflare",
+      "ticker": "NET",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "同為2023-2024軟體股大噴代表之一。",
+      "quote": "像那時候Pentier是20幾直接噴到100多那Cloudflare什麼FanBay、Cloudstrike就是一堆軟體都直接射出去"
+    },
+    {
+      "name": "CrowdStrike",
+      "ticker": "CRWD",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "同為2023-2024軟體股大噴代表之一。",
+      "quote": "Cloudflare什麼FanBay、Cloudstrike就是一堆軟體都直接射出去"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到TSM釋放legacy製程帶動成熟製程股上漲，以及在停損紀律討論中作為大型股不該頻繁停損的例子。",
+      "quote": "像是前面大家都在專注在GPU跟ASIC上面那最近大家發現說CPU很好...像TSM這些前端的製程他們放出了很多legacy的東西在外面"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "被動元件（整體）",
+      "stance": "看多",
+      "reason": "從成本驅動漲價轉為需求驅動漲價，日本被動元件廠全部做壞掉。市場過度聚焦MLCC，但鋁電容（SP-CAP、OS-CON、牛角電容）缺口高達20幾%，電感也將跟進缺貨，後面會持續發酵漲價。"
+    },
+    {
+      "name": "鋁電容",
+      "stance": "看多",
+      "reason": "從江海收到的MEMO顯示全球缺口高達20幾%，所有人產能加起來都不夠。包括疊層式SP-CAP、OS-CON、牛角電容都非常缺乏。台灣鋁電容廠商擴產幅度超大，在缺貨階段擴產代表料最多、最賺錢。市場討論度不夠但實際已在噴。"
+    },
+    {
+      "name": "MLCC",
+      "stance": "看多",
+      "reason": "確實也有缺貨，但認為市場花太多心力在上面，相對於鋁電容等更缺的品項，MLCC已經是錦上添花的行為。"
+    },
+    {
+      "name": "ODM/OEM/EMS（老AI）",
+      "stance": "看多",
+      "reason": "資金大幅撤出後重新回流，營收獲利一直都在，現在由美國發起進攻（DELL成績帶動），台灣硬體也跟上去。認為是健康的輪動。"
+    },
+    {
+      "name": "軟體股",
+      "stance": "看多",
+      "reason": "全面性大爆發，IGV表態拉出大漲幅。Snowflake、Okta等開出極好成績，Salesforce大手筆回購。AI是幫軟體加分不是扣分，Founder Mode的公司調整後帶來驚喜。後面資金可能持續往軟體方向跑。"
+    },
+    {
+      "name": "光通訊",
+      "stance": "中立",
+      "reason": "2025年最火紅的硬體族群，但最近在休息。資金輪動到其他地方，又是再一次的輪迴。"
+    },
+    {
+      "name": "CPU相關",
+      "stance": "看多",
+      "reason": "前面大家專注GPU跟ASIC，最近發現CPU很好，資金衝進去。聽眾問Intel看法時回應「我認為是CPU」。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "老AI",
+      "interpretation": "指早期AI建設潮中的硬體供應鏈公司，特別是ODM/OEM/EMS廠商如鴻海、廣達、緯創等，相對於後來的光通訊等新AI題材",
+      "stance": "看多",
+      "quote": "最近最火紅或說大家有嚇到的就是一些老AI的復辟...不只是一些老AI重新的站起來那包含像是軟體股也出現了全面性的大爆射...禮拜五我們看到像鴻海跟廣達都直接鎖漲停嘛",
+      "candidates": [
+        {
+          "name": "鴻海",
+          "ticker": "2317",
+          "market": "TW",
+          "reason": "逐字稿明確提到鴻海鎖漲停，是老AI復辟的代表"
+        },
+        {
+          "name": "廣達",
+          "ticker": "2382",
+          "market": "TW",
+          "reason": "逐字稿明確提到廣達鎖漲停，與鴻海並列老AI代表"
+        },
+        {
+          "name": "緯創",
+          "ticker": "3231",
+          "market": "TW",
+          "reason": "逐字稿提到「微影」（應為緯創），與鴻海廣達並列提到的美國OEM ODM"
+        }
+      ]
+    },
+    {
+      "term": "首富賽跑",
+      "interpretation": "指陳泰銘（國巨）剛成為台灣首富，但鴻海郭台銘家族、廣達林百里等人的個人資產市值很接近，股價變化會影響首富排名",
+      "stance": "僅提及",
+      "quote": "因為陳泰銘剛成為台灣首富嘛...後面搞不好有機會可以看到一個首富賽跑我覺得這會很有趣就是大家的市值是很接近的不是說公司啦就是個人的那個cap加起來是很接近的",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "陳泰銘是國巨董事長，逐字稿明確提到他剛成為台灣首富"
+        },
+        {
+          "name": "鴻海",
+          "ticker": "2317",
+          "market": "TW",
+          "reason": "逐字稿提到鴻海鎖漲停，暗示鴻海相關人士也在首富排名競爭中"
+        },
+        {
+          "name": "廣達",
+          "ticker": "2382",
+          "market": "TW",
+          "reason": "逐字稿提到廣達鎖漲停，林百里也是首富級別人物"
+        }
+      ]
+    },
+    {
+      "term": "牛角電容",
+      "interpretation": "鋁電解電容的一種型態（Snap-in型），因端子形狀像牛角得名，用於電源供應器、伺服器等大電流應用。股癌提到江海的MEMO顯示全球缺口高達20幾%",
+      "stance": "看多",
+      "quote": "或者是像是這種牛角電容也就是目前我們在江海這邊有收到一份MEMO是提到說它的全球缺口大概是高達20幾%左右就是說所有人的產能加起來都是不夠的",
+      "candidates": [
+        {
+          "name": "立隆電",
+          "ticker": "2472",
+          "market": "TW",
+          "reason": "台灣鋁電解電容代表廠商，股癌提到台灣鋁電容廠商擴產幅度超大，立隆電為主要業者之一"
+        },
+        {
+          "name": "凱美",
+          "ticker": "2375",
+          "market": "TW",
+          "reason": "台灣鋁電解電容廠商，涵蓋牛角型（Snap-in）產品線"
+        },
+        {
+          "name": "智寶",
+          "ticker": "7824",
+          "market": "TW",
+          "reason": "台灣固態電容/鋁電容相關廠商"
+        }
+      ]
+    },
+    {
+      "term": "SP-CAP / OS-CON",
+      "interpretation": "疊層式固態鋁電容的特殊產品線，用於高階伺服器與AI加速卡的電源管理。股癌明確提到這些品項正在缺貨",
+      "stance": "看多",
+      "quote": "不管是這種疊層式的像是SP-CAP那或者是像是OS-CON那或者是像是這種牛角電容...它的全球缺口大概是高達20幾%左右",
+      "candidates": [
+        {
+          "name": "立隆電",
+          "ticker": "2472",
+          "market": "TW",
+          "reason": "台灣鋁電容龍頭，有生產固態電容產品線，股癌提到台灣鋁電容廠商擴產幅度超大"
+        },
+        {
+          "name": "凱美",
+          "ticker": "2375",
+          "market": "TW",
+          "reason": "台灣鋁電容廠商，涵蓋SP-CAP等產品"
+        }
+      ]
+    },
+    {
+      "term": "微影",
+      "interpretation": "語音辨識誤差，根據上下文應指「緯創」（3231），與鴻海、廣達並列為台灣OEM/ODM代表",
+      "stance": "僅提及",
+      "quote": "我不會因為說今天可能看到鴻海廣達微影或是美國的這幾個可能OEM ODM那他們的表現很好就會覺得資金該往這個方向去",
+      "candidates": [
+        {
+          "name": "緯創",
+          "ticker": "3231",
+          "market": "TW",
+          "reason": "逐字稿中與鴻海、廣達並列為OEM/ODM廠商，「微影」應為語音辨識將「緯創」聽錯"
+        }
+      ]
+    },
+    {
+      "term": "TIMS / Elession",
+      "interpretation": "語音辨識誤差，根據上下文指軟體股中最先跳上去的公司。「TIMS」可能指TeamS（Teams相關）或某家軟體公司，「Elession」可能指Atlassian。這是最早表態的軟體股，後來一家一家接棒",
+      "stance": "僅提及",
+      "quote": "自從最前面的那家叫什麼TIMS其實TIMS先跳上去Elession他先跳上去之後然後後來持續的一家一家接棒到現在好多家都已經跳上去了",
+      "candidates": [
+        {
+          "name": "Atlassian",
+          "ticker": "TEAM",
+          "market": "US",
+          "reason": "「Elession」發音接近Atlassian，且上下文是討論軟體股率先表態上漲的公司，Atlassian（TEAM）確實是2025年初率先大漲的軟體股之一"
+        }
+      ]
+    },
+    {
+      "term": "光通休息了",
+      "interpretation": "指光通訊族群在2025年大漲後目前進入休息盤整階段，資金輪動到其他地方",
+      "stance": "中立",
+      "quote": "那最近光通休息了那就變成說你看又是再一次的輪迴...跑去推什麼推像光通這樣的東西那最近光通休息了",
+      "candidates": [
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "台灣光通訊代表股之一，股癌過去多次討論光通訊族群"
+        },
+        {
+          "name": "眾達-KY",
+          "ticker": "4977",
+          "market": "TW",
+          "reason": "台灣光通訊廠商代表之一"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "美股光通訊代表股"
+        }
+      ]
+    },
+    {
+      "term": "江海",
+      "interpretation": "中國鋁電解電容大廠「南通江海電容器」，股癌提到從江海收到MEMO，顯示牛角電容全球缺口高達20幾%",
+      "stance": "僅提及",
+      "quote": "目前我們在江海這邊有收到一份MEMO是提到說它的全球缺口大概是高達20幾%左右就是說所有人的產能加起來都是不夠的",
+      "candidates": [
+        {
+          "name": "南通江海電容器",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿明確提到「江海」及其MEMO，南通江海是全球知名鋁電解電容廠商，為中國A股上市公司"
+        }
+      ]
+    },
+    {
+      "term": "日本的被動元件已經全部都做壞掉了",
+      "interpretation": "指日本被動元件大廠（村田、TDK、太陽誘電等）的產能無法滿足需求或市場表現不佳，間接有利於台灣被動元件廠商",
+      "stance": "看多",
+      "quote": "被動元件還是非常的強勢大家去看那個日本的被動元件是已經全部都做壞掉了",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "台灣最大被動元件廠，日本廠商做壞掉對國巨最有利"
+        },
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "台灣被動元件大廠，受益於日本廠商產能問題"
+        }
+      ]
+    },
+    {
+      "term": "Founder Mode的公司",
+      "interpretation": "指創辦人仍在主導經營的軟體公司，能夠快速破釜沉舟做改變，從C-based轉Token-based計費，這類公司在AI轉型中最有機會給驚喜",
+      "stance": "看多",
+      "quote": "只要是Founder Mode的公司就像Founder還在裡面他們可以立刻的破釜沉舟去做改變的其實蠻多後面都有機會會給大家帶來一個驚喜",
+      "candidates": [
+        {
+          "name": "Salesforce",
+          "ticker": "CRM",
+          "market": "US",
+          "reason": "Marc Benioff仍為CEO，逐字稿中提到Salesforce大手筆buyback，是Founder Mode的代表"
+        },
+        {
+          "name": "ServiceNow",
+          "ticker": "NOW",
+          "market": "US",
+          "reason": "逐字稿中提到ServiceNow老闆公開反駁AI末日論，展現Founder式的強勢領導"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP666 | 🍐",
+  "analyzed_at": "2026-05-30T17:37:23.341781",
+  "transcript_chars": 24745
+}
