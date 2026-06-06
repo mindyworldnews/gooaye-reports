@@ -1,0 +1,246 @@
+{
+  "summary": "本集主要分享股癌參加Computex 2025的心得，包括NVIDIA Enterprise展區（PowerRack、LPU、CPU Rack）、消費端RTX Spark筆電（與Adobe深度合作、Unified Memory、等效5070性能）、聯發科展區、ASUS ROG產品（AR眼鏡、精緻化周邊），以及對AI產業從「打高空」走向「實際應用」的正面評價。最後提及美股夜盤大跌（台指期最深-10%），提醒投資人做好心理準備，但強調產業面沒有看到問題。",
+  "macro_views": [
+    {
+      "topic": "美股/台股短期修正",
+      "view": "夜盤台指期一度跌到-10%，收在-6~7%左右，週一台股會有衝擊，但認為洗籌碼是好事，把槓桿過大的人清掉後市場會更健康。產業端沒有看到問題，電腦展後更有信心。",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI產業發展方向",
+      "view": "今年Computex展示的AI應用從過去兩年的「打高空、講未來」轉向實際可用的生產力工具（剪片、修圖、遊戲、Agentic AI），認為這是正確方向，Future is now。不再是機械狗和空泛的AI概念，而是真正能影響工作和生活的應用。",
+      "stance": "看多"
+    },
+    {
+      "topic": "CPU需求（Agentic AI Workflow）",
+      "view": "有人認為Agentic Workflow目前用大量CPU是因為模型不夠好（瘋狂撞牆），優化後就不需要這麼多CPU。但股癌認為成本降低會讓更多人使用，整體需求會更大，引用Satya的觀點。",
+      "stance": "看多"
+    },
+    {
+      "topic": "股息槓桿族群的風險",
+      "view": "過去幾天已經開始殺股息股，那些融資槓桿最大去買高股息的人，8:45開盤直接被洗掉。後面可能還會有腥風血雨。",
+      "stance": "看空"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "Computex展會核心，Enterprise端展示PowerRack、LPU、CPU Rack、VR Rubin等產品；消費端RTX Spark與Adobe深度合作、Unified Memory設計讓本地AI和遊戲性能大幅提升，整體展示從打高空轉向實際應用，令人印象深刻。",
+      "quote": "NVIDIA消費端的展示我是非常喜歡的...每個東西都是超級實際的，而且是真的會讓你看完就說shut up take my money"
+    },
+    {
+      "name": "Adobe",
+      "ticker": "ADBE",
+      "market": "US",
+      "stance": "中立",
+      "reason": "市場認為AI會取代Adobe，但在NVIDIA消費端展會中發現Adobe與NVIDIA有深度合作，RTX Spark大幅加速Premiere/Photoshop等軟體效能。股癌表示這不代表低點到了，因為不是他熟悉的領域，但覺得這個現象很有趣。",
+      "quote": "市場中心大家都非常喜歡的Adobe...大家認為說AI可以生圖改圖所以Adobe就是要BBQ了，但這次很好玩的一點是甚至會感覺說NVIDIA跟Adobe是不是有什麼...竟然是看出來是他們深度合作的夥伴"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "去聯發科攤位看展，聯發科人員協助展示RTX Spark相關內容，確認RTX Spark等效5070性能且可以打遊戲。",
+      "quote": "在MediaTek的攤位上...那時候就問了聯發科幫我展示的這位大哥，我就說這個可不可以打遊戲，他說NVIDIA的東西一定都是可以打遊戲"
+    },
+    {
+      "name": "華碩（ASUS ROG）",
+      "ticker": "2357",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "ROG精銳盡出，展示精緻化周邊（24K鍍金背板、客製化鍵帽盲盒、T1聯名顯卡、帶面板的主機），以及AR眼鏡產品讓股癌印象深刻，認為畫面品質甚至超越Apple Vision Pro且重量僅眼鏡等級。消費性表現不好所以大家使出全力。",
+      "quote": "ROG也是精銳盡出...他們跟市面上的太太們宣戰，真的是直接宣戰...ROG的這款眼鏡戴上去之後，它給我的第一個感受是它的畫面是非常好的...甚至是超越了Vision Pro，然後它只是一個眼鏡的重量"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "用台積電歷史股價從十幾塊漲到上千塊的例子，提醒投資人不要被過去的錨定效應限制，不要因為覺得已經很貴就錯過後面的漲幅。",
+      "quote": "我最早看台積電的時候大概它是一兩百塊...他是幾十塊的時候就在看台積電了...你說可以到一千，我不太相信可以到一千，可是最後面他可能就真的到一千兩千三千去了"
+    },
+    {
+      "name": "Anthropic",
+      "ticker": null,
+      "market": "US",
+      "stance": "看空",
+      "reason": "產品（Claude）確實好用，但對老闆Dario Amodei的發言非常不認同，整天講AI多可怕、會讓人失業、造成全球危機。引用David Sachs的觀點：如果你的產品真的會造成這些問題，那就應該被國有化或嚴格監管。",
+      "quote": "我對Anthropic老闆...他的發文實在是令人不敢苟同...整天都是在講說我們東西多可怕，會有多少人失業...David Sachs...你整天在講說你的產品會讓一堆white collar jobs不見...你這個意思代表說你要被我們收歸國有"
+    },
+    {
+      "name": "Astera Labs",
+      "ticker": "ALAB",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "用Astera Labs從200多跌到100的例子，說明不要無腦跟單，強調聽眾不應該把投資決策外包給他。",
+      "quote": "我在看好那個Astralabs，那Astralabs大家都知道說他從那個200多就直接摔到100...有蠻多人就說你看他什麼過去表現超強就是無腦根就對了"
+    },
+    {
+      "name": "高通",
+      "ticker": "QCOM",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到高通之前推Local AI筆電（Snapdragon X系列）嚴格來說是有一點失敗，不是高通的問題而是時間還沒到，類似AIP概念。用來對比RTX Spark這次成功機率較高。",
+      "quote": "這個產品會不會跟過去的像高通啊...那高通的那一次呢嚴格上來說是有一點失敗，那不能夠怪他而是說就時間還沒有到"
+    },
+    {
+      "name": "XAI",
+      "ticker": null,
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到XAI把Colossus租給Anthropic，一年內就回本，用來類比個人買RTX Spark筆電省下雲端AI費用也能回本的邏輯。",
+      "quote": "就類似說像XAI現在把它的Colossus那租給Anthropic，那個其實算下來就是說一年內就有回本"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "AI基礎設施（Enterprise Server/Rack）",
+      "stance": "看多",
+      "reason": "Computex展會展示PowerRack、CPU Rack等產品，Agentic AI Workflow帶動CPU需求，認為成本降低會讓更多人使用，整體需求持續成長。"
+    },
+    {
+      "name": "AI PC / RTX Spark筆電",
+      "stance": "看多",
+      "reason": "RTX Spark搭載Unified Memory、等效5070性能，結合AI應用和遊戲功能，認為比過去幾代AI PC成功機率更高。高規版（9-10萬台幣）才值得買，建議直上。"
+    },
+    {
+      "name": "消費性電子（PC周邊）",
+      "stance": "中立",
+      "reason": "消費級表現不好，所以各家都使出全力做精緻化產品，側面了解今年消費性廠家都做了很多酷東西。但前提是消費性市場低迷。"
+    },
+    {
+      "name": "高股息/股息槓桿族群",
+      "stance": "看空",
+      "reason": "過去幾天已開始殺股息股，融資槓桿最大的人在早盤8:45被迫砍出，後面可能還會有腥風血雨。"
+    },
+    {
+      "name": "AR眼鏡/輕量化XR",
+      "stance": "看多",
+      "reason": "ROG展示的AR眼鏡畫面品質甚至超越Apple Vision Pro且重量極輕，認為眼鏡可能真的是非常有搞頭的方向，再給一兩年時間會有更大突破。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "光通的東西",
+      "interpretation": "光通訊相關元件/模組，在LPU等新平台上的應用",
+      "stance": "僅提及",
+      "quote": "再來就是可能會想看LPU上面有沒有什麼一些新的可能Gadget在上面，是我們過去沒有注意到的，或是一些光通的東西。那我注意到今年有蠻多東西它是把它封起來",
+      "candidates": [
+        {
+          "name": "上詮",
+          "ticker": "3363",
+          "market": "TW",
+          "reason": "光通訊連接器廠商，LPU內部光連接相關"
+        },
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "光收發模組廠，與NVIDIA新平台光通訊需求相關"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "光通訊元件大廠，NVIDIA平台供應鏈"
+        }
+      ]
+    },
+    {
+      "term": "Kyber",
+      "interpretation": "NVIDIA的NVLink互連交換晶片/平台（用於大規模GPU互連），涉及交換結構、背板、Midplane、Cube等元件",
+      "stance": "中立",
+      "quote": "我們稍微的看了一下Kyber，那Kyber的東西其實也是跟去年差不多...它一個比較大的問題是因為它的那個工藝是真的是比較複雜一點，所以甚至還會再有進一步的一些遞延都是有機會發生的...像什麼證交的結構那後面的背板Midplane然後或者說裡面的Cube",
+      "candidates": [
+        {
+          "name": "嘉澤",
+          "ticker": "3533",
+          "market": "TW",
+          "reason": "逐字稿提到Kyber的「證交（正交）結構」和「背板Midplane」，嘉澤為高速連接器/背板供應商"
+        },
+        {
+          "name": "貿聯-KY",
+          "ticker": "3665",
+          "market": "TW",
+          "reason": "高速傳輸線材/連接器，Kyber互連結構所需的高速連接方案"
+        }
+      ]
+    },
+    {
+      "term": "紫蘇",
+      "interpretation": "指大盤ETF（如0050或類似被動投資工具），股癌常用來建議不熟悉市場的聽眾直接買大盤ETF",
+      "stance": "僅提及",
+      "quote": "為什麼我每次講到最後面我都會跟大家講說，好啦你們還不懂的先去買紫蘇，因為我知道我的節目他媽很多死老百姓，因為我們就出圈了",
+      "candidates": [
+        {
+          "name": "元大台灣50",
+          "ticker": "0050",
+          "market": "ETF",
+          "reason": "股癌常用「紫蘇」代指被動型大盤ETF，0050是台股最具代表性的大盤ETF"
+        }
+      ]
+    },
+    {
+      "term": "飄飄",
+      "interpretation": "可能指NVIDIA某個產品線或技術平台的暱稱（piaopio音近某個產品代號），股癌帶過不多談",
+      "stance": "僅提及",
+      "quote": "那當然也聊到飄飄，我們就不用再聊",
+      "candidates": []
+    },
+    {
+      "term": "證交的結構",
+      "interpretation": "應為「正交（Orthogonal）」連接器結構，用於Kyber NVLink交換機的背板/Midplane互連",
+      "stance": "僅提及",
+      "quote": "所以導致像Kyber大家比較去關注的是像什麼證交的結構，那後面的背板Midplane，然後或者說裡面的Cube",
+      "candidates": [
+        {
+          "name": "嘉澤",
+          "ticker": "3533",
+          "market": "TW",
+          "reason": "正交連接器為嘉澤的關鍵產品線，用於NVIDIA高速互連背板"
+        }
+      ]
+    },
+    {
+      "term": "太太們",
+      "interpretation": "指其他消費性電子品牌/競爭對手（ROG宣戰的對象），可能指MSI、技嘉等",
+      "stance": "僅提及",
+      "quote": "簡單來講他們跟市面上的太太們宣戰，真的是直接宣戰，他們就是做出很多的酷東西",
+      "candidates": [
+        {
+          "name": "微星",
+          "ticker": "2377",
+          "market": "TW",
+          "reason": "ROG主要競爭對手之一，電競品牌直接競爭"
+        },
+        {
+          "name": "技嘉",
+          "ticker": "2376",
+          "market": "TW",
+          "reason": "ROG主要競爭對手之一，消費性電子/電競市場"
+        }
+      ]
+    },
+    {
+      "term": "Snowflake",
+      "interpretation": "指Snowflake（SNOW），雲端數據平台公司，股癌提到過去集數討論過有些東西無法外包到大型語言模型，需要在地端處理",
+      "stance": "僅提及",
+      "quote": "就類似我們前面在聊Snowflake，可能有些東西下次要外包到LM沒有辦法，那等到你開始有些Data把它建立進來之後，有些東西可以在地端直接去跑的話",
+      "candidates": [
+        {
+          "name": "Snowflake",
+          "ticker": "SNOW",
+          "market": "US",
+          "reason": "逐字稿直接提到Snowflake名稱，用來說明地端vs雲端AI的成本考量"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP688 | 🦞",
+  "analyzed_at": "2026-06-06T17:36:22.412659",
+  "transcript_chars": 21461
+}
