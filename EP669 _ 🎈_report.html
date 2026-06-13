@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP669 | 🎈</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-06-13</div>
+    <h1>EP669 | 🎈</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌主要討論近期台股劇烈震盪的觀察與應對心態，分析Semi-Analysis對NVIDIA/CPU/800VDC等議題的影響，並評論Apple WWDC策略。他認為產業長線趨勢未變，修正後資金將流向大型、高流動性、有實績的標的，泛光通訊等偏夢想類股短期承壓。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">2330</span><span class="quick-tag bullish">AAPL</span><span class="quick-tag bullish">NVDA</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「大力廣」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">大立光（3008），語音辨識將「大立光」聽成「大力廣」</p>
+          <blockquote>「那我在盤中一看好像剩下大力廣就是說大家比較有共識的一些標的剩下大力廣還在那邊屌在那可是其他一堆都往下灌」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3008" data-cand-name="大立光" data-cand-market="TW"><code class="ticker">3008</code><a href="https://tw.stock.yahoo.com/quote/3008" target="_blank" title="開啟 3008 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">大立光</span><span class="cand-reason"> — 「大力廣」為語音辨識誤聽，上下文描述盤中其他股票都跌但這檔仍撐住，符合大立光作為市場共識龍頭股的特徵</span><button class="wl-btn wl-btn-sm" data-ticker="3008" data-name="大立光" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「泛光類」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">泛指光通訊相關族群（包含CPO、800VDC、pluggable等），股癌認為這些多屬於短期看不到數字的夢想型標的</p>
+          <blockquote>「那一些比較偏向是夢想的東西就是現在你沒有辦法算出數字的東西其實泛光類的就是蠻多都是這樣子的東西所以我覺得資金會這樣子去跑」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3037" data-cand-name="欣興" data-cand-market="TW"><code class="ticker">3037</code><a href="https://tw.stock.yahoo.com/quote/3037" target="_blank" title="開啟 3037 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">欣興</span><span class="cand-reason"> — 光通訊/CPO相關龍頭，屬於泛光類的代表性標的</span><button class="wl-btn wl-btn-sm" data-ticker="3037" data-name="欣興" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="6451" data-cand-name="訊芯-KY" data-cand-market="TW"><code class="ticker">6451</code><a href="https://tw.stock.yahoo.com/quote/6451" target="_blank" title="開啟 6451 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">訊芯-KY</span><span class="cand-reason"> — 光通訊族群代表，800VDC/CPO相關</span><button class="wl-btn wl-btn-sm" data-ticker="6451" data-name="訊芯-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3363" data-cand-name="上詮" data-cand-market="TW"><code class="ticker">3363</code><a href="https://tw.stock.yahoo.com/quote/3363" target="_blank" title="開啟 3363 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">上詮</span><span class="cand-reason"> — 光通訊族群成員</span><button class="wl-btn wl-btn-sm" data-ticker="3363" data-name="上詮" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「pluggable的東西」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">光通訊中的可插拔式光模組（相對於CPO共封裝光學），股癌指出如果CPO/800VDC遞延，pluggable理論上應受惠但也一起被殺，顯示是整體回調</p>
+          <blockquote>「像美股這邊你也注意到說一些那種pluggable的東西一起殺掉就理論上你說可能CPU的東西會比較慢一點會遞延或什麼那pluggable就代表可以再多旺幾年可是為什麼連pluggable的東西都一起掉下去了呢」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AAOI" data-cand-name="Applied Optoelectronics" data-cand-market="US"><code class="ticker">AAOI</code><a href="https://finance.yahoo.com/quote/AAOI" target="_blank" title="開啟 AAOI K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Applied Optoelectronics</span><span class="cand-reason"> — 美股pluggable光模組代表廠商，股癌提到美股pluggable一起被殺</span><button class="wl-btn wl-btn-sm" data-ticker="AAOI" data-name="Applied Optoelectronics" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="LITE" data-cand-name="Lumentum" data-cand-market="US"><code class="ticker">LITE</code><a href="https://finance.yahoo.com/quote/LITE" target="_blank" title="開啟 LITE K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Lumentum</span><span class="cand-reason"> — 美股光通訊pluggable代表</span><button class="wl-btn wl-btn-sm" data-ticker="LITE" data-name="Lumentum" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="COHR" data-cand-name="Coherent" data-cand-market="US"><code class="ticker">COHR</code><a href="https://finance.yahoo.com/quote/COHR" target="_blank" title="開啟 COHR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Coherent</span><span class="cand-reason"> — 美股光通訊pluggable代表</span><button class="wl-btn wl-btn-sm" data-ticker="COHR" data-name="Coherent" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「發哥」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">聯發科（2454），台灣半導體業界對聯發科的慣用暱稱</p>
+          <blockquote>「那TSMC我本來覺得有機會是下一波要領跑的然後現在也是轉弱然後發哥也稍微都往下跳所以還沒有辦法很明確的去識別啦」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — 「發哥」是聯發科的業界暱稱，上下文與台積電並列提及，描述盤勢轉弱</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「常務類型的股票」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">長線穩定型、有穩定營收獲利的價值股，股癌原本猜想這些可以作為避風港，但也沒拉出去</p>
+          <blockquote>「那本來自己心中猜想的就是有些像是避風港比較便宜的像是一些常務類型的股票那也沒有拉出去所以現在還沒有辦法識別出來」</blockquote>
+          
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「800VDC」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">800V直流電力架構，用於AI資料中心的新一代電力系統，Semi-Analysis認為可能遞延</p>
+          <blockquote>「包含說像是800VDC就是就算它可能是比想像中的再慢個幾個Q之類的我覺得它沒有什麼太大的問題反正大趨勢就是往那個方向去做推進那所以該發生的事情該用到的一些components就還是會發生」</blockquote>
+          
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「老牌名牌的東西」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指大型、知名、流動性好且有實際業績的權值型或龍頭股，股癌認為修正後資金會往這類標的靠攏</p>
+          <blockquote>「我現在可能會想注意的是這一些有流動性然後又有層級又是比較紮實又是那種老牌名牌的東西那可是當然就是如果等到這個盤變好說不定也有一些新一波的想法」</blockquote>
+          
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「AYZ」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">一個投資圈的訂閱平台/分析者，因發表對中國光通股的分析被老鐵人（中國股票投資者）威脅恐嚇後收掉</p>
+          <blockquote>「前面才剛有一個AYZ AYZ發了東西然後踩到老鐵人們因為老鐵人們買一大堆中繼續創買一大堆中國的光通股然後那時候就認為說AYZ講的一些東西打擊到了這一些光通股...然後後來就是因為反正就是被恐嚇之類的然後後來就收掉了」</blockquote>
+          
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="2330" data-name="台積電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台積電</span>
+            <span class="card-meta"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">月營收表現不錯，CFO魏哲家暗示有可能漲價（但不會暴力漲），合理漲價有機會推升營收獲利與PE估值。原本預期下一波領跑但目前轉弱。</p>
+          <blockquote>「台積電這個月營收開起來是還蠻不錯...台積電有可能會漲價只是我們不會用那種幾倍的方式去漲...這就有機會去推升後面的一些不管是實質的營收獲利的數字」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2327" data-name="國巨" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">國巨</span>
+            <span class="card-meta"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">描述盤中觀察，國巨漲停後中午打開往下破，但當天仍創新高且在五日線上，用來說明市場震盪的矛盾感。</p>
+          <blockquote>「像國巨是直接漲停還趁中午時間瞬間打開然後就往下破可是問題是它今天還是創新高而且它還在五日線上所以就好像有發生事情可是又沒有發生事情」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="3008" data-name="大立光" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">大立光</span>
+            <span class="card-meta"><code class="ticker">3008</code><a href="https://tw.stock.yahoo.com/quote/3008" target="_blank" title="開啟 3008 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="3008" data-name="大立光" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">盤中觀察其他股票都往下灌時，大立光仍撐住，被視為市場共識較強的標的。</p>
+          <blockquote>「那我在盤中一看好像剩下大力廣就是說大家比較有共識的一些標的剩下大力廣還在那邊屌在那可是其他一堆都往下灌」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="AAPL" data-name="Apple（蘋果）" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Apple（蘋果）</span>
+            <span class="card-meta"><code class="ticker">AAPL</code><a href="https://finance.yahoo.com/quote/AAPL" target="_blank" title="開啟 AAPL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AAPL" data-name="Apple（蘋果）" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">WWDC評價：走折衷路線（部分自建模型+部分與Google合作），螢幕感知功能是殺手鐧，Agentic AI應用前景佳。記憶體漲價下蘋果銷量仍會贏過同業。長期非常看好，但需等資金流向消費性電子時才會進場。</p>
+          <blockquote>「整體來看還是非常看好他那只是當然這可能要等到說資金跑去消費性的時候才會想進去就是我對蘋果是非常看好...目前你很明顯可以看得出來說資金沒有往消費性跑」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="NVDA" data-name="NVIDIA" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">NVIDIA</span>
+            <span class="card-meta"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">Semi-Analysis針對NVIDIA記憶體用量減少的說法，實際上與供給面有關而非需求減弱。Computex上NVIDIA主管確認後續會開始出貨，只是量沒有投資圈假設的那麼大。產業未來沒有改變。</p>
+          <blockquote>「他甚至是直接介入到說有可能這個NV公司的決議就是這樣子...那主管明明就是講說後面就是要開始shipment的嘛那只是當然量的部分可能沒有像投資圈的人去假設的那麼大」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>被動元件</strong><span class="sector-reason"> — 禮拜三盤中觀察，被動元件仍非常強勢，是少數在震盪中維持強勢的族群。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>光通訊</strong><span class="sector-reason"> — 全面轉弱，被Semi-Analysis的800VDC/CPO遞延消息衝擊。但股癌認為產業趨勢未變，800VDC就算慢幾個Q也不影響大方向，pluggable也一起被殺但理論上應受惠，顯示是整體回調而非基本面問題。泛光類很多是短期看不到數字的夢想股。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>PMIC（電源管理IC）</strong><span class="sector-reason"> — 前面有試著要往PMIC跑，PMIC有故事，但後來被掐掉了。要等資金往消費性跑才會有興趣。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>消費性電子</strong><span class="sector-reason"> — 目前資金明顯沒有往消費性跑，但長期看好蘋果等消費性標的，需等資金輪動到此才會進場。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>機器人類股</strong><span class="sector-reason"> — 身邊朋友分享機器人討論熱度很高，美光等公司也非常看好，但時程可能要3-5年。若機器人類股成為市場主軸時反而該擔心，因為短期難看到數字。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>CPU/ASIC相關</strong><span class="sector-reason"> — Semi-Analysis指出CPU可能遞延，但股癌認為CPU本來就被投資圈喊得太高太快（之前節目就說過不會是1:1），技術路線不會掛掉，只是下一代才端出來。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">台股整體盤勢與修正</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 市場劇烈震盪但拉長來看其實沒發生什麼大事，認為這是多頭路途中的正常修正，產業基本面未變。修正結束後仍有機會做多，每次拉回都視為機會。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">修正後資金流向轉變</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 經過這波震盪後，資金將傾向流入大型、流動性好、有實際營收獲利數字的標的，遠離小型、低流動性、偏夢想型（短期看不到數字）的股票。被動元件仍強勢，光通訊全面轉弱。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">Semi-Analysis的空方觀點影響</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> Semi-Analysis提出的CPU遞延、NVIDIA記憶體減少等說法，實質上是市場的reality check，並非產業方向改變。CPU本來就被投資圈喊得太高太快，但長線趨勢不變。搭配回檔時這些消息被放大，但事後創新高時沒人會記得。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">AI產業長線前景</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> AI帶動的需求、零組件lead time拉長、價格上漲等趨勢不會因短期消息改變。機器人領域討論熱度高但數字要3-5年後才會出現，若機器人類股成為市場主軸時反而要擔心。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

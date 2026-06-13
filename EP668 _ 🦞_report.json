@@ -1,0 +1,217 @@
+{
+  "summary": "本集主要分享股癌參加Computex 2025的心得，認為今年展會展示的AI應用比過去兩年更實際、更落地，不再是紙上談兵。同時提到台股夜盤大跌（期貨最深負10%），提醒聽眾做好心理準備面對週一的衝擊，但認為產業面沒有看到太多問題，看完電腦展反而充滿信心。",
+  "macro_views": [
+    {
+      "topic": "台股短期回檔",
+      "view": "夜盤期貨最深摸到負10%，後拉到負6-7%，週一將有大場面。舒服久了就是要還，需要洗籌碼清掉槓桿仔，過程中會有腥風血雨，但整體產業端沒看到太多問題，整理後再看新方向。",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI產業前景",
+      "view": "參加Computex後充滿信心，今年展示的AI應用非常實際，不再是打高空或機械狗跟風，而是真正能加速工作、生活、娛樂的落地產品。認為AI成本降低會帶來更多使用者，整體需求會更大而非縮小。",
+      "stance": "看多"
+    },
+    {
+      "topic": "CPU在Agentic AI中的角色",
+      "view": "有人認為目前Agentic Workflow效率不佳導致CPU用量大，優化後需求會減少。但股癌認為成本降低會讓更多人使用，更多應用都會需要CPU，整體數字會更大，不應看空。",
+      "stance": "看多"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "整集圍繞NVIDIA的Computex展示，包括Enterprise端的PowerRack、LPU、CPU Rack，以及消費端的RTX Spark。認為NVIDIA展示的產品方向正確，從科幻轉向實際落地應用，展現人機結合而非取代人類的方向。",
+      "quote": "首先一大早我們是先跑到NV Enterprise...那最主要的應用就是用在Agentic的AI Workflow裡面"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "用台積電從十幾塊漲到上千塊的歷史，說明不要被過去的價格錨定，好的公司可能持續更好，提醒不要因為習慣而錯過後續漲幅。",
+      "quote": "像我最早看台積電的時候大概它是一兩百塊的東西...你說可以到一千我不太相信可以到一千可是最後面他可能就真的到一千兩千三千去了"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "在聯發科攤位看展，聯發科人員為他展示RTX Spark相關內容，確認RTX Spark等效5070效能且可打遊戲。股癌對RTX Spark產品前景正面，但未直接對聯發科股票表態。",
+      "quote": "那在聯發科這邊我有去跟他們聊了一下...那這個RTX Spark它雖然是很小的一個晶片可是它大概是等效5070的東西那我就覺得這是有搞頭的"
+    },
+    {
+      "name": "華碩(ASUS ROG)",
+      "ticker": "2357",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "大篇幅描述ROG展示的精緻化產品（T1聯名顯卡、客製化鍵盤、24K鍍金背板、主機面板、AR眼鏡），認為ROG精銳盡出、洪荒之力，消費性廠家開始往精緻化方向走。對ROG的AR眼鏡印象深刻，認為可能是輕量化的Apple Vision Pro。",
+      "quote": "那最後面我們去看了ASUS ROG那我覺得這次ROG也是精銳盡出他們已經是洪荒之力了很明顯簡單來講他們跟市面上的太太們宣戰"
+    },
+    {
+      "name": "Adobe",
+      "ticker": "ADBE",
+      "market": "US",
+      "stance": "中立",
+      "reason": "市場認為Adobe會被AI取代，人人喊打，但在NVIDIA消費展中看到NVIDIA與Adobe有深度合作，硬體為Adobe軟體客製化，軟體也配合RTX Spark做優化。認為這是有趣的反差，但明確表示不是要說Adobe低點到了，因為這領域他相對不熟。",
+      "quote": "市場中現在大家都非常喜歡的Adobe因為大家認為說AI可以生圖AI可以改圖所以Adobe就是要BBQ了...竟然是看出來是他們深度合作的夥伴...這邊不是要cue大家說所以Adobe的低點到了"
+    },
+    {
+      "name": "高通",
+      "ticker": "QCOM",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到高通之前推Local AI筆電（AIP）時間點不對，嚴格上來說有一點失敗，用來對比RTX Spark這次成功機率較高。",
+      "quote": "這個產品會不會跟過去的像高通啊或是說我們知道MacBook大家都有在推Local AI嘛那高通的那一次呢嚴格上來說是有一點失敗"
+    },
+    {
+      "name": "Astera Labs",
+      "ticker": "ALAB",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "用Astera Labs從200多跌到100的案例，提醒聽眾不要無腦跟單、把選擇外包給別人，要自己動腦思考。",
+      "quote": "因為我在看好那個Astralabs那Astralabs大家都知道說他從那個200多就直接摔到100反正就直接摔成狗就對了"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "AI產業（整體）",
+      "stance": "看多",
+      "reason": "Computex 2025展示的AI應用從過去的打高空、機械狗跟風，轉變為實際落地的生產力工具（剪片、修圖、Rendering、Agentic AI），認為Future is now，產業面沒有看到問題。"
+    },
+    {
+      "name": "消費性電子",
+      "stance": "中立",
+      "reason": "消費級表現不好，所以各廠商必須使出全力做精緻化產品來吸引消費者。但RTX Spark如果能結合遊戲（如GTA6）加上AI功能，可能帶動新一波換機潮。"
+    },
+    {
+      "name": "高股息/股息ETF",
+      "stance": "看空",
+      "reason": "提到過去幾天已經在殺股息股，融資槓桿最大的股息標的在開盤時被斷頭直接開超低，認為後面還會有一陣子腥風血雨清洗槓桿仔。",
+      "quote": null
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "紫蘇",
+      "interpretation": "指被動式投資工具（如大盤ETF），股癌常用來建議不懂個股操作的新手直接買ETF",
+      "stance": "僅提及",
+      "quote": "可是為什麼我每次講到最後面我都會跟大家講說好啦你們還不懂的先去買紫蘇因為我知道我的節目他媽很多死老百姓因為我們就出圈了",
+      "candidates": [
+        {
+          "name": "元大台灣50",
+          "ticker": "0050",
+          "market": "TW",
+          "reason": "股癌長期用「紫蘇」代稱被動式ETF，最常指向0050或類似大盤型ETF，建議新手不要亂操作個股"
+        }
+      ]
+    },
+    {
+      "term": "飄飄",
+      "interpretation": "指NVIDIA的某個產品線或技術平台，股癌說「也聊到飄飄我們就不用再聊」，表示是已經討論過的熟悉話題",
+      "stance": "僅提及",
+      "quote": "那當然也聊到飄飄我們就不用再聊我們稍微的看了一下Kyber",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "上下文在討論NVIDIA Enterprise展區的產品（VR Rubin、Grace Blackwell），飄飄應為NVIDIA某產品代號或暱稱，可能指NVLink或某代平台"
+        }
+      ]
+    },
+    {
+      "term": "Kyber相關的證交結構、背板、Midplane、Cube",
+      "interpretation": "指NVIDIA Kyber平台相關的零組件供應鏈，包括機櫃結構件、背板/中板、以及用在LPU中的Cube元件",
+      "stance": "看多",
+      "quote": "像Kyber大家比較去關注的是像什麼證交的結構那後面的背板Midplane然後或者說裡面的Cube但Cube有用在LPU裡面...也隨著遞延可能有些人就會不去注意它但是我覺得有朝一日他們都是還是會再回來的",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "Kyber是NVIDIA的新平台，股癌提到其工藝複雜可能遞延，但長期看好相關零組件會回來"
+        }
+      ]
+    },
+    {
+      "term": "光通",
+      "interpretation": "光通訊相關族群，在NVIDIA Enterprise展區中提到想看光通訊的新東西",
+      "stance": "僅提及",
+      "quote": "再來就是可能會想看LPU上面有沒有什麼一些新的可能Gadget在上面是我們過去沒有注意到的或是一些光通的東西",
+      "candidates": [
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "光通訊龍頭之一，股癌提到想在NVIDIA展區看光通相關新元件"
+        },
+        {
+          "name": "Applied Optoelectronics",
+          "ticker": "AAOI",
+          "market": "US",
+          "reason": "光通訊廠商，股癌常提到的光通標的之一"
+        }
+      ]
+    },
+    {
+      "term": "OEM ODM EMS",
+      "interpretation": "指台灣的代工製造廠商族群，包括品牌代工、設計代工、電子製造服務商",
+      "stance": "看多",
+      "quote": "像以前這些OEM ODM EMS或是晶圓代工業者他是多少錢EPS是多少...可是如果你有這樣子的想法的話你可能會錯過後面的一些漲幅因為他可能好就還會再更好",
+      "candidates": [
+        {
+          "name": "鴻海",
+          "ticker": "2317",
+          "market": "TW",
+          "reason": "EMS龍頭，股癌提醒不要因為習慣過去的價位而錯過好股票後續漲幅"
+        },
+        {
+          "name": "廣達",
+          "ticker": "2382",
+          "market": "TW",
+          "reason": "ODM伺服器龍頭，符合股癌提到的OEM/ODM廠商可能好還會更好的論述"
+        },
+        {
+          "name": "緯創",
+          "ticker": "3231",
+          "market": "TW",
+          "reason": "ODM大廠，同樣屬於股癌提到不要被過去價位錨定的代工族群"
+        }
+      ]
+    },
+    {
+      "term": "西部",
+      "interpretation": "指美股市場（相對於台股），股癌慣用說法",
+      "stance": "僅提及",
+      "quote": "那你再去問西部的操作我覺得也是沒有什麼用就是有時候還是要從大方向去改變選擇比較重要",
+      "candidates": []
+    },
+    {
+      "term": "台子",
+      "interpretation": "指台股期貨/台指期，用來描述夜盤的跌幅",
+      "stance": "僅提及",
+      "quote": "因為大家都知道說像昨天夜盤已經出現了大場面最深的時候我看台子有摸到負10%後來拉到負6、7%左右所以下禮拜大家就是brace for impact",
+      "candidates": []
+    },
+    {
+      "term": "龍顏",
+      "interpretation": "指龍巖(5530)，殯葬業者，聽眾提到該股幾乎每年都會來一波兇狠漲勢但不知道原因",
+      "stance": "僅提及",
+      "quote": "有發現龍顏幾乎每年都會來一波很兇狠的漲勢只是完全不懂為什麼會漲1月14號發現漲停後隔天果斷試價單上車一週後一根綠K就出場了",
+      "candidates": [
+        {
+          "name": "龍巖",
+          "ticker": "5530",
+          "market": "TW",
+          "reason": "「龍顏」為龍巖的諧音或語音辨識誤差，聽眾提到該股每年會有一波兇狠漲勢"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP668 | 🦞",
+  "analyzed_at": "2026-06-13T17:39:43.622548",
+  "transcript_chars": 21501
+}

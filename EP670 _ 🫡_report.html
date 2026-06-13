@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP670 | 🫡</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-06-13</div>
+    <h1>EP670 | 🫡</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌討論了SpaceX上市申購與交易經驗、衛星相關股票的出貨現象、被動元件漲價趨勢超預期、Anthropic推出Fable模型與AI監管議題，以及台股修正後的操作策略。他認為台股修正可能已接近尾聲，持續加碼買進，並看好被動元件走長週期漲價行情。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">SpaceX</span><span class="quick-tag bullish">ALAB</span><span class="quick-tag bearish">RKLB</span><span class="quick-tag bearish">ASTS</span><span class="quick-tag bearish">Fly（FLY）</span><span class="quick-tag bullish">2308</span><span class="quick-tag bullish">3665</span><span class="quick-tag vague">2492</span><span class="quick-tag vague">2327</span><span class="quick-tag vague">3363</span><span class="quick-tag vague">3081</span><span class="quick-tag vague">三星電機（Samsung Electro-Mechanics）</span><span class="quick-tag vague">6981</span><span class="quick-tag vague">6451</span><span class="quick-tag vague">4977</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「台子齊」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">台積電（語音辨識將「台積電」辨識為「台子齊」）</p>
+          <blockquote>「前面AI熱到不行，結果台子齊夜盤殺到跌停水準，最終大跌三千多點，本來只是滑一下美股，結果打開報價，台子齊先瘦一大圈」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2330" data-cand-name="台積電" data-cand-market="TW"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">台積電</span><span class="cand-reason"> — 逐字稿後文提到『台積電就是2330』，且夜盤大跌三千多點的描述符合台積電ADR的波動影響</span><button class="wl-btn wl-btn-sm" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「春田」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">被動元件相關公司（可能為「華新科」或被動元件廠，語音辨識誤差）</p>
+          <blockquote>「像我自己去看春田，我也覺得春田很貴，可是如果說春田後來的EPS狂拉，它真的漲價成功，那種一系列的什麼AI的需求把它推上去的話，到時候你看它搞不好就變成一個PE搞不好在20倍以下的東西」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2492" data-cand-name="華新科" data-cand-market="TW"><code class="ticker">2492</code><a href="https://tw.stock.yahoo.com/quote/2492" target="_blank" title="開啟 2492 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華新科</span><span class="cand-reason"> — 此段前後文都在討論被動元件漲價，華新科是台系被動元件大廠，且與整段被動元件漲價的討論脈絡一致</span><button class="wl-btn wl-btn-sm" data-ticker="2492" data-name="華新科" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2327" data-cand-name="國巨" data-cand-market="TW"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">國巨</span><span class="cand-reason"> — 同屬被動元件族群且在本集被點名提到目標價，是被動元件龍頭</span><button class="wl-btn wl-btn-sm" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「光的東西」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">光通訊相關產品/CPO等技術路線</p>
+          <blockquote>「我那時候不是跟大家講說，如果你說一些光的東西要遞延，那應該pluggable的東西要上去，可是pluggable的東西也被殺下去，就代表說其實不是在疊這個，它就是一個市場的情緒的通殺」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3363" data-cand-name="上詮" data-cand-market="TW"><code class="ticker">3363</code><a href="https://tw.stock.yahoo.com/quote/3363" target="_blank" title="開啟 3363 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">上詮</span><span class="cand-reason"> — 光通訊族群代表，本集討論光通訊路線遞延但認為是情緒性殺盤非基本面問題</span><button class="wl-btn wl-btn-sm" data-ticker="3363" data-name="上詮" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3081" data-cand-name="聯亞" data-cand-market="TW"><code class="ticker">3081</code><a href="https://tw.stock.yahoo.com/quote/3081" target="_blank" title="開啟 3081 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯亞</span><span class="cand-reason"> — 光通訊相關標的</span><button class="wl-btn wl-btn-sm" data-ticker="3081" data-name="聯亞" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「A家的」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">某外資券商（可能指Aletheia或其他以A開頭的研究機構），習慣用股票代號作為目標價</p>
+          <blockquote>「聽說在下個禮拜，某個這個A家的也要進去寫，就是喜歡去用那個數字當成是關鍵字的，類似說聯發科就是要目標價2454，台積電就是2330」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="Aletheia（純粹投資）" data-cand-market="其他"><span class="market-tag">其他</span> <span class="cand-name">Aletheia（純粹投資）</span><span class="cand-reason"> — 股癌提到『A家的』且描述其習慣用股票代號作為目標價數字，這是Aletheia的知名風格</span></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「日股的MACO」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">日本被動元件大廠村田製作所（Murata Manufacturing），語音辨識誤差</p>
+          <blockquote>「像日股的MACO的話，那也因為說後來去切被動元件，所以就有去做一些調整，那也注意到MACO其實也是回檔一陣子了」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6981" data-cand-name="村田製作所（Murata）" data-cand-market="其他"><code class="ticker">6981</code><a href="https://finance.yahoo.com/quote/6981" target="_blank" title="開啟 6981 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">其他</span> <span class="cand-name">村田製作所（Murata）</span><span class="cand-reason"> — 前後文在討論Starlink供應鏈和被動元件的切換，MACO語音可能是Murata的簡稱或誤辨，且村田是日本被動元件龍頭，與『切被動元件』的脈絡完全吻合</span><button class="wl-btn wl-btn-sm" data-ticker="6981" data-name="村田製作所（Murata）" data-market="其他" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「韓系日系台系」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">韓國、日本、台灣的被動元件大廠，在漲價與配貨動態中被提及</p>
+          <blockquote>「不只是韓系日系，然後連台系現在有些也開始扮演這種漲價領頭羊的一個角色，大家去針對一些料號去做漲價」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="三星電機（Samsung Electro-Mechanics）" data-cand-market="其他"><span class="market-tag">其他</span> <span class="cand-name">三星電機（Samsung Electro-Mechanics）</span><span class="cand-reason"> — 韓系被動元件代表，本集提到韓系已開始漲價與配貨</span></div><div class="cand-row" data-cand-ticker="6981" data-cand-name="村田製作所（Murata）" data-cand-market="其他"><code class="ticker">6981</code><a href="https://finance.yahoo.com/quote/6981" target="_blank" title="開啟 6981 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">其他</span> <span class="cand-name">村田製作所（Murata）</span><span class="cand-reason"> — 日系被動元件代表，本集提到日系已跟進配貨操作</span><button class="wl-btn wl-btn-sm" data-ticker="6981" data-name="村田製作所（Murata）" data-market="其他" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2492" data-cand-name="華新科" data-cand-market="TW"><code class="ticker">2492</code><a href="https://tw.stock.yahoo.com/quote/2492" target="_blank" title="開啟 2492 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華新科</span><span class="cand-reason"> — 台系被動元件大廠，本集提到台系也開始扮演漲價領頭羊角色</span><button class="wl-btn wl-btn-sm" data-ticker="2492" data-name="華新科" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2327" data-cand-name="國巨" data-cand-market="TW"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">國巨</span><span class="cand-reason"> — 台系被動元件龍頭，本集被點名提到目標價</span><button class="wl-btn wl-btn-sm" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「Amphibio / AMPLIFIC」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">Anthropic（AI公司），語音辨識將Anthropic誤辨為Amphibio/AMPLIFIC</p>
+          <blockquote>「Amphibio這邊推出了Fable...我覺得目前AMPLIFIC的模型真的都是還蠻屌炮的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="Anthropic" data-cand-market="US"><span class="market-tag">US</span> <span class="cand-name">Anthropic</span><span class="cand-reason"> — 逐字稿提到Fable模型、Dario Amodei、美國出口管制，這些都是Anthropic的特徵。Anthropic推出的是Claude系列模型</span></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「pluggable」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">可插拔光模組（相對於CPO共封裝光學的另一條技術路線）</p>
+          <blockquote>「如果你說一些光的東西要遞延，那應該pluggable的東西要上去，可是pluggable的東西也被殺下去，就代表說其實不是在疊這個，它就是一個市場的情緒的通殺」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6451" data-cand-name="訊芯-KY" data-cand-market="TW"><code class="ticker">6451</code><a href="https://tw.stock.yahoo.com/quote/6451" target="_blank" title="開啟 6451 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">訊芯-KY</span><span class="cand-reason"> — 光模組封裝廠，屬於pluggable光模組供應鏈，本集提到pluggable路線應受益於CPO遞延</span><button class="wl-btn wl-btn-sm" data-ticker="6451" data-name="訊芯-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="4977" data-cand-name="眾達-KY" data-cand-market="TW"><code class="ticker">4977</code><a href="https://tw.stock.yahoo.com/quote/4977" target="_blank" title="開啟 4977 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">眾達-KY</span><span class="cand-reason"> — 光通訊模組廠，屬pluggable路線</span><button class="wl-btn wl-btn-sm" data-ticker="4977" data-name="眾達-KY" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="" data-name="SpaceX" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">SpaceX</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">已參與申購並在次級市場以160多元買入，認為衛星是賺錢引擎，火箭和AI是本夢比但有潛力。會持續加碼，類似持有特斯拉的心態，是相挺太空夢想。</p>
+          <blockquote>「我去買的時候是160幾，申購的時候當然就是那個申購價，那後面是有再買到160幾，那我覺得在接下來幾天應該都會再持續的去點一點，有點像是說去支持一個太空的夢想」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="ALAB" data-name="Astera Labs" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Astera Labs</span>
+            <span class="card-meta"><code class="ticker">ALAB</code><a href="https://finance.yahoo.com/quote/ALAB" target="_blank" title="開啟 ALAB K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="ALAB" data-name="Astera Labs" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">以ALAB為經典案例說明短線故事不重要，從200多跌到100再漲到近400，強調基本面好就不該被短線雜訊影響。暗示自己仍持有且看好。</p>
+          <blockquote>「Astralabs因為它真的算是一個很經典的案例，從200多掉到100，然後接著下是300多快400，那你還記得快100的時候也是很多聽眾跑來問我嗎」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="TSLA" data-name="特斯拉" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">特斯拉</span>
+            <span class="card-meta"><code class="ticker">TSLA</code><a href="https://finance.yahoo.com/quote/TSLA" target="_blank" title="開啟 TSLA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="TSLA" data-name="特斯拉" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到自己持有特斯拉，是出於相挺的心態，與SpaceX的持有邏輯類似。</p>
+          <blockquote>「我覺得這個會有一點類似說像我自己去持有特斯拉一樣，它會有一點那種就是我是去相挺它」</blockquote>
+        </div>
+
+        <div class="card bearish" data-ticker="RKLB" data-name="RKLB（Rocket Lab）" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">RKLB（Rocket Lab）</span>
+            <span class="card-meta"><code class="ticker">RKLB</code><a href="https://finance.yahoo.com/quote/RKLB" target="_blank" title="開啟 RKLB K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="RKLB" data-name="RKLB（Rocket Lab）" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bearish">📉 看空</span>
+          <p class="reason">SpaceX上市後，過去跟著衛星火箭題材上漲的股票出現大逃殺，RKLB是其中之一，認為資金趁機出貨。</p>
+          <blockquote>「一些在過去跟衛星火箭相關的股票，不管什麼RKLV、ASTS然後或者是FLY，就是這些跟衛星或是通訊有關係的股票，其實他們都出現了一個大逃殺的狀況」</blockquote>
+        </div>
+
+        <div class="card bearish" data-ticker="ASTS" data-name="AST SpaceMobile" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">AST SpaceMobile</span>
+            <span class="card-meta"><code class="ticker">ASTS</code><a href="https://finance.yahoo.com/quote/ASTS" target="_blank" title="開啟 ASTS K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="ASTS" data-name="AST SpaceMobile" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bearish">📉 看空</span>
+          <p class="reason">與RKLB同屬衛星通訊族群，SpaceX上市後出現資金出逃的提款現象。</p>
+          <blockquote>「不管什麼RKLV、ASTS然後或者是FLY，就是這些跟衛星或是通訊有關係的股票，其實他們都出現了一個大逃殺的狀況」</blockquote>
+        </div>
+
+        <div class="card bearish" data-ticker="" data-name="Fly（FLY）" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Fly（FLY）</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge bearish">📉 看空</span>
+          <p class="reason">與RKLB、ASTS同被提及為SpaceX上市後遭出貨的衛星通訊相關股票。</p>
+          <blockquote>「不管什麼RKLV、ASTS然後或者是FLY，就是這些跟衛星或是通訊有關係的股票，其實他們都出現了一個大逃殺的狀況」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2330" data-name="台積電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台積電</span>
+            <span class="card-meta"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到台積電夜盤大跌三千多點作為市場修正的開端，另外在估值討論和券商目標價的脈絡中提及。</p>
+          <blockquote>「台子齊夜盤殺到跌停水準，最終大跌三千多點...台積電就是2330」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2454" data-name="聯發科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯發科</span>
+            <span class="card-meta"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">在討論券商目標價趨勢時提及，某券商習慣用股票代號當目標價數字。</p>
+          <blockquote>「類似說聯發科就是要目標價2454，台積電就是2330」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2327" data-name="國巨" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">國巨</span>
+            <span class="card-meta"><code class="ticker">2327</code><a href="https://tw.stock.yahoo.com/quote/2327" target="_blank" title="開啟 2327 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2327" data-name="國巨" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">在券商目標價討論脈絡中被提及，目標價2327。</p>
+          <blockquote>「那當然國巨有目標價2327，我們看後面會不會有這樣的情形發生」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="2308" data-name="台達電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台達電</span>
+            <span class="card-meta"><code class="ticker">2308</code><a href="https://tw.stock.yahoo.com/quote/2308" target="_blank" title="開啟 2308 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2308" data-name="台達電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">回應聽眾提問，認為800V HVDC延後反而延長台達電400V的受益期，股價下跌是市場情緒通殺而非基本面問題。</p>
+          <blockquote>「如果今天講說800V DC要延後，其實它只有兩個路線去跑，那你說400V應該可以持續的走下去，或甚至它會有更長的一個受益期」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="3665" data-name="貿聯-KY" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">貿聯-KY</span>
+            <span class="card-meta"><code class="ticker">3665</code><a href="https://tw.stock.yahoo.com/quote/3665" target="_blank" title="開啟 3665 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="3665" data-name="貿聯-KY" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">聽眾提到貿聯買了DataCom補足Connector和PowerShelf產品線，股癌未反駁且在回應中暗示這些標的的下跌是情緒面而非基本面問題。</p>
+          <blockquote>「貿連KY買了DataCom，補足了Connector和PowerShelf的產品，應該未來更強」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>被動元件</strong><span class="sector-reason"> — 漲價已成功且超出預期，不只AI核心料號，中小尺寸也開始漲價。韓系日系台系都在跟進漲價，大廠無大擴產計畫，週期有望類比記憶體走得更長。本來預計要漲6-7次才到Terminal，現在照速度只需2次就能達到。配貨機制啟動將驗證需求真實性。</span></div>
+<div class="sector-chip bearish"><span class="badge bearish">📉 看空</span> <strong>衛星/火箭/低軌通訊</strong><span class="sector-reason"> — SpaceX上市後，過去跟著題材上漲的衛星通訊股出現大逃殺。資金趁散戶看到報紙找衛星股時出貨。台股衛星族群從一月就開始佈局，已經漲很多，可能被拿來當提款機。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>AI電源族群</strong><span class="sector-reason"> — 800V HVDC延後但400V受益期延長，下跌是情緒通殺而非基本面問題。與光通訊類似，市場不理性地全面拋售，但路線該推的會繼續推。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>Edge Computing / 邊緣運算</strong><span class="sector-reason"> — 認為Edge Computing的時代已不遠，前沿大模型面臨監管風險可能推動資金轉向。開放模型追上閉鎖模型後，低端算力可完成絕大多數任務，低端裝置有望迎來爆發。目前籌碼乾淨、低基期。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">台股修正幅度</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 認為台股這波修正可能已經跌完，除非有新的事件產生。壞消息已一次性釋出，市場對CPI、川普奪島言論等利空反應已逐步鈍化，自己持續將籌碼推進做買進。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">AI監管風險</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> Anthropic的Dario Amodei過度訴諸恐懼，導致Fable模型遭美國出口管制，未來可能有更多監管鐵拳。這可能促使市場從追求大模型/大cluster轉向Edge Computing方向。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">Edge Computing趨勢</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 認為Edge Computing的時代已經不遠了。前沿模型越來越強，開放模型落後閉鎖模型約半年，透過低端算力就能完成大部分任務。加上大模型面臨監管，資金可能轉向低基期、籌碼乾淨的邊緣運算相關標的。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">估值觀念</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 估值是藝術不是科學，重點不在當下證對錯而是估在別人前面。便宜的價值股不一定會漲，成長股的價值可能放在後面。不應該用絕對估值數字去批評成長股或太空股。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

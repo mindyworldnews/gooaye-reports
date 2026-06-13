@@ -1,0 +1,290 @@
+{
+  "summary": "本集股癌討論了SpaceX上市申購與交易經驗、衛星相關股票的出貨現象、被動元件漲價趨勢超預期、Anthropic推出Fable模型與AI監管議題，以及台股修正後的操作策略。他認為台股修正可能已接近尾聲，持續加碼買進，並看好被動元件走長週期漲價行情。",
+  "macro_views": [
+    {
+      "topic": "台股修正幅度",
+      "view": "認為台股這波修正可能已經跌完，除非有新的事件產生。壞消息已一次性釋出，市場對CPI、川普奪島言論等利空反應已逐步鈍化，自己持續將籌碼推進做買進。",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI監管風險",
+      "view": "Anthropic的Dario Amodei過度訴諸恐懼，導致Fable模型遭美國出口管制，未來可能有更多監管鐵拳。這可能促使市場從追求大模型/大cluster轉向Edge Computing方向。",
+      "stance": "中立"
+    },
+    {
+      "topic": "Edge Computing趨勢",
+      "view": "認為Edge Computing的時代已經不遠了。前沿模型越來越強，開放模型落後閉鎖模型約半年，透過低端算力就能完成大部分任務。加上大模型面臨監管，資金可能轉向低基期、籌碼乾淨的邊緣運算相關標的。",
+      "stance": "看多"
+    },
+    {
+      "topic": "估值觀念",
+      "view": "估值是藝術不是科學，重點不在當下證對錯而是估在別人前面。便宜的價值股不一定會漲，成長股的價值可能放在後面。不應該用絕對估值數字去批評成長股或太空股。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "SpaceX",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "已參與申購並在次級市場以160多元買入，認為衛星是賺錢引擎，火箭和AI是本夢比但有潛力。會持續加碼，類似持有特斯拉的心態，是相挺太空夢想。",
+      "quote": "我去買的時候是160幾，申購的時候當然就是那個申購價，那後面是有再買到160幾，那我覺得在接下來幾天應該都會再持續的去點一點，有點像是說去支持一個太空的夢想"
+    },
+    {
+      "name": "Astera Labs",
+      "ticker": "ALAB",
+      "market": "US",
+      "stance": "看多",
+      "reason": "以ALAB為經典案例說明短線故事不重要，從200多跌到100再漲到近400，強調基本面好就不該被短線雜訊影響。暗示自己仍持有且看好。",
+      "quote": "Astralabs因為它真的算是一個很經典的案例，從200多掉到100，然後接著下是300多快400，那你還記得快100的時候也是很多聽眾跑來問我嗎"
+    },
+    {
+      "name": "特斯拉",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到自己持有特斯拉，是出於相挺的心態，與SpaceX的持有邏輯類似。",
+      "quote": "我覺得這個會有一點類似說像我自己去持有特斯拉一樣，它會有一點那種就是我是去相挺它"
+    },
+    {
+      "name": "RKLB（Rocket Lab）",
+      "ticker": "RKLB",
+      "market": "US",
+      "stance": "看空",
+      "reason": "SpaceX上市後，過去跟著衛星火箭題材上漲的股票出現大逃殺，RKLB是其中之一，認為資金趁機出貨。",
+      "quote": "一些在過去跟衛星火箭相關的股票，不管什麼RKLV、ASTS然後或者是FLY，就是這些跟衛星或是通訊有關係的股票，其實他們都出現了一個大逃殺的狀況"
+    },
+    {
+      "name": "AST SpaceMobile",
+      "ticker": "ASTS",
+      "market": "US",
+      "stance": "看空",
+      "reason": "與RKLB同屬衛星通訊族群，SpaceX上市後出現資金出逃的提款現象。",
+      "quote": "不管什麼RKLV、ASTS然後或者是FLY，就是這些跟衛星或是通訊有關係的股票，其實他們都出現了一個大逃殺的狀況"
+    },
+    {
+      "name": "Fly（FLY）",
+      "ticker": null,
+      "market": "US",
+      "stance": "看空",
+      "reason": "與RKLB、ASTS同被提及為SpaceX上市後遭出貨的衛星通訊相關股票。",
+      "quote": "不管什麼RKLV、ASTS然後或者是FLY，就是這些跟衛星或是通訊有關係的股票，其實他們都出現了一個大逃殺的狀況"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到台積電夜盤大跌三千多點作為市場修正的開端，另外在估值討論和券商目標價的脈絡中提及。",
+      "quote": "台子齊夜盤殺到跌停水準，最終大跌三千多點...台積電就是2330"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "在討論券商目標價趨勢時提及，某券商習慣用股票代號當目標價數字。",
+      "quote": "類似說聯發科就是要目標價2454，台積電就是2330"
+    },
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "在券商目標價討論脈絡中被提及，目標價2327。",
+      "quote": "那當然國巨有目標價2327，我們看後面會不會有這樣的情形發生"
+    },
+    {
+      "name": "台達電",
+      "ticker": "2308",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "回應聽眾提問，認為800V HVDC延後反而延長台達電400V的受益期，股價下跌是市場情緒通殺而非基本面問題。",
+      "quote": "如果今天講說800V DC要延後，其實它只有兩個路線去跑，那你說400V應該可以持續的走下去，或甚至它會有更長的一個受益期"
+    },
+    {
+      "name": "貿聯-KY",
+      "ticker": "3665",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "聽眾提到貿聯買了DataCom補足Connector和PowerShelf產品線，股癌未反駁且在回應中暗示這些標的的下跌是情緒面而非基本面問題。",
+      "quote": "貿連KY買了DataCom，補足了Connector和PowerShelf的產品，應該未來更強"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "被動元件",
+      "stance": "看多",
+      "reason": "漲價已成功且超出預期，不只AI核心料號，中小尺寸也開始漲價。韓系日系台系都在跟進漲價，大廠無大擴產計畫，週期有望類比記憶體走得更長。本來預計要漲6-7次才到Terminal，現在照速度只需2次就能達到。配貨機制啟動將驗證需求真實性。"
+    },
+    {
+      "name": "衛星/火箭/低軌通訊",
+      "stance": "看空",
+      "reason": "SpaceX上市後，過去跟著題材上漲的衛星通訊股出現大逃殺。資金趁散戶看到報紙找衛星股時出貨。台股衛星族群從一月就開始佈局，已經漲很多，可能被拿來當提款機。"
+    },
+    {
+      "name": "AI電源族群",
+      "stance": "看多",
+      "reason": "800V HVDC延後但400V受益期延長，下跌是情緒通殺而非基本面問題。與光通訊類似，市場不理性地全面拋售，但路線該推的會繼續推。"
+    },
+    {
+      "name": "Edge Computing / 邊緣運算",
+      "stance": "看多",
+      "reason": "認為Edge Computing的時代已不遠，前沿大模型面臨監管風險可能推動資金轉向。開放模型追上閉鎖模型後，低端算力可完成絕大多數任務，低端裝置有望迎來爆發。目前籌碼乾淨、低基期。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "台子齊",
+      "interpretation": "台積電（語音辨識將「台積電」辨識為「台子齊」）",
+      "stance": "僅提及",
+      "quote": "前面AI熱到不行，結果台子齊夜盤殺到跌停水準，最終大跌三千多點，本來只是滑一下美股，結果打開報價，台子齊先瘦一大圈",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "逐字稿後文提到『台積電就是2330』，且夜盤大跌三千多點的描述符合台積電ADR的波動影響"
+        }
+      ]
+    },
+    {
+      "term": "春田",
+      "interpretation": "被動元件相關公司（可能為「華新科」或被動元件廠，語音辨識誤差）",
+      "stance": "看多",
+      "quote": "像我自己去看春田，我也覺得春田很貴，可是如果說春田後來的EPS狂拉，它真的漲價成功，那種一系列的什麼AI的需求把它推上去的話，到時候你看它搞不好就變成一個PE搞不好在20倍以下的東西",
+      "candidates": [
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "此段前後文都在討論被動元件漲價，華新科是台系被動元件大廠，且與整段被動元件漲價的討論脈絡一致"
+        },
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "同屬被動元件族群且在本集被點名提到目標價，是被動元件龍頭"
+        }
+      ]
+    },
+    {
+      "term": "光的東西",
+      "interpretation": "光通訊相關產品/CPO等技術路線",
+      "stance": "看多",
+      "quote": "我那時候不是跟大家講說，如果你說一些光的東西要遞延，那應該pluggable的東西要上去，可是pluggable的東西也被殺下去，就代表說其實不是在疊這個，它就是一個市場的情緒的通殺",
+      "candidates": [
+        {
+          "name": "上詮",
+          "ticker": "3363",
+          "market": "TW",
+          "reason": "光通訊族群代表，本集討論光通訊路線遞延但認為是情緒性殺盤非基本面問題"
+        },
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "光通訊相關標的"
+        }
+      ]
+    },
+    {
+      "term": "A家的",
+      "interpretation": "某外資券商（可能指Aletheia或其他以A開頭的研究機構），習慣用股票代號作為目標價",
+      "stance": "僅提及",
+      "quote": "聽說在下個禮拜，某個這個A家的也要進去寫，就是喜歡去用那個數字當成是關鍵字的，類似說聯發科就是要目標價2454，台積電就是2330",
+      "candidates": [
+        {
+          "name": "Aletheia（純粹投資）",
+          "ticker": null,
+          "market": "其他",
+          "reason": "股癌提到『A家的』且描述其習慣用股票代號作為目標價數字，這是Aletheia的知名風格"
+        }
+      ]
+    },
+    {
+      "term": "日股的MACO",
+      "interpretation": "日本被動元件大廠村田製作所（Murata Manufacturing），語音辨識誤差",
+      "stance": "僅提及",
+      "quote": "像日股的MACO的話，那也因為說後來去切被動元件，所以就有去做一些調整，那也注意到MACO其實也是回檔一陣子了",
+      "candidates": [
+        {
+          "name": "村田製作所（Murata）",
+          "ticker": "6981",
+          "market": "其他",
+          "reason": "前後文在討論Starlink供應鏈和被動元件的切換，MACO語音可能是Murata的簡稱或誤辨，且村田是日本被動元件龍頭，與『切被動元件』的脈絡完全吻合"
+        }
+      ]
+    },
+    {
+      "term": "韓系日系台系",
+      "interpretation": "韓國、日本、台灣的被動元件大廠，在漲價與配貨動態中被提及",
+      "stance": "看多",
+      "quote": "不只是韓系日系，然後連台系現在有些也開始扮演這種漲價領頭羊的一個角色，大家去針對一些料號去做漲價",
+      "candidates": [
+        {
+          "name": "三星電機（Samsung Electro-Mechanics）",
+          "ticker": null,
+          "market": "其他",
+          "reason": "韓系被動元件代表，本集提到韓系已開始漲價與配貨"
+        },
+        {
+          "name": "村田製作所（Murata）",
+          "ticker": "6981",
+          "market": "其他",
+          "reason": "日系被動元件代表，本集提到日系已跟進配貨操作"
+        },
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "台系被動元件大廠，本集提到台系也開始扮演漲價領頭羊角色"
+        },
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "台系被動元件龍頭，本集被點名提到目標價"
+        }
+      ]
+    },
+    {
+      "term": "Amphibio / AMPLIFIC",
+      "interpretation": "Anthropic（AI公司），語音辨識將Anthropic誤辨為Amphibio/AMPLIFIC",
+      "stance": "中立",
+      "quote": "Amphibio這邊推出了Fable...我覺得目前AMPLIFIC的模型真的都是還蠻屌炮的",
+      "candidates": [
+        {
+          "name": "Anthropic",
+          "ticker": null,
+          "market": "US",
+          "reason": "逐字稿提到Fable模型、Dario Amodei、美國出口管制，這些都是Anthropic的特徵。Anthropic推出的是Claude系列模型"
+        }
+      ]
+    },
+    {
+      "term": "pluggable",
+      "interpretation": "可插拔光模組（相對於CPO共封裝光學的另一條技術路線）",
+      "stance": "看多",
+      "quote": "如果你說一些光的東西要遞延，那應該pluggable的東西要上去，可是pluggable的東西也被殺下去，就代表說其實不是在疊這個，它就是一個市場的情緒的通殺",
+      "candidates": [
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "光模組封裝廠，屬於pluggable光模組供應鏈，本集提到pluggable路線應受益於CPO遞延"
+        },
+        {
+          "name": "眾達-KY",
+          "ticker": "4977",
+          "market": "TW",
+          "reason": "光通訊模組廠，屬pluggable路線"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP670 | 🫡",
+  "analyzed_at": "2026-06-13T17:36:22.102210",
+  "transcript_chars": 22660
+}
