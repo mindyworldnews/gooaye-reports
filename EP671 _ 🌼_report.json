@@ -1,0 +1,359 @@
+{
+  "summary": "本集股癌討論市場百花齊放現象，被動元件籌碼開始變亂後轉向關注功率半導體/離散元件的新供需結構變化，包括安世半導體制裁餘波、中國功率半導體被歐盟制裁導致non-China轉單、DRMOS等高階功率元件需求大增，以及800VDC滲透率帶來的增量機會。同時提到台積電可能成為資金萬箭歸宗的終點，但時間點比預期慢。",
+  "macro_views": [
+    {
+      "topic": "台灣房地產",
+      "view": "實際去看店面租賃時發現房東態度強硬，即便成交量下降，屋主不急售不急租，加上央行表態控管到此為止，擔心後續可能又要再一次起漲，認為台灣房地產是鐵板一塊",
+      "stance": "看多"
+    },
+    {
+      "topic": "台股整體市場",
+      "view": "百花齊放，被動元件、金融股、中小型股、離散元件、載板、矽晶圓等各族群輪動接棒，資金輪動非常活躍，但後續可能會出現收斂，資金萬箭歸宗回到台積電",
+      "stance": "看多"
+    },
+    {
+      "topic": "800VDC（高壓直流配電）",
+      "view": "Semi Analysis提到明年800VDC滲透率約5%，股癌認為5%已經很多很真實，是破冰船等級的題材，不管走800V或400V中繼路線，功率元件用量都會大幅上升",
+      "stance": "看多"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "認為資金最終會萬箭歸宗回到台積電，投信法規已開放拉高台積電比重，外面題材休息時資金就會灌入，昨天尾盤拉升已預演此現象，隨時準備轉進台積電",
+      "quote": "我可能要觀察到這樣的現象出來之後然後才轉過去...後面是相信說有可能資金還是會萬箭歸宗會跑回去台積電只是比自己想像的來的慢一點"
+    },
+    {
+      "name": "富邦金",
+      "ticker": "2881",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "用來說明市場百花齊放的程度，金融股也噴了快50%，連退休老人和學校老師最愛的金融股都參與到了",
+      "quote": "你也觀察到像金融股是我們自己完全不看的東西可是你看富邦金他媽噴了快50%這到底是什麼世界"
+    },
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "被動元件領頭羊，籌碼開始變亂，參與者越來越多，處置進出頻繁，若繼續動可能又被關處置，股癌開始思考是否要往其他族群移動",
+      "quote": "像國劇如果再繼續動的話他又要再一次被關起來...因為隨著剛剛前面所講到的我覺得參與的人是越來越多了"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到NVIDIA的VR RUBY（Vera Rubin）即將生產是功率元件需求的最大驅動力，也提到市場認為NVIDIA是目前每股AI股最便宜的，但大家不急著進去",
+      "quote": "最大咖的就是NVIDIA的VR RUBY在後面要開始去做生產了...NVIDIA現在可能是每股AI股最便宜的東西可是為什麼大家不要進去"
+    },
+    {
+      "name": "SpaceX",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "一天噴一兩層的市值增量換算等於馬斯克一兩天賺贏巴菲特一輩子，引用法國人評論認為應用全宇宙角度看TAM，藉此提醒不要低估想像力",
+      "quote": "SpaceX一天可能噴個一兩層他那個噴出來的這個市值量換算在馬斯克的身價他等於他只花一兩天他就賺贏巴菲特的一輩子"
+    },
+    {
+      "name": "美光",
+      "ticker": "MU",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "台股記憶體賣太早，但美光因為美股較不習慣頻繁操作所以還持有",
+      "quote": "像記憶體我自己算是賣的蠻早的除了美光因為美股比較不習慣一直去動"
+    },
+    {
+      "name": "德州儀器",
+      "ticker": "TXN",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到德州儀器也在過去兩個月漲了一波，且有聽到TI在瘋狂加單，看到車用跟機器人需求很好",
+      "quote": "不然像德州儀器也是...有蠻多的不管是地方聽眾自己身邊的朋友都是有跟我講說他可能看到像什麼Texas Instruments他們在瘋狂的加單"
+    },
+    {
+      "name": "英飛凌",
+      "ticker": null,
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "作為海外IDM集體表態的代表之一，過去兩個月漲蠻多，高階功率元件的主要供應商",
+      "quote": "不管你去看一下什麼英飛凌或是什麼安森美然後相關的NPS那或者是瑞薩就是他們其實都是在過去的兩個月是漲蠻多"
+    },
+    {
+      "name": "安森美",
+      "ticker": "ON",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "海外IDM集體走強的代表之一",
+      "quote": "不管你去看一下什麼英飛凌或是什麼安森美然後相關的NPS那或者是瑞薩"
+    },
+    {
+      "name": "順德",
+      "ticker": "2351",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "回應聽眾提問半導體導線架時肯定其狀況不錯，屬於Tier 2-3的受惠標的",
+      "quote": "那個順德就是啊就確實我們就有看到說他們的狀況是還蠻不錯"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "被動元件",
+      "stance": "中立",
+      "reason": "認為被動元件是目前市場Tier 1最噴的族群，有斷貨風險支撐，但籌碼開始變亂、參與者過多、社群全面討論，開始從基本面依賴轉向籌碼面觀察，自己不會再追進去"
+    },
+    {
+      "name": "功率半導體/離散元件（Discrete、PMIC、POWER）",
+      "stance": "看多",
+      "reason": "安世半導體制裁產生缺口、中國功率半導體被歐盟制裁促進non-China轉單、DRMOS需求大增、800VDC帶來功率元件密度大幅提升，供需結構正在改變，台廠有機會補位並可能漲價，是被動元件之後的下一個關注方向"
+    },
+    {
+      "name": "海外IDM（整合元件製造商）",
+      "stance": "看多",
+      "reason": "英飛凌、安森美、NXP、瑞薩、德州儀器等過去兩個月都漲了一波後橫盤休息，認為如果要啟動新一輪行情，美國上市的IDM會先動起來，Semi Analysis報告可能是洗籌碼"
+    },
+    {
+      "name": "金融股",
+      "stance": "僅提及",
+      "reason": "以富邦金噴50%為例說明百花齊放，但強調自己完全不看金融股"
+    },
+    {
+      "name": "載板",
+      "stance": "僅提及",
+      "reason": "從被動元件抬頭往外看才發現載板也都很強，但未深入討論"
+    },
+    {
+      "name": "矽晶圓",
+      "stance": "僅提及",
+      "reason": "認為應該不會這麼早反應，但市場偏偏現在就要搞，屬於Tier 2-3的故事"
+    },
+    {
+      "name": "記憶體",
+      "stance": "中立",
+      "reason": "認為記憶體是之前的Tier 1，超級缺貨所以噴很多，自己台股部分賣太早沒吃到後面一大段，想像力不足是需要改善的罩門"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "光",
+      "interpretation": "光通訊族群，逐字稿中有聽眾提到「低軌光通被動元件一早就上車」，另外股癌提到Semi Analysis講光通可能會有遞延，以及「你滿手是光的你一定覺得說媽的跌成狗了」",
+      "stance": "中立",
+      "quote": "今年的低軌光通被動元件一早就上車了...然後外加說光通可能會有遞延的一個狀況產生...你滿手是光的你一定覺得說媽的跌成狗了也太慘了",
+      "candidates": [
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "台股光通訊代表性公司，逐字稿提到光通族群近期修正，持有者感受跌很慘"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "光通訊重要公司，逐字稿提到海外IDM和光通相關標的外資持股減少，且Semi Analysis提到光通可能遞延"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "market": "US",
+          "reason": "光通訊主要公司，逐字稿提到光通族群整體受到遞延消息影響而修正"
+        }
+      ]
+    },
+    {
+      "term": "安室半導體",
+      "interpretation": "安世半導體（Nexperia），語音辨識將Nexperia聽成「安室」，後文也出現「Nextperia事件」進一步確認",
+      "stance": "僅提及",
+      "quote": "反正那時候就是安室半導體他被制裁然後跟控管嘛然後所以就導致說他相關的一些訂單是有被丟出來...也是用在之前的Nextperia事件就是以前可能很習慣都是用Nextperia",
+      "candidates": [
+        {
+          "name": "Nexperia（安世半導體）",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿明確提到被制裁、訂單丟出來、後文又提到Nextperia事件，確認是安世半導體/Nexperia，為聞泰科技旗下公司，非上市獨立標的"
+        }
+      ]
+    },
+    {
+      "term": "攻略半導體",
+      "interpretation": "功率半導體（Power Semiconductor），語音辨識將「功率」聽成「攻略」",
+      "stance": "看多",
+      "quote": "就是有蠻多這些像是攻略半導體相關的廠商它的外資的持股減少超多然後剛好那個時間點就差不多是Semi Analysis去講說800VDC可能會有遞延",
+      "candidates": [
+        {
+          "name": "英飛凌",
+          "ticker": null,
+          "market": "US",
+          "reason": "逐字稿同段落提到英飛凌、安森美等IDM是功率半導體主要供應商"
+        },
+        {
+          "name": "安森美",
+          "ticker": "ON",
+          "market": "US",
+          "reason": "逐字稿提到的功率半導體IDM代表"
+        }
+      ]
+    },
+    {
+      "term": "NPS",
+      "interpretation": "NXP Semiconductors（恩智浦半導體），語音辨識將NXP聽成「NPS」",
+      "stance": "僅提及",
+      "quote": "不管你去看一下什麼英飛凌或是什麼安森美然後相關的NPS那或者是瑞薩就是他們其實都是在過去的兩個月是漲蠻多",
+      "candidates": [
+        {
+          "name": "NXP Semiconductors",
+          "ticker": "NXPI",
+          "market": "US",
+          "reason": "與英飛凌、安森美、瑞薩並列為海外IDM，語音辨識誤聽為NPS，實為NXP"
+        }
+      ]
+    },
+    {
+      "term": "VR RUBY",
+      "interpretation": "NVIDIA Vera Rubin（下一代GPU架構），語音辨識將Vera Rubin聽成「VR RUBY」",
+      "stance": "僅提及",
+      "quote": "最大咖的就是NVIDIA的VR RUBY在後面要開始去做生產了",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "逐字稿明確提到是NVIDIA的產品，Vera Rubin是NVIDIA下一代GPU架構代號"
+        }
+      ]
+    },
+    {
+      "term": "日本三礦",
+      "interpretation": "日本三大鋁電解電容廠商：Rubycon（紅寶石）、Nippon Chemi-Con（日本化工）、Nichicon（尼吉康）",
+      "stance": "僅提及",
+      "quote": "以前就是日本三礦就是Rubicon、Chemical然後跟Nichicon那可是現在可能三礦的東西你拿不到那怎麼辦你就去找台系的廠商",
+      "candidates": [
+        {
+          "name": "Rubycon",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿直接點名Rubicon（Rubycon），日本鋁電解電容大廠"
+        },
+        {
+          "name": "Nippon Chemi-Con",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿提到Chemical，指Nippon Chemi-Con（日本化工）"
+        },
+        {
+          "name": "Nichicon",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿直接點名Nichicon"
+        }
+      ]
+    },
+    {
+      "term": "西華...經濟",
+      "interpretation": "石英元件廠商，語音辨識不精確，推測為晶技和另一家石英元件公司",
+      "stance": "僅提及",
+      "quote": "台股的石英元件我感覺大家好像也是在做一個什麼缺油漲價的故事吧這個我真的是不太熟悉...就什麼西華嘛然後跟另外一個經濟嘛然後大家都在看這個但我沒有去追蹤這個主線",
+      "candidates": [
+        {
+          "name": "晶技",
+          "ticker": "3042",
+          "market": "TW",
+          "reason": "逐字稿提到石英元件缺貨漲價故事，晶技是台股石英元件龍頭，「經濟」可能是「晶技」的語音誤判"
+        },
+        {
+          "name": "希華",
+          "ticker": "2484",
+          "market": "TW",
+          "reason": "「西華」可能是語音辨識將「希華」誤聽，希華為台股石英元件廠商"
+        }
+      ]
+    },
+    {
+      "term": "旺旺",
+      "interpretation": "SiTime Corporation，美國上市的MEMS時脈解決方案公司，語音辨識將SiTime聽成類似「旺旺」的發音",
+      "stance": "僅提及",
+      "quote": "拾音元件的話我對台股的都不太熟了那在美國交易所的那個旺旺之前有跟大家稍微的聊過包含說他可能在一些這個Server或是說相關的應用這個我可能是比較有在注意",
+      "candidates": [
+        {
+          "name": "SiTime",
+          "ticker": "SITM",
+          "market": "US",
+          "reason": "逐字稿提到在美國交易所上市、與石英/時脈元件相關、在Server端有應用，SiTime是MEMS時脈元件龍頭，符合所有線索"
+        }
+      ]
+    },
+    {
+      "term": "彈電容",
+      "interpretation": "鉭電容（Tantalum Capacitor），語音辨識將「鉭」聽成「彈」",
+      "stance": "僅提及",
+      "quote": "像是一些高階的被動元件或像是彈電容那這些是直接出現的就類似是有斷貨危險的...像是用一些什麼彈電容為什麼要用這個東西為什麼要用一個爭議金屬的原因是因為它可以做得比較小一點",
+      "candidates": [
+        {
+          "name": "信昌電",
+          "ticker": "6173",
+          "market": "TW",
+          "reason": "逐字稿提到鉭電容是爭議金屬、可做較小、用在板端節省空間，信昌電為台系鉭電容供應商"
+        }
+      ]
+    },
+    {
+      "term": "牛角電容",
+      "interpretation": "牛角型鋁質電解電容（Snap-in Aluminum Electrolytic Capacitor），用於伺服器電源等高功率應用",
+      "stance": "僅提及",
+      "quote": "或者後面的牛角電容都是有類似的一個情形",
+      "candidates": [
+        {
+          "name": "凱美",
+          "ticker": "2375",
+          "market": "TW",
+          "reason": "台系鋁質電解電容廠商，逐字稿提到牛角電容也有斷貨類似情形，且後文提到日本三礦缺貨後轉找台系廠商"
+        },
+        {
+          "name": "立隆電",
+          "ticker": "2472",
+          "market": "TW",
+          "reason": "台系鋁電解電容廠商，逐字稿提到日本三礦缺貨後需驗證台系廠商"
+        }
+      ]
+    },
+    {
+      "term": "DRMOS",
+      "interpretation": "Driver MOSFET，將驅動IC與MOSFET整合封裝的功率元件，用於GPU/ASIC板端供電，每塊板用十幾二十顆",
+      "stance": "看多",
+      "quote": "現在在市場上很熱門的一個話題就是在講說DRMOS就是Driver MOS那這個東西主要是用在哪它是用在板端像是GPU或是ASIC它一次就用到可能十幾二十顆那後面還會再更大",
+      "candidates": [
+        {
+          "name": "致新",
+          "ticker": "8081",
+          "market": "TW",
+          "reason": "台系PMIC/DrMOS相關廠商，逐字稿提到台廠在消費端DrMOS有機會，Server端需要時間"
+        },
+        {
+          "name": "富鼎",
+          "ticker": "8261",
+          "market": "TW",
+          "reason": "台系MOSFET廠商，逐字稿提到功率元件台廠有機會補位"
+        },
+        {
+          "name": "大中",
+          "ticker": "6435",
+          "market": "TW",
+          "reason": "台系MOSFET廠商，逐字稿提到台系離散元件廠商可能受惠於轉單"
+        }
+      ]
+    },
+    {
+      "term": "趕蝦魚",
+      "interpretation": "比喻AI伺服器等大客戶需求像釣蝦場裡的趕蝦魚，攪動市場供需，帶動整個功率元件/離散元件生態鏈",
+      "stance": "看多",
+      "quote": "然後導致就是可能市場裡面真的有掀起一些漣漪後面有些狀況會產生那一樣市場裡面的趕蝦魚就是這些AI伺服器或是當然最大咖的就是NVIDIA的VR RUBY",
+      "candidates": []
+    }
+  ],
+  "episode_title": "EP671 | 🌼",
+  "analyzed_at": "2026-06-17T17:36:42.081599",
+  "transcript_chars": 22048
+}
