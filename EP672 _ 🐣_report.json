@@ -1,0 +1,242 @@
+{
+  "summary": "本集股癌延續上集功率半導體（MOSFET/PMIC）的觀察，確認全球IDM漲價與缺貨趨勢，強調lead time拉長至極端水準，並與被動元件cycle做類比。他認為台股創歷史新高代表修正結束，消費性與車用疲弱反而讓AI行情走得更長更遠。此外也分享了對機器人族群、軟體工程師前景、以及Marvell等美股持股的看法。",
+  "macro_views": [
+    {
+      "topic": "台股指數創歷史新高",
+      "view": "台股指數再次創高，證實先前判斷修正已結束。新高代表整體加權平均結果是正向的，不應因手上個股表現差就認為大盤不好。",
+      "stance": "看多"
+    },
+    {
+      "topic": "消費性與車用需求疲弱對AI行情的影響",
+      "view": "消費性與車用目前偏弱，反而讓AI這條主線可以走得更遠更長。如果消費性與車用同時好，多箭頭同時衝會快速撞到需求破壞的天花板，反而縮短行情。類比台積電產能作為限制器的概念，缺陷反而延長了週期。",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI仍處幼年期",
+      "view": "認為AI可能還在幼年期，但中間是否會先來一個30%修正再繼續上去都有可能，不做預測，強調見招拆招。",
+      "stance": "看多"
+    },
+    {
+      "topic": "軟體工程師就業市場",
+      "view": "軟體hiring下降主要是疫情期間over hiring的還債，而非AI取代。Indeed等數據顯示軟體工程師招聘數字已在回升，能善用AI工具的工程師不會有問題，但過去能藏在組織裡混日子的人可能會被淘汰。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "第三次遠征終於成功，漲幅遠超想像，至今仍持續持有並做進攻。過去掌握的消息事後都證明是對的，但前兩次價格都上不去。",
+      "quote": "在MARVEL我掌握的消息事後證明都是對的，可是你每次都上不去怎麼可能，然後在第三次遠征的時候就成功，然後到現在都還抱著，然後都持續的去做進攻，然後這個漲幅是遠超自己的想像"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "TSM ADR又再次射出去，雖然過去一陣子沒動讓人懷疑，但只是資金還沒輪到。類比Gavin Baker所說台積電像限制器，產能不瘋狂擴產反而讓AI行情走更久。",
+      "quote": "TSM ADR是職業又射出去了，但在過去一陣子是沒有動，所以有些人就覺得說是不是買錯東西，不一定，就是那個資金還沒有輪到"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到NVIDIA與TSM目前處於相對狀態，以及Vera Ruby拉貨帶動供應鏈各環節審視。",
+      "quote": "像可能TSM或是NVIDIA是處於一個相對狠...特別是Vera Ruby，那所以就會導致大家開始去審視每一個環節"
+    },
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "被動元件中大型公司如國巨照樣鎖漲停，中小型出現震盪。提到V-Share（華新科）時也帶到國巨作為對照。",
+      "quote": "像大型的國劇照樣繼續鎖漲停跟做壞掉一樣"
+    },
+    {
+      "name": "聯電",
+      "ticker": "2303",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到Fabless功率半導體廠商會找聯電等做代工，作為產能供給端的角色。",
+      "quote": "它可能是Fabulous然後接著它再去找可能聯電然後或者說什麼華鴻這些去做代工"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "功率半導體（MOSFET/PMIC/IDM）",
+      "stance": "看多",
+      "reason": "全球IDM（德州儀器、STM、安森美、羅姆、IFX等）股價全面表態，lead time拉到極端（99週以上），漲價趨勢確立。台灣廠商因歐美一供缺貨嚴重而獲得認證機會，近水樓台先得月。產業feedback確認比被動元件lead time更恐怖。"
+    },
+    {
+      "name": "被動元件",
+      "stance": "中立",
+      "reason": "已從前一波高點出現震盪，中小型標的有幫皮（雜音）出現，資金開始輪動到其他族群。但大型標的如國巨仍強勢，消費級MLCC公司反而噴最兇，說明市場常有意外。"
+    },
+    {
+      "name": "6吋/8吋晶圓代工",
+      "stance": "看多",
+      "reason": "功率半導體Fabless廠需要外包產能，6吋8吋代工廠股價走勢相對強勢，市場資金已提早佈局產能瓶頸題材。"
+    },
+    {
+      "name": "機器人相關（工具機/IPC/工業零件）",
+      "stance": "看多",
+      "reason": "IPC與工業零件廠商開始看到低個位數比例的機器人營收佔比，趨勢處於萌芽階段，未來展望正向。但目前更偏好半年到一年內能看到營收大量灌入的標的。"
+    },
+    {
+      "name": "CPU類股",
+      "stance": "看多",
+      "reason": "提到CPU類股漲幅也遠超想像，與Marvell一起作為帶來驚喜的投資。",
+      "quote": "其實CPU類股也是，所以這一種會比較偏向是會讓我覺得就是有驚喜或是有趣的東西"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "V-Share",
+      "interpretation": "華新科，同時具備被動元件與功率半導體業務的綜合體公司",
+      "stance": "看多",
+      "quote": "像過去我自己在追V-Share的話，我觀察的東西其實都是它的被動元件，那只是V-Share這家公司很特別的點是在於說，它除了被動元件之外，它其實算是功率半導體廠商，它是一個綜合體...我注意到說其實V-Share有些料那個V-Time拉得非常的恐怖，比它的被動元件還要恐怖非常多",
+      "candidates": [
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "逐字稿明確描述V-Share同時有被動元件與功率半導體業務，華新科（Vishay的台灣慣稱為V-Share）正是被動元件加MOSFET/功率半導體的綜合廠商，且股癌提到過去追蹤其被動元件業務"
+        }
+      ]
+    },
+    {
+      "term": "國劇",
+      "interpretation": "國巨，被動元件龍頭大廠，語音辨識將「國巨」誤轉為「國劇」",
+      "stance": "僅提及",
+      "quote": "像大型的國劇照樣繼續鎖漲停跟做壞掉一樣，那可是就是因為有些是自己手上的事故嘛，當你發現說有一些幫皮出來之後呢",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "上下文討論被動元件族群，提到「大型的」照樣鎖漲停，國巨是台灣被動元件最大型龍頭，語音辨識將國巨誤轉為國劇"
+        }
+      ]
+    },
+    {
+      "term": "華鴻",
+      "interpretation": "華虹半導體，中國晶圓代工廠，語音辨識可能誤轉",
+      "stance": "僅提及",
+      "quote": "它可能是Fabulous然後接著它再去找可能聯電然後或者說什麼華鴻這些去做代工，這個我們在過去其實已經有看過類似的一個情形",
+      "candidates": [
+        {
+          "name": "華虹半導體",
+          "ticker": null,
+          "market": "其他",
+          "reason": "上下文討論功率半導體Fabless廠找晶圓代工，與聯電並列提及，華虹半導體是專注6吋/8吋的晶圓代工廠，與功率半導體代工高度相關"
+        }
+      ]
+    },
+    {
+      "term": "Vera Ruby",
+      "interpretation": "NVIDIA Vera Rubin架構，下一代AI GPU平台",
+      "stance": "看多",
+      "quote": "這些AI伺服器因為現在開始進入一個密集的拉後背後，特別是Vera Ruby，那所以就會導致大家開始去審視每一個環節",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "Vera Rubin是NVIDIA下一代AI GPU架構，股癌提到其密集拉貨帶動供應鏈各環節需求審視"
+        }
+      ]
+    },
+    {
+      "term": "CSP",
+      "interpretation": "Cloud Service Provider，雲端服務提供商（如AWS、Azure、GCP等），股癌稱為「怪物們」，不計代價收購AI元件",
+      "stance": "僅提及",
+      "quote": "當然現在有一方我們把它稱為是CSP這樣的怪物們，他們是不計代價的去收東西，那可是如果今天是消費跟可能像車用也很好的話，那其實大家都會某個程度上的全力的去收貨",
+      "candidates": [
+        {
+          "name": "Amazon",
+          "ticker": "AMZN",
+          "market": "US",
+          "reason": "CSP泛指雲端巨頭，Amazon AWS為最大CSP之一"
+        },
+        {
+          "name": "Microsoft",
+          "ticker": "MSFT",
+          "market": "US",
+          "reason": "Azure為主要CSP之一"
+        },
+        {
+          "name": "Meta",
+          "ticker": "META",
+          "market": "US",
+          "reason": "Meta也是大量採購AI伺服器的CSP級客戶"
+        }
+      ]
+    },
+    {
+      "term": "日股做斜坡減速器的",
+      "interpretation": "日本做諧波減速器（Harmonic Drive）的公司，與機器人關節核心零件相關",
+      "stance": "看多",
+      "quote": "那時候我自己就有去做相關佈局，不然說有跑去買一個日股在做斜坡減速器的嘛，那只是當然後來就蹲很久之後才表態，因為日股那邊的部位我也是當成說就是一個某種避險",
+      "candidates": [
+        {
+          "name": "Harmonic Drive Systems",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿提到「斜坡減速器」應為語音辨識誤轉「諧波減速器」，日本最知名的諧波減速器廠商為Harmonic Drive Systems（6324.T），是機器人關節核心零件供應商，且股癌提到因Tesla Optimus佈局"
+        },
+        {
+          "name": "Nabtesco",
+          "ticker": null,
+          "market": "其他",
+          "reason": "日本另一家減速器大廠帝人納博特斯克（6268.T），做RV減速器，也是機器人核心零件供應商"
+        }
+      ]
+    },
+    {
+      "term": "CPU類股",
+      "interpretation": "可能指AMD或Broadcom等與CPU/ASIC相關的美股",
+      "stance": "看多",
+      "quote": "其實CPU類股也是，所以這一種會比較偏向是會讓我覺得就是有驚喜或是有趣的東西",
+      "candidates": [
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "market": "US",
+          "reason": "CPU類股最直接的聯想，且與Marvell並列提及作為帶來驚喜的投資"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "Broadcom在ASIC/客製化晶片領域也常被歸類為廣義CPU類股"
+        }
+      ]
+    },
+    {
+      "term": "士蘭維、華潤維",
+      "interpretation": "中國功率半導體IDM廠商：士蘭微、華潤微電子",
+      "stance": "僅提及",
+      "quote": "不管是在美系日系或甚至是中國的像什麼士蘭維華潤維之類的，那都會注意到說其實全部都是極其出現一個表態的狀態",
+      "candidates": [
+        {
+          "name": "士蘭微",
+          "ticker": null,
+          "market": "其他",
+          "reason": "中國A股功率半導體IDM廠商（600460.SH），股癌提到全球IDM全面表態時列舉的中國代表"
+        },
+        {
+          "name": "華潤微電子",
+          "ticker": null,
+          "market": "其他",
+          "reason": "中國A股功率半導體IDM廠商（688396.SH），與士蘭微並列提及作為中國IDM代表"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP672 | 🐣",
+  "analyzed_at": "2026-06-20T17:36:08.677164",
+  "transcript_chars": 23491
+}
