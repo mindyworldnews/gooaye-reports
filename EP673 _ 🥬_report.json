@@ -1,0 +1,351 @@
+{
+  "summary": "本集股癌討論近期台股從42000點拉升至48000多點後的回檔，認為屬漲多拉回而非趨勢反轉，並未找到solid的下跌理由，較傾向是韓國市場爆跌引發的連鎖情緒影響。重點聊到聯發科漲價、Google新晶片TRIGGERFISH、博通新產品WILDFISH，以及被動元件（電阻）與功率元件的漲價趨勢持續。操作上短暫將部位移入台積電後又回到中小型股。",
+  "macro_views": [
+    {
+      "topic": "台股大盤回檔",
+      "view": "從42000拉到48000多點後回檔，屬漲多拉回休息，並非假突破或趨勢反轉，沒有找到像樣的修正理由。可能觸發點是韓國市場槓桿ETF爆倉引發連鎖效應。",
+      "stance": "看多"
+    },
+    {
+      "topic": "韓國市場風險外溢",
+      "view": "韓國散戶大量使用槓桿ETF，類似當年Archegos爆倉的連鎖效應，韓國人群聚的地方容易產生瞬間爆炸，對全球市場造成短期情緒影響。",
+      "stance": "中立"
+    },
+    {
+      "topic": "台積電 vs 中小型股輪動",
+      "view": "一度擔心資金會從中小型股轉進台積電避風港，短暫加碼台積電但發現中小型股沒有死透，又把部位調回中小型股。認為台積電需要突破小波段新高才會再加碼。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "全產品線漲價利多，客戶接受漲價是好事。另外獲得Google TRIGGERFISH晶片案子，代表開發順利持續拿到新案。前面漲多所以短期利多未反映在股價，但漲價題材後續有機會被市場拿來炒。",
+      "quote": "發哥的漲價性...他並沒有去載明說要去調漲的晶片的項目跟幅度，所以一般我們就把這個視為是可能全餐品線都有機會會去做調整...重點是說你漲得動客戶啦，客戶給你漲，這個就是一個好事情"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "短暫加碼後又減碼回中小型股。認為台積電一定要上，但現階段回檔幅度未特別抗跌，等突破小波段新高再考慮加碼。",
+      "quote": "我感覺就是TSM一定要上的，可是問題是就感覺中小沒有死透啦...本來買了蠻多的TSM又把它稍微再降一點點，又再弄回去中小"
+    },
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "被動元件龍頭，這波修正幾乎沒跌，相對大盤非常強勢，多頭結構漂亮。",
+      "quote": "像是國巨，基本上這波修正跟沒有跌到一樣，然後其他的一些被動元件其實都是相對的強勢"
+    },
+    {
+      "name": "Broadcom（博通）",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到博通第九代產品WILDFISH出現，解決了市場擔心博通被跳過一代的疑慮。WILDFISH是前一代FISH的雙拼晶片，對載板廠有機會。另提到博通老闆嘲笑Marvel和聯發科是小屁孩。",
+      "quote": "在博通這邊就真的有新東西出來...叫做WILDFISH，它其實就用前一個FISH然後去把它變成是雙拼的晶片，二拼一，所以這可能是在載板這邊有機會可以找到一些機會的東西"
+    },
+    {
+      "name": "美光",
+      "ticker": "MU",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到自己很久沒再買記憶體股票，剩美光還有一些部位。有聽眾問SK海力士上ADR是否減碼美光，未給明確建議。",
+      "quote": "我自己已經很久沒有再去買進經濟股票，就剩美光有一些報紙這樣，然後後來都在弄別的題材"
+    },
+    {
+      "name": "Palantir",
+      "ticker": "PLTR",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到韓國散戶去搞Tesla、Palantir等標的，作為韓國人炒作外國股票的例子。",
+      "quote": "他們會跑到外面，像之前去搞Tesla去搞Palantir，或是搞一些鬼谷小票"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "同上，作為韓國散戶炒作標的的例子。",
+      "quote": "他們會跑到外面，像之前去搞Tesla去搞Palantir"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "類比聯發科漲多後利多推不上去的現象，提到NVIDIA也有類似狀況。",
+      "quote": "就類似說可能像NVIDIA，它有很多好消息，那可是不一定推得上去，因為畢竟就真的是已經推很多"
+    },
+    {
+      "name": "Lumentum",
+      "ticker": "LITE",
+      "market": "US",
+      "stance": "看多",
+      "reason": "回答聽眾提問時表示光通訊中最喜歡的是Lumentum和Coherent。",
+      "quote": "然後我最喜歡的就是Lumentan跟Coheron"
+    },
+    {
+      "name": "Coherent",
+      "ticker": "COHR",
+      "market": "US",
+      "stance": "看多",
+      "reason": "同上，表示是光通訊中最喜歡的標的之一。",
+      "quote": "然後我最喜歡的就是Lumentan跟Coheron"
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "中立",
+      "reason": "表示不會把Marvell放在光通訊純度高的分類裡面。",
+      "quote": "Marvell我甚至不會把它放在光通這裡面，就是大家都說要切啦，只是我不會把它放在純度高這裡面"
+    },
+    {
+      "name": "Nokia",
+      "ticker": null,
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "聽眾詢問Nokia，提到Nokia有轉機，切入CSP相關業務和光纖領域，不再只是手機或基地台。但最近較少關注光通訊，無法詳盡更新。",
+      "quote": "Nokia的話，對他是有一些轉機的產生，他不是像大家想像的手機，也不是像大家想像的基地台，開始有去切一些比較酷的業務啦"
+    },
+    {
+      "name": "SK海力士",
+      "ticker": null,
+      "market": "其他",
+      "stance": "僅提及",
+      "reason": "聽眾提到SK海力士8月要在美國上ADR，問是否減碼美光配置。股癌未給明確建議。",
+      "quote": "SK海力士8月要在美國上ADR了，你認為減碼美光配置一部分嗎"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "被動元件（電容、電阻、電感）",
+      "stance": "看多",
+      "reason": "電容已成功漲價且中位數超預期，電阻即將成為下一波漲價主軸（預估7月初），R-CHIP漲價趨勢壓不住終於要噴射。市場效率已反映，採購端開始恐慌性加單。整體多頭結構漂亮。"
+    },
+    {
+      "name": "功率元件",
+      "stance": "看多",
+      "reason": "過去已攀升一陣子，最近兩天開始休息但型態漂亮。面臨產能瓶頸（8吋晶圓），能掌握垂直代工能力或secure到成熟製程產能的廠商有機會開出成績。"
+    },
+    {
+      "name": "載板（ABF/BT）",
+      "stance": "看多",
+      "reason": "博通新產品WILDFISH是雙拼晶片，對載板廠有新的機會。",
+      "quote": "這可能是在載板這邊有機會可以找到一些機會的東西"
+    },
+    {
+      "name": "光通訊",
+      "stance": "中立",
+      "reason": "目前光通訊持股比例低，已轉向CPU和其他題材。仍喜歡Lumentum和Coherent但最近較少關注。"
+    },
+    {
+      "name": "中小型股",
+      "stance": "看多",
+      "reason": "短暫轉入台積電後發現中小型股沒有死透，又把部位調回中小型股。認為市場上新的機會還是非常多在排隊。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "發哥",
+      "interpretation": "聯發科（MediaTek），台灣IC設計龍頭，股癌慣用的暱稱",
+      "stance": "看多",
+      "quote": "接下來最近在市場上面呢，偏向發哥的話題是比較多一點，我們就簡單的來講一下，那首先是發哥的漲價性，這個應該蠻多人都有看到",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "逐字稿直接以「發哥」稱呼，並提到漲價、Google TRIGGERFISH晶片案等聯發科相關業務"
+        }
+      ]
+    },
+    {
+      "term": "TSM",
+      "interpretation": "台積電的美股ADR代號，在此指台積電",
+      "stance": "中立",
+      "quote": "我感覺就是TSM一定要上的，可是問題是就感覺中小沒有死透啦，所以呢就是本來買了蠻多的TSM又把它稍微再降一點點，又再弄回去中小",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "TSM即台積電美股ADR代號，逐字稿上下文明確討論台積電與中小型股的部位切換"
+        }
+      ]
+    },
+    {
+      "term": "載板",
+      "interpretation": "ABF/BT基板製造商，因博通WILDFISH雙拼晶片而受惠",
+      "stance": "看多",
+      "quote": "叫做WILDFISH，它其實就用前一個FISH然後去把它變成是雙拼的晶片，二拼一，所以這可能是在載板這邊有機會可以找到一些機會的東西",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "台灣主要ABF載板廠，博通WILDFISH雙拼晶片需要更大面積的載板，欣興為載板龍頭"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "台灣主要ABF載板廠之一，同樣受惠於高階晶片載板需求"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "台灣載板廠之一，可能受惠於博通新產品帶來的載板需求"
+        }
+      ]
+    },
+    {
+      "term": "R-CHIP",
+      "interpretation": "電阻晶片（Chip Resistor），被動元件中的電阻產品，指電阻漲價趨勢",
+      "stance": "看多",
+      "quote": "我們最近開始去密集的注意到R-CHIP的一個漲價的趨勢，然後現在已經是怎麼講，因為它壓不住了，終於要持續的噴射上去",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "逐字稿明確提到國巨這波修正幾乎沒跌，作為被動元件龍頭，電阻為其核心產品之一"
+        }
+      ]
+    },
+    {
+      "term": "中小",
+      "interpretation": "中小型股票，相對於台積電等大型權值股",
+      "stance": "看多",
+      "quote": "可是問題是就感覺中小沒有死透啦...又再弄回去中小...可是當你發現說其實好像中小沒有死掉的時候，又把它拉出來",
+      "candidates": [
+        {
+          "name": "中小型股整體",
+          "ticker": null,
+          "market": "TW",
+          "reason": "逐字稿中「中小」泛指中小型股票部位，對比台積電的大型股配置，非指特定個股。搭配被動元件、功率元件等題材理解"
+        }
+      ]
+    },
+    {
+      "term": "TRIGGERFISH",
+      "interpretation": "Google委託聯發科開發的ASIC晶片代號，是前代晶片的加強版（非standalone新晶片）",
+      "stance": "看多",
+      "quote": "郭明錫有去貼說聯發科這邊有一個新的晶片有拿到，就Google要給他，SOLO叫做TRIGGERFISH...它比較偏向是用本來的晶片去做一些調整，可能在memory這邊去做一些加量加料",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "逐字稿明確提到TRIGGERFISH是Google給聯發科的案子，與前面ZEBRA或HUMO是同一條產品線"
+        }
+      ]
+    },
+    {
+      "term": "WILDFISH",
+      "interpretation": "博通（Broadcom）下一代ASIC晶片代號，為前代FISH的雙拼版本（二拼一），用於第九代產品",
+      "stance": "僅提及",
+      "quote": "那個東西有跑出來叫做WILDFISH，它其實就用前一個FISH然後去把它變成是雙拼的晶片，二拼一...作為是它的下一代去做採用，所以最後面就是去解決了我們這些市場人士本來心中的一個問題",
+      "candidates": [
+        {
+          "name": "Broadcom（博通）",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿明確說是博通的第九代產品，解決了市場擔心博通被跳過一代的疑慮"
+        }
+      ]
+    },
+    {
+      "term": "韓國狼",
+      "interpretation": "韓國散戶投資者群體，因大量使用槓桿ETF和集中炒作特定標的，造成市場連鎖爆倉效應",
+      "stance": "看空",
+      "quote": "我自己覺得觸發點可能是韓國狼造成的，因為韓國人大家都知道說他們的指數下已經變成像是那種全民大賭場的感覺...每次只要韓國人群聚的地方，後面就是很容易會有那種瞬間的爆炸產生",
+      "candidates": [
+        {
+          "name": "韓國散戶/槓桿ETF群體",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿描述韓國散戶用槓桿ETF炒作Tesla、Palantir、加密貨幣等，爆倉後引發全球連鎖賣壓，類比Archegos事件"
+        }
+      ]
+    },
+    {
+      "term": "垃圾盤",
+      "interpretation": "指資金集中躲進台積電等大型權值股，中小型股被拋棄的盤面結構",
+      "stance": "中立",
+      "quote": "我本來前一兩天認為說垃圾盤會出現，可是我現在看就覺得垃圾盤感覺不會出現，所以就又再一次的跑回去中小裡面",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "逐字稿上下文說「密底瓜要往台積電裡面去跑」，垃圾盤即指資金全躲台積電、中小型股被拋棄的狀態，但最終判斷垃圾盤不會出現"
+        }
+      ]
+    },
+    {
+      "term": "EAMS",
+      "interpretation": "EMS（電子製造服務商），語音辨識可能將EMS聽成EAMS",
+      "stance": "僅提及",
+      "quote": "而且有成功的反映到一些大型的EAMS或是ODM，他們是有接受漲價的",
+      "candidates": [
+        {
+          "name": "EMS/ODM廠商（泛指）",
+          "ticker": null,
+          "market": "TW",
+          "reason": "逐字稿提到被動元件電容漲價已成功反映到大型EMS和ODM客戶，為被動元件漲價趨勢的佐證"
+        }
+      ]
+    },
+    {
+      "term": "光通",
+      "interpretation": "光通訊產業族群",
+      "stance": "中立",
+      "quote": "光通目前的比例是低的，因為後來我就跑去買CPU跟其他東西，有一段時間是很高沒錯，然後我最喜歡的就是Lumentan跟Coheron",
+      "candidates": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "market": "US",
+          "reason": "逐字稿明確提到光通訊中最喜歡Lumentum"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "逐字稿明確提到光通訊中最喜歡Coherent"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "逐字稿提到但表示不會把Marvell放在光通訊純度高的分類"
+        }
+      ]
+    },
+    {
+      "term": "密底瓜/密底呱呱抗",
+      "interpretation": "低調（日文みっちゃく的台式用法），指保持低調、不想被注意",
+      "stance": "僅提及",
+      "quote": "會不會大家終於要就是密底瓜，要往台積電裡面去跑...真的只想密底呱呱抗，真的只想完全的躲起來",
+      "candidates": [
+        {
+          "name": "非特定標的",
+          "ticker": null,
+          "market": "TW",
+          "reason": "第一處用於描述資金低調躲進台積電的現象，第二處用於描述個人生活態度，非指特定股票"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP673 | 🥬",
+  "analyzed_at": "2026-06-24T17:36:11.902241",
+  "transcript_chars": 21879
+}
