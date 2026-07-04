@@ -1,0 +1,212 @@
+{
+  "summary": "本集股癌主要討論盤面修正後的觀察，認為被動元件與功率元件持續領漲，功率元件（如MOSFET）已出現斷貨情形，封測廠也因AI需求出現大幅漲價（30%-50%）。另外針對Meta宣布投入Neo Cloud業務，股癌認為這不是退出AI競賽，而是要加碼投資、將閒置算力變現的策略。最後也回應光通訊族群目前資金不在此處，短期不看好股價表現。",
+  "macro_views": [
+    {
+      "topic": "台股盤面修正後展望",
+      "view": "修正後籌碼洗清，若大盤創新高則修正確認結束，強勢族群將重新凝聚資金，可能下週見分曉",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI資本支出趨勢",
+      "view": "科技巨頭資金充沛，持續搶貨推升整個供應鏈毛利率，從高階Design House到小料件（被動、功率元件）都受惠",
+      "stance": "看多"
+    },
+    {
+      "topic": "Meta投入Neo Cloud",
+      "view": "不是退出AI競賽，而是要Double Down加碼投資，將Legacy算力（如Hopper系列）外租變現，找到新出海口後反而會加速建置",
+      "stance": "看多"
+    },
+    {
+      "topic": "消費性電子需求",
+      "view": "HP、Lenovo等拉貨僅為補庫存，目前看不到消費性電子好轉的跡象，不會持續",
+      "stance": "看空"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "用聯發科作為案例說明股價跑在基本面前面，手機業務被下修後殺一段，但AI故事啟動後連續漲停，說明市場資金會提早博弈",
+      "quote": "聯發科在它很多漲停之前，大家還記得那時候它手機的東西被下修嗎？然後不是就大逃殺嗎？剛好殺一段，後面大家就進來去買單，它的AI故事就啪啪啪就好幾根漲停就出去了"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "market": "US",
+      "stance": "看多",
+      "reason": "認為Meta投入Neo Cloud不是退出AI，而是要加碼投資。祖克柏一貫風格是看到風口就衝，效仿Colossus模式將閒置算力外租變現，反而會加速AI建置",
+      "quote": "Meta他是打算要Double Down，他是想要去靠這個東西賺錢，他不是說完了我的AI算力不知道怎麼用拿出來租人家好了，他是打算要去投資然後再去搞更多的算力"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到AI時代要巴結台積電掌握產能，將同樣邏輯套用到成熟製程晶圓廠與封測廠",
+      "quote": "大家都要去巴結台積電嘛，那一樣的道理你就可以把它套用在這一些可能是比較偏向是成熟製程的晶圓製造廠"
+    },
+    {
+      "name": "京元電子",
+      "ticker": "2449",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到封測族群強勢時，以京元電子為例說明其幫NVIDIA做封測已是Household name",
+      "quote": "比較老的像日月光或是說淨圓店，大家都熟悉有KYEC，那它本身幫NVIDIA做的，所以它其實已經算是那種Household name"
+    },
+    {
+      "name": "日月光投控",
+      "ticker": "3711",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到封測族群轉強時順帶提及日月光作為封測龍頭",
+      "quote": "比較老的像日月光或是說淨圓店，大家都熟悉有KYEC"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "多次提及作為AI需求的代表，京元電子幫NVIDIA做封測，另提到NVIDIA好但不會漲也沒用",
+      "quote": "你說NVIDIA好不好，好啊，不會漲啊，不會漲沒有用啊"
+    },
+    {
+      "name": "Lumentum",
+      "ticker": "LITE",
+      "market": "US",
+      "stance": "中立",
+      "reason": "提到光通訊時舉例美股標的，認為產業是好的但目前資金不在此處",
+      "quote": "美股的LUMENTAN COHERENT或是說台股這些光相關的東西，你說好不好，其實都好，產業都好"
+    },
+    {
+      "name": "Coherent",
+      "ticker": "COHR",
+      "market": "US",
+      "stance": "中立",
+      "reason": "同Lumentum，作為光通訊代表被提及，產業好但資金不在此",
+      "quote": "美股的LUMENTAN COHERENT或是說台股這些光相關的東西，你說好不好，其實都好，產業都好"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "被動元件",
+      "stance": "看多",
+      "reason": "修正後第一波轉強，7月將密集發出漲價函，已確認缺貨漲價趨勢，股價已漲數倍但產業面持續惡化（對買方而言）"
+    },
+    {
+      "name": "功率元件（MOSFET等）",
+      "stance": "看多",
+      "reason": "ODM/EMS朋友反映已出現斷貨買不到的情形，Lead time拉長且開始漲價，缺貨狀況不亞於被動元件，IDM廠商掌握產能者較有優勢"
+    },
+    {
+      "name": "封測（封裝測試）",
+      "stance": "看多",
+      "reason": "整體族群轉強，IC Design House被後段封裝廠報價漲30%-50%，遠超疫情期間的10%-20%，AI需求造成排擠效應讓封裝廠可以挑客人"
+    },
+    {
+      "name": "光通訊",
+      "stance": "中立",
+      "reason": "產業面是好的但市場資金明顯不在此處，股價前面漲太多後休息，要等資金流回來才有機會，目前不值得花資源追蹤"
+    },
+    {
+      "name": "驅動IC（DDIC）/ 消費性IC Design",
+      "stance": "中立",
+      "reason": "本業展望到2027都不好，但成本導向漲價有成功轉嫁，股價已從底部先跑，類似補漲行情，部分公司切入AI/機器人等新故事可能推升PE Rating"
+    },
+    {
+      "name": "Neo Cloud / 雲端算力租賃",
+      "stance": "看多",
+      "reason": "Meta加入Neo Cloud競爭，短期對既有Neo Cloud業者是利空（多一個強大競爭者），但長期代表AI建置持續加速"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "淨圓店",
+      "interpretation": "京元電子（KYEC），語音辨識將「京元電」聽成「淨圓店」",
+      "stance": "僅提及",
+      "quote": "比較老的像日月光或是說淨圓店，大家都熟悉有KYEC，那它本身幫NVIDIA做的，所以它其實已經算是那種Household name",
+      "candidates": [
+        {
+          "name": "京元電子",
+          "ticker": "2449",
+          "market": "TW",
+          "reason": "逐字稿直接提到KYEC代號，且說明幫NVIDIA做封測，確認就是京元電子"
+        }
+      ]
+    },
+    {
+      "term": "那一場天",
+      "interpretation": "語音辨識錯誤，應為「那一檔」，指被動元件修正後轉強的個股，追進去就被修理",
+      "stance": "僅提及",
+      "quote": "你跳上來你去追那一場天，你就被修理，但這個修理可能就是稍微的持續一陣子，因為有些人要下車",
+      "candidates": []
+    },
+    {
+      "term": "Colossus",
+      "interpretation": "指Elon Musk旗下xAI的超級運算中心Colossus，被外租算力且一年回本的案例，Meta看到後決定效仿",
+      "stance": "僅提及",
+      "quote": "他一定是看到伊朗的不管是SpaceX或是AXIE下面的Colossus，因為他拿去租然後結果發現說他竟然一年就可以回本",
+      "candidates": []
+    },
+    {
+      "term": "伊朗",
+      "interpretation": "語音辨識錯誤，應為「Elon」即Elon Musk（馬斯克），上下文提到SpaceX和xAI的Colossus",
+      "stance": "僅提及",
+      "quote": "他一定是看到伊朗的不管是SpaceX或是AXIE下面的Colossus，因為他拿去租然後結果發現說他竟然一年就可以回本",
+      "candidates": []
+    },
+    {
+      "term": "AXIE",
+      "interpretation": "語音辨識錯誤，應為「xAI」，即Elon Musk創辦的AI公司，擁有Colossus超級運算中心",
+      "stance": "僅提及",
+      "quote": "SpaceX或是AXIE下面的Colossus，因為他拿去租然後結果發現說他竟然一年就可以回本，他一定是發現說靠北原來錢可以這樣子賺",
+      "candidates": []
+    },
+    {
+      "term": "ENCORE / 銳廣",
+      "interpretation": "可能指與台積電封裝相關的供應鏈公司，語音辨識可能有誤。上下文是將成熟製程封測廠的敘事邏輯類比TSM後面的供應鏈",
+      "stance": "僅提及",
+      "quote": "他們的一個敘事邏輯呢其實會跟TSM或者說TSM後面的不管是ENCORE或是銳廣那樣的故事是類似的，只是它可能是套用在不同的產品線",
+      "candidates": []
+    },
+    {
+      "term": "SEMI ANALYSIS搞的光的ETF",
+      "interpretation": "指SemiAnalysis研調機構與發行商合作推出的光通訊相關ETF，股癌認為其選股可能短期帶動光通訊族群但資金面不支持",
+      "stance": "中立",
+      "quote": "SEMI ANALYSIS竟然跑去跟發行商，他們有搞一個光的ETF跟另外一個不知道什麼的ETF，你可以稍微去看他的選股，我覺得他選到的東西有機會會短攤一下，有機會，但就很明顯市場的資金沒有在這邊",
+      "candidates": []
+    },
+    {
+      "term": "陳泰銘",
+      "interpretation": "國巨董事長陳泰銘，被動元件漲價後散戶追高被套，怪罪陳泰銘收割，股癌為其辯護",
+      "stance": "僅提及",
+      "quote": "然後再發一些梗圖說什麼陳泰銘在收割大家，不是啊幹自己資訊能力差自己不會做股票不要亂怪人家，陳泰銘家是多少人的恩人",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "陳泰銘是國巨董事長，上下文討論被動元件漲價函與股價表現"
+        }
+      ]
+    },
+    {
+      "term": "紀念廠",
+      "interpretation": "語音辨識錯誤，應為「晶圓廠」，指功率元件fabless公司去找晶圓代工廠簽約確保產能",
+      "stance": "僅提及",
+      "quote": "他們可能在過去的數年有去找一些不管是海內外的紀念廠去簽約，有去確保說他可以拿到他要的產能的話",
+      "candidates": []
+    },
+    {
+      "term": "Z time增加",
+      "interpretation": "語音辨識錯誤，應為「Lead time增加」，指交期拉長，是缺貨的前兆指標",
+      "stance": "看多",
+      "quote": "有一些Z time增加，然後有一些就是大家在接下來會開始看到漲價性發出的一個情形",
+      "candidates": []
+    }
+  ],
+  "episode_title": "EP676 | 🐬",
+  "analyzed_at": "2026-07-04T17:35:57.684412",
+  "transcript_chars": 20765
+}
