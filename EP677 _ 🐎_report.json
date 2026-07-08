@@ -1,0 +1,350 @@
+{
+  "summary": "本集股癌討論近期台股中小型股震盪與資金輪動，認為市場並非走空而是族群切換。深入剖析Semi-Analysis近期爭議報告（含NVL144延遲、HBM、800VDC等），認為其內容多屬短期雜音而非產業根本變化。並分享個人在美股軟體股、GPU、Tesla/SpaceX的持倉思路與佈局規劃。",
+  "macro_views": [
+    {
+      "topic": "台股大盤走勢",
+      "view": "加權指數仍在右上角，中小型股出現較大震盪但非系統性風險，主要是降槓行為與族群輪動，類似韓股投機降槓的縮小版。目前仍有強勢族群存在（功率、CCL、WAFER、封測），不像行情要立刻結束。",
+      "stance": "看多"
+    },
+    {
+      "topic": "槓桿風險與新世代投資行為",
+      "view": "新一代股民使用信貸+融資+股期等工具將槓桿拉到五六倍以上，遠超過自己過去最多2.5倍融資的水準。提醒聽眾注意downside風險，慢慢來比較快。",
+      "stance": "中立"
+    },
+    {
+      "topic": "Semi-Analysis報告影響",
+      "view": "SA近期爭議報告（NVL144延遲、HBM4、800VDC、SOCAM需求等）內容多屬短期預期修正，大方向不變。市場反應過度是因為閱聽者只看標題不看內文，加上槓桿過高導致敏感度高。SA正在快速消耗過去累積的信譽。",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI產業趨勢",
+      "view": "AI大趨勢不變，是核心指導原則。Token成本下降已開始反映在軟體股財報上，SaaS並非一面倒衰退。AI不是搶走工作而是創造更多工作的敘事正在轉變。",
+      "stance": "看多"
+    },
+    {
+      "topic": "韓國股市降槓",
+      "view": "韓國股市過度投機，槓桿ETF盛行，現在正在降槓。台股中小型股的震盪可能是類似韓股降槓的縮小版。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "認為NVIDIA是超級便宜的標的，是AI最核心的美股標的卻交易在最便宜的估值。從2018年開始持有，經歷AI轉型後更喜歡。便宜的factor加上AI強者地位。",
+      "quote": "NVIDIA就是一個超級便宜的標的，這個連講都不用講，大家都知道...以美股來講絕對就是NVIDIA，那可是兩個東西卻是交易在最便宜的估值"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "AI最核心的台股標的，卻交易在最便宜的估值。比喻為聖盔谷和媽媽，市場不好時大家會回去避風。關注TSM後面法說會釋出的訊息。",
+      "quote": "AI最核心的東西以台股來講絕對就是TSMC嘛...GG就是魔戒2裡面的聖盔谷，大家發現說哎呦你弟兒出事，落漢的人民就會跑進去這個聖盔谷裡面"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "坦承是信仰股，喜歡馬斯克。已賣掉部分Tesla轉入SpaceX。最理想劇本是SpaceX收購Tesla合為一體。",
+      "quote": "Tesla的話就比較偏向是信仰股，這個我就老實跟大家講，是一個信仰股，因為我本身是很喜歡馬斯克的"
+    },
+    {
+      "name": "SpaceX",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "已將部分Tesla資金轉入SpaceX（未上市）。提到SpaceX上市後一天的震盪等於一個巴菲特（巴菲特一生財富），希望SpaceX未來收購Tesla成為母艦。",
+      "quote": "馬斯克的SpaceX上市之後，他一天的震盪就是一個巴菲特...自從它有SpaceX之後，我就把一些Tesla賣掉，然後進去SpaceX"
+    },
+    {
+      "name": "CrowdStrike",
+      "ticker": "CRWD",
+      "market": "US",
+      "stance": "看多",
+      "reason": "手上持有的資安股，當初Mythos事件時市場說資安全部要完蛋，但現在資安股全部在右上角。是最愛的軟體股之一，型態蠻好，若GPU族群轉弱可能會將資金轉向此類標的。",
+      "quote": "我自己手上是有CrowdStrike...你現在去看這些資安股全部都在右上角啊...像是Palantir，那這個CrowdStrike跟Cloudflare，這是幾個是我最愛的"
+    },
+    {
+      "name": "Palantir",
+      "ticker": "PLTR",
+      "market": "US",
+      "stance": "看多",
+      "reason": "最愛的軟體股之一，若GPU族群轉弱，考慮將資金轉向軟體股，Palantir是首選之一。",
+      "quote": "我自己比較喜歡的軟體股像是Palantir，那這個CrowdStrike跟Cloudflare，這是幾個是我最愛的"
+    },
+    {
+      "name": "Cloudflare",
+      "ticker": "NET",
+      "market": "US",
+      "stance": "看多",
+      "reason": "最愛的軟體股之一，型態蠻好。若GPU族群轉弱，資金可能往軟體股移動。",
+      "quote": "像是Palantir，那這個CrowdStrike跟Cloudflare，這是幾個是我最愛的...其實有兩支型態都還蠻好的"
+    },
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "若GPU族群開始轉弱，心中選項之一是往Apple或Google等巨頭移動。",
+      "quote": "我可能往Apple去跑，或是往Google，就是巨頭"
+    },
+    {
+      "name": "Google (Alphabet)",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "若GPU族群轉弱，巨頭股是資金可能移動的方向之一。",
+      "quote": "我可能往Apple去跑，或是往Google，就是巨頭"
+    },
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "被動元件族群中最大的，法人可以parking資金進去。被動元件目前進入修正但還在季線上。",
+      "quote": "被動元件最大的可能像國巨華新科或什麼的，那個法人是有辦法可以parking進去的"
+    },
+    {
+      "name": "華新科",
+      "ticker": "2492",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "被動元件族群大型股之一，法人可以放資金的標的。",
+      "quote": "被動元件最大的可能像國巨華新科或什麼的，那個法人是有辦法可以parking進去的"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "功率元件",
+      "stance": "看多",
+      "reason": "以台股來講基本上都還在五日線跟十日線，是市場主流。但強勢個股的市值約數百億，大型法人難以進場，這是需要留意的限制。"
+    },
+    {
+      "name": "CCL（銅箔基板）",
+      "stance": "看多",
+      "reason": "目前都還很強，是市場上的強勢族群之一，且可以放大資金。"
+    },
+    {
+      "name": "WAFER（矽晶圓）",
+      "stance": "看多",
+      "reason": "目前都還很強，是市場上的強勢族群之一。"
+    },
+    {
+      "name": "封測",
+      "stance": "看多",
+      "reason": "強勢族群之一，可以放大資金。"
+    },
+    {
+      "name": "被動元件",
+      "stance": "中立",
+      "reason": "過去是可以塞很多錢的大族群，現在蠻多進入修正但至少還在季線上。法人可能後續回來推動反彈，但一般拉回到這種程度需要橫盤整理。"
+    },
+    {
+      "name": "光通訊",
+      "stance": "中立",
+      "reason": "直接集體轉弱，股癌自己也已降低光通部位。但認為光通基本面敘事沒有改變，只是短期資金輪動。"
+    },
+    {
+      "name": "GPU相關（台股）",
+      "stance": "看多",
+      "reason": "股癌目前仍在GPU族群，但若開始軟掉會考慮轉向軟體股或巨頭。"
+    },
+    {
+      "name": "資安股（美股）",
+      "stance": "看多",
+      "reason": "Mythos事件時市場恐慌說資安要死，結果現在資安股全部在右上角。市場犯錯時抓到對的東西報酬最大。"
+    },
+    {
+      "name": "SaaS/軟體股",
+      "stance": "看多",
+      "reason": "Token成本下降帶動軟體股收益上升、成長率爬升的跡象已在財報中出現。不是一面倒要死，但需要個別分析而非一包看待。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "光",
+      "interpretation": "光通訊族群（光模組、光收發器相關個股）",
+      "stance": "中立",
+      "quote": "那像光是直接集體轉弱了，那在被動元件下有蠻多也進入了修正，所以就是可能換下個東西，這樣的一個味道才是",
+      "candidates": [
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "光通訊族群代表性個股，逐字稿提到光通集體轉弱"
+        },
+        {
+          "name": "華星光",
+          "ticker": "4979",
+          "market": "TW",
+          "reason": "光通訊族群個股，符合集體轉弱描述"
+        },
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "光通訊族群個股，符合集體轉弱描述"
+        },
+        {
+          "name": "上詮",
+          "ticker": "3363",
+          "market": "TW",
+          "reason": "光通訊族群個股，符合集體轉弱描述"
+        },
+        {
+          "name": "聯鈞",
+          "ticker": "3450",
+          "market": "TW",
+          "reason": "光通訊族群個股，符合集體轉弱描述"
+        }
+      ]
+    },
+    {
+      "term": "GG",
+      "interpretation": "台積電（2330），股癌比喻為聖盔谷和媽媽，市場震盪時大家回去避風的標的",
+      "stance": "看多",
+      "quote": "先躲進GG撐過去這段就好...GG就是魔戒2裡面的聖盔谷，大家發現說哎呦你弟兒出事，落漢的人民就會跑進去這個聖盔谷裡面",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "GG是台積電的常見暱稱（台GG），逐字稿中明確比喻為聖盔谷、媽媽般的避風港角色"
+        }
+      ]
+    },
+    {
+      "term": "五哥跟十哥",
+      "interpretation": "台股伺服器代工大廠，指廣達、緯創等五大伺服器代工廠與延伸的十大供應商",
+      "stance": "僅提及",
+      "quote": "你根本就沒有辦法出貨，你東西被卡住了，所以你一樣有做Server，可是你就是不會跑贏可能五哥跟十哥，他們的一些營收獲利表現",
+      "candidates": [
+        {
+          "name": "廣達",
+          "ticker": "2382",
+          "market": "TW",
+          "reason": "伺服器代工五哥之一，逐字稿用來對比IPC廠商的競爭力差異"
+        },
+        {
+          "name": "緯創",
+          "ticker": "3231",
+          "market": "TW",
+          "reason": "伺服器代工五哥之一"
+        },
+        {
+          "name": "英業達",
+          "ticker": "2356",
+          "market": "TW",
+          "reason": "伺服器代工五哥之一"
+        },
+        {
+          "name": "鴻海",
+          "ticker": "2317",
+          "market": "TW",
+          "reason": "伺服器代工五哥之一"
+        },
+        {
+          "name": "和碩",
+          "ticker": "4938",
+          "market": "TW",
+          "reason": "伺服器代工五哥之一（部分定義）"
+        }
+      ]
+    },
+    {
+      "term": "CPU",
+      "interpretation": "GPU族群（股癌口誤或習慣用法，從上下文看他指的是GPU/AI晶片相關族群，因為他說從GPU搭車搭到一半，且對比軟體股的資金轉換）",
+      "stance": "看多",
+      "quote": "因為我後來跑進去CPU，那現在CPU我覺得都還好好的，雖然最近開始也有一些大回檔...如果他們再繼續上的話，那CPU開始軟掉，我是真的有可能會把資金往那邊去拷",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "股癌前後文提到自己持有NVIDIA且是AI核心，這裡的CPU應指GPU/AI晶片族群"
+        },
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "market": "US",
+          "reason": "GPU族群代表性個股之一"
+        }
+      ]
+    },
+    {
+      "term": "證交備版 / KYBER那個mid plan",
+      "interpretation": "NVIDIA NVL144 Kyber機櫃中的中板（mid-plane），使用PTFE與Q布材料，涉及載板/CCL技術",
+      "stance": "中立",
+      "quote": "我們講那個證交備版，就KYBER那個mid plan，因為他是要用那個PTFE材料，然後跟Q就是說Q布跟PTFE的材料，後來應該是會去做一個混搭",
+      "candidates": [
+        {
+          "name": "台光電",
+          "ticker": "2383",
+          "market": "TW",
+          "reason": "逐字稿提到PTFE、Q布等CCL材料，台光電是CCL/高頻材料大廠，且這集提到CCL族群還很強"
+        },
+        {
+          "name": "聯茂",
+          "ticker": "6213",
+          "market": "TW",
+          "reason": "CCL族群代表，逐字稿提到CCL還很強，且mid-plane涉及高頻板材"
+        },
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "載板廠，mid-plane製造涉及ABF載板技術"
+        }
+      ]
+    },
+    {
+      "term": "盛宏",
+      "interpretation": "可能是指中國的CCL/高頻材料廠商（語音辨識可能有誤），持續在測試PTFE相關材料",
+      "stance": "僅提及",
+      "quote": "在現在我們都還是有看到，像中國的盛宏是有持續去測這一塊料",
+      "candidates": [
+        {
+          "name": "生益科技",
+          "ticker": null,
+          "market": "其他",
+          "reason": "語音辨識「盛宏」可能是中國CCL大廠生益科技，逐字稿上下文提到中國廠商在測PTFE/Q布材料，生益是中國最大CCL廠"
+        }
+      ]
+    },
+    {
+      "term": "RUBY / RUBY ULTRA / FAMON",
+      "interpretation": "NVIDIA未來GPU架構代號。Rubin（RUBY）、Rubin Ultra、Feynman（FAMON）。Kyber NVL144的mid-plane可能延遲到Feynman世代才推出。",
+      "stance": "中立",
+      "quote": "有些人講說RUBY ULTRA，然後現在甚至講說就可能不會跟著RUBY ULTRA，會到FAMON才會跑出來",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "Rubin、Rubin Ultra、Feynman都是NVIDIA未來GPU架構代號，逐字稿討論的是這些架構搭配Kyber機櫃的時程"
+        }
+      ]
+    },
+    {
+      "term": "三個英文字的",
+      "interpretation": "可能指中國的某位分析師（如SJW或類似三字母縮寫），之前因發表光通訊看法被人肉搜索出問題",
+      "stance": "僅提及",
+      "quote": "之前中國那邊有一個分析師，雖然我們蠻常提到，但我們現在就不要去提了，就是三個英文字的，那他那時候就只是去講一下自己對光通元件的一些看法，然後最後面就直接給人家人肉出來",
+      "candidates": []
+    },
+    {
+      "term": "800VDC",
+      "interpretation": "800V直流電源架構（800V DC Power Rack），NVIDIA新一代資料中心的電源規格，Semi-Analysis曾報告其延遲。股癌認為5%滲透率已經很好，是正向訊號。",
+      "stance": "看多",
+      "quote": "前面剛發生只是在講說CPU跟800VDC的一個延遲...DM Patel他在一個X的推文下面有講到，他其實認為那個滲透率只有5%...其實5%叫很好",
+      "candidates": []
+    }
+  ],
+  "episode_title": "EP677 | 🐎",
+  "analyzed_at": "2026-07-08T17:37:08.858184",
+  "transcript_chars": 22137
+}
