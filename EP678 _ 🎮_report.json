@@ -1,0 +1,200 @@
+{
+  "summary": "本集股癌主要討論颱風假對台股的影響（散漲格局）、NVIDIA與Meta在AI算力市場的最新動態、光通訊族群內部的類股輪動（Narrow and Fast vs Wide and Slow）、以及被動元件與功率元件的全面漲價趨勢。他也深入分析Meta進入AI算力租賃市場對Neo Cloud及供應鏈估值的影響。",
+  "macro_views": [
+    {
+      "topic": "台股盤勢",
+      "view": "台股目前處於區間盤整，上追被套、下跌又撐回來，禮拜五富台指漲3%+屬散漲格局，距離新高其實不遠",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI算力定價趨勢",
+      "view": "隨著Meta等大咖加入算力租賃，GPU算力單價將趨於穩定下降，朦朧美消失後高估值投機標的會面臨估值收斂的壓力，但總需求仍在擴張",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI資本支出",
+      "view": "巨頭採購力量非常強大，記憶體漲成這樣仍持續大量採購，還沒有見到敗相，非常恐怖",
+      "stance": "看多"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "連續紅K直攻210，重新爬上季線，線型好看",
+      "quote": "像NVIDIA的話是直接再次的攻到210了，就很久沒有看到NVIDIA連續出這種紅K，然後重新的爬上季線，這個長得還蠻好看的"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "market": "US",
+      "stance": "看多",
+      "reason": "Zuckerberg證實不是退出算力競賽而是要double down，出售閒置算力是bullish訊號，舊GPU可做inferencing或出租，反駁Michael Burry的看空論點，未來data center booking的G瓦數很高",
+      "quote": "在Zuckerberg的訪問裡面好像是昨天還前天他出來證實了，就是我們這邊的意見才是對的，就是他並沒有要退出，他甚至是要這個滿倉殺進去，然後更加用力的做多"
+    },
+    {
+      "name": "Cradle（銅相關標的）",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "之前因光進銅退論述被殺爛，現在回頭看已在新高位置且漲蠻多，證明當時市場過度反應",
+      "quote": "像美股的話我自己的持股當時Cradle跟Starlabs都跌到爛掉...可是如果你現在回頭看一下Cradle跟Starlabs你就注意到那就是全部都是在新高的位置而且是還漲蠻多的"
+    },
+    {
+      "name": "Starlabs（銅相關標的）",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "同Cradle，光進銅退被過度賣出後已創新高，股癌自己的持股",
+      "quote": "Cradle跟Starlabs都跌到爛掉...可是如果你現在回頭看一下Cradle跟Starlabs你就注意到那就是全部都是在新高的位置"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "記憶體",
+      "stance": "看多",
+      "reason": "下一季合約價持續漲價，雖漲幅有收斂但巨頭採購力量太強大，還沒見到敗相。不過股癌自己已下車，認為股價已射到宇宙"
+    },
+    {
+      "name": "被動元件",
+      "stance": "看多",
+      "reason": "絕大多數廠商漲價成功，後續一兩個季度持續漲價中，大廠漲價帶動中小廠跟進（母雞拉小雞），與日本被動元件先動後台灣跟上的模式類似"
+    },
+    {
+      "name": "功率元件",
+      "stance": "看多",
+      "reason": "ADI發出漲價信，全面漲價狀態。功率元件缺貨擴張中，台系MOSFET與後段封裝走勢漂亮，但美股IDM反而軟掉不太漲"
+    },
+    {
+      "name": "封裝（後段）",
+      "stance": "看多",
+      "reason": "封裝廠產線很滿，有廠商自結數字顯示營收年增持平但獲利大幅跳升，代表漲價循環啟動與稼動率拉滿。導線架lead time從3-4個月拉到7-8個月，漲價10-20%"
+    },
+    {
+      "name": "光通訊",
+      "stance": "中立",
+      "reason": "內部出現類股輪動，矽光（Narrow and Fast）相關標的轉弱，VCSEL/AOC/Micro LED（Wide and Slow）相對硬。需等大盤新高、sentiment轉好才會有資金回流，股癌自己目前不想介入"
+    },
+    {
+      "name": "Neo Cloud / 算力租賃",
+      "stance": "看空",
+      "reason": "Meta加入競爭後多一個超級大玩家，定價權被壓縮，朦朧美消失後投報率可算出來，高估值炒作空間收窄，過去可交易在四五十倍的本夢比會面臨現實鐵拳"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "鬼創",
+      "interpretation": "緯創（3231），股癌過去常用的暱稱，指ODM/OEM廠商在AI伺服器水冷相關的先行布局",
+      "stance": "僅提及",
+      "quote": "類似說那時候我們在講鬼創的時候，那或者說其實市場很多的這個買方都已經在去買當時的ODM OEM，可是你去上各大論壇都說他們在炒股票，因為他們看不到那個營收，然後等到他們看得到營收衝進去買的時候就剛好全部買在水冷第一排",
+      "candidates": [
+        {
+          "name": "緯創",
+          "ticker": "3231",
+          "market": "TW",
+          "reason": "股癌歷來稱緯創為鬼創，且此處提到ODM/OEM與水冷題材，緯創是AI伺服器ODM代表廠商"
+        }
+      ]
+    },
+    {
+      "term": "Cypher / Cyclone Photronics / 矽光",
+      "interpretation": "矽光子（Silicon Photonics）相關標的，屬於光通訊中Narrow and Fast路線，股癌觀察到這類標的走勢偏軟",
+      "stance": "看空",
+      "quote": "我注意到說Cypher就是那個Cyclone Photronics矽光，然後跟所謂的這個IMP零化鷹的雷射相關的標的呢，你注意到他們蠻多都是比較偏向一個軟屌的情形",
+      "candidates": [
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "逐字稿提到矽光與零化鷹（III-V族，即InP磷化銦）雷射，Coherent是InP雷射與矽光的主要供應商"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "market": "US",
+          "reason": "InP雷射光通訊元件大廠，符合逐字稿中提到的零化鷹雷射相關標的"
+        }
+      ]
+    },
+    {
+      "term": "Wide and Slow / VCSEL / AOC",
+      "interpretation": "光通訊中以VCSEL（垂直共振腔面射型雷射）為基礎的寬頻但較低速率方案，包含AOC（主動式光纖纜線）和未來的Micro LED，股癌觀察到這類標的相對強勢",
+      "stance": "看多",
+      "quote": "可是如果你今天是Wide and Slow也就是說Vixel然後跟AOC然後或者是甚至到Micro LED他其實算是一個相對遠的故事然後但他們的股價你會注意到說比前者還要來的稍微的硬一點",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "Broadcom是VCSEL與AOC相關晶片的主要供應商之一，逐字稿提到VCSEL在消費性已行之多年，Broadcom是該領域龍頭"
+        },
+        {
+          "name": "Applied Optoelectronics",
+          "ticker": "AAOI",
+          "market": "US",
+          "reason": "AAOI生產VCSEL與AOC模組，直接對應逐字稿提到的Wide and Slow方案標的"
+        }
+      ]
+    },
+    {
+      "term": "AMPHENOM / 真正的銅概念股",
+      "interpretation": "Amphenol（APH），全球連接器大廠，股癌認為是真正的銅概念股",
+      "stance": "僅提及",
+      "quote": "我覺得真正的銅概念股是AMPHENOM，只是不知道為什麼那時候大家都把這兩隻也硬算進去，就是那種很高純度的銅概念股",
+      "candidates": [
+        {
+          "name": "Amphenol",
+          "ticker": "APH",
+          "market": "US",
+          "reason": "逐字稿中AMPHENOM即為Amphenol的口語發音，股癌明確稱其為真正的銅概念股"
+        }
+      ]
+    },
+    {
+      "term": "Semi-Analysis的ETF",
+      "interpretation": "Semi-Analysis（半導體分析機構）推出的ETF，選入部分光通訊標的，股癌認為可能成為光通訊族群的催化劑",
+      "stance": "僅提及",
+      "quote": "像是那個當初把他喊下去的Semi-Analysis他們現在發了一個ETF，那這ETF裡面有選到一些光通的元件嘛，那就是有機會會透過這些比較偏向資金行情的東西去再一次的把他Jumpstart",
+      "candidates": []
+    },
+    {
+      "term": "導線架",
+      "interpretation": "Lead frame，IC封裝中的關鍵元件，股癌提到缺貨嚴重、lead time從3-4個月拉到7-8個月、漲價10-20%",
+      "stance": "看多",
+      "quote": "一些比較精英的廠商甚至是從本來3到4個月跑到7到8個月左右，所以他是一個非常缺的環節...這個導線架買不到，出事啦",
+      "candidates": [
+        {
+          "name": "長華",
+          "ticker": "8070",
+          "market": "TW",
+          "reason": "長華旗下長華科技是台灣主要導線架供應商，逐字稿提到導線架嚴重缺貨且漲價"
+        },
+        {
+          "name": "順德",
+          "ticker": "2351",
+          "market": "TW",
+          "reason": "順德為台灣導線架製造商，逐字稿提到此環節lead time大幅拉長"
+        }
+      ]
+    },
+    {
+      "term": "Vera Rubin / 飛門",
+      "interpretation": "NVIDIA下一代GPU架構，Vera Rubin為下下代平台名稱，飛門可能是語音辨識誤差（可能指Feynman或其他代號），股癌用來說明舊GPU（Hopper）不會浪費",
+      "stance": "僅提及",
+      "quote": "像接下來要出的這個Vera Rubin或是後來的什麼飛門之類的，你會用這個東西拿去算可能最新的AI模型，那你舊的Hopper要怎麼辦",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "Vera Rubin與Hopper都是NVIDIA GPU架構代號，直接對應NVIDIA產品路線圖"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP678 | 🎮",
+  "analyzed_at": "2026-07-11T17:35:53.705025",
+  "transcript_chars": 22901
+}
