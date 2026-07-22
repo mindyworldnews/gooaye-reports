@@ -1,0 +1,330 @@
+{
+  "summary": "本集股癌討論近期盤勢震盪，認為目前處於警戒階段，大盤反彈會碰到均線壓力，建議以區間盤操作為主。重點關注AMD即將舉行的Advancing AI 2026活動、Venice（SP7 CPU）正式發表，以及Google財報。同時提到老AI族群轉強，載板族群集體漲停表現強勢，並分析CPU供應鏈在Agentic AI時代的重要性提升。",
+  "macro_views": [
+    {
+      "topic": "台股大盤走勢",
+      "view": "大盤反彈到季線附近，但上方有均線壓力和套牢賣壓，目前視為警戒階段，以區間盤操作為主。中小型股（櫃買）跌幅較深，形態不好看，資金有從中小型移往大型股的趨勢。",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI基本面展望",
+      "view": "雖然股價震盪，但許多AI相關公司的業績即將開出，基本面仍然on track甚至優於預期。VRuby放量出貨、AMD發表Venice、Intel年底推出新CPU，整個供應鏈營收展望正面。",
+      "stance": "看多"
+    },
+    {
+      "topic": "市場槓桿風險",
+      "view": "新一代股民槓桿開太大，2.5倍已算保守，這波回檔造成許多人斷頭。提醒這只是小壓力測試，未來大循環回檔會更慘，要做好心理準備。",
+      "stance": "中立"
+    },
+    {
+      "topic": "算力需求",
+      "view": "針對前一集討論的算力過剩論述，KeyMe（Kimi）在上集討論後隨即宣布算力不夠用要留給老客戶，打臉算力充足的說法，確認算力需求仍然強勁。",
+      "stance": "看多"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "market": "US",
+      "stance": "看多",
+      "reason": "即將舉行Advancing AI 2026活動，正式發表Venice（SP7 CPU），CPU市占率持續提升，GPU方面也有大型客戶如Microsoft Azure、Meta、OpenAI、Anthropic，550世代硬體有機會超車NVIDIA。CPU的TAM已上修一倍。",
+      "quote": "AMD有一個Advancing AI 2026...重點會是放在第二天也就是麗莎樹的一個Keynote...我們覺得應該是會去正式發表Venice...它會為AMD帶來蠻大的一個優勢"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "作為避風港角色，市場下跌時資金會先散進台積電，回穩後再從台積電拿錢出來買其他標的。",
+      "quote": "反正就是在下跌的時候先把錢散進去指數散進去台積電然後等到大盤回穩之後就開始從指數跟台積電拿錢出來然後看去買東西"
+    },
+    {
+      "name": "Google (Alphabet)",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "中立",
+      "reason": "即將公布財報，市場預期不高，只要不開負面消息就以中性態度看待。模型方面稍微落後，但生態系統仍有競爭力。新晶片Frozen消息出來但對Google營收影響可忽略。",
+      "quote": "大家對於Google的財報預期其實並沒有到很高只要它不是開負面的消息那應該就是用一個Neutral的態度去看它"
+    },
+    {
+      "name": "Intel",
+      "ticker": "INTC",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "年底將推出下一代CPU（Clearwater Forest、Diamond Rapids），但目前被AMD搶先，時間上處於劣勢。",
+      "quote": "Intel當然它也是有端出新東西只是它的Oxygen也就是它的下一代不管是Clearwater Forest然後或者是Diamond Reapers那應該是要等到今年的年底或是明年的年初才會出來"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到VRuby開始放量出貨，以及CUDA護城河慢慢被降低的說法，但也強調老黃不會坐以待斃。",
+      "quote": "特別是VRuby開始要放量出貨...皮一刀客它不是吃素的它不會躺在那邊給你幹"
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "Google的Frozen晶片被認為就是Marvell設計的TIA（TPU-Inference Accelerator），專門用於推論加速。雖然是市場老梗，但後續營收貢獻可能成為催化劑。",
+      "quote": "有些人說它應該是Marvell的那一顆晶片...這顆晶片的全名就是TPU-Inference Accelerator...這一顆應該就是由Marvell去做設計的那一顆"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到Google TPU中博通設計的晶片（Mirror/TPU-V10），以及博通過去公布客戶時對市場造成催化的案例。",
+      "quote": "有些人說它可能是Mirror也就是TPU-V10由博通設計的...像那時候BlockCom它去公佈客戶的時候對我們來講其實我們大概知道是誰"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "作為AMD的新客戶，Azure將部署大量Helios機櫃跑模型推論。",
+      "quote": "Microsoft這邊有大膽Azure會去部署大量的Helios機櫃去跑他們的模型推論"
+    },
+    {
+      "name": "國巨",
+      "ticker": "2327",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "Q&A中討論國巨減資慣犯問題，但指出還原股價其實是2000-3000多塊，當年套牢者都已解套賺錢，減資有其商業理由。",
+      "quote": "2327它現在還原回去還是是一個2000多塊快3000多塊的股票在最高點的時候甚至是4000多塊的一個股票所以其實當年套在1000多塊的人全部都解套跟賺錢"
+    },
+    {
+      "name": "Anthropic",
+      "ticker": null,
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "傳聞已久是AMD的客戶，可能在AMD Advancing AI活動上正式公布合作關係。",
+      "quote": "像模型商Amphibic這個市場已經傳很久了就是有機會也會被端出來說他們有去做合作"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "載板（ABF/BT基板）",
+      "stance": "看多",
+      "reason": "今天集體漲停，表現非常強勢，是目前盤面中少數型態好且有共識的族群。"
+    },
+    {
+      "name": "老AI（ODM/伺服器代工）",
+      "stance": "看多",
+      "reason": "休息了很長時間後重新轉強，Forward PE約10倍相對便宜，有業績有防守，聰明錢在往這個方向移動。"
+    },
+    {
+      "name": "CPU相關供應鏈",
+      "stance": "看多",
+      "reason": "CPU在Agentic AI應用中角色大增，GPU對CPU比例從1:7-8降到1:4甚至1:2，供應鏈處於缺貨狀態。AMD Venice和Intel下一代CPU都將帶動需求，socket等零組件ASP隨換代提升。"
+    },
+    {
+      "name": "被動元件",
+      "stance": "中立",
+      "reason": "最近營收年增數字漂亮，但過去漲數倍後面臨基本面校正回歸壓力，可能撐不住高估值。"
+    },
+    {
+      "name": "中小型股（櫃買）",
+      "stance": "看空",
+      "reason": "櫃買指數跌幅較大，形態不好看，資金正從中小型股撤出轉往大型股。"
+    },
+    {
+      "name": "功率元件/800V",
+      "stance": "中立",
+      "reason": "Q&A中提到電腦展上800V機櫃方案增加，營收獲利確定會好，但市場何時反應不確定，建議等族群集體表態再介入。"
+    },
+    {
+      "name": "Power Rack（機櫃/電源）",
+      "stance": "中立",
+      "reason": "台灣的Power Rack超級大廠反彈力量不大，形態可能進入休息階段，雖然基本面不差但需要整理。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "老AI",
+      "interpretation": "指ODM/伺服器代工廠等早期AI概念股，已經休息了很長一段時間，Forward PE約10倍",
+      "stance": "看多",
+      "quote": "像最近的話就是這些老AI重新的轉強...這些老AI其實在過去他們算是休息了蠻長的一段時間那如果是在ODN這邊你注意到蠻多的Ford PER大概就落在10倍左右",
+      "candidates": [
+        {
+          "name": "廣達",
+          "ticker": "2382",
+          "market": "TW",
+          "reason": "逐字稿提到ODM族群Forward PE約10倍且休息很長時間後轉強，廣達為AI伺服器ODM龍頭，符合老AI概念"
+        },
+        {
+          "name": "緯創",
+          "ticker": "3231",
+          "market": "TW",
+          "reason": "AI伺服器ODM大廠，符合老AI族群中休息後轉強、PE約10倍的描述"
+        },
+        {
+          "name": "英業達",
+          "ticker": "2356",
+          "market": "TW",
+          "reason": "AI伺服器ODM廠商，符合老AI低PE轉強的描述"
+        },
+        {
+          "name": "鴻海",
+          "ticker": "2317",
+          "market": "TW",
+          "reason": "AI伺服器代工大廠，符合老AI族群描述"
+        }
+      ]
+    },
+    {
+      "term": "載板",
+      "interpretation": "ABF/BT載板廠商，今天集體漲停表現強勢",
+      "stance": "看多",
+      "quote": "除了像載板今天是集體蠻多都漲停那個算非常強勢之外",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "載板三雄之一，逐字稿提到載板集體漲停"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "載板三雄之一，符合集體漲停描述"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "載板廠商，符合集體漲停描述"
+        }
+      ]
+    },
+    {
+      "term": "Power Rack超級大廠",
+      "interpretation": "台灣的電源/機櫃相關大型廠商，反彈力道不強，可能進入休息階段",
+      "stance": "中立",
+      "quote": "大家耳熟能詳的大名字就像台灣的一些那種Power Rack超級大廠那個反彈的力量也都沒有到很大所以我就覺得說這些東西是有機會會進入一個休息的階段",
+      "candidates": [
+        {
+          "name": "台達電",
+          "ticker": "2308",
+          "market": "TW",
+          "reason": "逐字稿提到台灣Power Rack超級大廠且是大家耳熟能詳的大名字，台達電為台灣電源/機櫃解決方案龍頭"
+        },
+        {
+          "name": "光寶科",
+          "ticker": "2301",
+          "market": "TW",
+          "reason": "台灣電源大廠，符合Power Rack超級大廠的描述"
+        }
+      ]
+    },
+    {
+      "term": "某記憶體廠",
+      "interpretation": "股癌在Q&A討論減資再增資時提到的記憶體廠，暗示過去有類似減資操作但後來公司變好",
+      "stance": "僅提及",
+      "quote": "好像某記憶體廠他們為什麼那時候會這樣做或是某金元代工廠為什麼那時候會這樣做其實都有理由因為當下可能不這樣做他也沒有太多的選項了",
+      "candidates": [
+        {
+          "name": "南亞科",
+          "ticker": "2408",
+          "market": "TW",
+          "reason": "台灣記憶體廠中有過減資歷史的公司，逐字稿以「某記憶體廠」暗示不點名"
+        },
+        {
+          "name": "華邦電",
+          "ticker": "2344",
+          "market": "TW",
+          "reason": "台灣記憶體廠，可能符合減資歷史的描述"
+        }
+      ]
+    },
+    {
+      "term": "某金元代工廠",
+      "interpretation": "股癌提到的晶圓代工廠，過去有減資再增資或先下市再上市的操作",
+      "stance": "僅提及",
+      "quote": "好像某記憶體廠他們為什麼那時候會這樣做或是某金元代工廠為什麼那時候會這樣做其實都有理由",
+      "candidates": [
+        {
+          "name": "力積電",
+          "ticker": "6770",
+          "market": "TW",
+          "reason": "逐字稿語音辨識「金元代工廠」應為「晶圓代工廠」，力積電有先下市再上市的歷史，符合描述"
+        }
+      ]
+    },
+    {
+      "term": "VRuby",
+      "interpretation": "NVIDIA的新一代GPU產品（Vera Rubin架構），即將放量出貨",
+      "stance": "看多",
+      "quote": "特別是VRuby開始要放量出貨",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "VRuby為NVIDIA下一代GPU架構Vera Rubin的簡稱，逐字稿明確提到開始放量出貨"
+        }
+      ]
+    },
+    {
+      "term": "CPU相關的sockets",
+      "interpretation": "CPU插槽/連接器，隨CPU換代針腳數增加而ASP提升的零組件",
+      "stance": "看多",
+      "quote": "像CPU它附載的這個sockets因為它的那個對率大概是1比1...隨著這個CPU的換代因為像這個sockets它裡面的那個增角數就會變多那增角數變多的意思就代表說它ASP會提高",
+      "candidates": [
+        {
+          "name": "嘉澤",
+          "ticker": "3533",
+          "market": "TW",
+          "reason": "逐字稿提到CPU socket與CPU 1:1對應，且換代時針腳數增加帶動ASP提升，嘉澤為全球CPU socket龍頭廠商"
+        },
+        {
+          "name": "胡連",
+          "ticker": "6279",
+          "market": "TW",
+          "reason": "連接器廠商，可能受惠CPU socket需求增加"
+        }
+      ]
+    },
+    {
+      "term": "皮一刀客",
+      "interpretation": "NVIDIA CEO黃仁勳的暱稱（皮衣刀客），指NVIDIA不會坐以待斃讓AMD超車",
+      "stance": "僅提及",
+      "quote": "皮一刀客它不是吃素的它不會躺在那邊給你幹那現在市場的一個論述是說因為跑到550那一代之後它可能一個板子上面可以打比NVIDIA還多顆的晶片",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "皮一刀客（皮衣刀客）是股癌對黃仁勳/NVIDIA的戲稱，逐字稿討論AMD 550世代可能在硬體超車NVIDIA時提到"
+        }
+      ]
+    },
+    {
+      "term": "KeyMeCareFree / KeyMe",
+      "interpretation": "指Kimi（月之暗面/Moonshot AI），中國AI模型公司，被市場認為會衝擊算力需求但隨即宣布算力不夠用",
+      "stance": "看多",
+      "quote": "像過去一集跟大家聊到KeyMeCareFree...最後面我們看到KeyMe就是在我們上集聊完之後他們就是有公佈直接告訴大家這個月之愛命就跟大家講說抱歉我們現在算力要留給老客戶因為不夠用",
+      "candidates": []
+    },
+    {
+      "term": "BlockCom",
+      "interpretation": "語音辨識誤差，應為Broadcom（博通），提到其過去公布客戶名單對市場造成催化的案例",
+      "stance": "僅提及",
+      "quote": "像那時候BlockCom它去公佈客戶的時候對我們來講其實我們大概知道是誰我們也知道說有這樣的訂單但是那時候在市場上面還是有造成一些影響",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "語音辨識將Broadcom聽成BlockCom，上下文討論ASIC客戶公布對市場的催化效應"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP681 | 🦉",
+  "analyzed_at": "2026-07-22T17:37:03.480340",
+  "transcript_chars": 22626
+}
