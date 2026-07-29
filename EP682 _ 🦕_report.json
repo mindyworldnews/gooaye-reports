@@ -1,0 +1,321 @@
+{
+  "summary": "本集股癌主要分享瀟南資本投資的遊戲《紅眼Ruby》上市心得，並討論當前市場大幅修正的困境——科技股普遍重挫，好壞財報皆跌，找不到明確下跌原因，類似去年三月的氛圍。產業面上，記憶體漲價將趨緩、功率半導體與鋁電容基本面仍佳，但股價與基本面脫鉤，建議降低槓桿、維持現金彈性。",
+  "macro_views": [
+    {
+      "topic": "美股/台股大盤修正",
+      "view": "標普500仍在高位，但費城半導體指數最深跌近三成，台股櫃買跌到爆。找不到明確下跌理由，類似去年三月關稅事件前的氛圍——可能有未知利空在醞釀，等消息出來可能就跌完了。目前偏向認為是估值修正，但若持續破底需提高警覺。",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI資本支出與雲服務巨頭投資",
+      "view": "Google財報非常好，證明AI可以賺錢。現金流轉負是早就預期的事，不該因此看空。CSP不投資就會輸，如同大富翁買房買到快破產最後靠過路費贏。Amazon、Microsoft、中國BAT都會持續大量投資，這是不得不花的錢。",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI運算成本與未來展望",
+      "view": "AI時代不再是軟體一本萬利，每次推論都有成本，短期內供應鏈各環節都在漲價，毛利會被壓縮但TAM更大。未來AI會變便宜，但在過渡期成本居高不下。長期一定會有『諸神的黃昏』循環結束，但目前還沒到。",
+      "stance": "中立"
+    },
+    {
+      "topic": "記憶體價格走勢",
+      "view": "Q4到明年Q1記憶體價格將趨於flat。並非需求轉弱，而是漲太多後可能受美國政府壓力與良心發現而踩煞車。Q1、Q2漲幅100%，Q3收斂到10-30%，Q4降到10%以下。原廠毛利可能衝到80%，非常恐怖。中國開始拒絕漲價轉向CXMT國產替代。",
+      "stance": "中立"
+    },
+    {
+      "topic": "川普與市場催化劑",
+      "view": "市場需要催化劑，可能是川普講話或Fed釋出鴿派訊號，但川普目前出來講話機率偏低，因為標普500還在高位。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "財報非常好但股價崩掉，股癌認為這是市場不理性的表現。魏哲家多次提到羨慕客戶毛利高，暗示台積電定價仍有空間。",
+      "quote": "從台積電的財報開出來，他的財報其實是非常好的，然後崩掉"
+    },
+    {
+      "name": "Google (Alphabet)",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "財報非常好，雲服務獲得巨大成功，證明AI可以賺錢。現金流轉負是早就預期的事，不投資才會輸。股癌明確反駁市場因現金流轉負而看空的邏輯。",
+      "quote": "Google的財報我們怎麼樣去評論，我們覺得是非常好，而且已經證明說AI就是可以賺錢的東西...它本身就是一個Cloud Service Provider，所以它是一定要花錢的"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "中立",
+      "reason": "花很多錢在physical AI和Optimus機器人，賽道跟其他巨頭不同，較難評價。類似Meta當初投資元宇宙市場會怕，但如果相信physical AI就要相信投資是必要的。",
+      "quote": "Tesla也是花很多錢，但是Tesla花的錢，他的賽道就跟大家有點不太一樣，他是在拼physical AI這一塊的，那所以會相對的難評價一點"
+    },
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "market": "US",
+      "stance": "中立",
+      "reason": "得天獨厚的位置，靠信仰和終端裝置話語權，不需要像其他CSP大刀闊斧投資AI。槓桿別人很聰明，但這是特殊路線。",
+      "quote": "Apple我們之前也跟大家講過，當然他去槓桿逼人是很聰明沒錯...它是一個那種得天獨厚的位置，可是如果像以Google這樣的角度來講，它本身就是一個CSP"
+    },
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "market": "US",
+      "stance": "看多",
+      "reason": "本週AMD有Advancing AI活動，股癌往AMD相關概念股去壓，帶來一些正報酬，但無法彌補其他部位的虧損。",
+      "quote": "像我可能在本週就是有看到說AMD有一個Advancing AI，那我就往AMD的一些相關概念股去壓，他們是帶來一些正報酬沒錯"
+    },
+    {
+      "name": "德州儀器 (Texas Instruments)",
+      "ticker": "TXN",
+      "market": "US",
+      "stance": "看多",
+      "reason": "電話會議釋出超級好的訊號，全面性復甦，data center表現很好，開始漲價。但開好財報仍被市場殺。",
+      "quote": "Texas Instruments就是德州儀器TXN或是TI，它其實也是類似的道理，它在這次的電話會議基本上它釋出一個超級好的訊號，就是告訴大家說它就是看到一個全面性的復甦"
+    },
+    {
+      "name": "Nichicon",
+      "ticker": null,
+      "market": "其他",
+      "stance": "看多",
+      "reason": "股癌自己的日股持股，跌很深但9月又有新一波漲價，基本面維持不變。",
+      "quote": "Nichicon我自己本身那也是我持股...我回頭一看，我也發現說哇靠怎麼可以跌這麼深...在9月它又有新一波的漲價"
+    },
+    {
+      "name": "Palantir",
+      "ticker": "PLTR",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到Palantir的應用在國防部等niche market，算是黃金料理（獨特競爭優勢），產品好但能否justify估值不一定。",
+      "quote": "Parentier的應用你可以很明確在市場上就知道說它沒有太多的競品，那它可以去接到這些什麼國防部的案子...這種生意就是基本上只有它可以做"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "科技股/AI相關",
+      "stance": "看多",
+      "reason": "產業基本面no change，從記憶體到被動元件、功率元件、載板都在漲價，CAPEX持續上修。但股價大幅修正，費城半導體指數最深跌近三成，所有科技股都在跌。短線難操作但長線產業趨勢不變。"
+    },
+    {
+      "name": "功率半導體/類比半導體",
+      "stance": "看多",
+      "reason": "TXN釋出全面復甦訊號並開始漲價，400V到800V趨勢帶動需求，相關晶圓廠6吋8吋和封測廠營收都開得很好。但股價跟著科技股一起被殺。"
+    },
+    {
+      "name": "記憶體",
+      "stance": "中立",
+      "reason": "前兩季漲幅100%，但Q3開始收斂到10-30%，Q4到明年Q1將趨於flat。原廠毛利可能衝到80%，但已引起美國政府注意，漲價力道將踩煞車。不是需求轉弱而是利潤太高需要修正。"
+    },
+    {
+      "name": "鋁電容",
+      "stance": "看多",
+      "reason": "市場上很缺乏，相關原料化成箔的台系廠商guidance非常好。Nichicon 9月又有新一波漲價。"
+    },
+    {
+      "name": "PCB/板材",
+      "stance": "看多",
+      "reason": "台灣PCB相關公司估值跌到十倍左右，用明年EPS算非常便宜，股癌認為市場在瘋狂亂殺。"
+    },
+    {
+      "name": "光通訊",
+      "stance": "僅提及",
+      "reason": "提到光通訊一堆跌到五成，作為科技股普遍重挫的例子。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "Parentier",
+      "interpretation": "Palantir (PLTR)，語音辨識將Palantir聽成Parentier",
+      "stance": "看多",
+      "quote": "Parentier的應用你可以很明確在市場上就知道說它沒有太多的競品，那它可以去接到這些什麼國防部的案子或什麼，那個都是屬於非常那種Niche market很特別的應用，你可能要過很多的法尊...這種生意就是基本上只有它可以做",
+      "candidates": [
+        {
+          "name": "Palantir",
+          "ticker": "PLTR",
+          "market": "US",
+          "reason": "逐字稿提到國防部案子、niche market、沒有太多競品、需要過很多法規驗證，這些特徵完全符合Palantir。聽眾提問用『黃金料理』比喻，股癌過去曾用『黃金廚具』形容Palantir的獨特競爭優勢。"
+        }
+      ]
+    },
+    {
+      "term": "設備股跌到七八倍",
+      "interpretation": "未具名的AI相關中小型設備股，用明年EPS算本益比跌到7-10倍",
+      "stance": "看多",
+      "quote": "我們沒有辦法去點名一些標的，應該可能比較中小，但是我們自己有在注意的某一些設備股，它跌到十倍股以下，它甚至跌到七八倍股，就是如果你用明年的EPS算的話，碼超低",
+      "candidates": [
+        {
+          "name": "辛耘",
+          "ticker": "3583",
+          "market": "TW",
+          "reason": "台股中小型半導體設備股，AI相關，符合股癌描述的跌深且用明年EPS算估值極低的特徵"
+        },
+        {
+          "name": "牧德",
+          "ticker": "3563",
+          "market": "TW",
+          "reason": "台股中小型設備檢測股，近期跌幅深，符合描述"
+        },
+        {
+          "name": "京鼎",
+          "ticker": "3413",
+          "market": "TW",
+          "reason": "半導體設備相關，鴻海集團旗下，近期跌幅大"
+        }
+      ]
+    },
+    {
+      "term": "板材PCB相關的東西跌到超低",
+      "interpretation": "PCB/載板相關公司估值跌到約十倍本益比",
+      "stance": "看多",
+      "quote": "台灣的一些板材PCB相關的東西，跌到超低那種十倍左右，想說這到底是什麼東西，為什麼他們的估值可以跌到這麼便宜",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "台股最大ABF載板廠，AI伺服器關鍵供應商，近期跌幅深"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "ABF載板大廠，AI相關PCB族群代表"
+        },
+        {
+          "name": "台光電",
+          "ticker": "2383",
+          "market": "TW",
+          "reason": "CCL銅箔基板大廠，屬於PCB板材上游"
+        },
+        {
+          "name": "聯茂",
+          "ticker": "6213",
+          "market": "TW",
+          "reason": "CCL銅箔基板廠，PCB板材相關"
+        }
+      ]
+    },
+    {
+      "term": "K3 Kimmy / KIMI",
+      "interpretation": "中國AI模型Kimi（月之暗面/Moonshot AI），語音辨識聽成K3 Kimmy",
+      "stance": "中立",
+      "quote": "可能是像是K3 Kimmy這樣的一個東西，那對市場造成一些影響，那可是後來Kimmy這個事件在市場上其實算是已經被大家消化完了...其實最終大家發現說它的用量值會更大",
+      "candidates": [
+        {
+          "name": "Kimi (月之暗面/Moonshot AI)",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿提到這是造成市場FUD的AI事件，後來被debunk——發現用量更大而非更少，且提到月之暗面（月子案面）自己說算力不夠用，完全符合Kimi模型效率引發的DeepSeek式擔憂"
+        }
+      ]
+    },
+    {
+      "term": "月子案面",
+      "interpretation": "月之暗面（Moonshot AI），Kimi的開發公司",
+      "stance": "僅提及",
+      "quote": "月子案面自己都講了，我的目前的算力是不夠用的",
+      "candidates": [
+        {
+          "name": "月之暗面 (Moonshot AI)",
+          "ticker": null,
+          "market": "其他",
+          "reason": "上下文緊接著KIMI事件討論，提到該公司表示算力不夠用，反駁AI需求減少的FUD"
+        }
+      ]
+    },
+    {
+      "term": "偏上油廠的",
+      "interpretation": "鋁電容原料化成箔相關的台系上游廠商",
+      "stance": "看多",
+      "quote": "原料化成鉑的話，最近台系的有一家偏上油廠的，他們其實給出來的guidance也是非常好的",
+      "candidates": [
+        {
+          "name": "立敦",
+          "ticker": "6175",
+          "market": "TW",
+          "reason": "台系鋁電容化成箔上游廠商，語音辨識可能將『上游廠』聽成『上油廠』，且上下文討論鋁電容原料化成箔，立敦為台灣主要化成箔供應商"
+        },
+        {
+          "name": "榮科",
+          "ticker": "4989",
+          "market": "TW",
+          "reason": "鋁箔相關廠商，但主要做鋁電容用鋁箔，可能性較低"
+        }
+      ]
+    },
+    {
+      "term": "盛虧股",
+      "interpretation": "可能是「盈虧股」或防禦性持股，語音辨識錯誤",
+      "stance": "僅提及",
+      "quote": "就算你可能有躲進去盛虧股一點，或什麼的，但無法改變的就是你每天都一直在輸錢",
+      "candidates": [
+        {
+          "name": "無法確定具體標的",
+          "ticker": null,
+          "market": "TW",
+          "reason": "語音辨識不清，可能指某類防禦型或已獲利的持股，上下文僅表示即使轉進這類股票也無法避免虧損"
+        }
+      ]
+    },
+    {
+      "term": "強茂、德威",
+      "interpretation": "功率半導體IDM廠商，聽眾提問中提到",
+      "stance": "僅提及",
+      "quote": "台股布局強茂、德威等Fabulous或是小型的IDM...強茂跟德威應該都算是IDM，他們應該不是Fabulous",
+      "candidates": [
+        {
+          "name": "強茂",
+          "ticker": "2481",
+          "market": "TW",
+          "reason": "逐字稿中聽眾提問直接點名，股癌修正說強茂是IDM不是Fabless"
+        },
+        {
+          "name": "德微",
+          "ticker": "3675",
+          "market": "TW",
+          "reason": "語音辨識將德微聽成德威，聽眾提問中與強茂並列的功率半導體IDM廠"
+        }
+      ]
+    },
+    {
+      "term": "漢磊、傑銘",
+      "interpretation": "功率半導體製造與封測廠",
+      "stance": "僅提及",
+      "quote": "以及漢磊、傑銘等功率半導體製造跟封測廠",
+      "candidates": [
+        {
+          "name": "漢磊",
+          "ticker": "3707",
+          "market": "TW",
+          "reason": "聽眾直接點名的功率半導體晶圓代工廠"
+        },
+        {
+          "name": "捷敏-KY",
+          "ticker": "6525",
+          "market": "TW",
+          "reason": "語音辨識可能將捷敏聽成傑銘，功率半導體封測廠"
+        }
+      ]
+    },
+    {
+      "term": "CXMT",
+      "interpretation": "長鑫存儲（ChangXin Memory Technologies），中國國產記憶體廠",
+      "stance": "僅提及",
+      "quote": "他們的意思就是他們要轉去CXMT，他們要轉去中國國產，那可是外面的世界因為我們都知道說目前CAPEX都還是持續在上修的一個trend",
+      "candidates": [
+        {
+          "name": "長鑫存儲 (CXMT)",
+          "ticker": null,
+          "market": "其他",
+          "reason": "逐字稿直接提到CXMT名稱，說明中國客戶拒絕記憶體漲價後轉向國產替代方案"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP682 | 🦕",
+  "analyzed_at": "2026-07-29T17:42:01.126969",
+  "transcript_chars": 21127
+}
