@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP684 | 🔦</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-08-05</div>
+    <h1>EP684 | 🔦</h1>
+  </div>
+
+  <div class='summary-box'><p>本集主要討論近期全球市場大跌的核心原因——Leopold Aschenbrenner的Situational Awareness基金爆倉事件，類比2021年Archegos事件，本質是全市場降槓桿與流動性危機。股癌也討論了台股處置股制度的弊端、投資停利與FIRE退休的觀念，並分享兒子五歲生日的感想。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">2454</span><span class="quick-tag bullish">0050</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「發哥」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">聯發科（2454），台股常用暱稱</p>
+          <blockquote>「發哥在禮拜五又給了一個非常好的guidance，上秋有他的forecast，那所以就是初判就是下禮拜還是有蠻多新的動能有可能把這個盤帶上去」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — 「發哥」是聯發科的常用暱稱，且逐字稿提到其給出好的guidance和forecast，符合聯發科法說會/展望的脈絡</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「蝗蟲人」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">黃崇仁（力積電董事長），因其綽號「蝗蟲人」</p>
+          <blockquote>「早上也看到那個蝗蟲人逝世的新聞...蝗蟲人的股票就是氣氛對了上去就是會賺錢...他的立基店愛普我都是賺錢的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6770" data-cand-name="力積電" data-cand-market="TW"><code class="ticker">6770</code><a href="https://tw.stock.yahoo.com/quote/6770" target="_blank" title="開啟 6770 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">力積電</span><span class="cand-reason"> — 逐字稿提到「立基電早日破百」「相信黃董年底就懂」「黃董你怎麼先走了RIP」，黃崇仁是力積電董事長</span><button class="wl-btn wl-btn-sm" data-ticker="6770" data-name="力積電" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="6531" data-cand-name="愛普" data-cand-market="TW"><code class="ticker">6531</code><a href="https://tw.stock.yahoo.com/quote/6531" target="_blank" title="開啟 6531 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">愛普</span><span class="cand-reason"> — 逐字稿直接提到「他的立基店愛普我都是賺錢的」，愛普是黃崇仁相關企業</span><button class="wl-btn wl-btn-sm" data-ticker="6531" data-name="愛普" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「鷹眼樑」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">可能指某位知名企業家/大股東，近期過世或離開市場</p>
+          <blockquote>「前陣子是鷹眼樑，其實這兩個老闆我都還蠻喜歡的...像是鷹眼樑的股票以前就是你可能在第三第四季的時候去做就是會賺錢」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="不確定" data-cand-market="TW"><span class="market-tag">TW</span> <span class="cand-name">不確定</span><span class="cand-reason"> — 逐字稿提到「第三第四季做就會賺錢」，可能是有季節性旺季的公司大股東，但語音辨識可能有誤，無法確定具體指誰</span></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「阿明」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">可能指某位知名企業家，以併購聞名，近期在高檔解職引發市場爭議</p>
+          <blockquote>「阿明是企業家還是職業操守...企業家絕對是，因為可以把一個企業搞到這麼大，併購天王...每次在高檔就一些神奇事件...這一波就是解職」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="不確定" data-cand-market="TW"><span class="market-tag">TW</span> <span class="cand-name">不確定</span><span class="cand-reason"> — 逐字稿描述為「併購天王」、在高檔解職（不是賣股票）、股票跌了五六十趴被罵最兇，但無法確定具體指哪家公司的老闆</span></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「盛虧股」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">防禦型/避風港股票，在市場大跌時相對抗跌的標的</p>
+          <blockquote>「這波為什麼我們的Drawdown會感覺說可以稍微的小一點點，你還有機會躲去盛虧股，單純是因為你出的掉」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="不確定（防禦型個股）" data-cand-market="TW"><span class="market-tag">TW</span> <span class="cand-name">不確定（防禦型個股）</span><span class="cand-reason"> — 語音辨識可能有誤，可能指「勝概股」或某類防禦型標的，這集未具體點名是哪些股票</span></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Situational Awareness / ActionBrand / Arsham Brenner / Lillipop Auction Brand」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指Leopold Aschenbrenner創立的AI對沖基金，這次爆倉事件的核心</p>
+          <blockquote>「Leopold Aschenbrenner他的situational awareness的爆倉可能就是這次的核心事件...它從它創立以來2024到現在它是繳出一個1000多%的報酬」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="Situational Awareness (對沖基金)" data-cand-market="US"><span class="market-tag">US</span> <span class="cand-name">Situational Awareness (對沖基金)</span><span class="cand-reason"> — 語音辨識將基金名稱辨識為多種變體，實際都指同一個由Leopold Aschenbrenner創立的AI Long/Short對沖基金，被Citadel收購部位</span></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「黃董」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">黃崇仁（力積電董事長），近期逝世</p>
+          <blockquote>「相信黃董年底就懂，可是黃董你怎麼先走了RIP...黃崇仁的股票也跌掉了50%可是為什麼好像沒有人要罵他...死者為大這是肯定的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6770" data-cand-name="力積電" data-cand-market="TW"><code class="ticker">6770</code><a href="https://tw.stock.yahoo.com/quote/6770" target="_blank" title="開啟 6770 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">力積電</span><span class="cand-reason"> — 逐字稿明確提到「黃崇仁的股票也跌掉了50%」及「立基電早日破百」，黃董即黃崇仁，力積電董事長</span><button class="wl-btn wl-btn-sm" data-ticker="6770" data-name="力積電" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「潘董」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">另一位市場上被散戶信仰的企業主，與「相信某董年底就懂」的梗有關</p>
+          <blockquote>「以前大家講說相信黃董年底就懂，其實有兩個都大家會相信，黃董跟另外一個潘董，相信潘董年底就懂，你還有一個潘董可以信」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="不確定" data-cand-market="TW"><span class="market-tag">TW</span> <span class="cand-name">不確定</span><span class="cand-reason"> — 這集未提供更多關於潘董的線索，僅與黃董並列為散戶信仰的對象</span></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="2454" data-name="聯發科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯發科</span>
+            <span class="card-meta"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">週五給了非常好的guidance和forecast，認為下週有新動能可能帶盤上去</p>
+          <blockquote>「發哥在禮拜五又給了一個非常好的guidance，上秋有他的forecast，那所以就是初判就是下禮拜還是有蠻多新的動能有可能把這個盤帶上去」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="6531" data-name="愛普" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">愛普</span>
+            <span class="card-meta"><code class="ticker">6531</code><a href="https://tw.stock.yahoo.com/quote/6531" target="_blank" title="開啟 6531 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="6531" data-name="愛普" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到蝗蟲人（黃崇仁）相關標的，過去有在愛普賺到錢，但洗了很久</p>
+          <blockquote>「他的立基店愛普我都是賺錢的...蝗蟲人的股票就是氣氛對了上去就是會賺錢，雖然有時候洗比較久，像那時候愛普就洗了好久好久」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="6770" data-name="力積電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">力積電</span>
+            <span class="card-meta"><code class="ticker">6770</code><a href="https://tw.stock.yahoo.com/quote/6770" target="_blank" title="開啟 6770 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="6770" data-name="力積電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">聽眾留言提到希望力積電早日破百，股癌表示希望所有遭受重擊的股票都能回到前高</p>
+          <blockquote>「也不要只有說立基電，就是所有這一波遭受到重擊的股票，希望大家都可以儘快的早日回到前高」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="0050" data-name="元大台灣50 ETF" data-market="ETF">
+          <div class="card-header">
+            <span class="stock-name">元大台灣50 ETF</span>
+            <span class="card-meta"><code class="ticker">0050</code><a href="https://tw.stock.yahoo.com/quote/0050" target="_blank" title="開啟 0050 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">ETF</span><button class="wl-btn" data-ticker="0050" data-name="元大台灣50 ETF" data-market="ETF" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">多次推薦買0050作為長期配置，聽眾也分享買0050累積資產到數千萬的經驗</p>
+          <blockquote>「聽你的建議開始買0050...迄今資產累積到數千萬」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="MU" data-name="Micron (美光)" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Micron (美光)</span>
+            <span class="card-meta"><code class="ticker">MU</code><a href="https://finance.yahoo.com/quote/MU" target="_blank" title="開啟 MU K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MU" data-name="Micron (美光)" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">列為Situational Awareness基金持有的飆股之一，是這波漲最多也跌最多的標的</p>
+          <blockquote>「什麼Nabeus、Sandisk、Iron、BE、Blown Energy Micron、SK Hynix就是你不可能說這些東西呢我回檔我一點都不要吃」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="" data-name="SK Hynix" data-market="其他">
+          <div class="card-header">
+            <span class="stock-name">SK Hynix</span>
+            <span class="card-meta"><span class="market-tag">其他</span></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">列為Situational Awareness基金持有的飆股之一</p>
+          <blockquote>「Micron、SK Hynix就是你不可能說這些東西呢我回檔我一點都不要吃」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="MSFT" data-name="微軟" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">微軟</span>
+            <span class="card-meta"><code class="ticker">MSFT</code><a href="https://finance.yahoo.com/quote/MSFT" target="_blank" title="開啟 MSFT K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MSFT" data-name="微軟" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">聽眾提到微軟新一季財報資本支出比預期減少，股癌澄清是帳上調整問題，並非真的縮減</p>
+          <blockquote>「像是微軟新一季的財報印象中資本支出比預期減少...他並不是真的有去縮減，他好像是把一些那種任列的東西調一調之後然後就看起來是好像比預期減少」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>AI相關股（整體）</strong><span class="sector-reason"> — 認為AI標的本身是好東西，不會因為行情反轉就說它不好。長期看好但提醒終究會有大修正，歷史循環怎麼上去就會怎麼下來。目前仍以做多為主。</span></div>
+<div class="sector-chip mention"><span class="badge mention">💬 僅提及</span> <strong>軟體股</strong><span class="sector-reason"> — 提到Situational Awareness基金空軟體股但被軋，軟體股在谷底出現大反彈，可能與對沖基金回補空倉有關</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>中小型股（處置股）</strong><span class="sector-reason"> — 這波中小型股因流動性被抽乾而超跌，站在局外人角度超跌會產生做多機會，但整體制度面不利</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">市場大跌核心原因：槓桿與流動性危機</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 這波下跌主因是Situational Awareness基金爆倉引發的全市場降槓桿事件，類似2021年Archegos事件，並非基本面惡化。多家知名對沖基金的動能策略POD也爆倉，韓國槓桿仔、台灣散戶融資質押槓桿一次性殺出，導致過去漲最多的標的跌最多。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">市場後續展望</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 隨著戰爭迷霧打開，事件影響會越來越小，市場會慢慢recover，但可能還有餘震。聯發科週五給了很好的guidance，下週有新動能可能帶盤上去。長期看，AI大修正終究會發生，只是時間不確定，但目前仍以做多為主。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">台股處置股制度</div>
+          <div><span class="badge bearish">📉 看空</span><span class="macro-view"> 強烈支持王世堅提出的改革處置股政策。處置股制度把流動性抽掉，反而讓狂漲狂跌更嚴重，對部位較大的投資人造成毀滅性傷害。漲跌停機制也有討論空間，應該讓市場要買買得到、要跑跑得掉。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">投資停利與FIRE退休</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 建議在生活中持續做被動停利，賺到錢要拿出來改善家人生活，不要只追求紙上富貴。FIRE退休要考慮人生消費高峰（孩子念書、房貸等），很多人用當下低支出算提領率是陷阱，且長期不工作會加速退化。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

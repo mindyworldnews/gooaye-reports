@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP685 | 🤓</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-08-05</div>
+    <h1>EP685 | 🤓</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌主要討論七月大跌後的反彈行情，分析市場是否會出現第二隻腳，並針對HBM降規、TPU遞延、光通訊中國封禁等近期市場鬼故事逐一拆解，認為前面已跌過，這些利空影響有限。同時提到Palantir財報表態帶動高估值族群信心，以及軟體股不會被AI消滅的觀點。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">PLTR</span><span class="quick-tag bullish">NET</span><span class="quick-tag bullish">SpaceX</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「續創、新義盛」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">中國光通訊廠商，股癌提到它們北美營收是從海外工廠（泰國、馬來西亞）出貨，受中國光通元件封禁影響有限</p>
+          <blockquote>「純用產業面的角度來講，那續創跟新義盛在北美的營收的部分都是在海外的工廠，不管是在泰國或是馬來西亞去做出貨，所以實質的打擊本身就是小的...你去看一下續創跟新義盛其實他們也沒有大崩」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="中際旭創 (Zhongji Innolight)" data-cand-market="其他"><span class="market-tag">其他</span> <span class="cand-name">中際旭創 (Zhongji Innolight)</span><span class="cand-reason"> — 逐字稿中的「續創」應為「旭創」即中際旭創，中國光通訊龍頭，股癌提到其北美營收從泰國/馬來西亞海外工廠出貨，與中國光通元件封禁議題直接相關</span></div><div class="cand-row" data-cand-ticker="" data-cand-name="新易盛 (Eoptolink)" data-cand-market="其他"><span class="market-tag">其他</span> <span class="cand-name">新易盛 (Eoptolink)</span><span class="cand-reason"> — 逐字稿中的「新義盛」應為「新易盛」，中國光通訊廠商，股癌提到與旭創一樣北美出貨走海外工廠，受封禁影響有限</span></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「老黃」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">黃仁勳 / NVIDIA CEO</p>
+          <blockquote>「前陣子老黃我們就立刻的上書給這個君王，告訴他說要注意，這個開源模型是必須要存在的，那這個東西當然蠻大的一部分是在為自己或像是AMD這樣的GPGPU業者去做一個這個解套」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="NVDA" data-cand-name="NVIDIA" data-cand-market="US"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">NVIDIA</span><span class="cand-reason"> — 股癌直接稱黃仁勳為老黃，上下文提到為GPGPU業者（NVIDIA、AMD）爭取開源模型不被封殺</span><button class="wl-btn wl-btn-sm" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「菱花銀基板」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">光通訊上游關鍵材料（磷化銦 InP 基板），中國掌握供應，可能作為反制美國封禁的籌碼</p>
+          <blockquote>「因為中國這邊掌握了菱花銀基板，算是蠻關鍵的一個supplier，所以中國這邊是有可能就類似當初的那個稀土事件，就如果你今天要卡我的話那我就封你的稀土」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="磷化銦基板 (InP substrate)" data-cand-market="其他"><span class="market-tag">其他</span> <span class="cand-name">磷化銦基板 (InP substrate)</span><span class="cand-reason"> — 語音辨識將「磷化銦」誤辨為「菱花銀」，是光通訊高速收發模組的關鍵上游材料，股癌提到中國掌握此材料可作為反制封禁的手段</span></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「Parentier / Parenting / Pentier」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">Palantir (PLTR)，語音辨識多次將 Palantir 誤辨為不同拼法</p>
+          <blockquote>「再來最近Parentier也開了一個非常不錯的財報...重點是市場願意去反映它，市場願意給它一個兩三成的漲幅，雖然我相信可能蠻高比例是在嘎空」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="PLTR" data-cand-name="Palantir" data-cand-market="US"><code class="ticker">PLTR</code><a href="https://finance.yahoo.com/quote/PLTR" target="_blank" title="開啟 PLTR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Palantir</span><span class="cand-reason"> — 上下文提到開出好財報、漲兩三成、高估值但市場願意推、嘎空等特徵，完全吻合Palantir近期財報表現</span><button class="wl-btn wl-btn-sm" data-ticker="PLTR" data-name="Palantir" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「報廠」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">爆倉，指槓桿投資者因保證金不足被強制平倉</p>
+          <blockquote>「可是當我們知道說OK就是有人報廠，那後面的東西其實沒有什麼太多的改變，我們會越來越穩健...差別在你知道說原來是有一個傢伙爆倉了而且他背後隱含的資金是很大的」</blockquote>
+          
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「那個做中繼的、中細的廠商」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">光通訊領域中排名較後面的中國廠商，股癌提到其出口美國的產品也是用海外工廠</p>
+          <blockquote>「再來就是另外一家可能是排比較後面的中細的廠商，那它其實也是一樣的道理，就是如果今天是for美國用的基本上它都不會是從中國這邊出貨」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="新易盛 (Eoptolink)" data-cand-market="其他"><span class="market-tag">其他</span> <span class="cand-name">新易盛 (Eoptolink)</span><span class="cand-reason"> — 前文已提到「續創跟新義盛」，這裡的「排比較後面的中細的廠商」可能指新易盛或其他中國二線光通廠商，因為旭創是龍頭，新易盛規模較小排名較後</span></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Situational Awareness」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指近期因槓桿爆倉而在社群上被調侃的知名投資者/分析師</p>
+          <blockquote>「最近在X上面就有看到人家在調侃那個Situational Awareness...有人調侃他說如果他可以再多撐兩天他就可以看到現在，我跟你講那個人他一定寫錯，他如果再多撐的話就是再繼續殺」</blockquote>
+          
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Zebra、HUMU」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">Google TPU相關的代號/代際名稱，語音辨識可能有誤。Zebra可能指某一代TPU的開發代號，HUMU可能也是TPU系列的代號。</p>
+          <blockquote>「因為基本上Zebra就這樣Track，那可能HUMU就是會有一些調整，有機會就是可能往後1Q或甚至是沒有往後」</blockquote>
+          
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Methods」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">可能指Meta推出的開源AI模型或某個AI相關產品發布事件，語音辨識可能有誤</p>
+          <blockquote>「即便在當下像Methods推出來的時候重殺一波，然後再來就是可能像是Parenting或是像Cloudflare之前也是有一個論述是講說他們也都是會被擊敗」</blockquote>
+          
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「中國加一」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">China Plus One策略，指企業在中國以外增設生產基地以分散風險的趨勢</p>
+          <blockquote>「這邊還是要去多多的關注這個中國加一的各種變化的可行性，因為如果說今天對中國有更多的元件的封禁的話，那一樣就是中國加一的廠商都是有機會受惠」</blockquote>
+          
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「SE」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">ASIC廠商/Semi-custom Engine，指非NVIDIA的客製化晶片陣營</p>
+          <blockquote>「不只是在這個輝達這邊，你會注意到說他本來用12海的東西然後可能回去用8海，那在其他的SE這邊也是有一樣的狀態」</blockquote>
+          
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card mention" data-ticker="2330" data-name="台積電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台積電</span>
+            <span class="card-meta"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到台積電漲停，作為反彈行情的代表性事件，以及台積電開財報後暴跌為七月大跌的起點之一。</p>
+          <blockquote>「大家也看到這個台積電漲停，非常誇張，各式各樣的標的都直接從谷底彈上來」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="PLTR" data-name="Palantir" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Palantir</span>
+            <span class="card-meta"><code class="ticker">PLTR</code><a href="https://finance.yahoo.com/quote/PLTR" target="_blank" title="開啟 PLTR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="PLTR" data-name="Palantir" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">財報數字好，市場願意給兩三成漲幅，代表高估值的東西大家還願意推。如果能持續撐住估值而非曇花一現，其他peer都有上修機會。視為市場健康的表態信號。</p>
+          <blockquote>「Parentier也開了一個非常不錯的財報...重點是市場願意去反映它，市場願意給它一個兩三成的漲幅...它如果可以持續的去撐住這個估值...就會可以視為是有機會其他人都是可以再去對標這個估值往上修」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="NET" data-name="Cloudflare" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Cloudflare</span>
+            <span class="card-meta"><code class="ticker">NET</code><a href="https://finance.yahoo.com/quote/NET" target="_blank" title="開啟 NET K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NET" data-name="Cloudflare" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">之前被市場論述說會被AI擊敗，但實際上並沒有，作為軟體股不會被AI消滅的例證。</p>
+          <blockquote>「像是Parenting或是像Cloudflare之前也是有一個論述是講說他們也都是會被擊敗，AI可以繞過這些軟體...然後後來發現說沒有辦法」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2308" data-name="台達電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台達電</span>
+            <span class="card-meta"><code class="ticker">2308</code><a href="https://tw.stock.yahoo.com/quote/2308" target="_blank" title="開啟 2308 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2308" data-name="台達電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到台達電和光寶出來講800V的說法，確認800V方向不變，作為佐證800V遞延不影響長線的論據。</p>
+          <blockquote>「像最近台達電或者說光寶出來講，基本上他們的說法你就不會去質疑說800V這個東西不會出現」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2301" data-name="光寶科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">光寶科</span>
+            <span class="card-meta"><code class="ticker">2301</code><a href="https://tw.stock.yahoo.com/quote/2301" target="_blank" title="開啟 2301 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2301" data-name="光寶科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">與台達電一起被提及，佐證800V電源架構方向不變。</p>
+          <blockquote>「像最近台達電或者說光寶出來講，基本上他們的說法你就不會去質疑說800V這個東西不會出現」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="AMD" data-name="AMD" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">AMD</span>
+            <span class="card-meta"><code class="ticker">AMD</code><a href="https://finance.yahoo.com/quote/AMD" target="_blank" title="開啟 AMD K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AMD" data-name="AMD" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到AMD開完財報還是跌，是近期少數開財報後下跌的公司。另外提到AMD等GPGPU業者需要開源模型存在。</p>
+          <blockquote>「只有那個AMD開完之後還是跌，那個蠻神奇的...因為如果說你真的是把開源的模型中國的開源模型給封殺掉...那就會導致對於這些產品的需求會大量的下降」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="MSFT" data-name="微軟" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">微軟</span>
+            <span class="card-meta"><code class="ticker">MSFT</code><a href="https://finance.yahoo.com/quote/MSFT" target="_blank" title="開啟 MSFT K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MSFT" data-name="微軟" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">微軟財報被視為分界點，開完後上漲，之後市場對財報的反應從懲罰轉為獎勵。</p>
+          <blockquote>「從那個微軟之後，微軟算是一個分界點，所以微軟的這份財報就他開完之後他上去，其實在我們的判讀裡面他也是一個非常重要的指標」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="NVDA" data-name="NVIDIA" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">NVIDIA</span>
+            <span class="card-meta"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到NVIDIA的HBM從12層降回8層，以及老黃上書反對封殺中國開源模型。NVIDIA與Google在光通元件取得上的競爭。</p>
+          <blockquote>「不只是在這個輝達這邊，你會注意到說他本來用12海的東西然後可能回去用8海...像NVIDIA跟Google的決勝點可能就會比說誰可以拿到更多的光纖更多的光通元件」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="GOOGL" data-name="Google" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Google</span>
+            <span class="card-meta"><code class="ticker">GOOGL</code><a href="https://finance.yahoo.com/quote/GOOGL" target="_blank" title="開啟 GOOGL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="GOOGL" data-name="Google" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">Google開財報先跌後漲回去，作為市場情緒轉變的案例。TPU遞延與Google相關。NVIDIA與Google在光通元件上競爭。</p>
+          <blockquote>「像Google前面開財報的時候不是跌嗎，然後跌完之後很多人就想說因為怎麼樣，結果後來又再漲回去」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2454" data-name="聯發科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯發科</span>
+            <span class="card-meta"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到MTK的Roadmap沒有改變，作為ASIC陣營產品方向穩定的佐證。</p>
+          <blockquote>「不管是在MTK這裡或者說在Broadcom這裡，大家的Roadmap都還是一樣」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="AVGO" data-name="Broadcom" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Broadcom</span>
+            <span class="card-meta"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">與MTK一起被提及，Roadmap都沒有改變，ASIC方向穩定。</p>
+          <blockquote>「不管是在MTK這裡或者說在Broadcom這裡，大家的Roadmap都還是一樣」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="" data-name="SpaceX" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">SpaceX</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">提到SpaceX開的層級跟未來展望不錯，雖然盤後跌，但作為高估值精品類型標的能撐住的話，代表其他peer有上修機會。</p>
+          <blockquote>「像SpaceX它其實開的層級跟整個對未來的展望我覺得也蠻喜歡，雖然它盤後面是跌，但如果說這一類就是高估值很貴的東西那種精品類型的然後它可以繼續的穩住」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>光通訊</strong><span class="sector-reason"> — 光通上來非常快，是市場領跑的族群，代表高估值的東西大家還願意推，是市場健康的現象。NVIDIA與Google的決勝點在誰能拿到更多光通元件。中國封禁影響有限，中國廠商北美營收靠海外工廠出貨。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>HBM / 高頻寬記憶體</strong><span class="sector-reason"> — HBM降規（12層降8層）確認為真，GPGPU和ASIC陣營都有此情形，但屬成本考量的短期調整，不影響長線方向。終究會往規格提升走。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>軟體/SaaS</strong><span class="sector-reason"> — 反對AI消滅軟體的論述。資安股跑去新高，Palantir和Cloudflare證明軟體股仍有價值。純套皮軟體會被淘汰，但有數據整合能力的企業軟體不會。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>資安</strong><span class="sector-reason"> — 過去一直被誤會會被AI取代，但很多資安股都跑去新高，持續越漲越多。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>中小型股/櫃買</strong><span class="sector-reason"> — 櫃買七月跌近三成，相當於2022全年跌幅。目前便宜的東西蠻多，股癌個人傾向壓中小，但因生活考量暫時留在指數。超跌區已很快被收復。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">美股與台股後市展望</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 七月大跌主因是槓桿仔爆倉，非基本面崩壞。標普已摸新高，加權指數離新高也很近。只要高估值的東西能撐住，市場就沒有太大問題。不太期待一定會有第二隻腳，2020年以後的盤面加速，V轉直接開走的機率不低。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">HBM降規傳聞</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 經考察證實為真，NVIDIA和ASIC陣營都有從12層降回8層的情形，但這是成本考量的短期調整，不影響長線Big Picture。前面已跌過，這類消息不太會再引發大跌。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">TPU遞延傳聞</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 引用South China Post報導提到TPU可能遞延，認為是小事情，產品放量階段本來就會有時程彈性調整。MTK和Broadcom的Roadmap都沒變。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">800V電源架構遞延</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 800VDC遞延但終究還是要用，400V的生命週期可能比預期長一點，但已有客戶在切換800V。台達電和光寶的說法已確認方向不變。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">AI對軟體產業的影響</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 反對AI會消滅所有軟體的論述。功能簡單的套皮軟體會被淘汰沒錯，但企業端需要穩定性和法遵，不可能接受AI隨機生成的軟體。資安、Palantir、Cloudflare等都證明軟體股仍有價值。AI是傳說廚具，但沒看到多少傳說料理真的上市。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">中國光通元件封禁風險</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 實際影響比想像中低很多，中國廠商出美國的貨大多用海外工廠（泰國、馬來西亞）。但中國掌握菱花銀基板等上游材料，若升級封禁可能引發反制。目前仍在研擬階段，短期不構成重大威脅。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>
