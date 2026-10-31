@@ -1,0 +1,273 @@
+{
+  "summary": "本集股癌主要討論SpaceX與Cerebras的股票解禁對籌碼的影響，深入解析NVIDIA 800V DC白皮書對電力架構演進的影響與受惠環節，並回應聽眾關於被動元件、功率元件、抄底策略等問題。",
+  "macro_views": [
+    {
+      "topic": "AI資料中心電力架構演進（800V DC）",
+      "view": "隨著每個機櫃功耗持續攀升（330kW-570kW），從54V到800V DC的轉換是必然趨勢，不是炒作題材而是實際需要解決的物理瓶頸。短期（2026-2027）以PowerRack架構為主，中期轉向PowerCenter，長期走向DC Power Block。",
+      "stance": "看多"
+    },
+    {
+      "topic": "市場底部判斷與抄底策略",
+      "view": "沒有人能百分之百抓到絕對底部，只能判斷相對位置。抄底一定要分批慢慢買，不要幻想抄在最低點。搭配事件與反彈走勢強弱來判斷，出現創紀錄等級的大量反彈通常底部較難破。",
+      "stance": "中立"
+    },
+    {
+      "topic": "美國資料中心建設阻力",
+      "view": "美國國內反對資料中心的聲音很多，包括民主黨議員在內都有反對，環評等審批會被卡關，新建資料中心不是容易的事。懷疑部分反對聲浪可能來自敵對國家為瓦解AI發展而散播的訊息。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "SpaceX",
+      "ticker": null,
+      "market": "US",
+      "stance": "中立",
+      "reason": "股票解禁後賣壓陸續釋出，但第一次衝擊最大，後續流動性增加反而是好事，價格表現會更符合市場邏輯。解禁分成約9-10個批次，前幾個大關過後影響會越來越小。",
+      "quote": "SpaceX就是有相當程度的賣壓，而且在後面都會持續的有股票丟出來，但是我覺得就可能是第一次造成的影響會是最大的"
+    },
+    {
+      "name": "Cerebras",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "產能拉升速度快，投片數量越來越多，與AMD合作Disaggregated Inference架構（AMD Helios處理Prompt，Cerebras WSE處理低延遲Decode），使用SRAM在推論時代有發展價值。近期也有大量股票解禁需注意籌碼面。",
+      "quote": "Cerebras這家公司它的產能的速度其實是拉得非常的快，它所拿到的投片的數量也是越來越高...在後面的reasoning的時代會帶來一些新的表現"
+    },
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "與Cerebras合作推出Disaggregated Inference架構，透過Helios處理Prompt與長Context。另外也收購了一家公司，將模型邏輯直接寫在晶片裡面，類似FPGA的做法。",
+      "quote": "像這家公司最近就有跟AMD去合作公佈Desegregated Inference架構，它就是透過AMD的Helios去處理Prompt跟長Context，然後再由Cerebros的WSE去搞低延遲的Decode"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到NVIDIA的800V DC白皮書在投資圈廣泛傳閱，以及之前CPX計畫可能不如預期順利。白皮書描繪了資料中心電力架構的長期演進路線。",
+      "quote": "自己身邊的蠻多的朋友，所謂的這個投資交易圈的人士，都在傳一個NVIDIA的800V DC的一個白皮書"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "電力/Power相關族群",
+      "stance": "看多",
+      "reason": "NVIDIA 800V DC白皮書重新點燃市場關注。過去幾個月爹不疼娘不愛沒人看，但現在很多股票修正完後，白皮書出來的時間剛好形成新故事。受惠環節包括PSU、SHELF、電容、連接器、BPU等，中長期還有集中式整流器、SiC、GaN、UPS、Busway、重電等。"
+    },
+    {
+      "name": "被動元件",
+      "stance": "看多",
+      "reason": "營收持續開新高，獲利成長速度高於營收成長速度，代表價格條件越來越好。前面噴多後跌深，現在反彈中。AI領域需求持續轉強，漲價可持續；但車用、PC、消費電子的漲價會到某個位置後價格破壞。"
+    },
+    {
+      "name": "功率半導體（SiC/GaN）",
+      "stance": "看多",
+      "reason": "在800V DC架構的中期階段（PowerCenter）會開始受惠。GaN特別被提及，有公司派承認供應超乎想像地吃緊，原本認為不會缺但現在慢慢成為市場主流。"
+    },
+    {
+      "name": "散熱族群",
+      "stance": "看多",
+      "reason": "散熱股票最近很多拉出去了，結合Power的白皮書題材，新的故事正在醞釀中。機櫃功耗提升後，GPU、Power Shelf、Busbar、Connector全部都要用液冷。"
+    },
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "光的股票最近也都復活了，之前一度被市場認為不需要，但現在證明很多都是自己嚇自己。"
+    },
+    {
+      "name": "銅線/連接器",
+      "stance": "看多",
+      "reason": "之前銅線股票被嘲笑說Data Center不用銅線了，但後來很多銅線的股票都噴回去了。800V架構下busbar、cable、connector都是關鍵環節。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "BPU",
+      "interpretation": "Battery Power Unit / Backup Power Unit，資料中心機櫃內的備用電源模組，在PowerRack架構中是受惠環節之一",
+      "stance": "看多",
+      "quote": "受惠的環節有哪一些，像是AC到800V PSU，800V再到54V的SHELF，電容、連接器、BPU...其中以BPU來講的話，它又會再去拆分成幾個spec...如果說你今天走到相對後期的話，它有可能就會變成是一個標配的環節",
+      "candidates": [
+        {
+          "name": "AES-KY",
+          "ticker": "6781",
+          "market": "TW",
+          "reason": "AES-KY為伺服器電源相關供應商，逐字稿提到BPU從選配可能變標配，且在PowerRack階段受惠"
+        }
+      ]
+    },
+    {
+      "term": "光的股票",
+      "interpretation": "光通訊相關股票，之前股價回檔後最近復活反彈",
+      "stance": "看多",
+      "quote": "現在Data Center都不用用電是不是，都是連銅線跟光都不用用了，因為那段時間銅線跟光都在疊，那雖然當然後面很多銅線的股票都噴回去了，那像光的股票最近也都復活了",
+      "candidates": [
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "台股光通訊族群代表，逐字稿提到光的股票最近復活"
+        },
+        {
+          "name": "華星光",
+          "ticker": "4979",
+          "market": "TW",
+          "reason": "台股光通訊族群代表"
+        },
+        {
+          "name": "眾達-KY",
+          "ticker": "4977",
+          "market": "TW",
+          "reason": "台股光通訊族群代表"
+        },
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "台股光通訊族群代表"
+        }
+      ]
+    },
+    {
+      "term": "散熱的股票",
+      "interpretation": "伺服器散熱相關族群，最近股價表現強勢拉出新高",
+      "stance": "看多",
+      "quote": "然後結合現在的一些散熱的股票蠻多拉出去，其實我覺得又有一個那種新的故事已經正在醞釀中",
+      "candidates": [
+        {
+          "name": "奇鋐",
+          "ticker": "3017",
+          "market": "TW",
+          "reason": "散熱族群龍頭之一，逐字稿提到散熱股票拉出去"
+        },
+        {
+          "name": "雙鴻",
+          "ticker": "3324",
+          "market": "TW",
+          "reason": "散熱族群代表"
+        },
+        {
+          "name": "健策",
+          "ticker": "3653",
+          "market": "TW",
+          "reason": "散熱族群代表（均熱片/散熱模組）"
+        }
+      ]
+    },
+    {
+      "term": "Power廠",
+      "interpretation": "AI伺服器/資料中心電力供應相關廠商，包含PSU、整流器、BPU、UPS等環節",
+      "stance": "看多",
+      "quote": "Power在過去他比較偏向是就是市場沒有什麼人在看的東西，可是最近因為這一個白皮書...這個會變成是市場上某一個就是大家會想要去討論的東西",
+      "candidates": [
+        {
+          "name": "台達電",
+          "ticker": "2308",
+          "market": "TW",
+          "reason": "台灣最大電源供應器廠商，逐字稿提到PSU、PowerRack、PowerCenter等環節都是受惠對象"
+        },
+        {
+          "name": "光寶科",
+          "ticker": "2301",
+          "market": "TW",
+          "reason": "電源供應器大廠，伺服器電源為重要業務"
+        },
+        {
+          "name": "康舒",
+          "ticker": "6282",
+          "market": "TW",
+          "reason": "伺服器電源供應器廠商"
+        },
+        {
+          "name": "群光",
+          "ticker": "2385",
+          "market": "TW",
+          "reason": "電源供應器廠商"
+        }
+      ]
+    },
+    {
+      "term": "銅線的股票",
+      "interpretation": "資料中心銅纜/連接器相關股票，之前被看衰但後來股價噴回",
+      "stance": "看多",
+      "quote": "現在Data Center都不用用電是不是，都是連銅線跟光都不用用了，因為那段時間銅線跟光都在疊，那雖然當然後面很多銅線的股票都噴回去了",
+      "candidates": [
+        {
+          "name": "信邦",
+          "ticker": "3023",
+          "market": "TW",
+          "reason": "連接線纜廠商，逐字稿提到銅線股票噴回"
+        },
+        {
+          "name": "嘉澤",
+          "ticker": "3533",
+          "market": "TW",
+          "reason": "連接器廠商，800V架構下connector是關鍵環節"
+        },
+        {
+          "name": "貿聯-KY",
+          "ticker": "3665",
+          "market": "TW",
+          "reason": "電源線纜/連接器廠商"
+        }
+      ]
+    },
+    {
+      "term": "重電",
+      "interpretation": "重電設備族群，在800V DC架構的長期階段（DC Power Block，2030以後）會是最主要受惠對象",
+      "stance": "看多",
+      "quote": "功率半導體他們也是在這裡面的一環，那再來就是重電，這個可能就會是最主要的一個受惠的對象",
+      "candidates": [
+        {
+          "name": "華城",
+          "ticker": "1519",
+          "market": "TW",
+          "reason": "重電設備龍頭，逐字稿提到重電在DC Power Block階段是最主要受惠對象"
+        },
+        {
+          "name": "士電",
+          "ticker": "1503",
+          "market": "TW",
+          "reason": "重電設備廠商"
+        },
+        {
+          "name": "中興電",
+          "ticker": "1513",
+          "market": "TW",
+          "reason": "重電設備廠商"
+        },
+        {
+          "name": "亞力",
+          "ticker": "1514",
+          "market": "TW",
+          "reason": "重電設備廠商"
+        }
+      ]
+    },
+    {
+      "term": "Situational Awareness",
+      "interpretation": "指 Situational Awareness 這個資訊來源/研調機構，聽眾提到該機構新增了VSH和STM的關注",
+      "stance": "僅提及",
+      "quote": "今天早上看到Situational Awareness新增了VSH和STM，那加上太陽誘電不久前的消息，元件的後事好像比想像中還樂觀",
+      "candidates": [
+        {
+          "name": "Vishay (VSH)",
+          "ticker": "VSH",
+          "market": "US",
+          "reason": "聽眾留言直接提到VSH，為被動元件/功率半導體廠商"
+        },
+        {
+          "name": "STMicroelectronics (STM)",
+          "ticker": "STM",
+          "market": "US",
+          "reason": "聽眾留言直接提到STM，為功率半導體廠商"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP688 | 🥽",
+  "analyzed_at": "2026-10-31T17:56:19.991210",
+  "transcript_chars": 21435
+}

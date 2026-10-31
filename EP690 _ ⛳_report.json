@@ -1,0 +1,214 @@
+{
+  "summary": "本集股癌主要討論Marvell與Google的半導體商業協議，深入分析Google往COT（Customer Owned Tooling）方向發展對IC設計公司的影響，認為對博通偏利空但對其他IC設計夥伴偏利多。盤面方面認為目前雖然黏但仍屬健康，失土持續收復中。其餘時間分享電影推薦、紅酒心得及聽眾QA。",
+  "macro_views": [
+    {
+      "topic": "台股盤面現況",
+      "view": "盤面雖然黏、沒有FOMO感，追漲容易被修理，但整體失土持續收復中，基本面有數字的股票會漲但缺乏延續性，屬於慢慢墊高的健康盤面，相對樂觀",
+      "stance": "看多"
+    },
+    {
+      "topic": "半導體週期",
+      "view": "半導體終究還是週期性產業，這波週期特別大，過去幾年錯過的人非常可惜，但未來終究會均值回歸",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "與Google簽署半導體商業協議，拿到TPU生態系周邊晶片（包含Frozen、MPU、inference chip、CPU等），這些都是新案子而非從別人搶來的，代表Google開更多晶片案子時Marvell會受惠",
+      "quote": "Marvell他可能拿下了什麼晶片...像是它有幾個代號，那就是可能在MPU這邊有一個晶片，然後還有一個inference chip，然後在CPU好像又額外會有一顆"
+    },
+    {
+      "name": "博通 Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "看空",
+      "reason": "Google明顯往COT方向推進，博通原本的Turnkey模式可以在每個料件加價賺取高毛利，現在Google要把高單價部分拿回自己手上，博通本來想像能拿5個案子，現在可能有2-3個要用COT方式推，Turnkey的量變少",
+      "quote": "這個事件確實可以拿來當成是博通的利空我覺得是OK...Huck都是有提到說包含那時候甚至講說他們什麼Encobiters就是說這些都是小朋友...但現在看起來就是即便你可能有這樣子的一個實力但是大老闆出錢的Google他很明顯他把未來的一些路線已經畫出來了"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "Marvell拿到的晶片並非從MTK既有roadmap搶走的，不是V8/V9/V10主晶片，有些人把它解釋成MTK利空但股癌覺得蠻奇怪的，認為反應太多。MTK在Google TPU合作中提供IO、Serdius Memory Interface等，仍有其角色",
+      "quote": "有些人把它解釋成為是可能像MTK的一個利空我是覺得蠻奇怪的，因為它並沒有直接去搶到MTK或者說BlockCon他們既有roadmap裡面的一些東西"
+    },
+    {
+      "name": "世芯-KY",
+      "ticker": "3661",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "在法說或股東會上提到客戶都會慢慢往COT方向走，被博通CEO稱為Encobiters（小朋友），但在Google持續開案的趨勢下，這些IC設計夥伴反而可能分到更多案子",
+      "quote": "在3661的忘記是法說還是股東會...他們就有提到其實客戶都會慢慢的往COT的方向去走因為對客戶比較有利嘛"
+    },
+    {
+      "name": "Google (Alphabet)",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "決心往COT方向走，開更多晶片案子，在硬體租賃/雲端租賃/AI Token產生上非常積極，可能是巴菲特投資的主因。從Frontier Model House轉向更確定性的伺服器租賃業務",
+      "quote": "Google現在是很認真的往硬體租賃的方向去衝，也有可能是巴菲特投資他的主因...他在伺服器的租賃跟AI的Token的產生上可能會是一個就是非常賺錢的存在"
+    },
+    {
+      "name": "美光",
+      "ticker": "MU",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "聽眾爆料美光分紅非常小氣，年度只有一次分紅且硬性上限五個月，2025年甚至只發2.4個月，股癌認為在搶人時代這個決策不太好",
+      "quote": "硬傷美光無敵摳，年度只有一次分紅而且硬性上線五個月，今年被威脅不會發到五個月，2025年甚至只有發2.4個月"
+    },
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "SemiAnalysis提到AMD可能加入Google晶片競爭，股癌認為AMD應該不會搶TPU那段，而是在後面代數中透過COT模式讓AMD的IP（如CPU Triplet）加入",
+      "quote": "像SemiAnalysis提到說甚至連AMD都要加入競爭，那AMD應該不會是去搞TPU那一段，應該就是反正走到越後面的代數...可能會把一些類似可能CPU的Triplet就有機會會讓AMD的一些IP一起進來"
+    },
+    {
+      "name": "藥華藥",
+      "ticker": "6446",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "在談生技股時提到藥華藥是目前相對硬挺的生技股，但整體對生技股持謹慎態度",
+      "quote": "好像現在就是藥華藥海是相對是非常的硬挺，那蠻多曾經起來的話也又再掉下去了，所以它真的相對難做"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "IC設計/ASIC設計服務（非博通）",
+      "stance": "看多",
+      "reason": "Google往COT方向發展，會開更多晶片案子，Marvell拿到的都是新案子而非搶別人的，代表整體市場在擴大。這些IC Design Partner在Google持續擴張硬體的趨勢下會受惠，博通以外的設計夥伴可能反應過度了"
+    },
+    {
+      "name": "生技新藥股",
+      "stance": "看空",
+      "reason": "股癌自述2018年曾在新藥股受過傷，即使臨床過關上市也可能銷售不如預期，認為比科技股或傳產更難掌握，不打算再深入了解"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "BlockCon",
+      "interpretation": "指博通（Broadcom），股癌用的簡稱/音譯，在討論Google TPU晶片設計合作時反覆使用",
+      "stance": "看空",
+      "quote": "跟BlockCon合作就是這樣子，可能Google就是開一些spec跟一些規格還有他想要達到的目的，那就由專業的設計夥伴像是BlockCon那就做晶片的設計然後包含說HBM的採購基板封裝...那這樣子呢其實是站在BlockCon的角度來說是非常賺錢的一門生意",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿中BlockCon與博通交替使用，提到Huck（博通CEO陳福陽）、TriggerFish/Merope/WildFish等博通的Google TPU晶片代號，以及Turnkey模式和Wi-Fi業務，均為博通特徵"
+        }
+      ]
+    },
+    {
+      "term": "Encobiters/小朋友",
+      "interpretation": "指博通CEO陳福陽對世芯、聯發科、創意等台灣IC設計公司的貶稱，意指這些公司規模太小無法與博通競爭",
+      "stance": "看多",
+      "quote": "Huck都是有提到說包含那時候甚至講說他們什麼Encobiters就是說這些都是小朋友，像什麼世芯或是發哥...這些他認為是小朋友就是你根本就沒有辦法來競爭...但現在看起來就是在大老闆想要去尊傑的一個背景之下有可能就會分到蠻多的案子",
+      "candidates": [
+        {
+          "name": "世芯-KY",
+          "ticker": "3661",
+          "market": "TW",
+          "reason": "逐字稿明確提到「像什麼世芯」為Encobiters之一"
+        },
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "逐字稿明確提到「發哥」為Encobiters之一"
+        },
+        {
+          "name": "創意",
+          "ticker": "3443",
+          "market": "TW",
+          "reason": "逐字稿明確提到「創意之類的」為Encobiters之一"
+        }
+      ]
+    },
+    {
+      "term": "L-CHIP",
+      "interpretation": "指聯發科（MediaTek），股癌使用的代稱，在討論IC Design Partner因卡到TSMC產能而有客戶找其下單時提到",
+      "stance": "僅提及",
+      "quote": "這些IC Design Partner包含說像之前的L-CHIP為什麼會有一些客戶找他下單，除了他們有卓越的一些設計能力之外再來就是他們有卡到一些產能",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "L-CHIP是聯發科的業界代稱，且前後文討論的就是Google TPU合作中MTK的角色，與V8/V9/Zebra/HUMU等聯發科Google TPU晶片代號吻合"
+        }
+      ]
+    },
+    {
+      "term": "3661",
+      "interpretation": "世芯-KY，在討論COT趨勢時直接用代號提及",
+      "stance": "中立",
+      "quote": "在3661的忘記是法說還是股東會就是最近好像是一兩個禮拜前，他們就有提到其實客戶都會慢慢的往COT的方向去走因為對客戶比較有利嘛",
+      "candidates": [
+        {
+          "name": "世芯-KY",
+          "ticker": "3661",
+          "market": "TW",
+          "reason": "逐字稿直接使用代號3661，且世芯-KY確實在近期法說會提到COT趨勢"
+        }
+      ]
+    },
+    {
+      "term": "Fish系列（TriggerFish、Merope、WildFish、WellFish、ZebraFish、HomoFish）",
+      "interpretation": "Google TPU各代晶片的內部代號，由不同IC設計夥伴負責。股癌用這些代號來區分博通vs聯發科各自負責的TPU晶片",
+      "stance": "僅提及",
+      "quote": "過往我們可能跟大家聊到說TPU的V8、V9在MTK這邊什麼Zebra、HUMU然後在BlockCon這邊什麼TriggerFish、Merope然後或者是後來傳出來的WellFish為什麼叫Well呢因為它是兩顆晶片拼成一顆",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "TriggerFish、Merope、WildFish為博通負責的Google TPU晶片代號"
+        },
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "ZebraFish、HomoFish為聯發科負責的Google TPU V8/V9晶片代號"
+        }
+      ]
+    },
+    {
+      "term": "Frozen",
+      "interpretation": "Marvell為Google設計的一顆特殊應用晶片代號，用於Google搜尋引擎的AI overview功能",
+      "stance": "僅提及",
+      "quote": "最近有傳出說Frozen，那Frozen這個晶片就我們的考察...應該說用在Search Engine上面也就是Google的像是那個AI overview裡面的一些那種特殊化的應用...它的量不會太大大概就是million左右的一個量",
+      "candidates": [
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "逐字稿明確說Frozen是Marvell拿到的Google晶片代號"
+        }
+      ]
+    },
+    {
+      "term": "COT",
+      "interpretation": "Customer Owned Tooling，指Google自己掌握晶片設計光罩、關鍵料件採購、投片下單等高價值環節，只付設計夥伴NRE和IP授權費，與Turnkey（一站式）模式相對",
+      "stance": "僅提及",
+      "quote": "Google已經是更加決心要往COT的方向去走，什麼是COT呢就是Customer Owned Tooling就是他自己會去做晶片裡面可能比較高單價的部分...晶片的設計跟光照以及一些關鍵料件的採購會放在自己的身上",
+      "candidates": []
+    },
+    {
+      "term": "天賺法師",
+      "interpretation": "股癌身邊一位朋友的代號/角色名稱，完全靠技術線圖交易、不看基本面，非常會賺錢但一心學佛，大量捐錢給佛教團體",
+      "stance": "僅提及",
+      "quote": "我不知道怎麼賣...我當然是不可能賣掉天賺法師然後去講說人家是怎麼交易，那天賺法師不知道的一些心情稍微講一下，反正就是身邊一個就是真的很會賺錢但是一心學佛的朋友",
+      "candidates": []
+    }
+  ],
+  "episode_title": "EP690 | ⛳",
+  "analyzed_at": "2026-10-31T17:53:12.704201",
+  "transcript_chars": 20717
+}

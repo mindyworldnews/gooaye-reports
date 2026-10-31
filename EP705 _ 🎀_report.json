@@ -1,0 +1,201 @@
+{
+  "summary": "本集股癌分享近期盤勢操作心得，強調反動能策略在震盪盤中的優勢，討論Broadcom CEO Hock Tan在DBS論壇對AI投資人與企業ROI的評論，並分享AI工具對自身工作效率的提升，以及記憶體股後續觀察重點。",
+  "macro_views": [
+    {
+      "topic": "台股盤勢與操作策略",
+      "view": "從九月初開始建議反動能操作，盤面持續震盪洗刷但整體仍在新高方向，追高容易被修理，逢跌撿起來逢漲丟一點的策略較有效",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI產業需求展望",
+      "view": "引用Hock Tan說法認為AI供不應求會持續到2029-2030，OpenAI的1.4兆估值並非高估，AI確實能產出價值，只是部分企業仍在無腦燒Token階段，但整體趨勢向上",
+      "stance": "看多"
+    },
+    {
+      "topic": "記憶體股後續觀察",
+      "view": "記憶體理論上是市場最缺最漲的東西，但股價呈現相對弱勢，若接下來財報無法改善表現，市場可能從交易供應鏈瓶頸漲價題材，轉向尋找真正能產出價值的標的",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "看多",
+      "reason": "引用Hock Tan的前沿模型算法，認為Broadcom作為XPU供應商受惠於企業大量燒Token的趨勢，用明年EPS推算本益比只有10倍多，屬低PE標的",
+      "quote": "像現在Blockcon的話我怎麼算都覺得說它只有10倍多一點而已，就是用明年的EPS來推算的話，因為有一些漲價的故事在發生或是說一些供不應求的情形"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "提到NVIDIA之前是很便宜的低PE標的，最近開始動，並提到NVIDIA與衛星公司合作的衛星Solution年底將發射",
+      "quote": "像之前就是很明顯NVIDIA是很便宜，那最近開始動...大概在年底就是你就會看到NVIDIA跟一些這種衛星公司他們合作出來的那種衛星Solution他們可能就會打上去"
+    },
+    {
+      "name": "SpaceX",
+      "ticker": null,
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "評論區提問者提到SPCX（SpaceX相關持股），股癌表示自己SPCX部位也壓到快兩成",
+      "quote": "我目前SPCX可能也有壓到部位的快兩成吧"
+    },
+    {
+      "name": "OpenAI",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "引用Hock Tan觀點，認為OpenAI年化營收從1-2B成長到50B是人類歷史上絕無僅有的成長速度，媒體自行上修到70B引發的失望賣壓是愚蠢的",
+      "quote": "你從本來的可能不知道1、2B然後成長到50B那是一個超級快速在人類歷史上是那種絕無僅有非常屌炮的東西結果竟然可以變成是某種失望賣壓"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "記憶體股",
+      "stance": "中立",
+      "reason": "理論上是市場最缺最漲的東西，但股價呈現相對弱勢，需觀察財報能否改善，若無法帶出好表現，市場可能轉向，從交易漲價瓶頸轉向尋找真正產出價值的標的"
+    },
+    {
+      "name": "小型設備股",
+      "stance": "中立",
+      "reason": "有在操作但提醒部分標的籌碼過度擁擠，法人圈都在車上，即使數字好也不會漲，需辨識哪些太多人在車上避免重倉追價"
+    },
+    {
+      "name": "載板股",
+      "stance": "僅提及",
+      "reason": "以載板股為例說明籌碼洗乾淨後股價才會突破拉出去的現象"
+    },
+    {
+      "name": "衛星相關",
+      "stance": "看多",
+      "reason": "提到NVIDIA與衛星公司合作的衛星Solution年底將打上去，板子規格與GPU/CPU數量已開出，量也已估出"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "Blockcon",
+      "interpretation": "語音辨識誤差，實際指Broadcom（博通），因上下文討論Hock Tan（博通CEO）的發言，且提到XPU客戶、明年EPS與本益比",
+      "stance": "看多",
+      "quote": "像現在Blockcon的話我怎麼算都覺得說它只有10倍多一點而已，就是用明年的EPS來推算的話，因為有一些漲價的故事在發生或是說一些供不應求的情形，所以理論上它是低PE的東西",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "上下文提到Hock Tan是Broadcom CEO，討論XPU客戶與前沿模型花費，Blockcon明顯是Broadcom的語音辨識錯誤"
+        }
+      ]
+    },
+    {
+      "term": "SPCX",
+      "interpretation": "可能指SpaceX相關的投資部位或基金，聽眾提問滿手SPCX，股癌也表示自己有壓到快兩成",
+      "stance": "僅提及",
+      "quote": "滿手SPCX的我開始思考部位配置是不是配壞了...我目前SPCX可能也有壓到部位的快兩成吧",
+      "candidates": [
+        {
+          "name": "SpaceX（未上市/相關基金）",
+          "ticker": null,
+          "market": "US",
+          "reason": "SPCX在上下文中被當作一個持股部位討論，結合股癌對衛星題材的關注，最可能指SpaceX相關投資"
+        }
+      ]
+    },
+    {
+      "term": "一些載板",
+      "interpretation": "載板廠商，用來舉例說明籌碼過度擁擠後洗乾淨才會突破的現象",
+      "stance": "僅提及",
+      "quote": "以過去一些載板大家可以看到它可能盤整了很長的一段時間然後突然間在崩殺完之後就直接整個拉出去為什麼因為我覺得就是上面互相為難的人他們終於被洗掉了",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "載板廠龍頭，股癌提到載板盤整後崩殺洗籌碼再拉出的案例"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "載板廠主要標的之一"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "載板廠主要標的之一"
+        }
+      ]
+    },
+    {
+      "term": "新倉電、華欣科",
+      "interpretation": "聽眾提問中的看A做B策略，「新倉電」可能是「新唐」或「新日興」等語音辨識錯誤，「華欣科」可能是「華新科」的語音辨識錯誤",
+      "stance": "僅提及",
+      "quote": "我看新倉電一直上去就買華欣科，那就華欣科沒有什麼動甚至下去什麼時候該出場",
+      "candidates": [
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "「華欣科」最可能是華新科的語音辨識錯誤，被動元件廠商，符合看A做B的聯想交易邏輯"
+        }
+      ]
+    },
+    {
+      "term": "衛星公司/衛星Solution",
+      "interpretation": "NVIDIA與衛星公司合作的衛星解決方案，年底將打上去，板子規格與GPU/CPU數量已開出",
+      "stance": "看多",
+      "quote": "大概在年底就是你就會看到NVIDIA跟一些這種衛星公司他們合作出來的那種衛星Solution他們可能就會打上去，他那個板子的規格然後跟上面要放幾個GPU幾個CPU其實都已經開出來了",
+      "candidates": [
+        {
+          "name": "AST SpaceMobile",
+          "ticker": "ASTS",
+          "market": "US",
+          "reason": "低軌衛星公司中與NVIDIA合作最被關注的標的之一，股癌提到衛星Solution年底打上去"
+        }
+      ]
+    },
+    {
+      "term": "小型的設備股",
+      "interpretation": "半導體小型設備股，股癌表示有些標的籌碼太擁擠，法人與交易室都在車上，開利多也不漲",
+      "stance": "中立",
+      "quote": "以我最近在搞的一些那種小型的設備股來說呢，我們就知道說有一些設備股它真的太擁擠了，就是它裡面滿滿的是各個交易室的或是一些法人圈子的人",
+      "candidates": [
+        {
+          "name": "辛耘",
+          "ticker": "3583",
+          "market": "TW",
+          "reason": "台股知名小型半導體設備股，符合股癌描述的「數字好但籌碼擁擠不會動」的特徵"
+        },
+        {
+          "name": "牧德",
+          "ticker": "3563",
+          "market": "TW",
+          "reason": "台股半導體/面板檢測設備股，屬小型設備類"
+        },
+        {
+          "name": "萬潤",
+          "ticker": "6187",
+          "market": "TW",
+          "reason": "台股小型設備股"
+        },
+        {
+          "name": "弘塑",
+          "ticker": "3131",
+          "market": "TW",
+          "reason": "台股半導體設備股，近期法人關注度高"
+        },
+        {
+          "name": "家登",
+          "ticker": "3680",
+          "market": "TW",
+          "reason": "台股半導體設備/耗材股，法人持股比例高"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP705 | 🎀",
+  "analyzed_at": "2026-10-21T18:59:12.741692",
+  "transcript_chars": 21096
+}

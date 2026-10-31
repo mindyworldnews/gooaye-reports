@@ -1,0 +1,248 @@
+{
+  "summary": "本集股癌討論了Anthropic與Salesforce合作推出Cloudforce的意義，認為SaaS Apocalypse不存在；分析Marvell上修財務預期背後的XPU與光通訊成長動能；深入探討NVIDIA在供應鏈掌控、GPU vs ASIC競爭格局中的優勢，以及載板缺貨、記憶體規格調整等台股供應鏈機會。",
+  "macro_views": [
+    {
+      "topic": "AI產業多頭展望",
+      "view": "盤面感覺比較正向，已經蠻有資格去發展下一波多頭，多份電話會議與數字都蠻不錯，市場中突然產生超級多的機會",
+      "stance": "看多"
+    },
+    {
+      "topic": "SaaS Apocalypse不存在",
+      "view": "Anthropic的Dario與Salesforce的Marc都表示沒有SaaS末日，軟體不會被AI一鍋端，價值分配會大洗牌但每個地方都有價值存在",
+      "stance": "看多"
+    },
+    {
+      "topic": "台灣健保制度",
+      "view": "健保入不敷出，走向軍醫化/社會主義方向會大家一起變爛，需要構造改革、使用者付費，短期5-10年會蠻慘",
+      "stance": "看空"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "Salesforce",
+      "ticker": "CRM",
+      "market": "US",
+      "stance": "看多",
+      "reason": "掌握大量企業數據與經營knowhow，轉型速度快，放棄介面層轉向行動層，與Anthropic合作推出Cloudforce，擁有數據護城河與進入門檻",
+      "quote": "Salesforce真的是一個蠻厲害的企業...它真的掌握了大量的企業數據跟過往在經濟上的一些knowhow...他直接在第一時間就放棄掉了介面層，直接把他的東西轉到後面的應用跟行動層"
+    },
+    {
+      "name": "Anthropic",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "與Salesforce合作推出Cloudforce，股癌認為Anthropic在定價權方面可能佔優勢，會掌握比較多的利潤",
+      "quote": "我們目前猜Wise and Fabric會掌握比較多的一個利潤...可是這邊還要再看，說不定最後面數據的影響超出我們的想像"
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "上修財務預期，最大宗來自XPU（Google ASIC訂單）開始放量出貨，光通訊方面的SCALE UP光交換晶片也是強大成長動能",
+      "quote": "Marvell上修了它的財務預期...最大宗一定就是XPU，可能他從Google這邊拿到的一些案子...再來就是他上修的很大一環，實在講光通方面，他提到說他的一個很大的推力是來自於SCALE UP的光交換晶片"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "供應鏈掌控力極強，大量採購光通與雷射元件擠壓對手產能，GPU長期競爭優勢依然強大，ASIC搶市佔但整體TAM持續擴大，供應鏈管理經驗是巨大護城河",
+      "quote": "NVIDIA有一個很暴力一個很變態的點是...他想要把對手給擠出去...他光是可以把供應鏈卡好，那可能就可以產生一個非常巨大的競爭優勢...GPU還是有非常強大的一個競爭優勢"
+    },
+    {
+      "name": "OpenAI",
+      "ticker": null,
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到OAI的Jalapeno晶片在推論表現上比GB-200/300強，但Semi-Analysis測試忽略了訓練面向，且NVIDIA晶片迭代到VR Ruby會很快追上",
+      "quote": "OAI的Jalapeno晶片...他讓Semi-Analysis進去去跑測試...在推論方面的表現他是比GB-200 300還要強大的一個晶片...但是他有一塊稍微忽略掉的...這個晶片他其實最主要的用途就是使用在推論"
+    },
+    {
+      "name": "元大台灣50",
+      "ticker": "0050",
+      "market": "ETF",
+      "stance": "僅提及",
+      "reason": "提到今年0050有50-60%報酬，作為衡量聽眾投資績效的基準",
+      "quote": "像今年0050就有50-60%，你什麼事都不用做你就有50-60%"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "Marvell電話會議確認光通訊為強大成長動能，光通股票反彈強勢多已進入新高，從上游材料到封裝都是AI伺服器必備的戰略物資，修正很長一段時間後終於醒過來"
+    },
+    {
+      "name": "載板（ABF/BT基板）",
+      "stance": "看多",
+      "reason": "目前最缺貨的環節，記憶體從12i改8i甚至4i會需要更大的板子用量，NVIDIA和ASIC廠商都在搶產能，缺口非常大"
+    },
+    {
+      "name": "AI伺服器供應鏈整體",
+      "stance": "看多",
+      "reason": "ASIC與GPU都在搶料，每個環節都在缺貨，台股會產生很多新機會，光通、板材、組裝相關都有機會繼續漲"
+    },
+    {
+      "name": "SaaS/企業軟體",
+      "stance": "看多",
+      "reason": "Anthropic CEO Dario與Salesforce Marc都明確表示沒有SaaS Apocalypse，軟體與AI是正合大家一起受惠的關係"
+    },
+    {
+      "name": "ASIC晶片",
+      "stance": "中立",
+      "reason": "ASIC持續搶GPU市佔是趨勢，但供應鏈管理經驗不足、產能取得困難，可能面臨出貨延遲，市佔搶奪速度可能被高估"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "載板",
+      "interpretation": "ABF/BT載板製造商，AI伺服器所需的關鍵基板",
+      "stance": "看多",
+      "quote": "最缺貨的環節目前就是在載板這邊我們注意到有一個非常大的缺口...如果記憶體他要從12i變8i甚至現在有一個新的說法是說會回到4i...他可能就需要一個更大的板子用量...但問題是現在板子本身就是一個缺貨的主軸",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "台灣最大ABF載板廠商，股癌提到載板是最缺貨環節且缺口非常大，欣興為載板龍頭直接受惠"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "台灣主要ABF載板供應商之一，載板缺貨且需求因記憶體規格調整而增加"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "BT載板與ABF載板供應商，載板缺口擴大時為主要受惠標的"
+        }
+      ]
+    },
+    {
+      "term": "光通/光護臉",
+      "interpretation": "光通訊相關元件與族群，包含光交換晶片、光收發模組等AI伺服器必備元件（「光護臉」為語音辨識誤植，應為光通訊相關用語）",
+      "stance": "看多",
+      "quote": "大家注意到光通的股票是跑得特別的強勢，蠻多都已經進入到新高...這些光護臉相關的概念股，不管是從最上游的材料，然後到中間的什麼封裝...這個東西算是後面的一個那種非常強大的戰略物資",
+      "candidates": [
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "台灣光通訊封裝龍頭，股癌提到光通從上游材料到封裝都是戰略物資，訊芯為光通訊封裝代表"
+        },
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "光通訊雷射元件供應商，股癌提到NVIDIA大量採購光通與雷射相關元件"
+        },
+        {
+          "name": "華星光",
+          "ticker": "4979",
+          "market": "TW",
+          "reason": "光通訊收發模組廠商，股癌提到光通族群修正很久後重新醒過來進入新高"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "全球光通訊龍頭之一，股癌提到光通相關概念股跑得特別強勢"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "market": "US",
+          "reason": "光通訊雷射元件大廠，與NVIDIA採購光通元件擠壓對手產能的論述相關"
+        }
+      ]
+    },
+    {
+      "term": "XPU",
+      "interpretation": "泛指各家自研的AI加速晶片/ASIC，相對於NVIDIA通用GPU的客製化晶片方案",
+      "stance": "中立",
+      "quote": "你們現在看到這些很酷的XPU持續的推出，他們有沒有辦法拿到這些產能，他會是後來的一個大新聞...可能他會一直出現地炎，他東西不一定推的出來，因為他根本就沒有辦法去取得這些產能",
+      "candidates": [
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "股癌明確提到Marvell上修財務預期中最大宗就是XPU，從Google拿到的ASIC案子開始放量"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "全球ASIC/XPU設計龍頭之一，股癌討論ASIC搶GPU市佔但供應鏈是挑戰"
+        }
+      ]
+    },
+    {
+      "term": "Wise and Fabric",
+      "interpretation": "語音辨識誤植，應指Anthropic，股癌認為在與Salesforce的合作中Anthropic會掌握較多利潤與定價權",
+      "stance": "看多",
+      "quote": "我們目前猜Wise and Fabric會掌握比較多的一個利潤...可是這邊還要再看，說不定最後面數據的影響超出我們的想像",
+      "candidates": [
+        {
+          "name": "Anthropic",
+          "ticker": null,
+          "market": "US",
+          "reason": "前後文討論Anthropic與Salesforce的Cloudforce合作，討論誰掌握定價權與利潤，Wise and Fabric為語音辨識對Anthropic的誤植"
+        }
+      ]
+    },
+    {
+      "term": "VR Ruby",
+      "interpretation": "語音辨識可能有誤，應指NVIDIA下一代晶片架構Vera Rubin，股癌提到NVIDIA晶片已迭代到此代，且ramp速度會是史上最快",
+      "stance": "看多",
+      "quote": "在NVIDIA這邊其實晶片已經迭代到VR Ruby，根據他在電話會議裡面的說法是，從現在開始要很快的RAM上去，而且可能是他過往產品線裡面RAM最快的",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "VR Ruby即NVIDIA的Vera Rubin架構，股癌引用電話會議說法指出此代ramp速度將是史上最快"
+        }
+      ]
+    },
+    {
+      "term": "NFAP",
+      "interpretation": "語音辨識誤植，根據上下文應指OpenAI，討論企業是否願意把數據交給AI原生公司",
+      "stance": "中立",
+      "quote": "你說NFAP要去切這塊可不可以，其實也是可以，但是問題就是說它一定是有某一種進入門檻...光是你要不要把數據交給NFAP，可能很多人都會想要打一個問號",
+      "candidates": [
+        {
+          "name": "OpenAI",
+          "ticker": null,
+          "market": "US",
+          "reason": "上下文討論AI原生公司想切入企業軟體市場但面臨信任與數據門檻問題，老闆的行銷術語引起反彈（想要管制AI），符合OpenAI Sam Altman的特徵"
+        }
+      ]
+    },
+    {
+      "term": "記憶體從12i變8i甚至4i",
+      "interpretation": "HBM記憶體的堆疊層數規格調整，從12-Hi降到8-Hi甚至4-Hi，代表追求頻寬而非容量，但會需要更大的載板面積",
+      "stance": "僅提及",
+      "quote": "如果記憶體他要從12i變8i，甚至現在有一個新的說法是說會回到4i，這個我還是稍微打一個問號...他們現在要的是記憶體的頻寬，那容量可以稍微的折衷一下",
+      "candidates": [
+        {
+          "name": "SK海力士",
+          "ticker": null,
+          "market": "其他",
+          "reason": "全球HBM記憶體主要供應商，股癌討論HBM堆疊層數調整趨勢"
+        },
+        {
+          "name": "南亞科",
+          "ticker": "2408",
+          "market": "TW",
+          "reason": "台灣DRAM廠商，記憶體規格調整的相關討論"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP692 | 🍺",
+  "analyzed_at": "2026-10-31T17:50:53.031671",
+  "transcript_chars": 21234
+}

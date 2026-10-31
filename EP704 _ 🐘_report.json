@@ -1,0 +1,186 @@
+{
+  "summary": "本集股癌主要討論了對市場短期雜訊的應對心態，強調不應因OpenAI營收數字修正等短期消息頻繁調整部位。重點分析了Marvell投資人日大幅上修營收展望，看好光通訊與資料中心互聯（Connectivity/Interconnect）的長期趨勢，並提及NPO與CPO並行、800G/1.6T/3.2T技術路線演進。另外分享了參加慢報Pro年會的感受及個人投資心態的轉變。",
+  "macro_views": [
+    {
+      "topic": "AI產業長期趨勢",
+      "view": "OpenAI營收從700億被修正為500億年化營收引發市場恐慌，但從2B到50B的成長速度是人類歷史罕見，不應因短期數字修正而動搖對AI長期方向的判斷。市場過度反應短期雜訊，方向對了就不需要因為一時的上修下修而頻繁調整部位。",
+      "stance": "看多"
+    },
+    {
+      "topic": "投資心態與風控",
+      "view": "強調不應因短期消息（如OpenAI營收修正、供應鏈數字波動）而頻繁砍倉追回，應做好風控配置後耐心持有。引用前外資大哥的觀點：方向對了，那些短期數字都是noise。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "投資人日大幅上修營收展望：2028年營收從180億上修至200億，2031年給出700-900億營收目標（約2026年的10倍）。Interconnect（光學、SerDes、NPO）佔近五成，Custom Compute佔三成七五。公司認為NPO與CPO會並行發展，看好連接（Connectivity）為主菜。",
+      "quote": "Marvell他們在這一次的Investor Day上面去再次的重申連接才是一個主菜...到2031他竟然直接給一個700到900億的一個營收數字，這個是差不多2026年的10倍"
+    },
+    {
+      "name": "SpaceX",
+      "ticker": null,
+      "market": "其他",
+      "stance": "看多",
+      "reason": "提到自己在IPO時有買到，後來加碼被套但不在意，因為確信方向是對的。部位約佔8-10%，已做好風控，即使爆掉也可接受。",
+      "quote": "類似SpaceX那時候在IPO的時候我是有買到最前面的，只是後來上去我就跟著加碼嘛，然後後來崩下來...我就知道說我買的方向一定是對的"
+    },
+    {
+      "name": "信驊",
+      "ticker": "5274",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "因Marvell宣布進軍資料中心管理晶片（類BMC市場），信驊股價下跌。但股癌認為這不一定是搶BMC市場，而是整個data center管理的total solution，且該市場TAM未來可能變超大，不一定是零和競爭。",
+      "quote": "即便這個東西丟出來立刻像信華的股價就跌下去了，可能大家就想像說有一個大咖的小市場，不一定有可能是說那個TM會變超級大，大家都可以分到更多的東西"
+    },
+    {
+      "name": "新唐",
+      "ticker": "4919",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提及過去押注新唐的BMC故事曾賠錢，做戰敗檢討時認為BMC營收太小。但現在反思認為小市場可能未來會變大，不應以當下營收規模否定未來潛力。",
+      "quote": "我去押注了BMC故事然後前面被幹成翔...我就有提到說其實我忽略到一點是就算可能BMC全部的營收都給新唐好了那個都很小"
+    },
+    {
+      "name": "OpenAI",
+      "ticker": null,
+      "market": "其他",
+      "stance": "看多",
+      "reason": "營收從700億被FT修正為500億引發市場恐慌，但股癌認為從2B到50B的成長速度是人類歷史極度罕見的紀錄，不應因計算方式差異就解讀為AI要出事。",
+      "quote": "這個公司從2B到50B花一個超級短的時間，這應該是那種人類歷史上極度罕見甚至未來我也相信說應該是比較難去超越的一個紀錄"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "光通訊（Connectivity/Interconnect）",
+      "stance": "看多",
+      "reason": "Marvell投資人日顯示Interconnect（含光學、SerDes、NPO）佔2031年營收近五成。公司認為NPO與CPO會並行發展，800G為目前主力，1.6T正在Ramp，3.2T可能2028年就會出現。整體方向是資料中心從chip-to-chip到rack-to-rack甚至DC-to-DC的高速互聯。"
+    },
+    {
+      "name": "BMC/資料中心管理晶片",
+      "stance": "中立",
+      "reason": "Marvell進軍此領域並非搶BMC小市場，而是做整個data center的total solution管理。未來TAM可能變得很大，但目前市場仍小，需要觀察。類似AI在2020年前也是小市場但後來爆發。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "BlockCon",
+      "interpretation": "Broadcom（博通），光通訊/交換機/資料中心互聯領域的業界領頭羊",
+      "stance": "看多",
+      "quote": "我覺得這邊可以去觀察像是BlockCon，因為BlockCon是業界的領頭羊，雖然他最近真的很低調，雖然他股價還真的停了蠻久，只是我們也是有了解到說BlockCon是有蠻多東西後面也會出來上秀，有可能看到Marvell這樣之後後面就看到Hug也輸人不輸陣的出來上秀",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "語音辨識將Broadcom聽成BlockCon，且逐字稿描述其為業界領頭羊、做交換機、股價停了蠻久但有好消息在後面，完全符合Broadcom在資料中心交換晶片與光通訊領域的地位。後面提到'看BlockCon他什麼時候會把那個交換機推上去'更確認是Broadcom。"
+        }
+      ]
+    },
+    {
+      "term": "信華",
+      "interpretation": "信驊（5274），BMC伺服器管理晶片龍頭廠商",
+      "stance": "中立",
+      "quote": "即便這個東西丟出來立刻像信華的股價就跌下去了...也就是大家熟知的像是信華、新唐或者說在新櫃也有公司在做類似的東西",
+      "candidates": [
+        {
+          "name": "信驊",
+          "ticker": "5274",
+          "market": "TW",
+          "reason": "語音辨識將信驊聽成信華，上下文提到BMC（伺服器管理晶片）市場、營收很小但股價很貴的公司，與新唐並列提及，完全符合信驊的特徵。信驊是全球BMC晶片龍頭。"
+        }
+      ]
+    },
+    {
+      "term": "老黃",
+      "interpretation": "黃仁勳 / NVIDIA CEO",
+      "stance": "僅提及",
+      "quote": "簡單來講就跟老黃的概念是有點類似，就是你下去提供solution的時候你不能夠只是可能某一個晶片或是某一個能源的裝置什麼的，你是要把所有東西都整合在一起",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "股癌用老黃指黃仁勳/NVIDIA，在這集用來類比Marvell做total solution整合的策略概念。"
+        }
+      ]
+    },
+    {
+      "term": "AOI",
+      "interpretation": "Applied Optoelectronics（美國光通訊公司），或泛指光通訊元件被炒作後大幅修正的案例",
+      "stance": "中立",
+      "quote": "像那時候大家去買AOI，事後證明說台灣這些投資圈的人是全部買對，這AOI是對的，只是他前面雲霄飛車不知道搞你幾次，那下來都是我記得跌5、60%以上，那個是很難扛的",
+      "candidates": [
+        {
+          "name": "Applied Optoelectronics",
+          "ticker": "AAOI",
+          "market": "US",
+          "reason": "逐字稿提到AOI是光通訊元件相關，台灣投資圈買對了但過程中跌了50-60%，用來警示追未來題材的波動風險。AAOI為美股光通訊公司，符合描述。"
+        }
+      ]
+    },
+    {
+      "term": "Hug",
+      "interpretation": "語音辨識誤聽，可能指Broadcom自己（前面提到BlockCon後說Hug也輸人不輸陣），或指其他XPU/互聯公司",
+      "stance": "看多",
+      "quote": "有可能看到Marvell這樣之後後面就看到Hug也輸人不輸陣的出來上秀，大家可以稍微期待一下有這樣的一個機會，因為我們也是注意到他們有蠻多好消息在後面放著",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "前後文與BlockCon連貫，Hug可能是語音辨識將Broadcom的某種簡稱或口語說法誤聽。整段描述的是同一家公司（業界領頭羊、做交換機、有好消息在後面），最可能仍指Broadcom。"
+        }
+      ]
+    },
+    {
+      "term": "那些光護臉",
+      "interpretation": "語音辨識誤聽，應為「光通訊」或「光互聯」相關領域",
+      "stance": "看多",
+      "quote": "我覺得可以透過Marvell這一次的上修去觀察其他的XPU公司，或是要做Connectivity Interconnect的公司，然後會不會也去做上修...就是大家都會所以如果他可以這樣上修我相信其他人應該都會跟著上修",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿提到XPU公司和做Connectivity Interconnect的公司都可能跟著Marvell上修，Broadcom為此領域最大競爭者之一。"
+        }
+      ]
+    },
+    {
+      "term": "電漿紙",
+      "interpretation": "語音辨識誤聽，應為「薄膜鈮酸鋰（TFLN）」之後的下一代材料技術，可能指plasmonics（電漿子學）相關的光學材料，用於3.2T光通訊",
+      "stance": "中立",
+      "quote": "因為3.2T他們要使用電漿紙，所以可能蠻多人就會想去找這種電漿紙相關的股票，老實講我就馬上去找一下有沒有相關的東西，然後後來發現說因為是他們自己有去採購公司",
+      "candidates": [
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "股癌提到Marvell自己收購了有此技術的公司，所以目前主要受惠者是Marvell自身，其他公司是否採用同樣技術路線待觀察。"
+        }
+      ]
+    },
+    {
+      "term": "TFLN",
+      "interpretation": "薄膜鈮酸鋰（Thin Film Lithium Niobate），1.6T光通訊使用的材料",
+      "stance": "中立",
+      "quote": "像前陣子蠻多人在關注因為1.6T他用到TFLN的材料，我想說這個東西不是還很新嗎，在我看來他都還算是一個未來的題材，然後大家看到像這種聯電去往這個方向去做佈局",
+      "candidates": [
+        {
+          "name": "聯電",
+          "ticker": "2303",
+          "market": "TW",
+          "reason": "逐字稿明確提到聯電往TFLN方向佈局，被股癌認為是做夢行情、未來題材，提醒要小心偏夢的東西修正時會跌很多。"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP704 | 🐘",
+  "analyzed_at": "2026-10-21T19:00:50.694518",
+  "transcript_chars": 21097
+}

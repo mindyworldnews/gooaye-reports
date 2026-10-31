@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP693 | 🍖</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-10-31</div>
+    <h1>EP693 | 🍖</h1>
+  </div>
+
+  <div class='summary-box'><p>本集主要討論聯發科獲得NVIDIA與Alphabet透過ECB進行策略投資的意義，分析NVIDIA佈局XPU生態系、NVHBM記憶體規格，以及對博通（Broadcom）可能造成的競爭壓力。股癌也分享了對當前盤勢的看法，認為震盪格局中持股不動即可，並期待後續創新高。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">2454</span><span class="quick-tag bullish">NVDA</span><span class="quick-tag vague">6451</span><span class="quick-tag vague">3081</span><span class="quick-tag vague">4979</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「光通」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">光通訊相關族群，包含光收發模組、矽光子、CPO等光纖通訊供應鏈</p>
+          <blockquote>「光通相關的股票其實也都是持續的強勢...現在光通也是很多噴到大家講說殺小開那個開什麼垃圾字節，可是等到它開了字節你看得懂的時候，說不定也噴完了」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6451" data-cand-name="訊芯-KY" data-cand-market="TW"><code class="ticker">6451</code><a href="https://tw.stock.yahoo.com/quote/6451" target="_blank" title="開啟 6451 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">訊芯-KY</span><span class="cand-reason"> — 光通訊族群代表，股癌過往多次提及光通訊相關標的</span><button class="wl-btn wl-btn-sm" data-ticker="6451" data-name="訊芯-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3081" data-cand-name="聯亞" data-cand-market="TW"><code class="ticker">3081</code><a href="https://tw.stock.yahoo.com/quote/3081" target="_blank" title="開啟 3081 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯亞</span><span class="cand-reason"> — 光通訊上游磊晶廠，屬光通族群核心標的</span><button class="wl-btn wl-btn-sm" data-ticker="3081" data-name="聯亞" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="4979" data-cand-name="華星光" data-cand-market="TW"><code class="ticker">4979</code><a href="https://tw.stock.yahoo.com/quote/4979" target="_blank" title="開啟 4979 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華星光</span><span class="cand-reason"> — 光收發模組廠商，屬光通訊族群</span><button class="wl-btn wl-btn-sm" data-ticker="4979" data-name="華星光" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「光銅之爭」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">指市場此前討論光通訊是否會取代銅纜連接的爭論，銅類股曾被大幅下殺，但最終營收未受影響、股價也回到新高。股癌用此比喻博通目前被市場看空的處境</p>
+          <blockquote>「前陣子的光銅之爭，那時候確實是銅相關的類股直接被打到爆掉...確實你從他的營收去看他是沒有被打掉的，他還是持續的有開出來，那最終股價是也還公道，就是那時候被打下去的銅類股後來一堆都新高了」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3533" data-cand-name="嘉澤" data-cand-market="TW"><code class="ticker">3533</code><a href="https://tw.stock.yahoo.com/quote/3533" target="_blank" title="開啟 3533 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">嘉澤</span><span class="cand-reason"> — 銅纜連接器代表廠商，在光銅之爭中曾被打壓但營收未受影響</span><button class="wl-btn wl-btn-sm" data-ticker="3533" data-name="嘉澤" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3665" data-cand-name="貿聯-KY" data-cand-market="TW"><code class="ticker">3665</code><a href="https://tw.stock.yahoo.com/quote/3665" target="_blank" title="開啟 3665 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">貿聯-KY</span><span class="cand-reason"> — 高速傳輸線纜廠商，銅纜連接相關標的</span><button class="wl-btn wl-btn-sm" data-ticker="3665" data-name="貿聯-KY" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「四星、發哥」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">四星指博通（Broadcom），發哥指聯發科（MediaTek）。股癌提到NVIDIA已把市面上所有玩家納入麾下</p>
+          <blockquote>「目前看起來NVIDIA已經是把市面上所有的玩家都已經納入麾下了，他跟像是什麼四星、發哥，或者是像是MARVEL最近也有一些劇情的產生」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 四星是博通的暱稱，股癌在同段提到NVIDIA綁樁各家IC設計廠</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — 發哥是聯發科的暱稱，本集核心討論標的</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Hardpanel」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">應指Google/OpenAI的自研AI晶片，由博通協助設計，股癌提到這顆晶片非常強大，證明博通的設計能力</p>
+          <blockquote>「像我們前面才剛剛提到說Hardpanel他做出來是一個超級強大的晶片，所以就證明了博通他的設計跟統整能力一定是非常強大」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 股癌明確提到這顆晶片是博通協助設計的，證明博通能力</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「加入光光、安能無光」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">暗示CUE留言者從某家光通訊相關公司離職。「加入光光」可能指該公司（或其名稱含「光」）已不在、離開了，「安能無光」則是對應語</p>
+          <blockquote>「加入光光 安能無光...是從那個最近很熱門的公司離開 要換新公司的是嗎」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3008" data-cand-name="大立光" data-cand-market="TW"><code class="ticker">3008</code><a href="https://tw.stock.yahoo.com/quote/3008" target="_blank" title="開啟 3008 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">大立光</span><span class="cand-reason"> — 股癌稱其為「最近很熱門的公司」，大立光近期股價活躍且名稱含「光」，符合諧音暗示</span><button class="wl-btn wl-btn-sm" data-ticker="3008" data-name="大立光" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「NVHBM」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">NVIDIA自有規格的HBM記憶體，將Controller從Accelerator搬到HBM Base die中，比HBM4多30%頻寬、少15%功耗，但脫離JEDEC標準成為特規</p>
+          <blockquote>「NVHBM...官方的宣稱是講說它比HBM4的頻寬再多了30%，那功耗是少了15%...它跟本來的東西最大的差別什麼，就是本來是走JEDEC的一個規格，然後現在變得有點像是說NVIDIA自己的一個特規」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="SK Hynix" data-cand-market="其他"><span class="market-tag">其他</span> <span class="cand-name">SK Hynix</span><span class="cand-reason"> — 股癌提到SK Hynix在HBM4後會把Base die交給台積電做，NVHBM可能改變記憶體供應鏈結構</span></div><div class="cand-row" data-cand-ticker="2330" data-cand-name="台積電" data-cand-market="TW"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">台積電</span><span class="cand-reason"> — 股癌明確提到NVHBM的Base die設計可能交給台積電，不會給記憶體三大廠</span><button class="wl-btn wl-btn-sm" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="MU" data-cand-name="美光" data-cand-market="US"><code class="ticker">MU</code><a href="https://finance.yahoo.com/quote/MU" target="_blank" title="開啟 MU K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">美光</span><span class="cand-reason"> — 股癌提到美光因無法滿足NVIDIA要求，已將Base die交給台積電</span><button class="wl-btn wl-btn-sm" data-ticker="MU" data-name="美光" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="2454" data-name="聯發科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯發科</span>
+            <span class="card-meta"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">獲得NVIDIA與Alphabet透過史上最大ECB（35億美元）進行策略投資，代表XPU發展獲得認可。已有Google TPU V8T設計經驗，後續Roadmap已有雛形，屬夥伴深化合作而非Seller Financing</p>
+          <blockquote>「這個是輝達第一次投資台灣上市公司，然後第一次出手就是史上最大的一個ECB，那數字是35億美元...聯發科本身就是一個財務健全也很賺錢的公司」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="NVDA" data-name="NVIDIA" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">NVIDIA</span>
+            <span class="card-meta"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">透過投資聯發科綁樁XPU生態系，推廣MGX/ETL Rack等周邊方案，從單賣GPU轉型為Total Solution供應商。即使XPU侵蝕GPGPU市佔，NVIDIA仍可透過七種晶片在AI工廠中獲取價值</p>
+          <blockquote>「黃榮軒有跟大家講說現在一座AI工廠它要的是七種的輝達晶片，那XPU呢只是其中的一部分...變成是一個那種萬能雜貨店的感覺」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="AVGO" data-name="Broadcom" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Broadcom</span>
+            <span class="card-meta"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">目前市場上多方勢力（NVIDIA、Marvell、聯發科）都在搶博通的ASIC市場份額，但博通設計與統整能力極強（如幫OpenAI設計出強大晶片），等電話會議回應後再觀察，類似之前光銅之爭被打壓但最終營收不受影響</p>
+          <blockquote>「跟MARVEL或者說現在跑去MTK要綁樁什麼的，就是每個人想要的東西感覺都是要從博通身上去搶一點東西的感覺...博通他的設計跟統整能力一定是非常強大」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="MRVL" data-name="Marvell" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Marvell</span>
+            <span class="card-meta"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到Marvell最近也有劇情產生，已被NVIDIA納入麾下，與博通競爭ASIC市場</p>
+          <blockquote>「像是MARVEL最近也有一些劇情的產生，其實幾乎每個都已經是被他攔住，都已經是加入他的行列了」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="3661" data-name="世芯-KY" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">世芯-KY</span>
+            <span class="card-meta"><code class="ticker">3661</code><a href="https://tw.stock.yahoo.com/quote/3661" target="_blank" title="開啟 3661 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="3661" data-name="世芯-KY" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到過去世芯拿到Amazon投資但股價反應冷淡（開高走低），與這次聯發科獲NVIDIA投資做對比</p>
+          <blockquote>「世芯有拿到Amazon的一個投資，然後大家看到傑夫貝佐斯先生，看到想說哇這一定超屌，但我記得好像就連拉都沒有拉」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="3008" data-name="大立光" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">大立光</span>
+            <span class="card-meta"><code class="ticker">3008</code><a href="https://tw.stock.yahoo.com/quote/3008" target="_blank" title="開啟 3008 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="3008" data-name="大立光" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">以大立光碰到7000多元為例，說明自己不設目標價，只做參考，認為可能繼續往上</p>
+          <blockquote>「像最近大立光碰到7000多，你就大概知道說它是明年後年的幾個倍數，這個我知道，可是我也不認為說到這個倍數它就要停」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="2330" data-name="台積電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台積電</span>
+            <span class="card-meta"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到HBM4的Base die將由SK Hynix和美光交給台積電製造，NVHBM若採用也可能交給台積電設計製造</p>
+          <blockquote>「SK HYNIX在HBM4之後應該就是把Base代會交給台積電去做...鎂光的話呢就我們的理解...也是直接把Base代去丟給TSM去做」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="GOOGL" data-name="Alphabet/Google" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Alphabet/Google</span>
+            <span class="card-meta"><code class="ticker">GOOGL</code><a href="https://finance.yahoo.com/quote/GOOGL" target="_blank" title="開啟 GOOGL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="GOOGL" data-name="Alphabet/Google" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">作為聯發科ECB的投資方之一，同時是聯發科TPU設計客戶，但與NVIDIA的投資是獨立事件。Google有自己完整的互聯方案（ICI、OCS），是NVIDIA互聯方案最強對手之一</p>
+          <blockquote>「Google雖然自己在推自己的TPU，可是也是NVIDIA很大的一個買家，還是買了很多GPU...目前在NVIDIA的Solution以外最強大的一個玩家之一」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>光通訊</strong><span class="sector-reason"> — 光通相關股票持續強勢，雖然很多還沒開出好的財報數字，但等到開出來看得懂的時候可能股價已經噴完了</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>ASIC/XPU設計</strong><span class="sector-reason"> — ASIC出貨顆數一定會越來越高，TAM持續增加，不代表NVIDIA會越賺越少，整個市場持續變大</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>HBM/記憶體</strong><span class="sector-reason"> — HBM後續有降規趨勢（12high→8high→4high），短期市場可能反應負面（類似光銅之爭），但實際上能賣更多，對整體市場是健康的</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">9月美股季節性下跌</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 數據顯示9月通常下跌，但不需過度擔心，看看就好，做好風控即可，10月可能就會好轉（光輝十月）</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">AI產業發展階段</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> AI仍在非常前期，TAM會持續增加，市場大到超過想像，各家公司都會受惠，不需過度糾結市佔率消長</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">台股大盤走勢</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 從7月高點回落30%後已快速修復，大盤已在新高附近，維持震盪格局，持股不動即可，預期下月或下下月有機會再創新高</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

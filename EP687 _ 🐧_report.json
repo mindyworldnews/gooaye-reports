@@ -1,0 +1,203 @@
+{
+  "summary": "本集股癌主要討論Google人事大搬風（DeepMind CEO離任、Jeff Dean離開創立Discovery Loop）的深層意義，認為Google正從前沿AI模型競爭轉向雲端基礎設施（算力租賃）路線，並將此與波克夏大舉投資Google串聯解讀。同時分享近期台股操作方向，偏好光通訊、散熱、AI電源等族群，認為盤面處於「宙斯法則崩壞」的互信低落狀態，但整體仍相對樂觀。",
+  "macro_views": [
+    {
+      "topic": "AI產業價值鏈分配",
+      "view": "前沿模型（Frontier Labs）未必是最終最賺錢的環節，特別是有中國追兵透過蒸餾/仿製壓低價格，算力基礎設施（Cloud/Infrastructure）可能才是數位時代的鐵路與電網，長期價值可能高於預期",
+      "stance": "中立"
+    },
+    {
+      "topic": "台股盤面信任危機（宙斯法則崩壞）",
+      "view": "目前盤面處於互信低落狀態，好營收出來反而被拿來出貨，大家互相算計。認為要等大盤新高才會改善，但整體仍相對樂觀，有越來越多族群匯聚成形",
+      "stance": "看多"
+    },
+    {
+      "topic": "逐筆交易制度改為兩分鐘一搓",
+      "view": "處置股制度改變後假單明顯增多，但認為這是小事，對一般投資人影響有限，主要是想在制度中套利的人互相博弈",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "Google (Alphabet)",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "認為Google從前沿模型轉向雲端基建是正面訊號，類似數位時代的鐵路與電網。波克夏大舉買入+私募100億美元佐證此邏輯。現金流可能比其他巨頭更快轉正，因為把燒錢的frontier風險包出去了",
+      "quote": "算力它就是數位時代的鐵路跟電網...現在誰買最多房子去做最多的投資，後面就是可能收租最強大的...波克夏去做投資，你可以就稍微的懂為什麼他會去做投資"
+    },
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "用來舉例說明市場不按嘴巴上的論述走——大家都說Apple在AI是輸家，但其Year To Date表現最好，資本市場買單。也用Apple示範「不做大量AI投資反而被市場正面看待」的先例",
+      "quote": "Apple是一個公司上的在AI的輸家都沒有做投資，就Surprise Motherfucker他的Year Today表現是最好的，就資本市場是買單的"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "market": "US",
+      "stance": "看多",
+      "reason": "認為Meta也在走類似Google的路線，想當CoreWeave加AWS的組合體，各項佈局和拉貨都是為了算力租賃。用廣告收入養模型和算力租賃業務",
+      "quote": "Meta的做法是...它其實都是為了租賃去做事情，就是我覺得它真的蠻想去當Core Reef這樣的一個味道，Core Reef再加AWS"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "被聽眾提到作為核心持股之一，股癌未特別表達額外觀點",
+      "quote": "核心就繼續在台積電 0050 騎虹等散熱 台達電 AI電源 智邦 以及茂聯KY這些AI基建股就好"
+    },
+    {
+      "name": "台達電",
+      "ticker": "2308",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "聽眾提到的AI基建核心持股，股癌認為聽眾選的東西都蠻漂亮，也是自己佈局方向",
+      "quote": "核心就繼續在台積電 0050 騎虹等散熱 台達電 AI電源 智邦 以及茂聯KY這些AI基建股就好...他選到的東西都蠻漂亮的，確實也是我這一波佈局的一個對象"
+    },
+    {
+      "name": "智邦",
+      "ticker": "2345",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "聽眾提到的AI基建核心持股，股癌認同選股方向",
+      "quote": "核心就繼續在台積電 0050 騎虹等散熱 台達電 AI電源 智邦 以及茂聯KY這些AI基建股就好"
+    },
+    {
+      "name": "波克夏 (Berkshire Hathaway)",
+      "ticker": "BRK.B",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "用波克夏投資Google的邏輯來解讀Google策略轉向——巴菲特喜歡重資產、長約、寡佔的基礎設施，Google轉向雲端基建正符合此偏好",
+      "quote": "波克夏或者說巴菲特他喜歡買的東西是什麼，BNSF重資產長約寡佔，BHE管制報酬...你如果說可以去看懂就是現在Google的一個做法"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "股癌明確表示這一波光通訊佈局蠻多的，是主要操作方向之一"
+    },
+    {
+      "name": "散熱",
+      "stance": "看多",
+      "reason": "股癌表示散熱有佈局，是這波操作對象之一"
+    },
+    {
+      "name": "AI電源 (AI Power)",
+      "stance": "看多",
+      "reason": "股癌表示AI power有佈局，是這波操作對象之一"
+    },
+    {
+      "name": "PCB/載板",
+      "stance": "中立",
+      "reason": "股癌認為載板已經做過一波且很擁擠，比較沒有興趣"
+    },
+    {
+      "name": "設備",
+      "stance": "中立",
+      "reason": "股癌表示設備這波只買一點點"
+    },
+    {
+      "name": "雲端基礎設施 (Cloud Infrastructure)",
+      "stance": "看多",
+      "reason": "認為算力就是數位時代的鐵路與電網，Google和Meta都在往這個方向加碼，是AI時代的核心基建"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "某AWS概念股",
+      "interpretation": "與AWS（Amazon Web Services）供應鏈相關的台股公司，開出超預期營收但未漲停，疑似因Trentium（NVIDIA新平台）放量受惠",
+      "stance": "看多",
+      "quote": "像某AWS概念股他開了一個營收超高，其實大家都知道這個營收會好，只是這個營收真的是高出預期，大家知道他會好因為Trenium就是開始放量了，可是沒有想到會好成這樣，但好成這樣沒有開漲停",
+      "candidates": [
+        {
+          "name": "廣達",
+          "ticker": "2382",
+          "market": "TW",
+          "reason": "廣達是AWS最大伺服器代工供應商之一，且與NVIDIA Trientium（應為GB200/新平台）放量直接相關，營收在7月可能大幅超預期"
+        },
+        {
+          "name": "緯創",
+          "ticker": "3231",
+          "market": "TW",
+          "reason": "緯創也是AWS伺服器供應鏈重要廠商，近期營收可能因AI伺服器放量而大幅成長"
+        },
+        {
+          "name": "緯穎",
+          "ticker": "6669",
+          "market": "TW",
+          "reason": "緯穎是雲端伺服器（含AWS）重要供應商，以高階AI伺服器為主力，營收波動大且與NVIDIA新平台高度連動"
+        }
+      ]
+    },
+    {
+      "term": "騎虹等散熱",
+      "interpretation": "聽眾提到的散熱族群核心持股，「騎虹」應為奇鋐（3017）的語音辨識結果",
+      "stance": "僅提及",
+      "quote": "核心就繼續在台積電 0050 騎虹等散熱 台達電 AI電源 智邦 以及茂聯KY這些AI基建股就好",
+      "candidates": [
+        {
+          "name": "奇鋐",
+          "ticker": "3017",
+          "market": "TW",
+          "reason": "「騎虹」是語音辨識誤差，實際為散熱大廠奇鋐（3017），且逐字稿上下文明確提到「散熱」"
+        }
+      ]
+    },
+    {
+      "term": "茂聯KY",
+      "interpretation": "聽眾提到的AI基建核心持股，語音辨識可能有誤，最可能指貿聯-KY（3665）",
+      "stance": "僅提及",
+      "quote": "核心就繼續在台積電 0050 騎虹等散熱 台達電 AI電源 智邦 以及茂聯KY這些AI基建股就好",
+      "candidates": [
+        {
+          "name": "貿聯-KY",
+          "ticker": "3665",
+          "market": "TW",
+          "reason": "「茂聯KY」是語音辨識誤差，實際應為貿聯-KY（3665），為AI伺服器電源線束/連接器大廠，屬於AI基建股，符合上下文提到的AI基建定位"
+        }
+      ]
+    },
+    {
+      "term": "老AI",
+      "interpretation": "指傳統AI相關概念股，可能是較早期就被歸類為AI概念的股票，相對於新興AI題材而言的「舊題材」",
+      "stance": "中立",
+      "quote": "現在光通設備 AI power 散熱 PCB載板老AI都在輪動...老AI的話在前面有小做一波，但是現在也把錢撤出來",
+      "candidates": [
+        {
+          "name": "廣達",
+          "ticker": "2382",
+          "market": "TW",
+          "reason": "廣達是最早被市場定義為AI概念股的伺服器代工廠之一，屬於「老AI」範疇"
+        },
+        {
+          "name": "緯創",
+          "ticker": "3231",
+          "market": "TW",
+          "reason": "緯創也是早期AI伺服器概念股代表，屬於較傳統的AI題材"
+        }
+      ]
+    },
+    {
+      "term": "Core Reef再加AWS",
+      "interpretation": "「Core Reef」應為CoreWeave的語音辨識結果，指Meta想成為類似CoreWeave（GPU雲端租賃）加上AWS（雲端服務）的組合體",
+      "stance": "看多",
+      "quote": "我覺得它真的蠻想去當Core Reef這樣的一個味道，Core Reef再加AWS，因為它可能會有一些模型的API，那這樣它是一個組合體，簡單來講也是要去產生金流",
+      "candidates": [
+        {
+          "name": "CoreWeave",
+          "ticker": "CRWV",
+          "market": "US",
+          "reason": "語音辨識將CoreWeave辨識為Core Reef，上下文討論的是GPU算力租賃商業模式"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP687 | 🐧",
+  "analyzed_at": "2026-10-31T17:57:42.217066",
+  "transcript_chars": 21602
+}

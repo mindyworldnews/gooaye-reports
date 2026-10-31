@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP688 | 🥽</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-10-31</div>
+    <h1>EP688 | 🥽</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌主要討論SpaceX與Cerebras的股票解禁對籌碼的影響，深入解析NVIDIA 800V DC白皮書對電力架構演進的影響與受惠環節，並回應聽眾關於被動元件、功率元件、抄底策略等問題。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">Cerebras</span><span class="quick-tag vague">6781</span><span class="quick-tag vague">3081</span><span class="quick-tag vague">4979</span><span class="quick-tag vague">4977</span><span class="quick-tag vague">6451</span><span class="quick-tag vague">3017</span><span class="quick-tag vague">3324</span><span class="quick-tag vague">3653</span><span class="quick-tag vague">2308</span><span class="quick-tag vague">2301</span><span class="quick-tag vague">6282</span><span class="quick-tag vague">2385</span><span class="quick-tag vague">3023</span><span class="quick-tag vague">3533</span><span class="quick-tag vague">3665</span><span class="quick-tag vague">1519</span><span class="quick-tag vague">1503</span><span class="quick-tag vague">1513</span><span class="quick-tag vague">1514</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「BPU」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">Battery Power Unit / Backup Power Unit，資料中心機櫃內的備用電源模組，在PowerRack架構中是受惠環節之一</p>
+          <blockquote>「受惠的環節有哪一些，像是AC到800V PSU，800V再到54V的SHELF，電容、連接器、BPU...其中以BPU來講的話，它又會再去拆分成幾個spec...如果說你今天走到相對後期的話，它有可能就會變成是一個標配的環節」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6781" data-cand-name="AES-KY" data-cand-market="TW"><code class="ticker">6781</code><a href="https://tw.stock.yahoo.com/quote/6781" target="_blank" title="開啟 6781 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">AES-KY</span><span class="cand-reason"> — AES-KY為伺服器電源相關供應商，逐字稿提到BPU從選配可能變標配，且在PowerRack階段受惠</span><button class="wl-btn wl-btn-sm" data-ticker="6781" data-name="AES-KY" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「光的股票」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">光通訊相關股票，之前股價回檔後最近復活反彈</p>
+          <blockquote>「現在Data Center都不用用電是不是，都是連銅線跟光都不用用了，因為那段時間銅線跟光都在疊，那雖然當然後面很多銅線的股票都噴回去了，那像光的股票最近也都復活了」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3081" data-cand-name="聯亞" data-cand-market="TW"><code class="ticker">3081</code><a href="https://tw.stock.yahoo.com/quote/3081" target="_blank" title="開啟 3081 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯亞</span><span class="cand-reason"> — 台股光通訊族群代表，逐字稿提到光的股票最近復活</span><button class="wl-btn wl-btn-sm" data-ticker="3081" data-name="聯亞" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="4979" data-cand-name="華星光" data-cand-market="TW"><code class="ticker">4979</code><a href="https://tw.stock.yahoo.com/quote/4979" target="_blank" title="開啟 4979 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華星光</span><span class="cand-reason"> — 台股光通訊族群代表</span><button class="wl-btn wl-btn-sm" data-ticker="4979" data-name="華星光" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="4977" data-cand-name="眾達-KY" data-cand-market="TW"><code class="ticker">4977</code><a href="https://tw.stock.yahoo.com/quote/4977" target="_blank" title="開啟 4977 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">眾達-KY</span><span class="cand-reason"> — 台股光通訊族群代表</span><button class="wl-btn wl-btn-sm" data-ticker="4977" data-name="眾達-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="6451" data-cand-name="訊芯-KY" data-cand-market="TW"><code class="ticker">6451</code><a href="https://tw.stock.yahoo.com/quote/6451" target="_blank" title="開啟 6451 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">訊芯-KY</span><span class="cand-reason"> — 台股光通訊族群代表</span><button class="wl-btn wl-btn-sm" data-ticker="6451" data-name="訊芯-KY" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「散熱的股票」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">伺服器散熱相關族群，最近股價表現強勢拉出新高</p>
+          <blockquote>「然後結合現在的一些散熱的股票蠻多拉出去，其實我覺得又有一個那種新的故事已經正在醞釀中」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3017" data-cand-name="奇鋐" data-cand-market="TW"><code class="ticker">3017</code><a href="https://tw.stock.yahoo.com/quote/3017" target="_blank" title="開啟 3017 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">奇鋐</span><span class="cand-reason"> — 散熱族群龍頭之一，逐字稿提到散熱股票拉出去</span><button class="wl-btn wl-btn-sm" data-ticker="3017" data-name="奇鋐" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3324" data-cand-name="雙鴻" data-cand-market="TW"><code class="ticker">3324</code><a href="https://tw.stock.yahoo.com/quote/3324" target="_blank" title="開啟 3324 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">雙鴻</span><span class="cand-reason"> — 散熱族群代表</span><button class="wl-btn wl-btn-sm" data-ticker="3324" data-name="雙鴻" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3653" data-cand-name="健策" data-cand-market="TW"><code class="ticker">3653</code><a href="https://tw.stock.yahoo.com/quote/3653" target="_blank" title="開啟 3653 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">健策</span><span class="cand-reason"> — 散熱族群代表（均熱片/散熱模組）</span><button class="wl-btn wl-btn-sm" data-ticker="3653" data-name="健策" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「Power廠」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">AI伺服器/資料中心電力供應相關廠商，包含PSU、整流器、BPU、UPS等環節</p>
+          <blockquote>「Power在過去他比較偏向是就是市場沒有什麼人在看的東西，可是最近因為這一個白皮書...這個會變成是市場上某一個就是大家會想要去討論的東西」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2308" data-cand-name="台達電" data-cand-market="TW"><code class="ticker">2308</code><a href="https://tw.stock.yahoo.com/quote/2308" target="_blank" title="開啟 2308 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">台達電</span><span class="cand-reason"> — 台灣最大電源供應器廠商，逐字稿提到PSU、PowerRack、PowerCenter等環節都是受惠對象</span><button class="wl-btn wl-btn-sm" data-ticker="2308" data-name="台達電" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2301" data-cand-name="光寶科" data-cand-market="TW"><code class="ticker">2301</code><a href="https://tw.stock.yahoo.com/quote/2301" target="_blank" title="開啟 2301 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">光寶科</span><span class="cand-reason"> — 電源供應器大廠，伺服器電源為重要業務</span><button class="wl-btn wl-btn-sm" data-ticker="2301" data-name="光寶科" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="6282" data-cand-name="康舒" data-cand-market="TW"><code class="ticker">6282</code><a href="https://tw.stock.yahoo.com/quote/6282" target="_blank" title="開啟 6282 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">康舒</span><span class="cand-reason"> — 伺服器電源供應器廠商</span><button class="wl-btn wl-btn-sm" data-ticker="6282" data-name="康舒" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2385" data-cand-name="群光" data-cand-market="TW"><code class="ticker">2385</code><a href="https://tw.stock.yahoo.com/quote/2385" target="_blank" title="開啟 2385 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">群光</span><span class="cand-reason"> — 電源供應器廠商</span><button class="wl-btn wl-btn-sm" data-ticker="2385" data-name="群光" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「銅線的股票」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">資料中心銅纜/連接器相關股票，之前被看衰但後來股價噴回</p>
+          <blockquote>「現在Data Center都不用用電是不是，都是連銅線跟光都不用用了，因為那段時間銅線跟光都在疊，那雖然當然後面很多銅線的股票都噴回去了」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3023" data-cand-name="信邦" data-cand-market="TW"><code class="ticker">3023</code><a href="https://tw.stock.yahoo.com/quote/3023" target="_blank" title="開啟 3023 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">信邦</span><span class="cand-reason"> — 連接線纜廠商，逐字稿提到銅線股票噴回</span><button class="wl-btn wl-btn-sm" data-ticker="3023" data-name="信邦" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3533" data-cand-name="嘉澤" data-cand-market="TW"><code class="ticker">3533</code><a href="https://tw.stock.yahoo.com/quote/3533" target="_blank" title="開啟 3533 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">嘉澤</span><span class="cand-reason"> — 連接器廠商，800V架構下connector是關鍵環節</span><button class="wl-btn wl-btn-sm" data-ticker="3533" data-name="嘉澤" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3665" data-cand-name="貿聯-KY" data-cand-market="TW"><code class="ticker">3665</code><a href="https://tw.stock.yahoo.com/quote/3665" target="_blank" title="開啟 3665 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">貿聯-KY</span><span class="cand-reason"> — 電源線纜/連接器廠商</span><button class="wl-btn wl-btn-sm" data-ticker="3665" data-name="貿聯-KY" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「重電」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">重電設備族群，在800V DC架構的長期階段（DC Power Block，2030以後）會是最主要受惠對象</p>
+          <blockquote>「功率半導體他們也是在這裡面的一環，那再來就是重電，這個可能就會是最主要的一個受惠的對象」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="1519" data-cand-name="華城" data-cand-market="TW"><code class="ticker">1519</code><a href="https://tw.stock.yahoo.com/quote/1519" target="_blank" title="開啟 1519 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華城</span><span class="cand-reason"> — 重電設備龍頭，逐字稿提到重電在DC Power Block階段是最主要受惠對象</span><button class="wl-btn wl-btn-sm" data-ticker="1519" data-name="華城" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="1503" data-cand-name="士電" data-cand-market="TW"><code class="ticker">1503</code><a href="https://tw.stock.yahoo.com/quote/1503" target="_blank" title="開啟 1503 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">士電</span><span class="cand-reason"> — 重電設備廠商</span><button class="wl-btn wl-btn-sm" data-ticker="1503" data-name="士電" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="1513" data-cand-name="中興電" data-cand-market="TW"><code class="ticker">1513</code><a href="https://tw.stock.yahoo.com/quote/1513" target="_blank" title="開啟 1513 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">中興電</span><span class="cand-reason"> — 重電設備廠商</span><button class="wl-btn wl-btn-sm" data-ticker="1513" data-name="中興電" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="1514" data-cand-name="亞力" data-cand-market="TW"><code class="ticker">1514</code><a href="https://tw.stock.yahoo.com/quote/1514" target="_blank" title="開啟 1514 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">亞力</span><span class="cand-reason"> — 重電設備廠商</span><button class="wl-btn wl-btn-sm" data-ticker="1514" data-name="亞力" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Situational Awareness」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指 Situational Awareness 這個資訊來源/研調機構，聽眾提到該機構新增了VSH和STM的關注</p>
+          <blockquote>「今天早上看到Situational Awareness新增了VSH和STM，那加上太陽誘電不久前的消息，元件的後事好像比想像中還樂觀」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="VSH" data-cand-name="Vishay (VSH)" data-cand-market="US"><code class="ticker">VSH</code><a href="https://finance.yahoo.com/quote/VSH" target="_blank" title="開啟 VSH K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Vishay (VSH)</span><span class="cand-reason"> — 聽眾留言直接提到VSH，為被動元件/功率半導體廠商</span><button class="wl-btn wl-btn-sm" data-ticker="VSH" data-name="Vishay (VSH)" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="STM" data-cand-name="STMicroelectronics (STM)" data-cand-market="US"><code class="ticker">STM</code><a href="https://finance.yahoo.com/quote/STM" target="_blank" title="開啟 STM K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">STMicroelectronics (STM)</span><span class="cand-reason"> — 聽眾留言直接提到STM，為功率半導體廠商</span><button class="wl-btn wl-btn-sm" data-ticker="STM" data-name="STMicroelectronics (STM)" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card neutral" data-ticker="" data-name="SpaceX" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">SpaceX</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">股票解禁後賣壓陸續釋出，但第一次衝擊最大，後續流動性增加反而是好事，價格表現會更符合市場邏輯。解禁分成約9-10個批次，前幾個大關過後影響會越來越小。</p>
+          <blockquote>「SpaceX就是有相當程度的賣壓，而且在後面都會持續的有股票丟出來，但是我覺得就可能是第一次造成的影響會是最大的」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="" data-name="Cerebras" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Cerebras</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">產能拉升速度快，投片數量越來越多，與AMD合作Disaggregated Inference架構（AMD Helios處理Prompt，Cerebras WSE處理低延遲Decode），使用SRAM在推論時代有發展價值。近期也有大量股票解禁需注意籌碼面。</p>
+          <blockquote>「Cerebras這家公司它的產能的速度其實是拉得非常的快，它所拿到的投片的數量也是越來越高...在後面的reasoning的時代會帶來一些新的表現」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="AMD" data-name="AMD" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">AMD</span>
+            <span class="card-meta"><code class="ticker">AMD</code><a href="https://finance.yahoo.com/quote/AMD" target="_blank" title="開啟 AMD K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AMD" data-name="AMD" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">與Cerebras合作推出Disaggregated Inference架構，透過Helios處理Prompt與長Context。另外也收購了一家公司，將模型邏輯直接寫在晶片裡面，類似FPGA的做法。</p>
+          <blockquote>「像這家公司最近就有跟AMD去合作公佈Desegregated Inference架構，它就是透過AMD的Helios去處理Prompt跟長Context，然後再由Cerebros的WSE去搞低延遲的Decode」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="NVDA" data-name="NVIDIA" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">NVIDIA</span>
+            <span class="card-meta"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到NVIDIA的800V DC白皮書在投資圈廣泛傳閱，以及之前CPX計畫可能不如預期順利。白皮書描繪了資料中心電力架構的長期演進路線。</p>
+          <blockquote>「自己身邊的蠻多的朋友，所謂的這個投資交易圈的人士，都在傳一個NVIDIA的800V DC的一個白皮書」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>電力/Power相關族群</strong><span class="sector-reason"> — NVIDIA 800V DC白皮書重新點燃市場關注。過去幾個月爹不疼娘不愛沒人看，但現在很多股票修正完後，白皮書出來的時間剛好形成新故事。受惠環節包括PSU、SHELF、電容、連接器、BPU等，中長期還有集中式整流器、SiC、GaN、UPS、Busway、重電等。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>被動元件</strong><span class="sector-reason"> — 營收持續開新高，獲利成長速度高於營收成長速度，代表價格條件越來越好。前面噴多後跌深，現在反彈中。AI領域需求持續轉強，漲價可持續；但車用、PC、消費電子的漲價會到某個位置後價格破壞。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>功率半導體（SiC/GaN）</strong><span class="sector-reason"> — 在800V DC架構的中期階段（PowerCenter）會開始受惠。GaN特別被提及，有公司派承認供應超乎想像地吃緊，原本認為不會缺但現在慢慢成為市場主流。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>散熱族群</strong><span class="sector-reason"> — 散熱股票最近很多拉出去了，結合Power的白皮書題材，新的故事正在醞釀中。機櫃功耗提升後，GPU、Power Shelf、Busbar、Connector全部都要用液冷。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>光通訊</strong><span class="sector-reason"> — 光的股票最近也都復活了，之前一度被市場認為不需要，但現在證明很多都是自己嚇自己。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>銅線/連接器</strong><span class="sector-reason"> — 之前銅線股票被嘲笑說Data Center不用銅線了，但後來很多銅線的股票都噴回去了。800V架構下busbar、cable、connector都是關鍵環節。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">AI資料中心電力架構演進（800V DC）</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 隨著每個機櫃功耗持續攀升（330kW-570kW），從54V到800V DC的轉換是必然趨勢，不是炒作題材而是實際需要解決的物理瓶頸。短期（2026-2027）以PowerRack架構為主，中期轉向PowerCenter，長期走向DC Power Block。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">市場底部判斷與抄底策略</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 沒有人能百分之百抓到絕對底部，只能判斷相對位置。抄底一定要分批慢慢買，不要幻想抄在最低點。搭配事件與反彈走勢強弱來判斷，出現創紀錄等級的大量反彈通常底部較難破。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">美國資料中心建設阻力</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 美國國內反對資料中心的聲音很多，包括民主黨議員在內都有反對，環評等審批會被卡關，新建資料中心不是容易的事。懷疑部分反對聲浪可能來自敵對國家為瓦解AI發展而散播的訊息。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

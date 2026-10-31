@@ -1,0 +1,221 @@
+{
+  "summary": "本集股癌主要討論三大主題：一、聯發科等企業面臨AI使用成本控管的兩難，反映token消耗與企業預算的現實考量；二、台股全面轉強，光通訊、被動元件、功率元件等族群重新啟動；三、摩根士丹利報告關於美國可能對中國光通訊元件實施禁令的分析，詳細拆解光模組BOM結構與潛在受惠/受害方。",
+  "macro_views": [
+    {
+      "topic": "台股大盤趨勢",
+      "view": "大盤根本沒有轉弱，期貨創新高，NQ表現極好，光輝十月如假包換，不要太早預判高點與大盤對做，均線沒有下完前不要提早做空",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI使用成本與企業治理",
+      "view": "企業面臨Token Maxing的成本壓力，聯發科等公司開始限縮AI使用額度，一個月支出一兩億，成本問題是供應鏈想像不能太快的原因，但最終會撞出解方（如落地伺服器模式）",
+      "stance": "中立"
+    },
+    {
+      "topic": "美國對中國光通訊禁令",
+      "view": "摩根士丹利報告偏向傳聞，目前65%美國BOM佔比本就是現狀，短期影響有限，但長期若收緊將壓制中國光通廠自製DSP/雷射的能力，美國不會推得太快因為上游材料仍在中國手中",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "以「大M麥當勞鏟薯條」代稱，討論其限縮員工AI使用額度，每月AI支出約一兩億，並自建data center但負荷不堪，作為企業面臨AI成本兩難的案例",
+      "quote": "有看到大M就大家俗稱大M麥當勞鏟薯條的聯發科，他們要去限縮員工可能在AI可以去使用的一個額度...大概現在可能一個月就要支出個一兩億左右"
+    },
+    {
+      "name": "欣興",
+      "ticker": "3037",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "以3037被稀釋產地傳聞導致恐慌為例，說明市場常因小事反應過度，但事後回頭看根本沒什麼",
+      "quote": "就是3037那時候不是被人家講說什麼稀產地嘛，然後大家講說死定了完蛋了爆炸了，然後下課先告了，然後類似這樣，所以你不知道他什麼時候又會再一次的起來"
+    },
+    {
+      "name": "達發",
+      "ticker": "6526",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "台系唯一DSP業者（聯發科旗下），目前鎖定400G出貨，走到3.2T還要幾個世代，且屬台灣公司不算美國BOM，不會是禁令第一波受惠者",
+      "quote": "台系就只有一家DSP業者就是聯發科下面的達法，那他的DSP其實目前應該是鎖定出貨在400G這邊...所以它如果要走到3.2T的話那個對它來講應該也是幾個世代以後的東西"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "看多",
+      "reason": "光模組DSP核心供應商，禁令確保美國BOM佔比，禮拜五股價已反應上漲",
+      "quote": "他們本來就是在用像是可能Broadcom然後或是Marvell他們的產品...DSP相關的不管是我們Marvell MaxLinear什麼的然後或者是Broadcom其實在禮拜五的股價表現都有起來"
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "光模組DSP核心供應商之一，受惠於禁令確保美系DSP地位，禮拜五股價表現已起來",
+      "quote": "DSP相關的不管是我們Marvell MaxLinear什麼的然後或者是Broadcom其實在禮拜五的股價表現都有起來"
+    },
+    {
+      "name": "Lumentum",
+      "ticker": "LITE",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "作為美系雷射元件供應商被提及，禁令若限制中國自製雷射，Lumentum等美系雷射廠將持續受惠",
+      "quote": "然後或是說Semtec Lumentan Coherent的雷射他們本來就是在用這些東西"
+    },
+    {
+      "name": "Coherent",
+      "ticker": "COHR",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "與Lumentum同為美系雷射廠，在光模組BOM中屬美國成分",
+      "quote": "然後或是說Semtec Lumentan Coherent的雷射他們本來就是在用這些東西"
+    },
+    {
+      "name": "MaxLinear",
+      "ticker": null,
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "DSP相關公司，與Marvell、Broadcom一起被提及在禮拜五股價有反應",
+      "quote": "DSP相關的不管是我們Marvell MaxLinear什麼的然後或者是Broadcom其實在禮拜五的股價表現都有起來"
+    },
+    {
+      "name": "大立光",
+      "ticker": "3008",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "在解釋光模組中光對準(FAU)的knowhow時順帶提到，說明把光對準本身是很困難的技術",
+      "quote": "所以像大家在討論什麼大立光有的沒有的各種那種FAU什麼的，那個就是在討論說誰可以把光對好"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "股癌表示光是他這一波最主要的持倉，目前走得好好的不想換；摩根士丹利禁令報告雖為傳聞，但市場已提早反應，DSP漲價趨勢持續，美系DSP/雷射廠受惠"
+    },
+    {
+      "name": "被動元件與功率元件",
+      "stance": "看多",
+      "reason": "七月前最後一波上去的族群，這一波也是最慢啟動但上週終於開始動起來，持續看到AI相關缺貨漲價情形，身邊勇者已快速佈局"
+    },
+    {
+      "name": "CPU相關",
+      "stance": "看多",
+      "reason": "提到有人壓CPU族群連日狂噴停不下來，作為盤面全面轉強的例證之一"
+    },
+    {
+      "name": "SSD相關",
+      "stance": "中立",
+      "reason": "昨天SSD股票跳樓，有人歸因於HDD廠商擴產，但股癌認為HDD基期很低擴產影響不大，市場有時因小事過度反應"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "光",
+      "interpretation": "光通訊相關族群（含光模組、光收發元件、DSP、雷射等）",
+      "stance": "看多",
+      "quote": "那就繼續留著了，所以有點像是說又回到了上半年...我是以光為主，光算是我這一波最主要的一個壓住...那就繼續留著了",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "這集明確提到Broadcom是光模組DSP核心供應商，禮拜五股價已反應"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "market": "US",
+          "reason": "這集明確提到Marvell為DSP供應商，禮拜五股價表現起來"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "market": "US",
+          "reason": "這集提到Lumentum為光模組中美系雷射元件供應商"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "這集提到Coherent為美系雷射廠，屬光模組BOM中美國成分"
+        }
+      ]
+    },
+    {
+      "term": "大M / 大M麥當勞鏟薯條",
+      "interpretation": "聯發科（2454），股癌圈內對聯發科的戲稱",
+      "stance": "僅提及",
+      "quote": "有看到大M就大家俗稱大M麥當勞鏟薯條的聯發科，他們要去限縮員工可能在AI可以去使用的一個額度",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "逐字稿直接說明「大M麥當勞鏟薯條的聯發科」，明確指出就是聯發科"
+        }
+      ]
+    },
+    {
+      "term": "Passive",
+      "interpretation": "被動元件族群（電容、電阻、電感等被動元件廠商）",
+      "stance": "看多",
+      "quote": "當他們發現說欸Passive又開始起來的時候，馬上就發現說一堆人幹手上又是裝滿了被動元件",
+      "candidates": [
+        {
+          "name": "國巨",
+          "ticker": "2327",
+          "market": "TW",
+          "reason": "被動元件龍頭，這集提到被動元件族群全面轉強且缺貨漲價，國巨為代表性公司"
+        },
+        {
+          "name": "華新科",
+          "ticker": "2492",
+          "market": "TW",
+          "reason": "被動元件主要廠商，這集提到被動元件族群啟動"
+        }
+      ]
+    },
+    {
+      "term": "CPU的",
+      "interpretation": "CPU供應鏈相關族群",
+      "stance": "看多",
+      "quote": "有些人跑去壓那個CPU的，那也是這樣連日狂噴都停不下來",
+      "candidates": [
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "market": "US",
+          "reason": "CPU主要廠商，這集僅模糊提到「壓CPU的連日狂噴」，未指明具體標的，AMD為最直接聯想"
+        },
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "market": "US",
+          "reason": "CPU廠商之一，但這集未給更多線索判斷是否為此標的"
+        }
+      ]
+    },
+    {
+      "term": "達法",
+      "interpretation": "達發（6526），聯發科旗下的光通訊DSP公司",
+      "stance": "中立",
+      "quote": "台系就只有一家DSP業者就是聯發科下面的達法，那他的DSP其實目前應該是鎖定出貨在400G這邊",
+      "candidates": [
+        {
+          "name": "達發",
+          "ticker": "6526",
+          "market": "TW",
+          "reason": "逐字稿明確說「聯發科下面的達法」，語音辨識將「達發」聽為「達法」"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP702 | 🐉",
+  "analyzed_at": "2026-10-21T19:03:23.529955",
+  "transcript_chars": 21963
+}

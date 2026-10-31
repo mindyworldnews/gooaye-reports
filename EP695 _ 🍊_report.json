@@ -1,0 +1,289 @@
+{
+  "summary": "本集股癌主要分享了Google Cloud在Goldman Sachs會議上的重磅訊息，包括AI伺服器不到兩年回本、自研ASIC TPU一年回本的驚人數據，認為這是市場超巨型利多。同時討論了AI產業價值鏈的循環融資結構、大模型商API費用趨同化趨勢，以及光通訊CPO供應鏈的投資策略建議。盤面方面，指出近期台股處於震盪格局，隔日沖地獄，建議不要搶快，等待大盤新高表態。",
+  "macro_views": [
+    {
+      "topic": "AI基礎設施投資回報",
+      "view": "Google Cloud揭示AI伺服器不到兩年回本，自研ASIC TPU一年回本，證明AI Infra投入者的印鈔速度極快，反駁了AI投資不賺錢的論述。這解釋了為何Google加大CapEx而非回購股票，因為ROIC遠高於回購。",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI產業循環融資結構",
+      "view": "將AI產業拆成三層：晶片/供應鏈出貨即收錢、雲商墊錢靠5年合約回收、模型商燒股東的錢（而股東多為雲商本身）。認為這個循環還有底氣再跑一陣子，最終會像.com泡沫一樣爆掉，但週期會超出大家想像，非常長。",
+      "stance": "看多"
+    },
+    {
+      "topic": "大模型API費用趨同化",
+      "view": "各大模型商的API token費用持續收斂，溢價權利在縮小，大模型正逐漸commodity化。這反而有利於高CP值硬體提供者（如Google TPU），因為模型商會傾向選擇成本更低的方案。",
+      "stance": "中立"
+    },
+    {
+      "topic": "台股盤勢",
+      "view": "近一個多月持續震盪，是隔日沖地獄，鎖越死隔天越慘。大盤已在新高附近但遲遲未見表態突破棒。建議不要搶快，縮小部位或調整做法，等待大盤新高後再積極操作。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "Google (Alphabet)",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "Google Cloud在Goldman Sachs會議揭示AI伺服器不到兩年回本、自研ASIC TPU一年回本，新客獲取速度是一年前兩倍，超億美元大單也翻倍成長，超額消費超過50%。轉型為Infra supplier雖乘數可能較低，但賺的是真金白銀。理解巴菲特為何投資Google。",
+      "quote": "Google直接告訴你他ASIC的部分可能只需要一年就回本，比他GPU還要來得更快...我們去看數據是看到Google真的是越買越多東西"
+    },
+    {
+      "name": "Palantir",
+      "ticker": "PLTR",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "有聽眾問到Google DeepMind切入政府跟軍工對Palantir的影響，股癌回應認為市場不是零和的，不覺得有什麼影響。",
+      "quote": "想問祝你對Panther受到Google DeepMind切入政府跟軍工影響的看法...不覺得這個是有什麼影響"
+    },
+    {
+      "name": "Intel",
+      "ticker": "INTC",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到最近一次操作option是做Intel，賺了不少，形容為「極爽」。",
+      "quote": "我最近一次尻option就是前面有一波intel那個真的是極爽"
+    },
+    {
+      "name": "OpenAI",
+      "ticker": null,
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "討論前沿模型競爭時提到OpenAI推出Astra，社群全部狗吹。也提到OpenAI作為模型商在燒股東的錢買算力，但持續有資金進來。",
+      "quote": "結果隔沒有多久馬上OpenAI下端出了Astra你看一下他所有的社群頁面全部人都在狗吹Astra"
+    },
+    {
+      "name": "Anthropic",
+      "ticker": null,
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到Anthropic在coding領域有口皆碑是最厲害的，財務數字讓大家喜歡，但模型API費用趨同化會影響其溢價空間。也提到Broadcom（Hack）已經all in這些SE業者包括Anthropic。",
+      "quote": "在Anthropic這邊在coding這裡還算是大家有口皆碑都覺得它是最厲害的...Envelope的一些財務數字大家看了很喜歡"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "AI基礎設施/雲端服務",
+      "stance": "看多",
+      "reason": "Google Cloud展示的回本數據證明AI Infra投資的高回報率，需求強勁到供應鏈全部加起來都不夠，未來展望看不到壞消息。"
+    },
+    {
+      "name": "光通訊/CPO供應鏈",
+      "stance": "看多",
+      "reason": "討論CPO供應鏈的價值鏈分配，包括FAU光纖耦合元件、高精度主動對位封裝設備等環節，建議投資者廣撒直接全包，不要只押單一環節。"
+    },
+    {
+      "name": "Google供應鏈（台股）",
+      "stance": "看多",
+      "reason": "Google持續加大採購，開出的Forecast和Demands非常強，全世界特殊零件加起來都不夠滿足需求。雖然股價不一定立刻反映，但產業方向持續向上。目前只有散熱相關在跑。"
+    },
+    {
+      "name": "ASIC/客製化晶片",
+      "stance": "看多",
+      "reason": "Google自研TPU（ASIC）一年回本，比GPU兩年回本更快，會持續加大ASIC採購力度。"
+    },
+    {
+      "name": "大模型商",
+      "stance": "中立",
+      "reason": "API費用趨同化、溢價權利縮小，大模型逐漸commodity化。模型商是AI產業鏈中扛最大風險的環節，靠外部資金持續投入維持運作。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "散熱有在跑",
+      "interpretation": "Google供應鏈中散熱相關族群股價表現較好",
+      "stance": "看多",
+      "quote": "雖然我知道講的東西可能後面大家一定聽到我們節目就想去佈局Google的supply chain什麼不一定會漲好像這邊看起來只有那個散熱有在跑但我們去看數據是看到Google真的是越買越多東西",
+      "candidates": [
+        {
+          "name": "奇鋐",
+          "ticker": "3017",
+          "market": "TW",
+          "reason": "散熱三雄之一，為AI伺服器散熱主要供應商，股癌提到Google供應鏈中散熱股在跑"
+        },
+        {
+          "name": "雙鴻",
+          "ticker": "3324",
+          "market": "TW",
+          "reason": "散熱三雄之一，AI伺服器散熱供應商"
+        },
+        {
+          "name": "建準",
+          "ticker": "2421",
+          "market": "TW",
+          "reason": "散熱三雄之一，伺服器風扇/散熱供應商"
+        }
+      ]
+    },
+    {
+      "term": "伊朗",
+      "interpretation": "指Elon Musk/Tesla/SpaceX的超大型AI集群租給別人的案例（語音辨識將Elon誤聽為伊朗）",
+      "stance": "看多",
+      "quote": "之前可能我們從伊朗那邊所得到的一個情報就是原來他的那個mega cost拿去租給別人可以回這麼快就原來他賺錢的速度可以這麼快",
+      "candidates": [
+        {
+          "name": "Tesla",
+          "ticker": "TSLA",
+          "market": "US",
+          "reason": "股癌前文提到SpaceX跟Tesla的超大型集群拿去租給別人回本很快，後文的「伊朗」應為語音辨識錯誤，指Elon Musk"
+        }
+      ]
+    },
+    {
+      "term": "Envelope / Fable",
+      "interpretation": "語音辨識錯誤，Envelope應為Anthropic，Fable應為Anthropic的Claude模型。股癌在討論前沿模型競爭時提到",
+      "stance": "僅提及",
+      "quote": "前陣子最紅的就是Fable那大家都講說好像只剩下Envelope的Fable在市場上有辦法搞出什麼東西你不要講說Google什麼很鳥你說OpenAI也是整個不見了然後再來就是Envelope的一些財務數字大家看了很喜歡",
+      "candidates": [
+        {
+          "name": "Anthropic",
+          "ticker": null,
+          "market": "US",
+          "reason": "Envelope應為Anthropic的語音辨識錯誤，Fable應為Claude模型。股癌提到其coding能力有口皆碑、財務數字被市場看好"
+        }
+      ]
+    },
+    {
+      "term": "Astra / Extra",
+      "interpretation": "語音辨識錯誤，應指OpenAI推出的新產品/模型（可能是o1或其他新模型），與Anthropic的Claude競爭",
+      "stance": "僅提及",
+      "quote": "結果隔沒有多久馬上OpenAI下端出了Astra你看一下他所有的社群頁面全部人都在狗吹Astra...就類似說Extra出來然後蓋Fable火鍋這樣的一個感覺",
+      "candidates": [
+        {
+          "name": "OpenAI",
+          "ticker": null,
+          "market": "US",
+          "reason": "股癌明確說是OpenAI推出的新模型，社群反應熱烈，蓋過Anthropic的Claude"
+        }
+      ]
+    },
+    {
+      "term": "Hack / Block.com",
+      "interpretation": "語音辨識錯誤，應指Broadcom（博通）。Block.com的電話會議應為Broadcom的earnings call，Hack為其代稱",
+      "stance": "看多",
+      "quote": "特別是我們在Block.com的電話會議裡面我們是有瞭解到Hack現在已經算是就是all in這些SE業者他也希望他們長大這些蒙古來的孩子希望可以好好念書要把他們養大",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "Block.com應為Broadcom的語音辨識錯誤，Hack為其CEO Hock Tan的代稱。股癌提到Broadcom在earnings call中表示all in ASIC業務，要把這些客戶養大"
+        }
+      ]
+    },
+    {
+      "term": "鏡頭廠",
+      "interpretation": "討論CPO供應鏈中做高精度主動對位的廠商，原本做機械加工的鏡頭廠現在精度要到半導體層級，股價trade到PE30倍",
+      "stance": "僅提及",
+      "quote": "過往你看到一些那種鏡頭廠他們本來是在做那種什麼機械加工的然後現在這個機械加工他的精度必須要搞到半導體層級所以於是你看他直接trade到PE30倍去",
+      "candidates": [
+        {
+          "name": "大立光",
+          "ticker": "3008",
+          "market": "TW",
+          "reason": "台股最知名鏡頭廠，但股癌此處可能指的是切入CPO高精度對位的光學廠商"
+        },
+        {
+          "name": "玉晶光",
+          "ticker": "3406",
+          "market": "TW",
+          "reason": "鏡頭廠之一，可能切入光通訊相關精密加工"
+        },
+        {
+          "name": "亞光",
+          "ticker": "3019",
+          "market": "TW",
+          "reason": "光學鏡頭廠，有切入光通訊領域的題材"
+        }
+      ]
+    },
+    {
+      "term": "SE業者 / 蒙古來的孩子",
+      "interpretation": "語音辨識可能有誤，SE業者應指ASIC客戶或CSP（Cloud Service Provider）客戶。「蒙古來的孩子」為股癌的比喻，指Broadcom要養大的ASIC客戶們",
+      "stance": "看多",
+      "quote": "Hack現在已經算是就是all in這些SE業者他也希望他們長大這些蒙古來的孩子希望可以好好念書要把他們養大",
+      "candidates": [
+        {
+          "name": "Google",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "Google TPU是Broadcom ASIC的重要客戶，本集大篇幅討論Google加大TPU採購"
+        },
+        {
+          "name": "Meta",
+          "ticker": "META",
+          "market": "US",
+          "reason": "Meta也是Broadcom ASIC客戶之一"
+        }
+      ]
+    },
+    {
+      "term": "Vera Rubin / Feynman",
+      "interpretation": "NVIDIA未來的GPU架構代號。Vera Rubin是下一代架構，Feynman是再下一代",
+      "stance": "僅提及",
+      "quote": "我們不知道說可能Vera Rubin丟出來或是後面的Feynman搞不好又會有不一樣的光景可是現階段來看其實TPU真的算是一個CP值蠻高的一個選項",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "Vera Rubin和Feynman是NVIDIA未來GPU架構代號，股癌提到這些新品推出後可能改變目前TPU的CP值優勢"
+        }
+      ]
+    },
+    {
+      "term": "某某做進去台積電（FAU相關）",
+      "interpretation": "某家做FAU相關零組件的公司被市場炒作說打進台積電CPO供應鏈，但台積電內部人士說沒有看到展貨，股價卻一直在高位",
+      "stance": "看空",
+      "quote": "一些FAU相關的components的股票有些甚至在市場上大家整天在講說那個某某我就不去點名人家那什麼他做進去台積電然後可是在台積電的人都講說根本就沒有看到這家廠商的東西有什麼展貨可是你看他股價就永遠都在很高位的",
+      "candidates": [
+        {
+          "name": "上詮",
+          "ticker": "3363",
+          "market": "TW",
+          "reason": "上詮為光通訊FAU（光纖陣列單元）相關廠商，市場常討論其是否打進台積電CPO供應鏈，與股癌描述的情境吻合"
+        },
+        {
+          "name": "波若威",
+          "ticker": "3163",
+          "market": "TW",
+          "reason": "光通訊連接器/FAU相關廠商，也是市場討論CPO概念股之一"
+        }
+      ]
+    },
+    {
+      "term": "3.5被跳過直接往下一代",
+      "interpretation": "Google的Gemini前沿模型，Gemini 2.0（3.5版本）可能被跳過，直接開發下一代（Gemini 4.0）",
+      "stance": "僅提及",
+      "quote": "Google目前的前沿模型好像不太行然後3.5可能被跳過要直接往下一代去那是不是他們開始把一些資源去移到他的Infra那一塊去",
+      "candidates": [
+        {
+          "name": "Google",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "直接討論Google Gemini模型的開發策略，3.5表現不佳所以跳過直接做4.0"
+        }
+      ]
+    },
+    {
+      "term": "Pitcha",
+      "interpretation": "語音辨識錯誤，應指Pichai，即Google CEO Sundar Pichai",
+      "stance": "僅提及",
+      "quote": "當然我們不是講說Pitcha一下就是不想去搞前沿模型他們一定都還是會搞他們絕對也不會放棄他們只是稍微的聚焦多一點在Flash那部分",
+      "candidates": [
+        {
+          "name": "Google",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "Pitcha為Google CEO Sundar Pichai的語音辨識錯誤"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP695 | 🍊",
+  "analyzed_at": "2026-10-31T17:45:55.882573",
+  "transcript_chars": 21336
+}

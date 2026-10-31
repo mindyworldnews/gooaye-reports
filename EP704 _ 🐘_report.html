@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP704 | 🐘</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-10-21</div>
+    <h1>EP704 | 🐘</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌主要討論了對市場短期雜訊的應對心態，強調不應因OpenAI營收數字修正等短期消息頻繁調整部位。重點分析了Marvell投資人日大幅上修營收展望，看好光通訊與資料中心互聯（Connectivity/Interconnect）的長期趨勢，並提及NPO與CPO並行、800G/1.6T/3.2T技術路線演進。另外分享了參加慢報Pro年會的感受及個人投資心態的轉變。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">MRVL</span><span class="quick-tag bullish">SpaceX</span><span class="quick-tag bullish">OpenAI</span><span class="quick-tag vague">AVGO</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「BlockCon」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">Broadcom（博通），光通訊/交換機/資料中心互聯領域的業界領頭羊</p>
+          <blockquote>「我覺得這邊可以去觀察像是BlockCon，因為BlockCon是業界的領頭羊，雖然他最近真的很低調，雖然他股價還真的停了蠻久，只是我們也是有了解到說BlockCon是有蠻多東西後面也會出來上秀，有可能看到Marvell這樣之後後面就看到Hug也輸人不輸陣的出來上秀」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 語音辨識將Broadcom聽成BlockCon，且逐字稿描述其為業界領頭羊、做交換機、股價停了蠻久但有好消息在後面，完全符合Broadcom在資料中心交換晶片與光通訊領域的地位。後面提到&#x27;看BlockCon他什麼時候會把那個交換機推上去&#x27;更確認是Broadcom。</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「信華」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">信驊（5274），BMC伺服器管理晶片龍頭廠商</p>
+          <blockquote>「即便這個東西丟出來立刻像信華的股價就跌下去了...也就是大家熟知的像是信華、新唐或者說在新櫃也有公司在做類似的東西」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="5274" data-cand-name="信驊" data-cand-market="TW"><code class="ticker">5274</code><a href="https://tw.stock.yahoo.com/quote/5274" target="_blank" title="開啟 5274 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">信驊</span><span class="cand-reason"> — 語音辨識將信驊聽成信華，上下文提到BMC（伺服器管理晶片）市場、營收很小但股價很貴的公司，與新唐並列提及，完全符合信驊的特徵。信驊是全球BMC晶片龍頭。</span><button class="wl-btn wl-btn-sm" data-ticker="5274" data-name="信驊" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「老黃」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">黃仁勳 / NVIDIA CEO</p>
+          <blockquote>「簡單來講就跟老黃的概念是有點類似，就是你下去提供solution的時候你不能夠只是可能某一個晶片或是某一個能源的裝置什麼的，你是要把所有東西都整合在一起」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="NVDA" data-cand-name="NVIDIA" data-cand-market="US"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">NVIDIA</span><span class="cand-reason"> — 股癌用老黃指黃仁勳/NVIDIA，在這集用來類比Marvell做total solution整合的策略概念。</span><button class="wl-btn wl-btn-sm" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「AOI」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">Applied Optoelectronics（美國光通訊公司），或泛指光通訊元件被炒作後大幅修正的案例</p>
+          <blockquote>「像那時候大家去買AOI，事後證明說台灣這些投資圈的人是全部買對，這AOI是對的，只是他前面雲霄飛車不知道搞你幾次，那下來都是我記得跌5、60%以上，那個是很難扛的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AAOI" data-cand-name="Applied Optoelectronics" data-cand-market="US"><code class="ticker">AAOI</code><a href="https://finance.yahoo.com/quote/AAOI" target="_blank" title="開啟 AAOI K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Applied Optoelectronics</span><span class="cand-reason"> — 逐字稿提到AOI是光通訊元件相關，台灣投資圈買對了但過程中跌了50-60%，用來警示追未來題材的波動風險。AAOI為美股光通訊公司，符合描述。</span><button class="wl-btn wl-btn-sm" data-ticker="AAOI" data-name="Applied Optoelectronics" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「Hug」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">語音辨識誤聽，可能指Broadcom自己（前面提到BlockCon後說Hug也輸人不輸陣），或指其他XPU/互聯公司</p>
+          <blockquote>「有可能看到Marvell這樣之後後面就看到Hug也輸人不輸陣的出來上秀，大家可以稍微期待一下有這樣的一個機會，因為我們也是注意到他們有蠻多好消息在後面放著」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 前後文與BlockCon連貫，Hug可能是語音辨識將Broadcom的某種簡稱或口語說法誤聽。整段描述的是同一家公司（業界領頭羊、做交換機、有好消息在後面），最可能仍指Broadcom。</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「那些光護臉」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">語音辨識誤聽，應為「光通訊」或「光互聯」相關領域</p>
+          <blockquote>「我覺得可以透過Marvell這一次的上修去觀察其他的XPU公司，或是要做Connectivity Interconnect的公司，然後會不會也去做上修...就是大家都會所以如果他可以這樣上修我相信其他人應該都會跟著上修」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 逐字稿提到XPU公司和做Connectivity Interconnect的公司都可能跟著Marvell上修，Broadcom為此領域最大競爭者之一。</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「電漿紙」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">語音辨識誤聽，應為「薄膜鈮酸鋰（TFLN）」之後的下一代材料技術，可能指plasmonics（電漿子學）相關的光學材料，用於3.2T光通訊</p>
+          <blockquote>「因為3.2T他們要使用電漿紙，所以可能蠻多人就會想去找這種電漿紙相關的股票，老實講我就馬上去找一下有沒有相關的東西，然後後來發現說因為是他們自己有去採購公司」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="MRVL" data-cand-name="Marvell" data-cand-market="US"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Marvell</span><span class="cand-reason"> — 股癌提到Marvell自己收購了有此技術的公司，所以目前主要受惠者是Marvell自身，其他公司是否採用同樣技術路線待觀察。</span><button class="wl-btn wl-btn-sm" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「TFLN」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">薄膜鈮酸鋰（Thin Film Lithium Niobate），1.6T光通訊使用的材料</p>
+          <blockquote>「像前陣子蠻多人在關注因為1.6T他用到TFLN的材料，我想說這個東西不是還很新嗎，在我看來他都還算是一個未來的題材，然後大家看到像這種聯電去往這個方向去做佈局」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2303" data-cand-name="聯電" data-cand-market="TW"><code class="ticker">2303</code><a href="https://tw.stock.yahoo.com/quote/2303" target="_blank" title="開啟 2303 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯電</span><span class="cand-reason"> — 逐字稿明確提到聯電往TFLN方向佈局，被股癌認為是做夢行情、未來題材，提醒要小心偏夢的東西修正時會跌很多。</span><button class="wl-btn wl-btn-sm" data-ticker="2303" data-name="聯電" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="MRVL" data-name="Marvell" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Marvell</span>
+            <span class="card-meta"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">投資人日大幅上修營收展望：2028年營收從180億上修至200億，2031年給出700-900億營收目標（約2026年的10倍）。Interconnect（光學、SerDes、NPO）佔近五成，Custom Compute佔三成七五。公司認為NPO與CPO會並行發展，看好連接（Connectivity）為主菜。</p>
+          <blockquote>「Marvell他們在這一次的Investor Day上面去再次的重申連接才是一個主菜...到2031他竟然直接給一個700到900億的一個營收數字，這個是差不多2026年的10倍」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="" data-name="SpaceX" data-market="其他">
+          <div class="card-header">
+            <span class="stock-name">SpaceX</span>
+            <span class="card-meta"><span class="market-tag">其他</span></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">提到自己在IPO時有買到，後來加碼被套但不在意，因為確信方向是對的。部位約佔8-10%，已做好風控，即使爆掉也可接受。</p>
+          <blockquote>「類似SpaceX那時候在IPO的時候我是有買到最前面的，只是後來上去我就跟著加碼嘛，然後後來崩下來...我就知道說我買的方向一定是對的」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="5274" data-name="信驊" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">信驊</span>
+            <span class="card-meta"><code class="ticker">5274</code><a href="https://tw.stock.yahoo.com/quote/5274" target="_blank" title="開啟 5274 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="5274" data-name="信驊" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">因Marvell宣布進軍資料中心管理晶片（類BMC市場），信驊股價下跌。但股癌認為這不一定是搶BMC市場，而是整個data center管理的total solution，且該市場TAM未來可能變超大，不一定是零和競爭。</p>
+          <blockquote>「即便這個東西丟出來立刻像信華的股價就跌下去了，可能大家就想像說有一個大咖的小市場，不一定有可能是說那個TM會變超級大，大家都可以分到更多的東西」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="4919" data-name="新唐" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">新唐</span>
+            <span class="card-meta"><code class="ticker">4919</code><a href="https://tw.stock.yahoo.com/quote/4919" target="_blank" title="開啟 4919 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="4919" data-name="新唐" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提及過去押注新唐的BMC故事曾賠錢，做戰敗檢討時認為BMC營收太小。但現在反思認為小市場可能未來會變大，不應以當下營收規模否定未來潛力。</p>
+          <blockquote>「我去押注了BMC故事然後前面被幹成翔...我就有提到說其實我忽略到一點是就算可能BMC全部的營收都給新唐好了那個都很小」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="" data-name="OpenAI" data-market="其他">
+          <div class="card-header">
+            <span class="stock-name">OpenAI</span>
+            <span class="card-meta"><span class="market-tag">其他</span></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">營收從700億被FT修正為500億引發市場恐慌，但股癌認為從2B到50B的成長速度是人類歷史極度罕見的紀錄，不應因計算方式差異就解讀為AI要出事。</p>
+          <blockquote>「這個公司從2B到50B花一個超級短的時間，這應該是那種人類歷史上極度罕見甚至未來我也相信說應該是比較難去超越的一個紀錄」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>光通訊（Connectivity/Interconnect）</strong><span class="sector-reason"> — Marvell投資人日顯示Interconnect（含光學、SerDes、NPO）佔2031年營收近五成。公司認為NPO與CPO會並行發展，800G為目前主力，1.6T正在Ramp，3.2T可能2028年就會出現。整體方向是資料中心從chip-to-chip到rack-to-rack甚至DC-to-DC的高速互聯。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>BMC/資料中心管理晶片</strong><span class="sector-reason"> — Marvell進軍此領域並非搶BMC小市場，而是做整個data center的total solution管理。未來TAM可能變得很大，但目前市場仍小，需要觀察。類似AI在2020年前也是小市場但後來爆發。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">AI產業長期趨勢</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> OpenAI營收從700億被修正為500億年化營收引發市場恐慌，但從2B到50B的成長速度是人類歷史罕見，不應因短期數字修正而動搖對AI長期方向的判斷。市場過度反應短期雜訊，方向對了就不需要因為一時的上修下修而頻繁調整部位。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">投資心態與風控</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 強調不應因短期消息（如OpenAI營收修正、供應鏈數字波動）而頻繁砍倉追回，應做好風控配置後耐心持有。引用前外資大哥的觀點：方向對了，那些短期數字都是noise。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

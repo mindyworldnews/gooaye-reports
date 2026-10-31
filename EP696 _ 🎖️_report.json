@@ -1,0 +1,256 @@
+{
+  "summary": "本集股癌主要討論Apple發表會中iPhone Duo摺疊手機的供應鏈影響與銷量預期，分析Oracle財報與AI基礎建設面臨的電力與政治瓶頸，以及分享Mark Zuckerberg在Goldman Sachs會議上對AI大型語言模型寡頭格局的看法。此外也提到群聯Adaptive方案在地端AI推論的商業前景。",
+  "macro_views": [
+    {
+      "topic": "AI基礎建設與地方政治風險",
+      "view": "AI資料中心建設已進入地方政治博弈階段，Bernie Sanders、AOC等反對聲浪加大，若民主黨勢力擴大，可能對資料中心建置造成變數。電力與許可是關鍵瓶頸，大企業可能選擇自行解決供電問題（燃氣、太陽能等）。",
+      "stance": "中立"
+    },
+    {
+      "topic": "大型語言模型的經濟模式",
+      "view": "閉源模型投1000億可賺1300億，開源模型投1000億只賺300億。目前價值主要集中在前端模型廠商，但他們壓力也大，賺到的錢需立刻再投入。未來隨著應用劃分更清楚，簡單應用交給開源模型，地端推論需求增加，價值分配可能改變。",
+      "stance": "中立"
+    },
+    {
+      "topic": "台股盤面生態",
+      "view": "市場人與人的信賴消失，所長停（漲停鎖住）隔天不繼續跑，利多出盡頻繁，整體環境偏向震盪，利多不一定會漲。身邊一些較小的投資者開始全面轉空、上空單，但股癌認為這在大多頭行情中是可惜的做法。",
+      "stance": "中立"
+    },
+    {
+      "topic": "中國消費降級",
+      "view": "中國消費明顯降級，精品品牌成績不佳，華強北整形機（仿品）賣得很好，這可能影響iPhone Duo摺疊手機在中國市場的表現。",
+      "stance": "看空"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "新日興",
+      "ticker": "3376",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "iPhone Duo鉸鏈的主要供應商之一，佔major share，但需與鴻海拆帳，利潤被蘋果壓制嚴格，股價難掌握。雖產品確定打入，但第一代margin不如預期。",
+      "quote": "像鉸鏈的話，台系的廠商3376新日行他就是裡面最主要的一個玩家之一...只是在3376這邊會稍微複雜一點，因為他畢竟要去跟鴻海拆帳...後來在業界的朋友是講說好像沒有，就是蘋果還是壓制的蠻嚴格的"
+    },
+    {
+      "name": "蘋果",
+      "ticker": "AAPL",
+      "market": "US",
+      "stance": "看多",
+      "reason": "iPhone Duo定價比預期低，銷量應超出預期。在記憶體漲價中反而產生優勢，毛利守得好，能以實惠價格獲取新客。催脂整合能力強大，掌握供應鏈與通路，在AI時代不會被邊緣化。",
+      "quote": "蘋果應該就是有機會會再有...在過去大家是比較看他沒有，覺得他可能在AI時代要被邊緣化...在這一波的記憶體漲價裡面他反而產生巨大的一個優勢...他漲價他不一定會賠錢，他還是毛利可以守得相當的不錯"
+    },
+    {
+      "name": "Oracle",
+      "ticker": "ORCL",
+      "market": "US",
+      "stance": "中立",
+      "reason": "營收年增30%，RPO達6600多億，全年上修。但商業模式靠客戶預付、BYOH、供應商融資等槓桿手法，需求有可能被融資放大而虛胖。4年舊卡漲價20%驗證了GPU的耐用性。",
+      "quote": "Oracle這季的表現其實都還蠻好的...營收部分是年增了30%，那未履約的合約呢RPO有6600多億，所以上修全年...不用出錢的魔術，像目前就是由客戶預付...供應商融資借NVIDIA或是設備商的錢"
+    },
+    {
+      "name": "群聯",
+      "ticker": "8299",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "Adaptive方案用NAND做地端AI推論與fine-tune，降本效果佳（台幣兩三百萬投入可省50M），符合企業端不想一直上雲的趨勢。公司佈局廣泛，從controller擴展到高速傳輸等，概念超前。",
+      "quote": "前陣子聽潘董在財報狗節目聊到AI Adaptive的降本效果極佳...他們是很早就在提這個概念，就是我去幫你切，把東西切一切之後，然後用我們的硬體去做訓練，可以幫你省下非常多錢"
+    },
+    {
+      "name": "高通",
+      "ticker": "QCOM",
+      "market": "US",
+      "stance": "看空",
+      "reason": "蘋果自研Modem晶片從C1走到C2，高通在蘋果供應鏈中的角色會慢慢被擠掉。",
+      "quote": "像我們前面看到C1的那個Modem晶片，然後現在已經走到C2了，可以想像像高通在後面可以扮演的角色一定就是慢慢的被擠掉"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到NVIDIA與TSM的利多持續發酵未完全出盡，以及Oracle的seller financing與NVIDIA相關。黃仁勳提到的Fungible Durable Rentable概念。",
+      "quote": "那你說利多出盡的話，那NVIDIA跟TSM他們利多發幾次了，那也沒有完全出盡，就是還是會一直上去"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "與NVIDIA並列為利多持續未出盡的代表，夜盤期貨中作為大票會動的例子。",
+      "quote": "那NVIDIA跟TSM他們利多發幾次了，那也沒有完全出盡"
+    },
+    {
+      "name": "特斯拉",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "以特斯拉和SpaceX為例說明垂直整合能力，SpaceX自己做PCB不外包，類比蘋果的供應鏈掌控策略。也提到Tesla放出大量太陽能訂單帶動相關供應鏈。",
+      "quote": "讓我想到特斯拉的感覺...他們甚至在SpaceX裡面有些PCB他自己打他自己組...最近像Tesla這邊就有一個傳說是這樣，就是對外放出了大量的太陽能的訂單"
+    },
+    {
+      "name": "元大台灣50",
+      "ticker": "0050",
+      "market": "ETF",
+      "stance": "僅提及",
+      "reason": "Q&A中提到回檔時將資金轉進0050等防守性標的。",
+      "quote": "之前回檔說資金轉去盛魁股0050的指數，這樣不是滿手多單嗎"
+    },
+    {
+      "name": "研華",
+      "ticker": "2395",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "群聯Adaptive方案曾與研華合作，但後續推進情況不明。",
+      "quote": "我記得他們有跟Advantech就研華有一些合作，我是不知道後面推的怎麼樣"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "摺疊手機供應鏈",
+      "stance": "中立",
+      "reason": "iPhone Duo推出有望帶動摺疊手機市場銷量上修，鉸鏈與觸控相關元件受惠，但蘋果壓制利潤嚴格，且消費性題材成長性遠不如AI，資金未必願意投入。"
+    },
+    {
+      "name": "觸控/顯示元件（色頻元件）",
+      "stance": "中立",
+      "reason": "美系觸控/顯示元件廠因摺疊手機題材已開始動起來，摺疊機設計上與一般手機有差異且價格較好，但股癌個人不會去看消費性題材。"
+    },
+    {
+      "name": "AI資料中心/基礎建設",
+      "stance": "看多",
+      "reason": "BlockCon提出一年就可以回本，Oracle營收年增30%、RPO大增。但面臨電力瓶頸與地方政治阻力，大企業可能自行解決供電。整體需求仍強。"
+    },
+    {
+      "name": "太陽能/表後供電",
+      "stance": "看多",
+      "reason": "因電力系統卡關，表後供電方案（燃氣、太陽能等）成為AI資料中心的解方。Tesla傳出大量太陽能訂單，相關供應鏈跑起來。"
+    },
+    {
+      "name": "地端AI/邊緣AI",
+      "stance": "看多",
+      "reason": "企業不願一直上雲（成本太高），地端推論需求增加。群聯Adaptive用NAND做地端AI推論的方案降本效果佳，搭配CaveCache外推至NAND/Storage的趨勢。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "色頻相關的元件",
+      "interpretation": "觸控/顯示面板相關的感測元件或觸控IC，因摺疊手機設計需求不同而受惠",
+      "stance": "中立",
+      "quote": "如果你轉頭去看一些色頻相關的元件的話，然後在美系廠商這邊，你可以去注意到色頻元件廠其實蠻多動起來，那現在有一個說法就是因為摺疊機大家已經會提早去想像他有可能在後面會有蠻好的銷量跑出來",
+      "candidates": [
+        {
+          "name": "Synaptics",
+          "ticker": "SYNA",
+          "market": "US",
+          "reason": "股癌明確說「美系廠商」的色頻元件廠動起來，Synaptics是美系觸控/顯示驅動IC大廠，與摺疊手機觸控方案相關"
+        },
+        {
+          "name": "Cirrus Logic",
+          "ticker": "CRUS",
+          "market": "US",
+          "reason": "美系音頻/觸覺反饋IC廠，也涉及感測元件，為蘋果重要供應商"
+        }
+      ]
+    },
+    {
+      "term": "安芬諾",
+      "interpretation": "Amphenol，美系連接器/鉸鏈大廠，iPhone Duo鉸鏈供應商之一",
+      "stance": "僅提及",
+      "quote": "像鉸鏈的話，台系的廠商3376新日行他就是裡面最主要的一個玩家之一，還有美系的像是安芬諾",
+      "candidates": [
+        {
+          "name": "Amphenol",
+          "ticker": "APH",
+          "market": "US",
+          "reason": "股癌直接提到「美系的像是安芬諾」，與新日興並列為iPhone Duo鉸鏈主要供應商"
+        }
+      ]
+    },
+    {
+      "term": "BlockCon",
+      "interpretation": "可能指Blockpower或某AI資料中心營運商，提出AI Data Center一年可回本的說法",
+      "stance": "僅提及",
+      "quote": "像BlockCon直接提出來一年就可以回本，那你最大的問題其實是要在法規跟電力這邊要去過關",
+      "candidates": []
+    },
+    {
+      "term": "Huck",
+      "interpretation": "Mark Zuckerberg（祖克柏），在Goldman Sachs會議上發言，討論AI大型語言模型的寡頭格局",
+      "stance": "僅提及",
+      "quote": "Huck也去了這個GS的會議...他認為呢B所模型最後的贏家是寡頭，然後甚至就是一個人，就是只有一組人會獲得勝利...Flappy跟OpenAI輪流的超車",
+      "candidates": [
+        {
+          "name": "Meta",
+          "ticker": "META",
+          "market": "US",
+          "reason": "Huck即Zuck（Mark Zuckerberg），Meta CEO。股癌提到他在GS會議上對閉源vs開源模型經濟模式的看法，以及Llama（Flappy可能是語音辨識錯誤）與OpenAI輪流超車"
+        }
+      ]
+    },
+    {
+      "term": "B所模型/B所模式",
+      "interpretation": "閉源模型（Closed-source model），語音辨識將「閉鎖」聽成「B所」",
+      "stance": "中立",
+      "quote": "他認為呢B所模型最後的贏家是寡頭...目前這些B所市的呢你可能投一千億是可以賺一千三百億，如果你今天是開放式權重的模型呢你可能投一千億能夠賺三百億",
+      "candidates": [
+        {
+          "name": "OpenAI (GPT)",
+          "ticker": null,
+          "market": "US",
+          "reason": "股癌提到閉源模型投1000億賺1300億，OpenAI是最大的閉源模型廠商，且文中提到「Flappy跟OpenAI輪流的超車」"
+        },
+        {
+          "name": "Google (Gemini)",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "上集提到Google在Goldman Sachs會議的發言，Google也是閉源模型的主要玩家之一"
+        }
+      ]
+    },
+    {
+      "term": "Flappy",
+      "interpretation": "Llama（Meta的開源大型語言模型），語音辨識錯誤將Llama聽成Flappy",
+      "stance": "僅提及",
+      "quote": "Flappy跟OpenAI輪流的超車，應該是在後來一段時間會看到的",
+      "candidates": [
+        {
+          "name": "Meta",
+          "ticker": "META",
+          "market": "US",
+          "reason": "Llama是Meta推出的開放權重大型語言模型，股癌認為Llama與OpenAI會輪流超車，語音辨識將Llama誤聽為Flappy"
+        }
+      ]
+    },
+    {
+      "term": "CaveCache往外丟",
+      "interpretation": "KV Cache（Key-Value Cache），AI推論中的快取資料，從昂貴的HBM/SRAM外推至NAND/Storage以降低成本",
+      "stance": "看多",
+      "quote": "最近就已經越來越多討論跟一些實務的做法，就是我把CaveCache往外丟，我丟到Nand，我丟到甚至Storage Rack裡面去，開始去切分這些模型",
+      "candidates": [
+        {
+          "name": "群聯",
+          "ticker": "8299",
+          "market": "TW",
+          "reason": "股癌在此段落直接討論群聯Adaptive方案，用NAND承接KV Cache外推的需求，是此趨勢的主要受惠者"
+        }
+      ]
+    },
+    {
+      "term": "盛魁股",
+      "interpretation": "升規股/神鬼股，可能指大型權值股或防守性配置，語音辨識誤聽",
+      "stance": "僅提及",
+      "quote": "之前回檔說資金轉去盛魁股0050的指數，這樣不是滿手多單嗎",
+      "candidates": [
+        {
+          "name": "元大台灣50",
+          "ticker": "0050",
+          "market": "ETF",
+          "reason": "股癌在回檔時將資金轉入0050等防守性標的，「盛魁股」可能是語音辨識錯誤，實際指升規或大型股配置"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP696 | 🎖️",
+  "analyzed_at": "2026-10-31T17:44:02.998522",
+  "transcript_chars": 21554
+}

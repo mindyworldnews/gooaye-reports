@@ -1,0 +1,248 @@
+{
+  "summary": "本集股癌主要討論SpaceX財報表現優異但盤前反應不如預期，認為AI算力需求基本面仍強勁，短期回檔偏向情緒面而非基本面問題。同時提到NAND需求EB數遭微幅下修、載板嚴重缺貨但相關個股股價表現不一，以及Cleanroom（無塵室）產能成為半導體擴產瓶頸。整體操作上偏向保守調節，換股至下一波題材。",
+  "macro_views": [
+    {
+      "topic": "AI算力需求與基本面",
+      "view": "SpaceX電話會議顯示算力需求仍供不應求，馬斯克表示不簽長約因為價格持續上漲，預期明年6個月即可回本。基本面沒有問題，近期回檔偏向情緒面（sentiment）而非基本面惡化。",
+      "stance": "看多"
+    },
+    {
+      "topic": "NAND記憶體需求",
+      "view": "海內外研調報告顯示接下來一兩年NAND所需EB數微幅下修，雖然供需失衡仍存在（供應跟不上），但需求端有回調跡象，記憶體漲價可能維持Flat或微增，難以再暴增。",
+      "stance": "中立"
+    },
+    {
+      "topic": "股市短期風險與操作策略",
+      "view": "越來越多標的轉弱，盤面能做的越來越少，有PTSD所以提早做保守調整。不是看空，而是調節換股，將資金從漲不動的標的轉向下一波題材。強調現在只是「不舒服」，還沒進入噩夢階段。",
+      "stance": "中立"
+    },
+    {
+      "topic": "歐洲非法移民問題",
+      "view": "歐洲正經歷非法移民政策的反噬，社會問題嚴重，民怨大，需要很長時間修正。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "SpaceX",
+      "ticker": null,
+      "market": "US",
+      "stance": "看多",
+      "reason": "營收成績極佳，SI（Super Intelligence）營收成長暴力，Starlink通訊業務也很好。電話會議中馬斯克表示不簽長約因算力價格持續上漲，預期6個月回本，打破市場對算力泡沫的擔憂。但盤前漲幅不到10%，認為應該漲更多。",
+      "quote": "SpaceX的營收呢也開了一個巨屌的成績...他們不會急著想要去簽長約...因為你可以看到算力的價格其實持續有去上漲...甚至到明年他們是有機會去預期那只要6個月就可以直接回本"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "以台積電為例說明超預期財報應有更大漲幅反應，以及不同時期進場成本差異。",
+      "quote": "很類似說什麼台積電本來大家預期是隨便舉例那個什麼quota on quota是10%然後突然開一個什麼20%、30%那種很恐怖...完全是高於street consensus的成績"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到MTK可能進入TPU下個世代時在載板方面（特別是EMIB）會遇到良率問題。另外提到有人罵MTK，但股癌認為它是噴好幾倍的東西，買在山頂要反省自己。",
+      "quote": "就像可能上一集Q&A不是有人要出來罵那個MTK嗎你不要忘記他是噴好幾倍的東西所以買在山頂真的有時候要反省自己...像是MTK或像是Blockart他們可能進入到這個TPU的下個世代的時候有可能在載板方面特別是如果他是使用EMIB的話"
+    },
+    {
+      "name": "欣興",
+      "ticker": "3037",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到EMIB-T載板良率問題時，引用Trendforce數據指出欣興良率約20到30%，身邊知情朋友認為可能更低。",
+      "quote": "EBITDA是有50到60然後新興是大概20到30當然身邊有一些知情的朋友跟我講說應該是更低因為如果說有到50、60的話早就可以量產了"
+    },
+    {
+      "name": "ASML",
+      "ticker": "ASML",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到ASML對外電話會議中重申Cleanroom（無塵室）出不來是設備無法進場的瓶頸，影響載板擴產。",
+      "quote": "最近在ASML的法說會裡面不是法說會就是對外的電話會議裡面其實就再一次有去重申這件事情為什麼會有一些成績開不出來就是因為Cleanroom出不來"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "作為類比SpaceX執行力的參考，表示如果相信其執行力可類比SpaceX或Tesla，算力需求前景明朗。",
+      "quote": "如果說可以去類比SpaceX或是Tesla的話那就可以算是蠻明朗的就是目前可能針對算力的需求都還是非常的龐大"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "載板（ABF/BT基板）",
+      "stance": "看多",
+      "reason": "TPCA展會回報載板業歌舞昇平，市場上最缺的東西除記憶體外就是載板，高階PCB原料和設備都極度缺乏。2027-2028會有大擴產潮。但部分個股股價破底，可能是資金集中在其他領先族群所致。載板EMIB良率仍低（20-60%），是需要密集解決的痛點。"
+    },
+    {
+      "name": "記憶體（NAND）",
+      "stance": "中立",
+      "reason": "供需失衡仍存在但需求端EB數微幅下修，記憶體漲價可能維持Flat或微增，難以再暴增。Agent AI時代理論上存儲需求應更高，但CSP各項Demand統整後數字有回調。"
+    },
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "OCP展望很好，DSP也給出正向展望，光通元件需求極好。"
+    },
+    {
+      "name": "Neo Cloud（算力租賃）",
+      "stance": "中立",
+      "reason": "市場擔心融資成本越來越高，但SpaceX表示6個月可回本，可能緩解市場疑慮。一般對外募資聽到約14個月回本期，比SpaceX的6個月長但仍算合理。"
+    },
+    {
+      "name": "無塵室（Cleanroom）相關",
+      "stance": "看多",
+      "reason": "ASML重申Cleanroom產能不足是設備進場的瓶頸，載板擴產需要先解決無塵室問題，是接下來需要被解決的重要環節。但相關股票目前不太會動，可能因資金集中在其他族群。"
+    },
+    {
+      "name": "PCB/高階PCB",
+      "stance": "看多",
+      "reason": "TPCA展會顯示整體需求好，但部分個股股價表現不佳，有些甚至破底。認為是資金分配問題而非基本面問題。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "SI",
+      "interpretation": "SpaceX旗下的AI/Super Intelligence業務，原名AI後在川普呼籲下改名為Super Intelligence",
+      "stance": "看多",
+      "quote": "在他的SI也就是以前的AI只是後來在川普的呼籲之下現在把它叫Super Intelligence SI的營收成長呢是極度的暴力啦",
+      "candidates": [
+        {
+          "name": "SpaceX（xAI/Grok相關）",
+          "ticker": null,
+          "market": "US",
+          "reason": "逐字稿明確說明SI是SpaceX（應為馬斯克旗下xAI）的業務，原名AI改為Super Intelligence"
+        }
+      ]
+    },
+    {
+      "term": "CCR",
+      "interpretation": "可能指載板或PCB相關的特定公司，股癌提到有人在罵CCR或載板相關公司",
+      "stance": "僅提及",
+      "quote": "所以就開始看到有人在罵一些可能CCR或載板相關的公司罵的超垃圾可是你拉長看其實也不用多長就半年就好那漲到爆掉的東西只是可能最近稍微出現一些回檔就很多人開始發瘋了",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "逐字稿上下文在討論載板族群，CCR可能是語音辨識誤判，欣興為載板龍頭且後文直接提到欣興良率問題"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "載板族群主要公司之一，上下文討論載板相關個股近期回檔被罵"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "載板族群主要公司之一，符合上下文討論載板相關個股半年大漲後回檔的描述"
+        }
+      ]
+    },
+    {
+      "term": "Blockart",
+      "interpretation": "語音辨識可能誤判，上下文提到與MTK並列進入TPU下個世代，最可能指Broadcom（博通）",
+      "stance": "僅提及",
+      "quote": "像是MTK或像是Blockart他們可能進入到這個TPU的下個世代的時候有可能在載板方面特別是如果他是使用EMIB的話",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿中Blockart與MTK並列討論TPU下個世代，Broadcom是主要的ASIC/TPU設計公司（為Google設計TPU），語音辨識將Broadcom誤判為Blockart"
+        }
+      ]
+    },
+    {
+      "term": "長屋類股",
+      "interpretation": "語音辨識可能有誤，從上下文「大家都知道說很好然後成數沒有很高可是就是上不去」來看，可能指航運類股或某個基本面好但股價不動的族群",
+      "stance": "中立",
+      "quote": "就跟那種長屋類股一樣因為長屋也是大家都知道說很好然後成數沒有很高可是就是上不去",
+      "candidates": [
+        {
+          "name": "長榮",
+          "ticker": "2603",
+          "market": "TW",
+          "reason": "「長屋」可能是語音辨識誤判「長榮」，長榮航運基本面好、本益比不高但股價長期不太動，符合上下文描述"
+        },
+        {
+          "name": "陽明",
+          "ticker": "2609",
+          "market": "TW",
+          "reason": "航運類股之一，同樣符合基本面好但股價上不去的描述"
+        },
+        {
+          "name": "萬海",
+          "ticker": "2615",
+          "market": "TW",
+          "reason": "航運類股之一，符合成數不高但漲不上去的特徵"
+        }
+      ]
+    },
+    {
+      "term": "EBITDA是有50到60然後新興是大概20到30",
+      "interpretation": "這裡的EBITDA應該不是財務指標，而是指Intel EMIB載板的良率數字。「新興」是語音辨識誤判「欣興」（3037）。意思是某廠商EMIB良率50-60%，欣興EMIB良率約20-30%。",
+      "stance": "僅提及",
+      "quote": "在載板這一段他的那個良率最近看Trendforce是爆出來講說EBITDA是有50到60然後新興是大概20到30當然身邊有一些知情的朋友跟我講說應該是更低",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "「新興」為語音辨識誤判「欣興」，欣興為台灣載板龍頭，是EMIB載板的主要供應商，上下文討論EMIB載板良率問題"
+        }
+      ]
+    },
+    {
+      "term": "Neo Cloud",
+      "interpretation": "指CoreWeave、Lambda等算力租賃/雲端GPU服務商，市場擔心其融資成本過高",
+      "stance": "中立",
+      "quote": "說不定也會救就是最近的這些Neo Cloud一點因為可能在市場上大家擔心的是你這個募資的成本越來越高融資的成本越來越高那是不是會導致一些問題的產生",
+      "candidates": [
+        {
+          "name": "CoreWeave",
+          "ticker": null,
+          "market": "US",
+          "reason": "Neo Cloud代表性公司，逐字稿提到融資成本高、利息飆到十幾%的擔憂，CoreWeave是最常被討論的Neo Cloud公司"
+        }
+      ]
+    },
+    {
+      "term": "伊朗",
+      "interpretation": "語音辨識誤判，結合上下文「Jensen Huang已經有提過說伊朗它算是知情力最強大的老闆之一在Data Center的建置速度他們算是無與倫比」，這裡的「伊朗」最可能指「Elon」即Elon Musk（馬斯克）",
+      "stance": "看多",
+      "quote": "Jensen Huang已經有提過說伊朗它算是知情力最強大的老闆之一在Data Center的建置速度他們算是無與倫比非常非常的厲害他們厲害到什麼樣的一個程度呢大家今天發現它Data Center的一個卡住的環節有可能是渦輪的風扇這一塊",
+      "candidates": [
+        {
+          "name": "SpaceX / xAI",
+          "ticker": null,
+          "market": "US",
+          "reason": "「伊朗」是語音辨識將Elon（Musk）誤判，上下文描述其Data Center建置速度極快、執行力強、遇到缺料直接自製，完全符合馬斯克xAI的Memphis超級計算中心的報導"
+        }
+      ]
+    },
+    {
+      "term": "EMIB / EMIB-T",
+      "interpretation": "Intel的Embedded Multi-die Interconnect Bridge封裝技術，用於載板互連，目前良率是瓶頸",
+      "stance": "僅提及",
+      "quote": "特別是如果他是使用EMIB的話或是EMIB-T他遇到的問題是其實在Intel那邊我們應該在幾個月前跟大家講Intel的良率早就已經拉到90幾%以上甚至是已經97到99之間但是在載板這一段他的那個良率",
+      "candidates": [
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "market": "US",
+          "reason": "EMIB是Intel的封裝技術，逐字稿提到Intel端良率已達97-99%，但載板端良率仍低"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP707 | 🦋",
+  "analyzed_at": "2026-10-21T18:55:18.278220",
+  "transcript_chars": 21846
+}

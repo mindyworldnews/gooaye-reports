@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP692 | 🍺</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-10-31</div>
+    <h1>EP692 | 🍺</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌討論了Anthropic與Salesforce合作推出Cloudforce的意義，認為SaaS Apocalypse不存在；分析Marvell上修財務預期背後的XPU與光通訊成長動能；深入探討NVIDIA在供應鏈掌控、GPU vs ASIC競爭格局中的優勢，以及載板缺貨、記憶體規格調整等台股供應鏈機會。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">CRM</span><span class="quick-tag bullish">Anthropic</span><span class="quick-tag bullish">MRVL</span><span class="quick-tag bullish">NVDA</span><span class="quick-tag vague">3037</span><span class="quick-tag vague">8046</span><span class="quick-tag vague">3189</span><span class="quick-tag vague">6451</span><span class="quick-tag vague">3081</span><span class="quick-tag vague">4979</span><span class="quick-tag vague">COHR</span><span class="quick-tag vague">LITE</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「載板」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">ABF/BT載板製造商，AI伺服器所需的關鍵基板</p>
+          <blockquote>「最缺貨的環節目前就是在載板這邊我們注意到有一個非常大的缺口...如果記憶體他要從12i變8i甚至現在有一個新的說法是說會回到4i...他可能就需要一個更大的板子用量...但問題是現在板子本身就是一個缺貨的主軸」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3037" data-cand-name="欣興" data-cand-market="TW"><code class="ticker">3037</code><a href="https://tw.stock.yahoo.com/quote/3037" target="_blank" title="開啟 3037 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">欣興</span><span class="cand-reason"> — 台灣最大ABF載板廠商，股癌提到載板是最缺貨環節且缺口非常大，欣興為載板龍頭直接受惠</span><button class="wl-btn wl-btn-sm" data-ticker="3037" data-name="欣興" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="8046" data-cand-name="南電" data-cand-market="TW"><code class="ticker">8046</code><a href="https://tw.stock.yahoo.com/quote/8046" target="_blank" title="開啟 8046 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">南電</span><span class="cand-reason"> — 台灣主要ABF載板供應商之一，載板缺貨且需求因記憶體規格調整而增加</span><button class="wl-btn wl-btn-sm" data-ticker="8046" data-name="南電" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3189" data-cand-name="景碩" data-cand-market="TW"><code class="ticker">3189</code><a href="https://tw.stock.yahoo.com/quote/3189" target="_blank" title="開啟 3189 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">景碩</span><span class="cand-reason"> — BT載板與ABF載板供應商，載板缺口擴大時為主要受惠標的</span><button class="wl-btn wl-btn-sm" data-ticker="3189" data-name="景碩" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「光通/光護臉」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">光通訊相關元件與族群，包含光交換晶片、光收發模組等AI伺服器必備元件（「光護臉」為語音辨識誤植，應為光通訊相關用語）</p>
+          <blockquote>「大家注意到光通的股票是跑得特別的強勢，蠻多都已經進入到新高...這些光護臉相關的概念股，不管是從最上游的材料，然後到中間的什麼封裝...這個東西算是後面的一個那種非常強大的戰略物資」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6451" data-cand-name="訊芯-KY" data-cand-market="TW"><code class="ticker">6451</code><a href="https://tw.stock.yahoo.com/quote/6451" target="_blank" title="開啟 6451 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">訊芯-KY</span><span class="cand-reason"> — 台灣光通訊封裝龍頭，股癌提到光通從上游材料到封裝都是戰略物資，訊芯為光通訊封裝代表</span><button class="wl-btn wl-btn-sm" data-ticker="6451" data-name="訊芯-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3081" data-cand-name="聯亞" data-cand-market="TW"><code class="ticker">3081</code><a href="https://tw.stock.yahoo.com/quote/3081" target="_blank" title="開啟 3081 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯亞</span><span class="cand-reason"> — 光通訊雷射元件供應商，股癌提到NVIDIA大量採購光通與雷射相關元件</span><button class="wl-btn wl-btn-sm" data-ticker="3081" data-name="聯亞" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="4979" data-cand-name="華星光" data-cand-market="TW"><code class="ticker">4979</code><a href="https://tw.stock.yahoo.com/quote/4979" target="_blank" title="開啟 4979 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華星光</span><span class="cand-reason"> — 光通訊收發模組廠商，股癌提到光通族群修正很久後重新醒過來進入新高</span><button class="wl-btn wl-btn-sm" data-ticker="4979" data-name="華星光" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="COHR" data-cand-name="Coherent" data-cand-market="US"><code class="ticker">COHR</code><a href="https://finance.yahoo.com/quote/COHR" target="_blank" title="開啟 COHR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Coherent</span><span class="cand-reason"> — 全球光通訊龍頭之一，股癌提到光通相關概念股跑得特別強勢</span><button class="wl-btn wl-btn-sm" data-ticker="COHR" data-name="Coherent" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="LITE" data-cand-name="Lumentum" data-cand-market="US"><code class="ticker">LITE</code><a href="https://finance.yahoo.com/quote/LITE" target="_blank" title="開啟 LITE K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Lumentum</span><span class="cand-reason"> — 光通訊雷射元件大廠，與NVIDIA採購光通元件擠壓對手產能的論述相關</span><button class="wl-btn wl-btn-sm" data-ticker="LITE" data-name="Lumentum" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「XPU」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">泛指各家自研的AI加速晶片/ASIC，相對於NVIDIA通用GPU的客製化晶片方案</p>
+          <blockquote>「你們現在看到這些很酷的XPU持續的推出，他們有沒有辦法拿到這些產能，他會是後來的一個大新聞...可能他會一直出現地炎，他東西不一定推的出來，因為他根本就沒有辦法去取得這些產能」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="MRVL" data-cand-name="Marvell" data-cand-market="US"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Marvell</span><span class="cand-reason"> — 股癌明確提到Marvell上修財務預期中最大宗就是XPU，從Google拿到的ASIC案子開始放量</span><button class="wl-btn wl-btn-sm" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 全球ASIC/XPU設計龍頭之一，股癌討論ASIC搶GPU市佔但供應鏈是挑戰</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「Wise and Fabric」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">語音辨識誤植，應指Anthropic，股癌認為在與Salesforce的合作中Anthropic會掌握較多利潤與定價權</p>
+          <blockquote>「我們目前猜Wise and Fabric會掌握比較多的一個利潤...可是這邊還要再看，說不定最後面數據的影響超出我們的想像」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="Anthropic" data-cand-market="US"><span class="market-tag">US</span> <span class="cand-name">Anthropic</span><span class="cand-reason"> — 前後文討論Anthropic與Salesforce的Cloudforce合作，討論誰掌握定價權與利潤，Wise and Fabric為語音辨識對Anthropic的誤植</span></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「VR Ruby」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">語音辨識可能有誤，應指NVIDIA下一代晶片架構Vera Rubin，股癌提到NVIDIA晶片已迭代到此代，且ramp速度會是史上最快</p>
+          <blockquote>「在NVIDIA這邊其實晶片已經迭代到VR Ruby，根據他在電話會議裡面的說法是，從現在開始要很快的RAM上去，而且可能是他過往產品線裡面RAM最快的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="NVDA" data-cand-name="NVIDIA" data-cand-market="US"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">NVIDIA</span><span class="cand-reason"> — VR Ruby即NVIDIA的Vera Rubin架構，股癌引用電話會議說法指出此代ramp速度將是史上最快</span><button class="wl-btn wl-btn-sm" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「NFAP」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">語音辨識誤植，根據上下文應指OpenAI，討論企業是否願意把數據交給AI原生公司</p>
+          <blockquote>「你說NFAP要去切這塊可不可以，其實也是可以，但是問題就是說它一定是有某一種進入門檻...光是你要不要把數據交給NFAP，可能很多人都會想要打一個問號」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="OpenAI" data-cand-market="US"><span class="market-tag">US</span> <span class="cand-name">OpenAI</span><span class="cand-reason"> — 上下文討論AI原生公司想切入企業軟體市場但面臨信任與數據門檻問題，老闆的行銷術語引起反彈（想要管制AI），符合OpenAI Sam Altman的特徵</span></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「記憶體從12i變8i甚至4i」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">HBM記憶體的堆疊層數規格調整，從12-Hi降到8-Hi甚至4-Hi，代表追求頻寬而非容量，但會需要更大的載板面積</p>
+          <blockquote>「如果記憶體他要從12i變8i，甚至現在有一個新的說法是說會回到4i，這個我還是稍微打一個問號...他們現在要的是記憶體的頻寬，那容量可以稍微的折衷一下」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="" data-cand-name="SK海力士" data-cand-market="其他"><span class="market-tag">其他</span> <span class="cand-name">SK海力士</span><span class="cand-reason"> — 全球HBM記憶體主要供應商，股癌討論HBM堆疊層數調整趨勢</span></div><div class="cand-row" data-cand-ticker="2408" data-cand-name="南亞科" data-cand-market="TW"><code class="ticker">2408</code><a href="https://tw.stock.yahoo.com/quote/2408" target="_blank" title="開啟 2408 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">南亞科</span><span class="cand-reason"> — 台灣DRAM廠商，記憶體規格調整的相關討論</span><button class="wl-btn wl-btn-sm" data-ticker="2408" data-name="南亞科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="CRM" data-name="Salesforce" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Salesforce</span>
+            <span class="card-meta"><code class="ticker">CRM</code><a href="https://finance.yahoo.com/quote/CRM" target="_blank" title="開啟 CRM K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="CRM" data-name="Salesforce" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">掌握大量企業數據與經營knowhow，轉型速度快，放棄介面層轉向行動層，與Anthropic合作推出Cloudforce，擁有數據護城河與進入門檻</p>
+          <blockquote>「Salesforce真的是一個蠻厲害的企業...它真的掌握了大量的企業數據跟過往在經濟上的一些knowhow...他直接在第一時間就放棄掉了介面層，直接把他的東西轉到後面的應用跟行動層」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="" data-name="Anthropic" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Anthropic</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">與Salesforce合作推出Cloudforce，股癌認為Anthropic在定價權方面可能佔優勢，會掌握比較多的利潤</p>
+          <blockquote>「我們目前猜Wise and Fabric會掌握比較多的一個利潤...可是這邊還要再看，說不定最後面數據的影響超出我們的想像」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="MRVL" data-name="Marvell" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Marvell</span>
+            <span class="card-meta"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">上修財務預期，最大宗來自XPU（Google ASIC訂單）開始放量出貨，光通訊方面的SCALE UP光交換晶片也是強大成長動能</p>
+          <blockquote>「Marvell上修了它的財務預期...最大宗一定就是XPU，可能他從Google這邊拿到的一些案子...再來就是他上修的很大一環，實在講光通方面，他提到說他的一個很大的推力是來自於SCALE UP的光交換晶片」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="NVDA" data-name="NVIDIA" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">NVIDIA</span>
+            <span class="card-meta"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">供應鏈掌控力極強，大量採購光通與雷射元件擠壓對手產能，GPU長期競爭優勢依然強大，ASIC搶市佔但整體TAM持續擴大，供應鏈管理經驗是巨大護城河</p>
+          <blockquote>「NVIDIA有一個很暴力一個很變態的點是...他想要把對手給擠出去...他光是可以把供應鏈卡好，那可能就可以產生一個非常巨大的競爭優勢...GPU還是有非常強大的一個競爭優勢」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="" data-name="OpenAI" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">OpenAI</span>
+            <span class="card-meta"><span class="market-tag">US</span></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到OAI的Jalapeno晶片在推論表現上比GB-200/300強，但Semi-Analysis測試忽略了訓練面向，且NVIDIA晶片迭代到VR Ruby會很快追上</p>
+          <blockquote>「OAI的Jalapeno晶片...他讓Semi-Analysis進去去跑測試...在推論方面的表現他是比GB-200 300還要強大的一個晶片...但是他有一塊稍微忽略掉的...這個晶片他其實最主要的用途就是使用在推論」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="0050" data-name="元大台灣50" data-market="ETF">
+          <div class="card-header">
+            <span class="stock-name">元大台灣50</span>
+            <span class="card-meta"><code class="ticker">0050</code><a href="https://tw.stock.yahoo.com/quote/0050" target="_blank" title="開啟 0050 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">ETF</span><button class="wl-btn" data-ticker="0050" data-name="元大台灣50" data-market="ETF" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到今年0050有50-60%報酬，作為衡量聽眾投資績效的基準</p>
+          <blockquote>「像今年0050就有50-60%，你什麼事都不用做你就有50-60%」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>光通訊</strong><span class="sector-reason"> — Marvell電話會議確認光通訊為強大成長動能，光通股票反彈強勢多已進入新高，從上游材料到封裝都是AI伺服器必備的戰略物資，修正很長一段時間後終於醒過來</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>載板（ABF/BT基板）</strong><span class="sector-reason"> — 目前最缺貨的環節，記憶體從12i改8i甚至4i會需要更大的板子用量，NVIDIA和ASIC廠商都在搶產能，缺口非常大</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>AI伺服器供應鏈整體</strong><span class="sector-reason"> — ASIC與GPU都在搶料，每個環節都在缺貨，台股會產生很多新機會，光通、板材、組裝相關都有機會繼續漲</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>SaaS/企業軟體</strong><span class="sector-reason"> — Anthropic CEO Dario與Salesforce Marc都明確表示沒有SaaS Apocalypse，軟體與AI是正合大家一起受惠的關係</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>ASIC晶片</strong><span class="sector-reason"> — ASIC持續搶GPU市佔是趨勢，但供應鏈管理經驗不足、產能取得困難，可能面臨出貨延遲，市佔搶奪速度可能被高估</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">AI產業多頭展望</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 盤面感覺比較正向，已經蠻有資格去發展下一波多頭，多份電話會議與數字都蠻不錯，市場中突然產生超級多的機會</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">SaaS Apocalypse不存在</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> Anthropic的Dario與Salesforce的Marc都表示沒有SaaS末日，軟體不會被AI一鍋端，價值分配會大洗牌但每個地方都有價值存在</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">台灣健保制度</div>
+          <div><span class="badge bearish">📉 看空</span><span class="macro-view"> 健保入不敷出，走向軍醫化/社會主義方向會大家一起變爛，需要構造改革、使用者付費，短期5-10年會蠻慘</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

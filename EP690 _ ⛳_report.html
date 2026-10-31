@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP690 | ⛳</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-10-31</div>
+    <h1>EP690 | ⛳</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌主要討論Marvell與Google的半導體商業協議，深入分析Google往COT（Customer Owned Tooling）方向發展對IC設計公司的影響，認為對博通偏利空但對其他IC設計夥伴偏利多。盤面方面認為目前雖然黏但仍屬健康，失土持續收復中。其餘時間分享電影推薦、紅酒心得及聽眾QA。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">MRVL</span><span class="quick-tag bearish">AVGO</span><span class="quick-tag bullish">GOOGL</span><span class="quick-tag vague">3661</span><span class="quick-tag vague">2454</span><span class="quick-tag vague">3443</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bearish">
+          <div class="vague-header">
+            <span class="vague-term">「BlockCon」</span>
+            <span class="badge bearish">📉 看空</span>
+          </div>
+          <p class="vague-interp">指博通（Broadcom），股癌用的簡稱/音譯，在討論Google TPU晶片設計合作時反覆使用</p>
+          <blockquote>「跟BlockCon合作就是這樣子，可能Google就是開一些spec跟一些規格還有他想要達到的目的，那就由專業的設計夥伴像是BlockCon那就做晶片的設計然後包含說HBM的採購基板封裝...那這樣子呢其實是站在BlockCon的角度來說是非常賺錢的一門生意」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — 逐字稿中BlockCon與博通交替使用，提到Huck（博通CEO陳福陽）、TriggerFish/Merope/WildFish等博通的Google TPU晶片代號，以及Turnkey模式和Wi-Fi業務，均為博通特徵</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「Encobiters/小朋友」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指博通CEO陳福陽對世芯、聯發科、創意等台灣IC設計公司的貶稱，意指這些公司規模太小無法與博通競爭</p>
+          <blockquote>「Huck都是有提到說包含那時候甚至講說他們什麼Encobiters就是說這些都是小朋友，像什麼世芯或是發哥...這些他認為是小朋友就是你根本就沒有辦法來競爭...但現在看起來就是在大老闆想要去尊傑的一個背景之下有可能就會分到蠻多的案子」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3661" data-cand-name="世芯-KY" data-cand-market="TW"><code class="ticker">3661</code><a href="https://tw.stock.yahoo.com/quote/3661" target="_blank" title="開啟 3661 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">世芯-KY</span><span class="cand-reason"> — 逐字稿明確提到「像什麼世芯」為Encobiters之一</span><button class="wl-btn wl-btn-sm" data-ticker="3661" data-name="世芯-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — 逐字稿明確提到「發哥」為Encobiters之一</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3443" data-cand-name="創意" data-cand-market="TW"><code class="ticker">3443</code><a href="https://tw.stock.yahoo.com/quote/3443" target="_blank" title="開啟 3443 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">創意</span><span class="cand-reason"> — 逐字稿明確提到「創意之類的」為Encobiters之一</span><button class="wl-btn wl-btn-sm" data-ticker="3443" data-name="創意" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「L-CHIP」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">指聯發科（MediaTek），股癌使用的代稱，在討論IC Design Partner因卡到TSMC產能而有客戶找其下單時提到</p>
+          <blockquote>「這些IC Design Partner包含說像之前的L-CHIP為什麼會有一些客戶找他下單，除了他們有卓越的一些設計能力之外再來就是他們有卡到一些產能」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — L-CHIP是聯發科的業界代稱，且前後文討論的就是Google TPU合作中MTK的角色，與V8/V9/Zebra/HUMU等聯發科Google TPU晶片代號吻合</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「3661」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">世芯-KY，在討論COT趨勢時直接用代號提及</p>
+          <blockquote>「在3661的忘記是法說還是股東會就是最近好像是一兩個禮拜前，他們就有提到其實客戶都會慢慢的往COT的方向去走因為對客戶比較有利嘛」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3661" data-cand-name="世芯-KY" data-cand-market="TW"><code class="ticker">3661</code><a href="https://tw.stock.yahoo.com/quote/3661" target="_blank" title="開啟 3661 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">世芯-KY</span><span class="cand-reason"> — 逐字稿直接使用代號3661，且世芯-KY確實在近期法說會提到COT趨勢</span><button class="wl-btn wl-btn-sm" data-ticker="3661" data-name="世芯-KY" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Fish系列（TriggerFish、Merope、WildFish、WellFish、ZebraFish、HomoFish）」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">Google TPU各代晶片的內部代號，由不同IC設計夥伴負責。股癌用這些代號來區分博通vs聯發科各自負責的TPU晶片</p>
+          <blockquote>「過往我們可能跟大家聊到說TPU的V8、V9在MTK這邊什麼Zebra、HUMU然後在BlockCon這邊什麼TriggerFish、Merope然後或者是後來傳出來的WellFish為什麼叫Well呢因為它是兩顆晶片拼成一顆」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="AVGO" data-cand-name="Broadcom" data-cand-market="US"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Broadcom</span><span class="cand-reason"> — TriggerFish、Merope、WildFish為博通負責的Google TPU晶片代號</span><button class="wl-btn wl-btn-sm" data-ticker="AVGO" data-name="Broadcom" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="2454" data-cand-name="聯發科" data-cand-market="TW"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯發科</span><span class="cand-reason"> — ZebraFish、HomoFish為聯發科負責的Google TPU V8/V9晶片代號</span><button class="wl-btn wl-btn-sm" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「Frozen」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">Marvell為Google設計的一顆特殊應用晶片代號，用於Google搜尋引擎的AI overview功能</p>
+          <blockquote>「最近有傳出說Frozen，那Frozen這個晶片就我們的考察...應該說用在Search Engine上面也就是Google的像是那個AI overview裡面的一些那種特殊化的應用...它的量不會太大大概就是million左右的一個量」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="MRVL" data-cand-name="Marvell" data-cand-market="US"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Marvell</span><span class="cand-reason"> — 逐字稿明確說Frozen是Marvell拿到的Google晶片代號</span><button class="wl-btn wl-btn-sm" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「COT」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">Customer Owned Tooling，指Google自己掌握晶片設計光罩、關鍵料件採購、投片下單等高價值環節，只付設計夥伴NRE和IP授權費，與Turnkey（一站式）模式相對</p>
+          <blockquote>「Google已經是更加決心要往COT的方向去走，什麼是COT呢就是Customer Owned Tooling就是他自己會去做晶片裡面可能比較高單價的部分...晶片的設計跟光照以及一些關鍵料件的採購會放在自己的身上」</blockquote>
+          
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「天賺法師」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">股癌身邊一位朋友的代號/角色名稱，完全靠技術線圖交易、不看基本面，非常會賺錢但一心學佛，大量捐錢給佛教團體</p>
+          <blockquote>「我不知道怎麼賣...我當然是不可能賣掉天賺法師然後去講說人家是怎麼交易，那天賺法師不知道的一些心情稍微講一下，反正就是身邊一個就是真的很會賺錢但是一心學佛的朋友」</blockquote>
+          
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="MRVL" data-name="Marvell" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Marvell</span>
+            <span class="card-meta"><code class="ticker">MRVL</code><a href="https://finance.yahoo.com/quote/MRVL" target="_blank" title="開啟 MRVL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MRVL" data-name="Marvell" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">與Google簽署半導體商業協議，拿到TPU生態系周邊晶片（包含Frozen、MPU、inference chip、CPU等），這些都是新案子而非從別人搶來的，代表Google開更多晶片案子時Marvell會受惠</p>
+          <blockquote>「Marvell他可能拿下了什麼晶片...像是它有幾個代號，那就是可能在MPU這邊有一個晶片，然後還有一個inference chip，然後在CPU好像又額外會有一顆」</blockquote>
+        </div>
+
+        <div class="card bearish" data-ticker="AVGO" data-name="博通 Broadcom" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">博通 Broadcom</span>
+            <span class="card-meta"><code class="ticker">AVGO</code><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" title="開啟 AVGO K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AVGO" data-name="博通 Broadcom" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bearish">📉 看空</span>
+          <p class="reason">Google明顯往COT方向推進，博通原本的Turnkey模式可以在每個料件加價賺取高毛利，現在Google要把高單價部分拿回自己手上，博通本來想像能拿5個案子，現在可能有2-3個要用COT方式推，Turnkey的量變少</p>
+          <blockquote>「這個事件確實可以拿來當成是博通的利空我覺得是OK...Huck都是有提到說包含那時候甚至講說他們什麼Encobiters就是說這些都是小朋友...但現在看起來就是即便你可能有這樣子的一個實力但是大老闆出錢的Google他很明顯他把未來的一些路線已經畫出來了」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="2454" data-name="聯發科" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">聯發科</span>
+            <span class="card-meta"><code class="ticker">2454</code><a href="https://tw.stock.yahoo.com/quote/2454" target="_blank" title="開啟 2454 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2454" data-name="聯發科" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">Marvell拿到的晶片並非從MTK既有roadmap搶走的，不是V8/V9/V10主晶片，有些人把它解釋成MTK利空但股癌覺得蠻奇怪的，認為反應太多。MTK在Google TPU合作中提供IO、Serdius Memory Interface等，仍有其角色</p>
+          <blockquote>「有些人把它解釋成為是可能像MTK的一個利空我是覺得蠻奇怪的，因為它並沒有直接去搶到MTK或者說BlockCon他們既有roadmap裡面的一些東西」</blockquote>
+        </div>
+
+        <div class="card neutral" data-ticker="3661" data-name="世芯-KY" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">世芯-KY</span>
+            <span class="card-meta"><code class="ticker">3661</code><a href="https://tw.stock.yahoo.com/quote/3661" target="_blank" title="開啟 3661 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="3661" data-name="世芯-KY" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge neutral">➡️ 中立</span>
+          <p class="reason">在法說或股東會上提到客戶都會慢慢往COT方向走，被博通CEO稱為Encobiters（小朋友），但在Google持續開案的趨勢下，這些IC設計夥伴反而可能分到更多案子</p>
+          <blockquote>「在3661的忘記是法說還是股東會...他們就有提到其實客戶都會慢慢的往COT的方向去走因為對客戶比較有利嘛」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="GOOGL" data-name="Google (Alphabet)" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Google (Alphabet)</span>
+            <span class="card-meta"><code class="ticker">GOOGL</code><a href="https://finance.yahoo.com/quote/GOOGL" target="_blank" title="開啟 GOOGL K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="GOOGL" data-name="Google (Alphabet)" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">決心往COT方向走，開更多晶片案子，在硬體租賃/雲端租賃/AI Token產生上非常積極，可能是巴菲特投資的主因。從Frontier Model House轉向更確定性的伺服器租賃業務</p>
+          <blockquote>「Google現在是很認真的往硬體租賃的方向去衝，也有可能是巴菲特投資他的主因...他在伺服器的租賃跟AI的Token的產生上可能會是一個就是非常賺錢的存在」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="MU" data-name="美光" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">美光</span>
+            <span class="card-meta"><code class="ticker">MU</code><a href="https://finance.yahoo.com/quote/MU" target="_blank" title="開啟 MU K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="MU" data-name="美光" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">聽眾爆料美光分紅非常小氣，年度只有一次分紅且硬性上限五個月，2025年甚至只發2.4個月，股癌認為在搶人時代這個決策不太好</p>
+          <blockquote>「硬傷美光無敵摳，年度只有一次分紅而且硬性上線五個月，今年被威脅不會發到五個月，2025年甚至只有發2.4個月」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="AMD" data-name="AMD" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">AMD</span>
+            <span class="card-meta"><code class="ticker">AMD</code><a href="https://finance.yahoo.com/quote/AMD" target="_blank" title="開啟 AMD K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AMD" data-name="AMD" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">SemiAnalysis提到AMD可能加入Google晶片競爭，股癌認為AMD應該不會搶TPU那段，而是在後面代數中透過COT模式讓AMD的IP（如CPU Triplet）加入</p>
+          <blockquote>「像SemiAnalysis提到說甚至連AMD都要加入競爭，那AMD應該不會是去搞TPU那一段，應該就是反正走到越後面的代數...可能會把一些類似可能CPU的Triplet就有機會會讓AMD的一些IP一起進來」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="6446" data-name="藥華藥" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">藥華藥</span>
+            <span class="card-meta"><code class="ticker">6446</code><a href="https://tw.stock.yahoo.com/quote/6446" target="_blank" title="開啟 6446 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="6446" data-name="藥華藥" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">在談生技股時提到藥華藥是目前相對硬挺的生技股，但整體對生技股持謹慎態度</p>
+          <blockquote>「好像現在就是藥華藥海是相對是非常的硬挺，那蠻多曾經起來的話也又再掉下去了，所以它真的相對難做」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>IC設計/ASIC設計服務（非博通）</strong><span class="sector-reason"> — Google往COT方向發展，會開更多晶片案子，Marvell拿到的都是新案子而非搶別人的，代表整體市場在擴大。這些IC Design Partner在Google持續擴張硬體的趨勢下會受惠，博通以外的設計夥伴可能反應過度了</span></div>
+<div class="sector-chip bearish"><span class="badge bearish">📉 看空</span> <strong>生技新藥股</strong><span class="sector-reason"> — 股癌自述2018年曾在新藥股受過傷，即使臨床過關上市也可能銷售不如預期，認為比科技股或傳產更難掌握，不打算再深入了解</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">台股盤面現況</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 盤面雖然黏、沒有FOMO感，追漲容易被修理，但整體失土持續收復中，基本面有數字的股票會漲但缺乏延續性，屬於慢慢墊高的健康盤面，相對樂觀</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">半導體週期</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 半導體終究還是週期性產業，這波週期特別大，過去幾年錯過的人非常可惜，但未來終究會均值回歸</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,309 @@
+{
+  "summary": "股癌回顧第三季績效，台股部位從最高點回撤三成後已在九月初修復新高，美股因押注Blockcon爆炸而延遲修復。他分享了對小型IC設計股受益於AI訂單外溢的觀察、OpenAI Jalapeno晶片快速設計對產業的影響、閉鎖模型可能部署到地端的趨勢，以及台積電可能赴德州設廠的傳聞對設廠概念股的影響。整體看法偏多，認為盤面氣氛正在轉好。",
+  "macro_views": [
+    {
+      "topic": "台股第四季展望",
+      "view": "中秋後盤面氣氛慢慢變好，FOMO感覺有在回來，指數持續墊高，盤面健康，但延續性還有待確認，操作上會比較積極但不急躁",
+      "stance": "看多"
+    },
+    {
+      "topic": "美國公債利率",
+      "view": "利率在高檔已經好一陣子，總經評論一直說危險恐怖，但不應因此不敢出手，應順著眼見的盤面操作，鎖定個別公司與題材",
+      "stance": "中立"
+    },
+    {
+      "topic": "美中關係與晶片政策",
+      "view": "美中見面沒有建設性內容，中國光通封鎖禁令沒有解除，基本上當作什麼都沒發生",
+      "stance": "中立"
+    },
+    {
+      "topic": "美國設廠趨勢",
+      "view": "隨著晶片用量越來越大，在美國設廠是非常合理的決策，不只是政府要求，客戶端也有這樣的需求（如馬斯克NCNT政策），相關概念股可能會有新的upside",
+      "stance": "看多"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到台積電可能赴德州達拉斯設廠的傳聞，六個fab前段加後段，認為是合理決策，相關設廠概念股會受惠",
+      "quote": "TSM有可能要跑去德州達拉斯這邊去做設廠...在報導這邊講說是六個fab好像說是在講這個前段，但其實我們本來最早去聽說到是應該會先是後段的東西"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "舉例說明AI訂單外溢現象：MTK接了很多TPU訂單，產能不足導致一些訂單外溢到其他IC設計公司",
+      "quote": "舉例來說像MTK他接了很多TPU的訂單，那有些東西他就沒有辦法接嘛，後面的一些就台灣的IC設計大頭也分到"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "分享自己訂了Tesla Roadster 2的經歷，提到10月15號發布會，以及馬斯克NCNT（non-China non-Taiwan）政策對供應鏈的影響",
+      "quote": "我在前幾天呢也跑去訂了Tesla的Roadster...希望他在10月15號的發布會可以帶給更多的訊息"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到美中會面後可能允許中國科技巨頭買NVIDIA產品，但認為美國政府不一定會賣",
+      "quote": "有可能會允許中國的一些科技巨頭然後可以去買NVIDIA的東西，但問題就是你也要看美國政府要不要賣你"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到OpenAI的Jalapeno晶片，認為雖然官宣說是透過AI協作加速設計，但高機率是Broadcom本身晶片設計能力很強",
+      "quote": "像是OpenAI的Jalapeno這個案例呢，雖然其實有蠻高機率是Broadcom本身的晶片設計能力非常厲害，但是他們對外官宣就這樣講"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "小型IC設計",
+      "stance": "看多",
+      "reason": "AI晶片需求導致大型IC設計公司（如聯發科）產能不足，訂單外溢到中小型IC設計公司；加上AI輔助晶片設計加速，小公司可以開更大的營運槓桿，推更多產品"
+    },
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "光通訊是今年最早做強勢表態的族群，修正後也是第一個站回去的，目前持續往上走，是第三季修復績效的主要貢獻"
+    },
+    {
+      "name": "銅纜概念股",
+      "stance": "看多",
+      "reason": "近期有佈局銅纜相關概念股，認為光進銅退沒那麼簡單，市場如果真的很好，所有solution都會需要"
+    },
+    {
+      "name": "衛星題材",
+      "stance": "看多",
+      "reason": "衛星是今年一月最早表態的族群，目前也有搭配佈局"
+    },
+    {
+      "name": "美國設廠/廠務概念股",
+      "stance": "看多",
+      "reason": "台積電赴德州設廠傳聞若成真，設廠相關的廠務、材料概念公司會受惠，單價高但毛利仍有爭議，相關標的前陣子便宜不動，但新upside可能帶動市場重新聚焦"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "光通",
+      "interpretation": "光通訊族群，包含光纖通訊、CPO等相關概念股",
+      "stance": "看多",
+      "quote": "像是第一波起來的是光通，那當你已經識別出來說這個族群的時候就立刻就跳上車...差不多光通是今年最早去做強勢表態...後來就進入光通，所以光通是走在比較前面，那當然它後面也是比較快軟掉，接著在修正之後它也是第一個站上去",
+      "candidates": [
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "台股光通訊族群代表，股癌過去多次提及光通訊時涉及的標的"
+        },
+        {
+          "name": "華星光",
+          "ticker": "4979",
+          "market": "TW",
+          "reason": "台股光通訊族群代表個股"
+        },
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "光通訊磊晶相關標的"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "美股光通訊代表個股"
+        },
+        {
+          "name": "Applied Optoelectronics",
+          "ticker": "AAOI",
+          "market": "US",
+          "reason": "美股光通訊代表個股"
+        }
+      ]
+    },
+    {
+      "term": "小IC/小型IC設計",
+      "interpretation": "台灣中小型IC設計公司，因大型IC設計公司（如聯發科）忙於AI晶片而獲得訂單外溢",
+      "stance": "看多",
+      "quote": "我們注意到在台股有很多的小型IC設計集體表態，這個算是一個蠻罕見的情形...因為上面的東西太多滿出來了嘛，那一路往下低，然後低到最下面的這個小沙漏呢可能也都可以吃到滿多東西",
+      "candidates": [
+        {
+          "name": "智原",
+          "ticker": "3035",
+          "market": "TW",
+          "reason": "台股中小型IC設計代表，ASIC設計服務商，逐字稿提到大公司訂單外溢、AI協助加速晶片設計流程，ASIC設計公司直接受益"
+        },
+        {
+          "name": "創意",
+          "ticker": "3443",
+          "market": "TW",
+          "reason": "台股ASIC設計服務商，逐字稿提到TPU相關訂單外溢，創意為Google TPU主要設計服務商"
+        },
+        {
+          "name": "世芯-KY",
+          "ticker": "3661",
+          "market": "TW",
+          "reason": "ASIC設計服務商，AI晶片訂單外溢的潛在受益者"
+        },
+        {
+          "name": "晶心科",
+          "ticker": "6533",
+          "market": "TW",
+          "reason": "小型IC設計，提供RISC-V處理器IP"
+        }
+      ]
+    },
+    {
+      "term": "銅纜相關的概念股",
+      "interpretation": "高速銅纜連接器、線材相關廠商，用於AI伺服器內部互連",
+      "stance": "看多",
+      "quote": "然後再來就是過去的一些銅纜相關的概念股...像以前大家講什麼光進銅退，沒有那麼簡單，就是一定是大家都先一起成長",
+      "candidates": [
+        {
+          "name": "貿聯-KY",
+          "ticker": "3665",
+          "market": "TW",
+          "reason": "高速線纜龍頭，AI伺服器銅纜主要供應商，逐字稿提到銅纜概念股且強調光進銅退沒那麼簡單"
+        },
+        {
+          "name": "信邦",
+          "ticker": "3023",
+          "market": "TW",
+          "reason": "連接線材廠商，銅纜概念股之一"
+        },
+        {
+          "name": "嘉澤",
+          "ticker": "3533",
+          "market": "TW",
+          "reason": "高速連接器廠商，AI伺服器銅纜互連相關"
+        }
+      ]
+    },
+    {
+      "term": "衛星題材",
+      "interpretation": "低軌衛星相關概念股",
+      "stance": "看多",
+      "quote": "搭配一些衛星題材...應該說衛星我記得是最早，就一月多的時候，因為那時候我是要飛往羅馬的路上所以印象非常深刻",
+      "candidates": [
+        {
+          "name": "昇達科",
+          "ticker": "3491",
+          "market": "TW",
+          "reason": "低軌衛星地面站天線相關廠商"
+        },
+        {
+          "name": "啟碁",
+          "ticker": "6285",
+          "market": "TW",
+          "reason": "衛星通訊終端設備相關"
+        },
+        {
+          "name": "同欣電",
+          "ticker": "6271",
+          "market": "TW",
+          "reason": "衛星通訊模組相關"
+        }
+      ]
+    },
+    {
+      "term": "廠務/設廠概念股",
+      "interpretation": "半導體廠房建設、無塵室工程、設備材料等相關公司，因台積電赴美設廠而受惠",
+      "stance": "看多",
+      "quote": "如果為真的話當然就是對於一些產物或是說設廠跟材料相關的概念的公司他們一定會是相當程度的受惠...這個常務相關的股票他們就是非常有名的便宜然後我也知道說未來很好但就是不會動",
+      "candidates": [
+        {
+          "name": "帆宣",
+          "ticker": "6196",
+          "market": "TW",
+          "reason": "半導體廠務工程龍頭，逐字稿提到設廠相關概念公司受惠、去美國搞單價高"
+        },
+        {
+          "name": "漢唐",
+          "ticker": "2404",
+          "market": "TW",
+          "reason": "半導體無塵室工程大廠，美國設廠直接受益"
+        },
+        {
+          "name": "亞翔",
+          "ticker": "6139",
+          "market": "TW",
+          "reason": "無塵室與廠務工程公司"
+        },
+        {
+          "name": "崇越",
+          "ticker": "5434",
+          "market": "TW",
+          "reason": "半導體材料通路商，逐字稿提到材料相關概念受惠"
+        }
+      ]
+    },
+    {
+      "term": "Blockcon",
+      "interpretation": "股癌在美股押注的標的，後來爆炸導致美股部位修復新高時間延後。可能是區塊鏈或加密貨幣相關標的",
+      "stance": "看空",
+      "quote": "因為美股跑去壓了一個Blockcon，那Blockcon後來就爆炸下去就躺了蠻久的，所以呢因為壓的比例算是在部位蠻大的，所以導致呢就是美股去摸新高的時間點就拉到蠻後面的",
+      "candidates": [
+        {
+          "name": "Blockcon（不確定具體標的）",
+          "ticker": null,
+          "market": "US",
+          "reason": "股癌提到壓了蠻大比例但爆炸下去，具體標的不確定，可能是區塊鏈相關個股或加密貨幣相關"
+        }
+      ]
+    },
+    {
+      "term": "深度價值區/明年只有十倍左右的股票",
+      "interpretation": "已跌到深度價值區、以明年獲利推算本益比只有約10倍的標的",
+      "stance": "看多",
+      "quote": "就是我認為差不多已經跌到深度價值區，可能你去換算明年的話只有在十倍左右的股票，整個組合弄起來是覺得還蠻滿意一下的一個配置",
+      "candidates": [
+        {
+          "name": "（未明確指出具體標的）",
+          "ticker": null,
+          "market": "TW",
+          "reason": "股癌未具體說明是哪些標的，僅描述為換算明年本益比約10倍、已跌至深度價值區的股票"
+        }
+      ]
+    },
+    {
+      "term": "OpenAI的Jalapeno",
+      "interpretation": "OpenAI自研的AI推論晶片，由Broadcom協助設計，官宣稱透過AI協作大幅加速設計流程",
+      "stance": "僅提及",
+      "quote": "近期大家看到OpenAI的Jalapeno，他大概就是花了宣稱是8到9個月啦...從這個晶片的架構定型到最後面Tape out...他透過AI的一個協作就可能在Layer層這邊...透過AI可以去省掉蠻多的人力跟時間",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿明確提到Jalapeno高機率是Broadcom的晶片設計能力很厲害"
+        }
+      ]
+    },
+    {
+      "term": "Search Engine整合購物的巨頭",
+      "interpretation": "Google，股癌暗示其Search Engine已整合訂餐廳、訂飯店功能，手上也有購物Agent相關產品",
+      "stance": "僅提及",
+      "quote": "其實你在他家的一些Search Engine，然後講到這大家就知道是哪一家，你在Search Engine就已經可以看到了嘛，他其實Search Engine他已經整合到你去訂餐廳或者是去訂飯店，你可以直接在他的Search Engine上面就完成了",
+      "candidates": [
+        {
+          "name": "Alphabet (Google)",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "逐字稿直接提到Search Engine且說「講到這大家就知道是哪一家」，明顯指Google"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP701 | 🐡",
+  "analyzed_at": "2026-10-21T19:05:13.179781",
+  "transcript_chars": 21370
+}

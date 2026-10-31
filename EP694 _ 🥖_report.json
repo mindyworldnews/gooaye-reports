@@ -1,0 +1,253 @@
+{
+  "summary": "本集股癌分享了參加Startup Spheres論壇的心得，討論AI時代內容創作的價值與瀟南資本的投資哲學。市場方面，他認為目前動能交易困難，建議投資人要有耐心，聚焦基本面持續改善的標的，並分析了Broadcom財報、聯發科被Broadcom點名為對手的正面意義，以及Snowflake等軟體股的趨勢。",
+  "macro_views": [
+    {
+      "topic": "AI投資趨勢與資本循環",
+      "view": "AI類似網路，是非常長的趨勢，但資本市場會有上上下下的循環。目前可能在中間的休息段，後面可能還有一段大的行情，但終究會有砸下來的一天。只要跟著獲利實際在改善的公司，長期都能賺錢。",
+      "stance": "中立"
+    },
+    {
+      "topic": "當前盤勢與交易策略",
+      "view": "9月至今震盪難搞，動能交易容易虧錢，反而傻傻抱著的人淨值慢慢往上墊。加權指數越墊越高，接近前高，如果突破新高就會回到多頭行情。建議縮小槓桿，等待明確方向。",
+      "stance": "中立"
+    },
+    {
+      "topic": "微軟CAPEX展望",
+      "view": "有聽到Rumor說微軟明年的CAPEX會開很高，沒有要停下來的意思，大家都持續衝，因為AI真的會賺錢。",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI需求真實性",
+      "view": "每次財報看下來都覺得需求是千真萬確的強大，不管是大家擔心的Seller Financing還是螺旋互相投資，需求沒有問題。Frontier Lab是目前最主要的核心貢獻者。",
+      "stance": "看多"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "看多",
+      "reason": "財報開得非常好，首次給出偏中長期指引，數字都是加100%以上。在光通跟互聯的指引和方向都給得非常好。Broadcom有強烈動機服務Anthropic，因為Ironwood大量轉到Anthropic，後續Google晶片也往那邊丟。股價暫時不漲只是時間問題。",
+      "quote": "BlockCom它其實是開得非常好...第一次給出了那種偏中長期的一些指引，那些數字其實看到現在我都頓化了，反正就一堆都是加100%以上"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "Broadcom的Hock首次在電話會議上點名MediaTek為對手，等於幫聯發科開了法說會，證明其ASIC實力已被業界王者認知。雖然晶片出來的速度可能有些落差，但公司預期管理做得好，可能低報高beat。",
+      "quote": "但這是他第一次把MediaTek拿出來講...直接被一個晶片的王者ASIC晶片的強者去證明說你是對手，他以前都不想提你們的...代表MediaTek我覺得某個程度上的昇華了"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "基本面很好但過去幾個月沒有給投資人收益，股價沒有動。以交易角度來說缺乏進攻機會，但長期跟著EPS趨勢跑不需擔心。",
+      "quote": "你說台積電很好，可是台積電就是已經在過去幾個月可能就是沒有給你收益"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "中立",
+      "reason": "前陣子也是不漲，但時間到了可能就會動。NVIDIA有協助Anthropic和OpenAI融資的角色。在Semicon展上消費端的展示反而令人印象深刻，但AI展示已有鈍化感。",
+      "quote": "就有點類似像NVIDIA前陣子不漲，可是時間到了他可能就還是會動一下這樣子"
+    },
+    {
+      "name": "Snowflake",
+      "ticker": "SNOW",
+      "market": "US",
+      "stance": "看多",
+      "reason": "成績和數字再次往上調，非常強大。最厲害的一環是做AI的協作，讓客戶信任把資料放在他們那邊。預設模式的Router功能可產生較好毛利，客戶越信任平台毛利越好。大量鋪Forward Deployment Engineer。",
+      "quote": "Snowflake大家看到他們的成績跟數字又再一次的往上調，非常的強大。那直接去總結它，就是它最厲害的一環就是在做AI的協作"
+    },
+    {
+      "name": "Salesforce",
+      "ticker": "CRM",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "前陣子提到與Frappi的合作，在資料治理方面得到類似情報，關於哪些東西上雲、哪些維持在地端。",
+      "quote": "像前陣子就聊到說Salesforce跟Frappi的一個合作嘛...跟Salesforce那邊我們得到一些情報是類似的，就是像資料治理怎麼樣去做分門別類"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到Cybercab的馬達完全不用稀土，認為可能在供應鏈產生投資機會，但目前只當次題材關注，因為Growth Rate最強的還是在AI。",
+      "quote": "像最近Tesla他們講說他們Cybercap裡面用到的那個馬達是完全沒有用稀土嘛...如果AI的東西真的趨於橫盤的話，其實大家會開始往外圍的東西去找"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "AI相關族群（大型權值股）",
+      "stance": "看多",
+      "reason": "基本面持續開好，需求千真萬確，但短期股價不漲需要更多耐心。最終還是會回歸fundamental持續開好的標的。目前進入中間休息段。"
+    },
+    {
+      "name": "光通訊/互聯",
+      "stance": "看多",
+      "reason": "Broadcom在光通跟互聯相關的指引跟整個方向都給得非常好，是市場蠻多人關注的焦點。"
+    },
+    {
+      "name": "軟體/SaaS（AI協作平台）",
+      "stance": "看多",
+      "reason": "Snowflake、Salesforce等軟體公司在AI協作、資料治理、Forward Deployment Engineer等方面有中型趨勢機會。Router功能和FDE是後續競爭核心。"
+    },
+    {
+      "name": "金融股",
+      "stance": "僅提及",
+      "reason": "提到最近金融股非常凶猛，但表示不會參與因為跟自己的領域有蠻大差距。"
+    },
+    {
+      "name": "Tesla Cybercab供應鏈/無稀土馬達",
+      "stance": "中立",
+      "reason": "認為有機會產生供應鏈投資機會，但目前只當次題材關注，因為成長率最強的還是AI。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "BlockCom",
+      "interpretation": "Broadcom（博通），股癌用的諧音/代稱",
+      "stance": "看多",
+      "quote": "BlockCom它其實是開得非常好，然後它裡面聊到蠻多有趣的內容，它每次都會有一些經典的語錄，像之前是講說Encobiters...這次在講說Outer Mongolia的學生",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿中提到BlockCom的CEO Hock（即博通CEO Hock Tan）、ASIC晶片王者、電話會議中點名MediaTek、提到fabric和光通互聯指引，完全吻合Broadcom"
+        }
+      ]
+    },
+    {
+      "term": "Encobiters / 外蒙古的學生",
+      "interpretation": "Anthropic，AI前沿實驗室",
+      "stance": "看多",
+      "quote": "Outer Mongolia的學生，這兩個學生一個是Encobiters一個是OpenAI，他們要去念書啦，你各位要幫幫他啦...因為Ironwood一堆是Shift到安娜",
+      "candidates": [
+        {
+          "name": "Anthropic",
+          "ticker": null,
+          "market": "US",
+          "reason": "逐字稿提到Encobiters是Broadcom的六大客戶之一、尚未上市、需要融資協助，且提到Ironwood（Google TPU晶片）大量轉到「安娜」（Anthropic），與Anthropic完全吻合"
+        }
+      ]
+    },
+    {
+      "term": "魏老闆",
+      "interpretation": "台積電董事長魏哲家",
+      "stance": "僅提及",
+      "quote": "持續下單給魏老闆，謝謝MK。對他們應該就是會持續下單給魏老闆沒錯。但是在後段有一些規劃，他們在Singapore那邊像是有自己的宅版跟一些封裝的東西會拉到那邊去，但是在前端的部分我覺得持續下單給魏老闆是一個最主要的核心",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "逐字稿中提到聽眾在美國Broadcom工作的哥哥持續下單給「魏老闆」，且提到前端製造持續下單、後段封裝拉到新加坡，完全符合台積電魏哲家及台積電為Broadcom代工的關係"
+        }
+      ]
+    },
+    {
+      "term": "宅版",
+      "interpretation": "載板（ABF/BT基板），語音辨識誤植",
+      "stance": "僅提及",
+      "quote": "他們在Singapore那邊像是有自己的宅版跟一些封裝的東西會拉到那邊去，但是在前端的部分我覺得持續下單給魏老闆是一個最主要的核心",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "逐字稿討論Broadcom後段封裝和載板在新加坡的規劃，欣興是主要ABF載板供應商"
+        },
+        {
+          "name": "南電",
+          "ticker": "8046",
+          "market": "TW",
+          "reason": "南電亦為主要ABF載板供應商，與Broadcom封裝供應鏈相關"
+        },
+        {
+          "name": "景碩",
+          "ticker": "3189",
+          "market": "TW",
+          "reason": "景碩為BT載板供應商，與Broadcom載板需求相關"
+        }
+      ]
+    },
+    {
+      "term": "Ironwood",
+      "interpretation": "Google的TPU晶片（代號Ironwood，即TPU v7）",
+      "stance": "僅提及",
+      "quote": "因為Ironwood一堆是Shift到安娜，然後之後的V8i跟後續的Google的晶片可能蠻多也是往那個地方丟",
+      "candidates": [
+        {
+          "name": "Alphabet/Google",
+          "ticker": "GOOGL",
+          "market": "US",
+          "reason": "逐字稿明確提到Ironwood是Google的晶片，且提到後續V8i也是Google的晶片，大量shift到Anthropic使用"
+        }
+      ]
+    },
+    {
+      "term": "Pentium（這集指Palantir）",
+      "interpretation": "Palantir，AI數據分析軟體公司",
+      "stance": "僅提及",
+      "quote": "在Snowflake這邊我們也注意到它就是跟進了像是Pentium或是其他偏軟體相關的公司他們在做的事情，就是Forward Deployment Engineer大量的去鋪這樣的一個職業",
+      "candidates": [
+        {
+          "name": "Palantir",
+          "ticker": "PLTR",
+          "market": "US",
+          "reason": "逐字稿提到Forward Deployment Engineer（FDE）是Palantir最知名的職位設計，Snowflake跟進這個做法。語音辨識將Palantir誤認為Pentium"
+        }
+      ]
+    },
+    {
+      "term": "安娜",
+      "interpretation": "Anthropic，語音辨識將Anthropic簡稱誤植為「安娜」",
+      "stance": "僅提及",
+      "quote": "因為Ironwood一堆是Shift到安娜，然後之後的V8i跟後續的Google的晶片可能蠻多也是往那個地方丟",
+      "candidates": [
+        {
+          "name": "Anthropic",
+          "ticker": null,
+          "market": "US",
+          "reason": "上下文提到Broadcom服務的客戶Encobiters（Anthropic），且Ironwood（Google TPU）shift到「安娜」，指Anthropic使用Google的TPU晶片"
+        }
+      ]
+    },
+    {
+      "term": "Frappi",
+      "interpretation": "Agentforce或某AI平台，與Salesforce合作的產品/平台（語音辨識可能誤植）",
+      "stance": "僅提及",
+      "quote": "像前陣子就聊到說Salesforce跟Frappi的一個合作嘛",
+      "candidates": [
+        {
+          "name": "Salesforce",
+          "ticker": "CRM",
+          "market": "US",
+          "reason": "逐字稿提到Salesforce與Frappi合作，可能是語音辨識誤植某個AI平台或產品名稱，具體指向不明確"
+        }
+      ]
+    },
+    {
+      "term": "Hock / HUK",
+      "interpretation": "Hock Tan，Broadcom CEO",
+      "stance": "僅提及",
+      "quote": "可以請您用HUK在電話會議上嗆台場小打小鬧語音寶...過去其實BlockCom的Hawk他在數個電話會議裡面他算是蠻輕視他的對手",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "Hock Tan是Broadcom的CEO，逐字稿中多次提到他在電話會議上的發言風格，嗆對手、點名MediaTek"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP694 | 🥖",
+  "analyzed_at": "2026-10-31T17:47:40.051097",
+  "transcript_chars": 21528
+}

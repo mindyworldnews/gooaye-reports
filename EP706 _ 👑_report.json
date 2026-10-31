@@ -1,0 +1,346 @@
+{
+  "summary": "股癌本集分享了Tesla Roadster發布會的震撼體驗與個人購車經歷，市場方面對盤面轉趨保守，注意到多頭走到中後段、強勢股越來越少，融資減幅不如預期令人擔憂。產業面觀察到資金從硬體轉向軟體，韓國記憶體股市疲弱，台積電利多不漲的訊號值得警惕，並討論了CoreWeave/Nebius等Neo Cloud公司的風險。",
+  "macro_views": [
+    {
+      "topic": "台股盤面結構",
+      "view": "多頭可能走到中後段，強勢股越來越少，像唐鬥人地板一直掉的概念。禮拜四大跌後融資僅減50億遠低於預期的150-200億，顯示散戶腳麻不動，但歷史經驗是最終一定會被洗出來，傾向認為還會再殺一下。",
+      "stance": "看空"
+    },
+    {
+      "topic": "美股NASDAQ",
+      "view": "NASDAQ再次跌破季線，如果下一波反彈彈不上去就真的要很擔心。目前以software為主的標的有創新高，hardware則相對弱勢，資金有從硬體轉向軟體的趨勢。",
+      "stance": "中立"
+    },
+    {
+      "topic": "韓國股市與記憶體",
+      "view": "韓國股市以記憶體為主軸（約50%市值），近一兩週跌最深且準備破底，連最火熱的缺貨supply chain都撐不住，是整體硬體要警覺的訊號。",
+      "stance": "看空"
+    },
+    {
+      "topic": "AI產業三部曲（Infrastructure → Platform → Software）",
+      "view": "資金正在從hardware轉向software，走進過去分享的三部曲劇本。軟體沒有要去死，Anthropic老闆也這樣說，連最會搞驚恐行銷的人最後也跟Salesforce做整合。如果修正後software率先站回來就確認方向。",
+      "stance": "看多"
+    },
+    {
+      "topic": "戰爭與地緣政治",
+      "view": "與朋友討論後認為，目前能想到的利多可能只有美國政府停戰等消息，如果沒有這類利多，台積電這樣好的成績都帶不動盤，很難找到其他催化劑。",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "法說成績很好，CCY董事長給出正向樂觀指引，認為算是beat且成績不錯，但講完後股價無法反彈，盤攤在下面。這是過去預演過的危險訊號——利多不漲代表後面缺乏更強催化劑。",
+      "quote": "台積電這邊他的說法內容然後跟對外來的一些指引...公司是給很正向樂觀的一個評價...但是他講完之後這個東西還是沒有辦法反彈 這個盤還是攤在下面"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "看多",
+      "reason": "自己重壓在Broadcom導致美股部位沒創新高，但認為公司基本面很好。Hock在法說上表現很強，後面還開很多案子，有漲價空間，用明後年EPS回算並不貴，類比當年NVIDIA盤整期。雖然被MTK搶市佔但掉share不代表公司不行。",
+      "quote": "可能買太多BlockCom之類的...它後面還是有開很多案子...用它的可能明後年的EPS來回算的話 它並不是一個貴的股票 因為類似那時候的NVIDIA"
+    },
+    {
+      "name": "Astera Labs",
+      "ticker": "ALAB",
+      "market": "US",
+      "stance": "看多",
+      "reason": "以Astera Labs過去從200多跌到100塊又噴到三四百的經驗，類比目前Broadcom的處境。當時市場主流論述逆風，但實際狀況很好，最後還了公道。",
+      "quote": "那時候ALAB確實也從200多塊跌到100塊...因為我們看到狀況很好 那當然它最後有還公道 就噴到三四百以上"
+    },
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "中立",
+      "reason": "提到MTK搶Broadcom市佔，但認為掉share是產業發展必然，不代表Broadcom就不行。另外提到自己MTK成本在1000左右，提醒不要價值觀錯亂，很多股票已經噴了好幾倍。",
+      "quote": "MTK在我自己的身上來講 我成本是在差不多1000左右啦...大家真的不要價值觀錯亂 你現在看到很多股票那個都是已經不知道他媽噴幾倍上來了"
+    },
+    {
+      "name": "CoreWeave",
+      "ticker": null,
+      "market": "US",
+      "stance": "看空",
+      "reason": "發行高利率垃圾債，代表市場認購意願低。認為Neo Cloud風險最大，還有SpaceX、Tesla等強力競爭者。不過修正看法：因為產能不大，最糟也就是被巨頭如NVIDIA便宜收購，不至於大爆炸，但股價仍可能狂崩。",
+      "quote": "CoreWeef因為它發在那個債的利率是很高啦...我覺得在AI的選項這麼多...你為什麼要去挑一個風險最大...他其實最糟最糟是不會到太糟 因為他的量體不大 所以有可能被其他的CSP或甚至像是NVIDIA之類的就把它接下來"
+    },
+    {
+      "name": "Nebius",
+      "ticker": null,
+      "market": "US",
+      "stance": "看空",
+      "reason": "與CoreWeave同屬Neo Cloud，對這類公司不喜歡，認為風險偏大。之前Q&A就已表達過不看好。",
+      "quote": "前幾集的Q&A有一個聽眾說他買Nabeus 我想說其實我對於CoreWeef跟Nabeus是沒那麼喜歡"
+    },
+    {
+      "name": "美光",
+      "ticker": "MU",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "記憶體部位只剩美光還在，其他早就被洗掉，沒有賺到記憶體較大波段的獲利。",
+      "quote": "我自己的記憶體我只有美光還在 我其他早就被洗掉 好久以前 所以我根本就沒有賺到那個記憶體比較大波的"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到黃仁勳有講話且認為狀況很好，另提及NVIDIA可能接手Neo Cloud公司，以及類比Broadcom當前處境如同當年NVIDIA盤整期。",
+      "quote": "黃元勳有講話...大家都還是覺得說狀況是很好...有可能被其他的CSP或甚至像是NVIDIA之類的就把它接下來"
+    },
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到蘇媽（AMD CEO）有講話，認為狀況很好，暫且當成技術回調。",
+      "quote": "像最近的AMD蘇媽有講話嘛 那黃元勳有講話...其實大家都還是覺得說狀況是很好 所以暫且都還是先把它當成是某個程度上的技術回調"
+    },
+    {
+      "name": "Salesforce",
+      "ticker": "CRM",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到連最會搞驚恐行銷說軟體要死的人（暗指Anthropic），最後也跟Salesforce做整合，證明軟體沒有要死。",
+      "quote": "最會去搞那種驚恐行銷的人 最後面他也是媽的把這個Salesforce...他們也去做一個整合嘛 所以對這些軟體沒有要去死"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "主要分享Roadster發布會的震撼體驗與個人購車經歷（升級至Frost版本），以及FSD在美國的成熟度。提到Tesla可能跳進Neo Cloud競爭。非投資觀點。",
+      "quote": "Tesla Roadster的一個發布會 這可能是我史上看到最震驚的一個畫面...立刻把我的Performance的版本去升級成為Frost版本"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "軟體股（Software）",
+      "stance": "看多",
+      "reason": "資金明顯往software方向跑，符合AI三部曲最後階段（infrastructure→platform→application）。如果修正後software率先站回來，就確認方向，整個天秤會往軟體傾倒。已開始回去看software標的。"
+    },
+    {
+      "name": "硬體/半導體（Hardware）",
+      "stance": "看空",
+      "reason": "韓國記憶體股破底、台積電利多不漲、NASDAQ跌破季線，硬體相關標的可能面臨估值下修。過去習慣給30倍的估值不一定會回到30倍。如果下一波反彈hardware上不去就要小心。"
+    },
+    {
+      "name": "Neo Cloud（新興雲端算力）",
+      "stance": "看空",
+      "reason": "CoreWeave發高利率垃圾債、Vera AI爆倉傳聞，加上SpaceX等強力競爭者進入，認為這類公司扛的風險最大且不對稱。雖然最糟可能被巨頭收購不至於公司爆炸，但股價仍可能大跌。"
+    },
+    {
+      "name": "記憶體",
+      "stance": "中立",
+      "reason": "認為記憶體可能是2025-2026最大贏家，但過去一個月到一季表現不好，韓國記憶體股接近破底。自己只剩美光，其他早被洗掉。佩服能長抱記憶體的人。"
+    },
+    {
+      "name": "台股支付軟體",
+      "stance": "中立",
+      "reason": "注意到台股支付軟體開始動，跟美股類似，但認為大錢可能放不進去，中小資可以操作但中大資已漸漸沒有地方去。"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "光",
+      "interpretation": "光通訊族群，股癌提到自己有蠻多「光」的部位，被殺到很多需要停損出場",
+      "stance": "看空",
+      "quote": "助普心谷天樂歐映光的男人...成為光之巨人...最近在歐映光的應該是身體不太舒服 因為我自己也有蠻多光的部位 就是被殺到蠻多 都必須要可能停力或是停損出去 對 最近比較辛苦一點 但是光如果是從前面一路尻尻 現在確實是噱到海掉去",
+      "candidates": [
+        {
+          "name": "Applied Optoelectronics",
+          "ticker": "AAOI",
+          "market": "US",
+          "reason": "逐字稿提到『歐映光』，語音辨識應為AAOI（Applied Optoelectronics），且提到該聽眾是『歐映光的男人』、『光之巨人』，股癌也說自己有蠻多光的部位被殺"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "market": "US",
+          "reason": "光通訊主要標的之一，股癌說有蠻多光的部位，Lumentum為光通訊領域重要公司"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "market": "US",
+          "reason": "光通訊領域重要公司，股癌提到有蠻多光的部位整體被殺"
+        }
+      ]
+    },
+    {
+      "term": "BlockCom",
+      "interpretation": "Broadcom（AVGO），語音辨識將Broadcom辨識為BlockCom，股癌重壓該股",
+      "stance": "看多",
+      "quote": "可能買太多BlockCom之類的 所以導致說就是即便部位有些東西是蠻強的 可是整體因為重壓在硬體這邊比較多一點 所以就導致沒有創新高...那現在BlockCom我就是有去記得那時候ALAB的記憶 所以我沒有瘋狂的去談 我知道它便宜",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "逐字稿中BlockCom即Broadcom，股癌提到重壓該股、提到Hock（Broadcom CEO Hock Tan）在法說表現、後面開很多案子、有漲價空間、用明後年EPS回算不貴"
+        }
+      ]
+    },
+    {
+      "term": "CCY董事長",
+      "interpretation": "台積電董事長魏哲家（C.C. Wei），語音辨識產生的變體",
+      "stance": "僅提及",
+      "quote": "包含像是CCY董事長 他表示說他們有什麼生意都要盡可能去做什麼的 就是其實公司是給很正向樂觀的一個評價 那在我們的角度也沒有注意到說這個完美的盔甲上面有什麼裂痕之類的 但是他講完之後這個東西還是沒有辦法反彈",
+      "candidates": [
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "CCY即魏哲家（C.C. Wei），台積電董事長，上下文直接在討論台積電法說與股價表現"
+        }
+      ]
+    },
+    {
+      "term": "HACK/Hock",
+      "interpretation": "Broadcom CEO Hock Tan，語音辨識將Hock辨識為HACK",
+      "stance": "看多",
+      "quote": "那個HACK在一些什麼法說或是對外的會議上很糗 那是應該的啦 因為它的東西不只是說品質好 然後大家喜歡 再來又有一些漲價的空間 然後再來就是後來去做更多的光護聯或什麼 不要忘記它也是一個很大的Player",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "HACK即Hock Tan（Broadcom CEO），上下文在討論Broadcom的法說表現、產品品質、漲價空間等"
+        }
+      ]
+    },
+    {
+      "term": "蘇媽",
+      "interpretation": "AMD CEO Lisa Su（蘇姿丰），股癌慣用暱稱",
+      "stance": "僅提及",
+      "quote": "像最近的AMD蘇媽有講話嘛 那黃元勳有講話 那再來就是Huck有講話 其實大家都還是覺得說狀況是很好",
+      "candidates": [
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "market": "US",
+          "reason": "蘇媽即AMD CEO Lisa Su，上下文提到與黃仁勳（NVIDIA）、Hock（Broadcom）並列講話"
+        }
+      ]
+    },
+    {
+      "term": "黃元勳",
+      "interpretation": "NVIDIA CEO 黃仁勳，語音辨識產生的變體",
+      "stance": "僅提及",
+      "quote": "像最近的AMD蘇媽有講話嘛 那黃元勳有講話 那再來就是Huck有講話 其實大家都還是覺得說狀況是很好",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "黃元勳即黃仁勳（Jensen Huang），NVIDIA CEO，與蘇媽（AMD）、Hock（Broadcom）並列"
+        }
+      ]
+    },
+    {
+      "term": "華文勳",
+      "interpretation": "NVIDIA CEO 黃仁勳，另一處語音辨識變體",
+      "stance": "僅提及",
+      "quote": "有可能被一些巨頭直接買走 或是華文勳 因為他都已經在背後支持他們了嘛 所以再去幫他抑制一些應該都是有可能的啦",
+      "candidates": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "market": "US",
+          "reason": "華文勳即黃仁勳，上下文提到他在背後支持Neo Cloud公司，NVIDIA確實是CoreWeave等公司的重要支持者"
+        }
+      ]
+    },
+    {
+      "term": "Vera AI",
+      "interpretation": "可能指某家AI相關基金或公司遭遇爆倉問題，與7月Situational Awareness事件類似",
+      "stance": "僅提及",
+      "quote": "有另外一家公司是Vera AI 然後這個Vera AI他們也遇到了爆倉的問題 那我是覺得反正在修正的時候就是大家一定會找各種故事來補動...這個Vera AI其實已經出來我記得一兩天以上了 可是還是有在跌的話 那就再稍微的觀察一下",
+      "candidates": []
+    },
+    {
+      "term": "台子",
+      "interpretation": "台股大盤指數或大盤ETF（如0050），股癌說大崩盤時會直接打指數而非選個股",
+      "stance": "中立",
+      "quote": "不是蠻多時候在抄底的時候都直接跑去買台子 就是因為你已經不知道說反彈會去彈哪個東西了...所以最終我們很多時候跑去抄底就不一定會去找個股 特別是大崩盤的時候一般就直接去打指數",
+      "candidates": [
+        {
+          "name": "元大台灣50",
+          "ticker": "0050",
+          "market": "ETF",
+          "reason": "股癌提到大崩盤時直接打指數不選個股，台子即台股大盤指數相關ETF，0050為最具代表性的台股指數ETF"
+        }
+      ]
+    },
+    {
+      "term": "阿巴狗",
+      "interpretation": "Broadcom（AVGO），聽眾用AVGO的諧音稱呼",
+      "stance": "看多",
+      "quote": "MK想問你美股阿巴狗買蠻多的原因是什麼 被MTK搶市佔應該Margin會變低 還是不能夠這樣思考 那就跟ALAB一樣 光鏡不代表會不用到桶",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "阿巴狗是AVGO的諧音，上下文討論被MTK搶市佔、與ALAB類比，均指向Broadcom"
+        }
+      ]
+    },
+    {
+      "term": "SOFR相關",
+      "interpretation": "可能指與利率或金融科技相關的標的，股癌提到在禮拜四五仍相對強勢但也做了調整",
+      "stance": "中立",
+      "quote": "就連可能在禮拜四禮拜五還是相對強勢的一些支付或是一些什麼SOFR相關的東西 我都有去做一些調整 為什麼 因為我已經是有感覺到這個盤有點怪怪的",
+      "candidates": []
+    },
+    {
+      "term": "支付",
+      "interpretation": "支付軟體相關個股，台股和美股都有出現資金流入的現象",
+      "stance": "中立",
+      "quote": "像台股的一些支付軟體也開始動 就像美股一樣 可是問題是這個可能不一定是大錢放得進去的東西 所以以中小資來講他可以去搞這個東西...就連可能在禮拜四禮拜五還是相對強勢的一些支付...我都有去做一些調整",
+      "candidates": []
+    },
+    {
+      "term": "SOX / SOXL",
+      "interpretation": "費城半導體指數及其三倍做多ETF，有朋友開SOX去抄底，聽眾問是否用費半ETF抄底",
+      "stance": "看空",
+      "quote": "我自己身邊有些朋友比較狂的他們是開那種什麼SOX去抄底 我會比較擔心這樣的一個操作...他在2022的時候就是瘋狂的去接那個SOXL...從好像多少2、30塊接到9塊之類的 就是整個是大爆炸",
+      "candidates": [
+        {
+          "name": "Direxion Daily Semiconductor Bull 3X",
+          "ticker": "SOXL",
+          "market": "ETF",
+          "reason": "股癌明確提到SOXL，並警告不喜歡在多頭中後段用槓桿型ETF抄底特定主題"
+        }
+      ]
+    },
+    {
+      "term": "天傳法師",
+      "interpretation": "股癌的朋友，可能是暱稱或語音辨識變體，一起在大安和平公園跑步時討論市場",
+      "stance": "僅提及",
+      "quote": "今天早上跑去大家和平公園跟朋友在跑步的時候 然後那個天傳法師他就講說 他看一下他覺得如果今天要有利多的話 應該就是因為美國政府是這樣",
+      "candidates": []
+    },
+    {
+      "term": "Rick",
+      "interpretation": "聯發科董事長蔡明介或CEO蔡力行的暱稱，聽眾說『Rick還錢』，股癌解讀為MTK老闆",
+      "stance": "僅提及",
+      "quote": "By the way Rick還錢 不要那麼嚴格啦 他講的Rick應該在講那個MTK的老闆 就是現在大家可能看到他回答就說Rick還錢",
+      "candidates": [
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "股癌直接說Rick是MTK的老闆，應指聯發科CEO蔡力行（Rick Tsai）"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP706 | 👑",
+  "analyzed_at": "2026-10-21T18:58:00.712404",
+  "transcript_chars": 22386
+}

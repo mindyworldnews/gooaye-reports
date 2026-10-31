@@ -1,0 +1,251 @@
+{
+  "summary": "本集股癌主要聊Meta Connect 2026發表會的新產品Muse Charm，分析其與過去失敗AI裝置的差異及潛在機會，並探討Meta在硬體與Agentic AI的戰略佈局。另外大量討論近期台股動能交易困難的盤勢，建議投資人放慢腳步、買綠不追高，並點評一位聽眾的美股持股組合。",
+  "macro_views": [
+    {
+      "topic": "台股連假後資金回流效應",
+      "view": "連假前常見賣壓（丙種收回、部位降低），假期結束後資金通常會回來，歷史上反覆出現此現象，中秋後開盤可期待不錯表現",
+      "stance": "看多"
+    },
+    {
+      "topic": "台股盤勢特性轉變",
+      "view": "過去五年動能盤非常瘋狂，但目前回歸正常，追高容易被殺，應調整為買綠、選強中帶弱的策略。指數即將新高，持股放著其實一直往上墊，只是加槓和追高的人會被教訓",
+      "stance": "看多"
+    },
+    {
+      "topic": "AI硬體裝置取代手機的可能性",
+      "view": "認為眼鏡、AI device想取代手機非常困難，手機太強大，各方預估的眼鏡銷量數億支是不切實際的。但Meta的Muse Charm因定位不同（電子機概念）反而有機會",
+      "stance": "中立"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "market": "US",
+      "stance": "看多",
+      "reason": "Muse Charm產品令人感興趣，是首次看到AI新裝置認為有機會突破的。Meta有龐大用戶基礎（FB/IG），站在比前輩更好的起跑點，Agentic AI串接多平台有潛力產生構造改革",
+      "quote": "相較於他前面的那一些競品跟前輩們，這是第一次就是我看到這些新的裝置，我會認為說他是有機會會去有所突破的"
+    },
+    {
+      "name": "台達電",
+      "ticker": "2308",
+      "market": "TW",
+      "stance": "看空",
+      "reason": "聽眾買進後不動，股癌指出台達電型態已轉空，是這波比較落後的標的，質疑追動能的人為何會選台達",
+      "quote": "如果是看強去追的話，怎麼會買台達呢，因為台達早就已經轉空了，就他的那個型態也是長得相對差一點，他算是這一波比較落後一點的"
+    },
+    {
+      "name": "Google (Alphabet)",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "中立",
+      "reason": "聽眾持股點評時認為Google沒有問題，同時提到Google在AI領域時好時壞，去年急起猛追後又被遺忘，未來可能再給驚喜",
+      "quote": "Google沒有問題...去年有一陣子突然間急起猛追，大家覺得很屌，然後現在大家都不想看Google，說不定後面Google給驚喜"
+    },
+    {
+      "name": "Lumentum",
+      "ticker": "LITE",
+      "market": "US",
+      "stance": "看多",
+      "reason": "聽眾持股點評，歸類為光通訊組合，股癌表示是自己蠻喜歡的東西",
+      "quote": "Lumentum光通 Coherent兩個全包了嘛...搭配前面光的組合...這個是一個很全面的組合"
+    },
+    {
+      "name": "Coherent",
+      "ticker": "COHR",
+      "market": "US",
+      "stance": "看多",
+      "reason": "聽眾持股點評，光通訊雙雄全包，股癌認為整體配置選得蠻漂亮",
+      "quote": "Lumentum光通 Coherent兩個全包了嘛...這個是一個很全面的組合...配置感覺是選的還蠻漂亮的"
+    },
+    {
+      "name": "Bloom Energy",
+      "ticker": "BE",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "聽眾持股，股癌指出是賭表後供電，屬於Data Center整體敘事，有人會搭配台灣供應鏈一起看",
+      "quote": "Bloom Energy就是，你要去賭那個什麼表後供電...它也是Data Center整個整體的敘事嘛"
+    },
+    {
+      "name": "Corning (康寧)",
+      "ticker": "GLW",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "聽眾持股點評，股癌認為很合理，有光通訊的味道",
+      "quote": "康寧玻璃很合理，就是它基本上也是有點那種光的味道，光的形狀在"
+    },
+    {
+      "name": "Teradyne",
+      "ticker": "TER",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "聽眾持股點評，歸類為機台類，與整體組合搭配合理",
+      "quote": "搭配前面光的組合跟Teradyne的機台，然後再外加AMD CPU，這個是一個很全面的組合"
+    },
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "聽眾持股點評，歸類為CPU，整體配置的一環",
+      "quote": "然後再外加AMD CPU，這個是一個很全面的組合"
+    },
+    {
+      "name": "Infineon (英飛凌)",
+      "ticker": "IFX",
+      "market": "US",
+      "stance": "中立",
+      "reason": "聽眾持股點評，股癌認為稍嫌牛皮但看功率元件一定會看到這家公司",
+      "quote": "IFX就是，可能會稍微的嫌它牛皮一點，但如果你要往功率元件去看的話，就是這一定是一定會看到的公司"
+    },
+    {
+      "name": "元大台灣50",
+      "ticker": "0050",
+      "market": "ETF",
+      "stance": "僅提及",
+      "reason": "聽眾持股組合之一，股癌未特別評論",
+      "quote": "前十大詞鼓0050QQIFX Google Lumentum Coherent BE...掛號印象在台通節目有聽到"
+    },
+    {
+      "name": "QQQ (Invesco納斯達克100 ETF)",
+      "ticker": "QQQ",
+      "market": "ETF",
+      "stance": "僅提及",
+      "reason": "聽眾持股組合之一，股癌未特別評論",
+      "quote": "前十大詞鼓0050QQIFX Google Lumentum Coherent BE"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "點評聽眾持股時特別肯定Lumentum+Coherent全包的光通訊組合，稱配置選得漂亮，康寧也被歸入有光的味道。另提到某聽眾從旺系轉倉到光通結果差點跌停，但整體對光通仍正面"
+    },
+    {
+      "name": "AI硬體/Agentic AI裝置",
+      "stance": "看多",
+      "reason": "Meta Connect 2026的Muse Charm被認為是首次看到有機會突破的AI裝置，串接Agentic AI與多平台服務有構造改革潛力"
+    },
+    {
+      "name": "功率元件",
+      "stance": "中立",
+      "reason": "提到Infineon(IFX)看功率元件一定會看到，但嫌牛皮"
+    },
+    {
+      "name": "表後供電/Data Center供電",
+      "stance": "僅提及",
+      "reason": "透過Bloom Energy提到表後供電題材屬Data Center整體敘事，有人會搭台灣供應鏈看，但刻意不點名台灣標的"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "旺系",
+      "interpretation": "旺宏(2337)或旺矽(6223)等旺字輩公司，從上下文「買旺系影威跟微影」來看，可能指旺矽(6223)，因旺矽屬於半導體測試探針相關，與動能追漲邏輯較吻合",
+      "stance": "僅提及",
+      "quote": "買旺系影威跟微影，結果莫名嚇煞，任培台達電隔天就噴上去，昨天任培旺系轉倉到某光通，結果今天差點跌停",
+      "candidates": [
+        {
+          "name": "旺矽",
+          "ticker": "6223",
+          "market": "TW",
+          "reason": "逐字稿提到「旺系」與「影威」「微影」並列，且轉倉到光通，旺矽為半導體測試設備股，屬動能仔會追的類型"
+        },
+        {
+          "name": "旺宏",
+          "ticker": "2337",
+          "market": "TW",
+          "reason": "旺字輩的另一可能，記憶體相關，但與上下文動能追漲的脈絡相比較不像主要指涉對象"
+        }
+      ]
+    },
+    {
+      "term": "某光通",
+      "interpretation": "某檔光通訊個股，聽眾從旺系轉倉過去結果差點跌停，股癌刻意不點名",
+      "stance": "僅提及",
+      "quote": "昨天任培旺系轉倉到某光通，結果今天差點跌停，我有點不曉得要怎麼友善的面對這個世界",
+      "candidates": [
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "台股光通訊族群中波動較大、動能仔常追的標的，差點跌停符合其波動特性"
+        },
+        {
+          "name": "華星光",
+          "ticker": "4979",
+          "market": "TW",
+          "reason": "光通訊相關，股價波動大，動能交易者會關注"
+        },
+        {
+          "name": "上詮",
+          "ticker": "3363",
+          "market": "TW",
+          "reason": "光通訊連接器相關，近期有較大波動"
+        },
+        {
+          "name": "光聖",
+          "ticker": "6442",
+          "market": "TW",
+          "reason": "光通訊零組件，近期波動劇烈"
+        }
+      ]
+    },
+    {
+      "term": "影威跟微影",
+      "interpretation": "語音辨識可能有誤，從上下文「買旺系影威跟微影」來看，可能是指穎崴(6515)與某微影相關公司，或是語音辨識錯誤的其他標的",
+      "stance": "僅提及",
+      "quote": "買旺系影威跟微影，結果莫名嚇煞",
+      "candidates": [
+        {
+          "name": "穎崴",
+          "ticker": "6515",
+          "market": "TW",
+          "reason": "「影威」語音辨識可能為「穎崴」，穎崴為半導體測試介面廠，與旺矽同屬測試設備族群，動能仔常追"
+        }
+      ]
+    },
+    {
+      "term": "表後供電的台灣供應鏈",
+      "interpretation": "Bloom Energy相關的台灣供應鏈，股癌刻意不點名，但提到有人會搭配一起看",
+      "stance": "僅提及",
+      "quote": "Bloom Energy就是，你要去賭那個什麼表後供電，有些人會搭台灣的一些供應鏈，我們就不去點名了，那個有些人會直接把它包一包看",
+      "candidates": [
+        {
+          "name": "森崴能源",
+          "ticker": "6806",
+          "market": "TW",
+          "reason": "台灣表後供電概念相關，但股癌刻意不點名，無法確認"
+        },
+        {
+          "name": "士電",
+          "ticker": "1503",
+          "market": "TW",
+          "reason": "電力設備相關，市場常與表後供電題材連結"
+        },
+        {
+          "name": "華城",
+          "ticker": "1519",
+          "market": "TW",
+          "reason": "重電族群，市場常與Data Center供電需求連結"
+        }
+      ]
+    },
+    {
+      "term": "欣欣",
+      "interpretation": "聽眾提到「買欣欣隔天公司就被剪掉搜索」，語音辨識可能有誤。從上下文「被剪掉搜索」來看，可能指某公司被降評或遭搜索等負面事件",
+      "stance": "僅提及",
+      "quote": "買欣欣隔天公司就被剪掉搜索，買台達結果移動也不動",
+      "candidates": [
+        {
+          "name": "欣興",
+          "ticker": "3037",
+          "market": "TW",
+          "reason": "「欣欣」可能是語音辨識將「欣興」聽錯，欣興為ABF載板大廠，近期有新聞事件"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP700 | 🪭",
+  "analyzed_at": "2026-10-21T19:06:41.270664",
+  "transcript_chars": 20883
+}

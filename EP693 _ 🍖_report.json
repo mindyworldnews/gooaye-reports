@@ -1,0 +1,228 @@
+{
+  "summary": "本集主要討論聯發科獲得NVIDIA與Alphabet透過ECB進行策略投資的意義，分析NVIDIA佈局XPU生態系、NVHBM記憶體規格，以及對博通（Broadcom）可能造成的競爭壓力。股癌也分享了對當前盤勢的看法，認為震盪格局中持股不動即可，並期待後續創新高。",
+  "macro_views": [
+    {
+      "topic": "9月美股季節性下跌",
+      "view": "數據顯示9月通常下跌，但不需過度擔心，看看就好，做好風控即可，10月可能就會好轉（光輝十月）",
+      "stance": "中立"
+    },
+    {
+      "topic": "AI產業發展階段",
+      "view": "AI仍在非常前期，TAM會持續增加，市場大到超過想像，各家公司都會受惠，不需過度糾結市佔率消長",
+      "stance": "看多"
+    },
+    {
+      "topic": "台股大盤走勢",
+      "view": "從7月高點回落30%後已快速修復，大盤已在新高附近，維持震盪格局，持股不動即可，預期下月或下下月有機會再創新高",
+      "stance": "看多"
+    }
+  ],
+  "stocks": [
+    {
+      "name": "聯發科",
+      "ticker": "2454",
+      "market": "TW",
+      "stance": "看多",
+      "reason": "獲得NVIDIA與Alphabet透過史上最大ECB（35億美元）進行策略投資，代表XPU發展獲得認可。已有Google TPU V8T設計經驗，後續Roadmap已有雛形，屬夥伴深化合作而非Seller Financing",
+      "quote": "這個是輝達第一次投資台灣上市公司，然後第一次出手就是史上最大的一個ECB，那數字是35億美元...聯發科本身就是一個財務健全也很賺錢的公司"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "market": "US",
+      "stance": "看多",
+      "reason": "透過投資聯發科綁樁XPU生態系，推廣MGX/ETL Rack等周邊方案，從單賣GPU轉型為Total Solution供應商。即使XPU侵蝕GPGPU市佔，NVIDIA仍可透過七種晶片在AI工廠中獲取價值",
+      "quote": "黃榮軒有跟大家講說現在一座AI工廠它要的是七種的輝達晶片，那XPU呢只是其中的一部分...變成是一個那種萬能雜貨店的感覺"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "market": "US",
+      "stance": "中立",
+      "reason": "目前市場上多方勢力（NVIDIA、Marvell、聯發科）都在搶博通的ASIC市場份額，但博通設計與統整能力極強（如幫OpenAI設計出強大晶片），等電話會議回應後再觀察，類似之前光銅之爭被打壓但最終營收不受影響",
+      "quote": "跟MARVEL或者說現在跑去MTK要綁樁什麼的，就是每個人想要的東西感覺都是要從博通身上去搶一點東西的感覺...博通他的設計跟統整能力一定是非常強大"
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "提到Marvell最近也有劇情產生，已被NVIDIA納入麾下，與博通競爭ASIC市場",
+      "quote": "像是MARVEL最近也有一些劇情的產生，其實幾乎每個都已經是被他攔住，都已經是加入他的行列了"
+    },
+    {
+      "name": "世芯-KY",
+      "ticker": "3661",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到過去世芯拿到Amazon投資但股價反應冷淡（開高走低），與這次聯發科獲NVIDIA投資做對比",
+      "quote": "世芯有拿到Amazon的一個投資，然後大家看到傑夫貝佐斯先生，看到想說哇這一定超屌，但我記得好像就連拉都沒有拉"
+    },
+    {
+      "name": "大立光",
+      "ticker": "3008",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "以大立光碰到7000多元為例，說明自己不設目標價，只做參考，認為可能繼續往上",
+      "quote": "像最近大立光碰到7000多，你就大概知道說它是明年後年的幾個倍數，這個我知道，可是我也不認為說到這個倍數它就要停"
+    },
+    {
+      "name": "台積電",
+      "ticker": "2330",
+      "market": "TW",
+      "stance": "僅提及",
+      "reason": "提到HBM4的Base die將由SK Hynix和美光交給台積電製造，NVHBM若採用也可能交給台積電設計製造",
+      "quote": "SK HYNIX在HBM4之後應該就是把Base代會交給台積電去做...鎂光的話呢就我們的理解...也是直接把Base代去丟給TSM去做"
+    },
+    {
+      "name": "Alphabet/Google",
+      "ticker": "GOOGL",
+      "market": "US",
+      "stance": "僅提及",
+      "reason": "作為聯發科ECB的投資方之一，同時是聯發科TPU設計客戶，但與NVIDIA的投資是獨立事件。Google有自己完整的互聯方案（ICI、OCS），是NVIDIA互聯方案最強對手之一",
+      "quote": "Google雖然自己在推自己的TPU，可是也是NVIDIA很大的一個買家，還是買了很多GPU...目前在NVIDIA的Solution以外最強大的一個玩家之一"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "光通訊",
+      "stance": "看多",
+      "reason": "光通相關股票持續強勢，雖然很多還沒開出好的財報數字，但等到開出來看得懂的時候可能股價已經噴完了"
+    },
+    {
+      "name": "ASIC/XPU設計",
+      "stance": "看多",
+      "reason": "ASIC出貨顆數一定會越來越高，TAM持續增加，不代表NVIDIA會越賺越少，整個市場持續變大"
+    },
+    {
+      "name": "HBM/記憶體",
+      "stance": "中立",
+      "reason": "HBM後續有降規趨勢（12high→8high→4high），短期市場可能反應負面（類似光銅之爭），但實際上能賣更多，對整體市場是健康的"
+    }
+  ],
+  "vague_terms": [
+    {
+      "term": "光通",
+      "interpretation": "光通訊相關族群，包含光收發模組、矽光子、CPO等光纖通訊供應鏈",
+      "stance": "看多",
+      "quote": "光通相關的股票其實也都是持續的強勢...現在光通也是很多噴到大家講說殺小開那個開什麼垃圾字節，可是等到它開了字節你看得懂的時候，說不定也噴完了",
+      "candidates": [
+        {
+          "name": "訊芯-KY",
+          "ticker": "6451",
+          "market": "TW",
+          "reason": "光通訊族群代表，股癌過往多次提及光通訊相關標的"
+        },
+        {
+          "name": "聯亞",
+          "ticker": "3081",
+          "market": "TW",
+          "reason": "光通訊上游磊晶廠，屬光通族群核心標的"
+        },
+        {
+          "name": "華星光",
+          "ticker": "4979",
+          "market": "TW",
+          "reason": "光收發模組廠商，屬光通訊族群"
+        }
+      ]
+    },
+    {
+      "term": "光銅之爭",
+      "interpretation": "指市場此前討論光通訊是否會取代銅纜連接的爭論，銅類股曾被大幅下殺，但最終營收未受影響、股價也回到新高。股癌用此比喻博通目前被市場看空的處境",
+      "stance": "中立",
+      "quote": "前陣子的光銅之爭，那時候確實是銅相關的類股直接被打到爆掉...確實你從他的營收去看他是沒有被打掉的，他還是持續的有開出來，那最終股價是也還公道，就是那時候被打下去的銅類股後來一堆都新高了",
+      "candidates": [
+        {
+          "name": "嘉澤",
+          "ticker": "3533",
+          "market": "TW",
+          "reason": "銅纜連接器代表廠商，在光銅之爭中曾被打壓但營收未受影響"
+        },
+        {
+          "name": "貿聯-KY",
+          "ticker": "3665",
+          "market": "TW",
+          "reason": "高速傳輸線纜廠商，銅纜連接相關標的"
+        }
+      ]
+    },
+    {
+      "term": "四星、發哥",
+      "interpretation": "四星指博通（Broadcom），發哥指聯發科（MediaTek）。股癌提到NVIDIA已把市面上所有玩家納入麾下",
+      "stance": "僅提及",
+      "quote": "目前看起來NVIDIA已經是把市面上所有的玩家都已經納入麾下了，他跟像是什麼四星、發哥，或者是像是MARVEL最近也有一些劇情的產生",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "四星是博通的暱稱，股癌在同段提到NVIDIA綁樁各家IC設計廠"
+        },
+        {
+          "name": "聯發科",
+          "ticker": "2454",
+          "market": "TW",
+          "reason": "發哥是聯發科的暱稱，本集核心討論標的"
+        }
+      ]
+    },
+    {
+      "term": "Hardpanel",
+      "interpretation": "應指Google/OpenAI的自研AI晶片，由博通協助設計，股癌提到這顆晶片非常強大，證明博通的設計能力",
+      "stance": "僅提及",
+      "quote": "像我們前面才剛剛提到說Hardpanel他做出來是一個超級強大的晶片，所以就證明了博通他的設計跟統整能力一定是非常強大",
+      "candidates": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "market": "US",
+          "reason": "股癌明確提到這顆晶片是博通協助設計的，證明博通能力"
+        }
+      ]
+    },
+    {
+      "term": "加入光光、安能無光",
+      "interpretation": "暗示CUE留言者從某家光通訊相關公司離職。「加入光光」可能指該公司（或其名稱含「光」）已不在、離開了，「安能無光」則是對應語",
+      "stance": "僅提及",
+      "quote": "加入光光 安能無光...是從那個最近很熱門的公司離開 要換新公司的是嗎",
+      "candidates": [
+        {
+          "name": "大立光",
+          "ticker": "3008",
+          "market": "TW",
+          "reason": "股癌稱其為「最近很熱門的公司」，大立光近期股價活躍且名稱含「光」，符合諧音暗示"
+        }
+      ]
+    },
+    {
+      "term": "NVHBM",
+      "interpretation": "NVIDIA自有規格的HBM記憶體，將Controller從Accelerator搬到HBM Base die中，比HBM4多30%頻寬、少15%功耗，但脫離JEDEC標準成為特規",
+      "stance": "僅提及",
+      "quote": "NVHBM...官方的宣稱是講說它比HBM4的頻寬再多了30%，那功耗是少了15%...它跟本來的東西最大的差別什麼，就是本來是走JEDEC的一個規格，然後現在變得有點像是說NVIDIA自己的一個特規",
+      "candidates": [
+        {
+          "name": "SK Hynix",
+          "ticker": null,
+          "market": "其他",
+          "reason": "股癌提到SK Hynix在HBM4後會把Base die交給台積電做，NVHBM可能改變記憶體供應鏈結構"
+        },
+        {
+          "name": "台積電",
+          "ticker": "2330",
+          "market": "TW",
+          "reason": "股癌明確提到NVHBM的Base die設計可能交給台積電，不會給記憶體三大廠"
+        },
+        {
+          "name": "美光",
+          "ticker": "MU",
+          "market": "US",
+          "reason": "股癌提到美光因無法滿足NVIDIA要求，已將Base die交給台積電"
+        }
+      ]
+    }
+  ],
+  "episode_title": "EP693 | 🍖",
+  "analyzed_at": "2026-10-31T17:49:15.547193",
+  "transcript_chars": 20633
+}
