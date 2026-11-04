@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP711 | 🕊️🐦🦚🦜🦉🦅🐦🐧</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-11-04</div>
+    <h1>EP711 | 🕊️🐦🦚🦜🦉🦅🐦🐧</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌主要討論Palantir Q3財報帶來的AI產業新趨勢，包括小模型/開源模型在Edge Device上的應用前景與SI（系統整合）業者的商機，同時簡評AMD Q3財報表現，並分享對近期台股盤勢的看法，認為融資殺出、盤中急殺收下影線是不錯的進攻訊號。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">PLTR</span><span class="quick-tag bullish">AMD</span><span class="quick-tag bullish">2330</span><span class="quick-tag vague">NVDA</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「光通」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">光通訊相關族群</p>
+          <blockquote>「包含像之前那種光進銅退之類的，就這個市場如果還在高速成長的話，是大家都會成長...當GPU已經告訴大家未來是這樣走，然後大家開始跑去拉什麼，光通啊，各種設備，各種AI related的東西」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6451" data-cand-name="訊芯-KY" data-cand-market="TW"><code class="ticker">6451</code><a href="https://tw.stock.yahoo.com/quote/6451" target="_blank" title="開啟 6451 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">訊芯-KY</span><span class="cand-reason"> — 台股光通訊代表性公司之一，股癌提到GPU確認趨勢後大家去拉光通等AI相關族群</span><button class="wl-btn wl-btn-sm" data-ticker="6451" data-name="訊芯-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3081" data-cand-name="聯亞" data-cand-market="TW"><code class="ticker">3081</code><a href="https://tw.stock.yahoo.com/quote/3081" target="_blank" title="開啟 3081 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯亞</span><span class="cand-reason"> — 台股光通訊族群代表公司</span><button class="wl-btn wl-btn-sm" data-ticker="3081" data-name="聯亞" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="4979" data-cand-name="華星光" data-cand-market="TW"><code class="ticker">4979</code><a href="https://tw.stock.yahoo.com/quote/4979" target="_blank" title="開啟 4979 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華星光</span><span class="cand-reason"> — 台股光通訊族群代表公司</span><button class="wl-btn wl-btn-sm" data-ticker="4979" data-name="華星光" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「定海神針」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">指NVIDIA和Palantir分別在各自賽道扮演估值錨定角色</p>
+          <blockquote>「當NVIDIA確認了AI的盛世之後...它好像就變成是某一種那種定海神針，而且它還是維持在相對便宜的一個variation，然後其他人就趕快去拉估值...Pentier今天把這個賽道開出來之後...你就是一個定海神針，一個那種估值的架構在那邊，然後其他人就趕快拉到那個定位」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="NVDA" data-cand-name="NVIDIA" data-cand-market="US"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">NVIDIA</span><span class="cand-reason"> — 股癌明確指出NVIDIA在AI硬體賽道扮演定海神針角色，盤整期間其他AI相關股票先行噴漲</span><button class="wl-btn wl-btn-sm" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="PLTR" data-cand-name="Palantir" data-cand-market="US"><code class="ticker">PLTR</code><a href="https://finance.yahoo.com/quote/PLTR" target="_blank" title="開啟 PLTR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Palantir</span><span class="cand-reason"> — 股癌類比Palantir在AI軟體/SI賽道也成為類似的估值錨定角色，其他SI相關公司會跟著拉估值</span><button class="wl-btn wl-btn-sm" data-ticker="PLTR" data-name="Palantir" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「養牛/在家養牛」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">比喻企業自行部署AI模型、自建AI團隊，股癌認為不切實際，應該找SI業者外包</p>
+          <blockquote>「大家的想法是我想要喝奶我就要在家養牛，沒有你不用在家養牛，你可以退而求其次，我就找一個不知道當地契作的那種媽的小農之類的...所以SI業者在Pentier這一次的調查會議裡面...這些SI他們是會有辦法在裡面吃到肉的」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="PLTR" data-cand-name="Palantir" data-cand-market="US"><code class="ticker">PLTR</code><a href="https://finance.yahoo.com/quote/PLTR" target="_blank" title="開啟 PLTR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Palantir</span><span class="cand-reason"> — 股癌以養牛比喻說明Palantir作為SI業者的價值，企業不用自己部署AI，交給專業SI處理</span><button class="wl-btn wl-btn-sm" data-ticker="PLTR" data-name="Palantir" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card neutral">
+          <div class="vague-header">
+            <span class="vague-term">「龍蝦」</span>
+            <span class="badge neutral">➡️ 中立</span>
+          </div>
+          <p class="vague-interp">指LLaMA等開源大型語言模型的本地部署（諧音），股癌用來比喻一般人被鼓吹自己在家部署AI模型但最終棄養的現象</p>
+          <blockquote>「好像之前的龍蝦就是一堆人就要收錢幫你灌龍蝦...然後你最後面臨的龍蝦就他媽棄養了，你也沒有養...你叫他去什麼網路上訂閱哪一個人有在開課，教你怎麼樣弄龍蝦，怎麼樣Deploy地端，不可能啦」</blockquote>
+          
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「ASIC」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">特定應用積體電路，股癌提到在GPU之後市場開始關注的AI硬體賽道之一</p>
+          <blockquote>「當GPU已經告訴大家未來是這樣走，然後大家開始跑去拉什麼，光通啊，各種設備，各種AI related的東西，或是後面走到CPU ASIC，一樣的道理，就大家就趕快拉上去」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3661" data-cand-name="世芯-KY" data-cand-market="TW"><code class="ticker">3661</code><a href="https://tw.stock.yahoo.com/quote/3661" target="_blank" title="開啟 3661 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">世芯-KY</span><span class="cand-reason"> — 台股ASIC設計服務龍頭，股癌提到GPU確認趨勢後資金輪動到ASIC等相關族群</span><button class="wl-btn wl-btn-sm" data-ticker="3661" data-name="世芯-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3443" data-cand-name="創意" data-cand-market="TW"><code class="ticker">3443</code><a href="https://tw.stock.yahoo.com/quote/3443" target="_blank" title="開啟 3443 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">創意</span><span class="cand-reason"> — 台股ASIC設計服務代表公司</span><button class="wl-btn wl-btn-sm" data-ticker="3443" data-name="創意" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="PLTR" data-name="Palantir" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Palantir</span>
+            <span class="card-meta"><code class="ticker">PLTR</code><a href="https://finance.yahoo.com/quote/PLTR" target="_blank" title="開啟 PLTR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="PLTR" data-name="Palantir" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">Q3營收加速至96%成長，連續13季加速，單季首次突破20億，Rule of 40維持在150以上。產業面基本面很好，唯一問題是太貴，但成長力強勁的股票貴了還會更貴。其財報開啟了Edge Device與SI業者的新賽道。</p>
+          <blockquote>「Palantir Q3的法說我覺得它開的數字非常好，它營收再加速到了96%的一個一郎一二，那call down quarter是20%，這是它連續13季的加速...它在產業面基本面都很好，它最大的問題是什麼，就太貴」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="AMD" data-name="AMD" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">AMD</span>
+            <span class="card-meta"><code class="ticker">AMD</code><a href="https://finance.yahoo.com/quote/AMD" target="_blank" title="開啟 AMD K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="AMD" data-name="AMD" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">Q3營收超過Guidance上緣，Non-GAAP EPS 2.09超預期，Data Center季增27%、年增97%，CPU表現很好。消費端PC下季預計掉20%但市場不太在意。在CPU這塊維持Bullish狀態。</p>
+          <blockquote>「AMD的Q3...營收再加速到125%，這個是已經超過他Guidance的上緣...Data Center它的Quotient是27%一兩一二是97%這個數字是非常漂亮...在CPU這塊還是持續的維持一個算是蠻Bullish的狀態」</blockquote>
+        </div>
+
+        <div class="card bullish" data-ticker="2330" data-name="台積電" data-market="TW">
+          <div class="card-header">
+            <span class="stock-name">台積電</span>
+            <span class="card-meta"><code class="ticker">2330</code><a href="https://tw.stock.yahoo.com/quote/2330" target="_blank" title="開啟 2330 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">TW</span><button class="wl-btn" data-ticker="2330" data-name="台積電" data-market="TW" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">中小型股殺爆但台積電沒什麼跌，用明年EPS算現在還是便宜。以明年EPS約145元、12倍本益比(2022股災水準)估算底部約1800元。不認為台積電是價值陷阱，價值陷阱通常用在景氣循環股而非長期成長股。</p>
+          <blockquote>「台積沒什麼跌，用台積明年的EPS來算現在還是怎麼樣都便宜...我們先隨便抓一個可能145然後去乘以12，那這樣是多少...差不多1800左右...價值陷阱這種東西...我們比較不會拿來講這種比較偏向是長期成長的股票」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="NVDA" data-name="NVIDIA" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">NVIDIA</span>
+            <span class="card-meta"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">提到NVIDIA確認了AI盛世後盤整了蠻長時間，等其他人噴起來，成為定海神針且維持相對便宜的估值。</p>
+          <blockquote>「當NVIDIA確認了AI的盛世之後，大家知道說NVIDIA它其實盤測了蠻長一段時間，然後等其他人噴測，就是它好像就變成是某一種那種定海神針，而且它還是維持在相對便宜的一個variation」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>SI（系統整合）/ AI應用服務</strong><span class="sector-reason"> — Palantir財報驗證了SI業者在AI部署中的不可替代性：企業不會自己部署AI，需要專業整合商幫忙處理開源模型部署、數據管理、資安等問題。即使不如Palantir頂尖，做到七八成水準收三成費用也有巨大商機。預計半年到一年內會看到更多業者湧入。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>Edge Device / AI邊緣裝置</strong><span class="sector-reason"> — 從過去的Buzzword炒股題材，到Palantir展示實際案例（300億參數模型在邊緣裝置上跑贏3兆參數GPT），已變成可實踐的應用。消費級顯卡、AI筆電等中端設備灌特化開源模型後可處理翻譯、語音辨識、數據分析等特殊應用。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>CPU / 伺服器處理器</strong><span class="sector-reason"> — AMD財報顯示CPU表現很好，與Intel數據可做吻合。持續維持Bullish狀態，雖然盤面處在不好的狀態，但基本面沒有問題。</span></div>
+<div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>半導體（台灣）</strong><span class="sector-reason"> — 台灣市場高度聚焦在美國目前衰退較重的半導體族群，整體受拖累較大。但應區分哪些東西基本面仍好，修正時反而是研究和布局的機會。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">台股盤勢與融資指標</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 喜歡盤中急殺後收下影線且有出量的走勢，認為是不錯的進攻訊號。上週自己操作太躁進已修正，這週認為可以開始嘗試。融資若能持續殺出是好事，昨天殺出200多億融資，恐慌感有出來。先做指數部位，等融資爆掉再做個股。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">美國選舉對市場影響</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 市場早已反映選舉不確定性，如果壞消息出來後股市不跌甚至開始漲，可能就是利空出盡。不需要過度恐慌選舉結果。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">AI產業趨勢：小模型與Edge Device</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> Palantir財報揭示小型開源模型在特殊應用上可超越大型閉鎖模型，成本降低95%。Edge Device從過去的Buzzword變成可實踐的應用，預計半年到一年內會看到更多企業跟進。開源模型與閉鎖模型不是零和遊戲，市場整體仍在高速成長，兩邊都會成長。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">SI（系統整合）業者前景</div>
+          <div><span class="badge bullish">📈 看多</span><span class="macro-view"> 企業不會自己部署AI（不會在家養牛），需要SI業者幫忙整合軟硬體、部署模型、維護系統。Palantir的案例證明SI業者能幫客戶省下大量成本，這個賽道的商機已被驗證，預期更多業者會湧入。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">台灣vs美國近期市場表現</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 這波美國人做股票還算OK，很多標的仍強勢，主要是Semi偏弱。台灣因高度集中在半導體相關族群，整體跌幅較大，該檢討的是韓國人跟台灣人。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>
