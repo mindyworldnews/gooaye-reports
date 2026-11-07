@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>股癌 EP712 | 🦌</title>
+<style>
+  :root {
+    --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --red: #dc2626;   --red-bg: #fef2f2;   --red-border: #fecaca;
+    --gray: #6b7280;  --gray-bg: #f9fafb;  --gray-border: #e5e7eb;
+    --blue: #2563eb;  --radius: 12px; --font: -apple-system, "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: #f3f4f6; color: #111827; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header { background: #111827; color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .header .meta { font-size: 0.8rem; color: #9ca3af; }
+
+  /* Summary */
+  .summary-box { background: #fff; border-radius: var(--radius); padding: 16px; margin-bottom: 16px;
+                  border-left: 4px solid #2563eb; }
+  .summary-box p { color: #374151; font-size: 0.95rem; }
+
+  /* Quick bar */
+  .quick-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .quick-tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+  .quick-tag.bullish { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .quick-tag.bearish { background: var(--red-bg);   color: var(--red);   border: 1px solid var(--red-border); }
+
+  /* Section title */
+  .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: .08em; color: #6b7280; margin: 20px 0 10px; }
+
+  /* Stock cards */
+  .card { background: #fff; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+           border-left: 4px solid #e5e7eb; }
+  .card.bullish { border-left-color: var(--green); }
+  .card.bearish { border-left-color: var(--red); }
+  .card.neutral { border-left-color: #d1d5db; }
+  .card.mention { border-left-color: #e5e7eb; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start;
+                  margin-bottom: 6px; gap: 8px; }
+  .stock-name { font-weight: 700; font-size: 1rem; }
+  .card-meta { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  code.ticker { background: #1e293b; color: #e2e8f0; font-size: 0.8rem;
+                 padding: 2px 7px; border-radius: 6px; font-family: monospace; }
+  a.chart-btn { display: inline-flex; align-items: center; justify-content: center;
+                 width: 22px; height: 22px; border-radius: 5px; margin-left: 4px;
+                 background: #e0f2fe; color: #0369a1; vertical-align: middle;
+                 text-decoration: none; transition: background 0.15s; }
+  a.chart-btn:hover { background: #bae6fd; }
+  .market-tag { background: #e0e7ff; color: #3730a3; font-size: 0.75rem;
+                 padding: 2px 6px; border-radius: 6px; }
+  .reason { font-size: 0.9rem; color: #374151; margin-top: 6px; }
+  blockquote { font-size: 0.82rem; color: #6b7280; margin-top: 6px;
+                padding-left: 10px; border-left: 2px solid #d1d5db; font-style: italic; }
+  .empty { color: #9ca3af; font-size: 0.9rem; text-align: center; padding: 16px; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 0.78rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 20px; }
+  .badge.bullish { background: var(--green-bg); color: var(--green); }
+  .badge.bearish { background: var(--red-bg);   color: var(--red); }
+  .badge.neutral { background: var(--gray-bg);  color: var(--gray); }
+  .badge.mention { background: #eff6ff; color: var(--blue); }
+
+  /* Macro */
+  .macro-row { background: #fff; border-radius: var(--radius); padding: 12px 14px;
+                margin-bottom: 8px; }
+  .macro-topic { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .macro-view { font-size: 0.88rem; color: #374151; }
+
+  /* Sectors */
+  .sector-chip { background: #fff; border-radius: var(--radius); padding: 10px 14px;
+                  margin-bottom: 8px; font-size: 0.88rem; }
+  .sector-reason { color: #6b7280; }
+
+  /* Vague terms */
+  .vague-card { background: #fff; border-radius: var(--radius); padding: 14px 16px;
+                 margin-bottom: 10px; border-left: 4px solid #a78bfa; }
+  .vague-card.bullish { border-left-color: var(--green); }
+  .vague-card.bearish { border-left-color: var(--red); }
+  .vague-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .vague-term { font-weight: 700; font-size: 1rem; color: #111827; }
+  .vague-interp { font-size: 0.88rem; color: #374151; margin-bottom: 6px; }
+  .cand-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .cand-row { font-size: 0.85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px;
+               padding: 6px 10px; background: #f8fafc; border-radius: 8px; }
+  .cand-name { font-weight: 600; }
+  .cand-reason { color: #6b7280; }
+  .quick-tag.vague { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+  .wl-btn { background: none; border: none; cursor: pointer; font-size: 1rem;
+             padding: 0 2px; line-height: 1; opacity: 0.5; transition: opacity 0.15s; }
+  .wl-btn:hover { opacity: 1; }
+  .wl-btn.active { opacity: 1; }
+  .wl-btn-sm { font-size: 0.8rem; margin-left: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; padding: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="meta">股癌 Podcast 分析報告 · 2026-11-07</div>
+    <h1>EP712 | 🦌</h1>
+  </div>
+
+  <div class='summary-box'><p>本集股癌主要討論美國民主黨勝選後對AI產業及台股的衝擊，分享自身在股災中的操作心態與策略調整，並提到馬斯克爆料SoftBank砍單渦輪訂單可能是供應鏈警訊。整體偏向短線謹慎、中線觀察Data Center新permit是否被卡住來判斷AI建設前景。</p></div>
+
+  <div class="quick-bar"><span class="quick-tag bullish">NFLX</span><span class="quick-tag vague">6451</span><span class="quick-tag vague">6442</span><span class="quick-tag vague">NVDA</span><span class="quick-tag vague">MSFT</span><span class="quick-tag vague">META</span><span class="quick-tag vague">PLTR</span></div>
+
+  <div class='section-title'>🔍 詞彙解讀（股癌說的「光」「低軌」是指…）</div>
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「同退光鏡」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">語音辨識錯誤，根據上下文（從200-270跌破100再漲到400多）推測為光通訊相關標的</p>
+          <blockquote>「像前陣子那個同退光鏡 那個我印象還是非常深刻 就是我們明明看到的狀況就不是這樣子 可是你手上的標的從200 250 270 直接跌到破100 殺小這到底是什麼東西⋯因為他後來就碰到400多塊」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6451" data-cand-name="訊芯-KY" data-cand-market="TW"><code class="ticker">6451</code><a href="https://tw.stock.yahoo.com/quote/6451" target="_blank" title="開啟 6451 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">訊芯-KY</span><span class="cand-reason"> — 股癌過去多次提及光通訊標的，訊芯在2024年間有從200多跌破100再反彈至400多的走勢，且股癌過去常用諧音簡稱提到此標的，符合逐字稿描述的價格區間</span><button class="wl-btn wl-btn-sm" data-ticker="6451" data-name="訊芯-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="6442" data-cand-name="光聖" data-cand-market="TW"><code class="ticker">6442</code><a href="https://tw.stock.yahoo.com/quote/6442" target="_blank" title="開啟 6442 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">光聖</span><span class="cand-reason"> — 光通訊族群之一，但價格區間較不吻合逐字稿描述的200跌到100再到400</span><button class="wl-btn wl-btn-sm" data-ticker="6442" data-name="光聖" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「光」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">光通訊族群，股癌提到年初判斷的題材輪動順序中的一站</p>
+          <blockquote>「像說為什麼在年初的時候 我會覺得是衛星 然後或是為什麼後面會覺得是光 為什麼後面會覺得是什麼 會覺得是什麼 像被動元件 功率元件 這樣一路輪過去」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="6451" data-cand-name="訊芯-KY" data-cand-market="TW"><code class="ticker">6451</code><a href="https://tw.stock.yahoo.com/quote/6451" target="_blank" title="開啟 6451 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">訊芯-KY</span><span class="cand-reason"> — 股癌在這集提到光通訊標的漲到400多的案例，訊芯為光通訊代表性個股</span><button class="wl-btn wl-btn-sm" data-ticker="6451" data-name="訊芯-KY" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="3081" data-cand-name="聯亞" data-cand-market="TW"><code class="ticker">3081</code><a href="https://tw.stock.yahoo.com/quote/3081" target="_blank" title="開啟 3081 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">聯亞</span><span class="cand-reason"> — 台股光通訊族群代表之一</span><button class="wl-btn wl-btn-sm" data-ticker="3081" data-name="聯亞" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="4979" data-cand-name="華星光" data-cand-market="TW"><code class="ticker">4979</code><a href="https://tw.stock.yahoo.com/quote/4979" target="_blank" title="開啟 4979 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">華星光</span><span class="cand-reason"> — 台股光通訊族群代表之一</span><button class="wl-btn wl-btn-sm" data-ticker="4979" data-name="華星光" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card mention">
+          <div class="vague-header">
+            <span class="vague-term">「衛星」</span>
+            <span class="badge mention">💬 僅提及</span>
+          </div>
+          <p class="vague-interp">低軌衛星族群，股癌提到年初判斷的第一個題材輪動方向</p>
+          <blockquote>「像說為什麼在年初的時候 我會覺得是衛星 然後或是為什麼後面會覺得是光」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="3491" data-cand-name="昇達科" data-cand-market="TW"><code class="ticker">3491</code><a href="https://tw.stock.yahoo.com/quote/3491" target="_blank" title="開啟 3491 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">昇達科</span><span class="cand-reason"> — 台股低軌衛星代表性個股，股癌過去節目曾多次提及衛星題材時涉及</span><button class="wl-btn wl-btn-sm" data-ticker="3491" data-name="昇達科" data-market="TW" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="6285" data-cand-name="啟碁" data-cand-market="TW"><code class="ticker">6285</code><a href="https://tw.stock.yahoo.com/quote/6285" target="_blank" title="開啟 6285 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">TW</span> <span class="cand-name">啟碁</span><span class="cand-reason"> — 低軌衛星相關供應鏈</span><button class="wl-btn wl-btn-sm" data-ticker="6285" data-name="啟碁" data-market="TW" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「巨頭」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">美國科技巨頭（如NVIDIA、Microsoft、Google等），股癌觀察到這波崩跌中巨頭相對強勢、跌較少</p>
+          <blockquote>「再來就是你注意到巨頭也是這一波 至少是相對強的 跌的比較少的 然後一些Components掉下去」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="NVDA" data-cand-name="NVIDIA" data-cand-market="US"><code class="ticker">NVDA</code><a href="https://finance.yahoo.com/quote/NVDA" target="_blank" title="開啟 NVDA K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">NVIDIA</span><span class="cand-reason"> — 股癌這集提到老黃（黃仁勳）及AI Data Center建設，NVIDIA為AI巨頭代表</span><button class="wl-btn wl-btn-sm" data-ticker="NVDA" data-name="NVIDIA" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="MSFT" data-cand-name="Microsoft" data-cand-market="US"><code class="ticker">MSFT</code><a href="https://finance.yahoo.com/quote/MSFT" target="_blank" title="開啟 MSFT K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Microsoft</span><span class="cand-reason"> — 美國科技巨頭之一，AI建設主要客戶</span><button class="wl-btn wl-btn-sm" data-ticker="MSFT" data-name="Microsoft" data-market="US" title="加入自選股">⭐</button></div><div class="cand-row" data-cand-ticker="META" data-cand-name="Meta" data-cand-market="US"><code class="ticker">META</code><a href="https://finance.yahoo.com/quote/META" target="_blank" title="開啟 META K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Meta</span><span class="cand-reason"> — 美國科技巨頭之一，Data Center建設主要投資者</span><button class="wl-btn wl-btn-sm" data-ticker="META" data-name="Meta" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+        <div class="vague-card bullish">
+          <div class="vague-header">
+            <span class="vague-term">「Plantier（Palantir）」</span>
+            <span class="badge bullish">📈 看多</span>
+          </div>
+          <p class="vague-interp">語音辨識將Palantir辨識為Plantier，股癌提到前幾集聽Palantir電話會議後感覺抓到機會</p>
+          <blockquote>「像類似我們前幾集分享到 我聽了那個Plantier的電話會議之後 我感覺我抓到一些機會」</blockquote>
+          <div class="cand-list"><div class="cand-row" data-cand-ticker="PLTR" data-cand-name="Palantir" data-cand-market="US"><code class="ticker">PLTR</code><a href="https://finance.yahoo.com/quote/PLTR" target="_blank" title="開啟 PLTR K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a> <span class="market-tag">US</span> <span class="cand-name">Palantir</span><span class="cand-reason"> — 股癌明確提到聽其電話會議後覺得抓到機會，語音辨識將Palantir誤寫為Plantier</span><button class="wl-btn wl-btn-sm" data-ticker="PLTR" data-name="Palantir" data-market="US" title="加入自選股">⭐</button></div></div>
+        </div>
+
+  <div class='section-title'>個股標的</div>
+        <div class="card bullish" data-ticker="NFLX" data-name="Netflix" data-market="US">
+          <div class="card-header">
+            <span class="stock-name">Netflix</span>
+            <span class="card-meta"><code class="ticker">NFLX</code><a href="https://finance.yahoo.com/quote/NFLX" target="_blank" title="開啟 NFLX K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">US</span><button class="wl-btn" data-ticker="NFLX" data-name="Netflix" data-market="US" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge bullish">📈 看多</span>
+          <p class="reason">股癌表示蠻喜歡Netflix，自己是長期訂閱用戶，從未想取消，認為這筆訂閱費會持續付下去，以用戶角度看好。</p>
+          <blockquote>「你說現在怎麼樣看 我還是蠻喜歡它的 因為至少我家裡Netflix訂的 我從來都沒有想要去取消它」</blockquote>
+        </div>
+
+        <div class="card mention" data-ticker="0050" data-name="0050（元大台灣50）" data-market="ETF">
+          <div class="card-header">
+            <span class="stock-name">0050（元大台灣50）</span>
+            <span class="card-meta"><code class="ticker">0050</code><a href="https://tw.stock.yahoo.com/quote/0050" target="_blank" title="開啟 0050 K線圖" class="chart-btn"><svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><rect x="2" y="10" width="3" height="8" rx="1"/><rect x="8.5" y="5" width="3" height="13" rx="1"/><rect x="15" y="2" width="3" height="16" rx="1"/></svg></a><span class="market-tag">ETF</span><button class="wl-btn" data-ticker="0050" data-name="0050（元大台灣50）" data-market="ETF" title="加入自選股">⭐</button></span>
+          </div>
+          <span class="badge mention">💬 僅提及</span>
+          <p class="reason">聽眾分享9月已將部位換成0050，在股災中相對不慌張。股癌未直接評論但收錄此問答。</p>
+          <blockquote>「還好我在9月就慢慢的把部位都換成0050 那讓我在絕境中沒有那麼慌張」</blockquote>
+        </div>
+
+  <div class='section-title'>類股 / 產業</div><div class="sector-chip neutral"><span class="badge neutral">➡️ 中立</span> <strong>AI / Data Center</strong><span class="sector-reason"> — 短期到2027訂單無虞，但需觀察民主黨是否真的卡住新permit，若2028-2029新建案被擋則有重大影響。馬斯克爆料SoftBank砍單增添不確定性。</span></div>
+<div class="sector-chip bullish"><span class="badge bullish">📈 看多</span> <strong>軟體 / SI（系統整合）</strong><span class="sector-reason"> — 股癌觀察到這波崩跌中軟體和SI相對強勢，巨頭也相對抗跌，認為漲價題材的components已經結束，資金可能轉向軟體。</span></div>
+<div class="sector-chip bearish"><span class="badge bearish">📉 看空</span> <strong>漲價題材（被動元件、功率元件等）</strong><span class="sector-reason"> — 股癌明確表示過去做漲價題材在這邊就結束了，不是不會再漲但錢會比較難賺，被動元件和功率元件上去太快又掉下來，很難操作。</span></div>
+
+  <div class='section-title'>總體經濟觀點</div>
+        <div class="macro-row">
+          <div class="macro-topic">美國民主黨勝選對AI/Data Center的影響</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 民主黨部分議員喊停AI和Data Center，但股癌認為短期到2027的訂單應無問題，需觀察新permit是否被卡住；若2028-2029的新建案被擋，股市會提早反應。認為科技巨頭的政治獻金最終會讓反對聲音消退，類比拜登上台時市場恐慌但最終再創新高。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">台股股災與國安基金</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 定調本次為股災，國安基金進場非常早（過去慣例約在萬點附近才進場），短線高機率會有反彈，但反彈後需觀察能否站上季線並站穩，若站不穩則形成大頭部。操作上會在反彈後拉高現金比例。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">SoftBank砍單警訊</div>
+          <div><span class="badge bearish">📉 看空</span><span class="macro-view"> 馬斯克爆料SoftBank在渦輪（Turbine）有違約砍單情形，股癌認為砍單通常從小料件開始傳導到核心訂單，若只是單一客戶且被接手則問題不大，但若出現多家連續砍旁邊小料的現象，就是初步警訊，類似2022年和2018年供應鏈修正前的模式。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">融資與籌碼面</div>
+          <div><span class="badge bearish">📉 看空</span><span class="macro-view"> 融資開始暴減，波動放大時融資高的標的跌最重，因為籌碼不安定、有人被迫砍倉。週三融資大增的標的在後面幾天跌最重。</span></div>
+        </div>
+
+        <div class="macro-row">
+          <div class="macro-topic">全球經濟兩極化與選舉</div>
+          <div><span class="badge neutral">➡️ 中立</span><span class="macro-view"> 台灣指數好是因為AI相關成分股帶動，但傳產訂單和消費級訂單並不好，經濟兩極化加劇。美國民眾對油價和通膨感受強烈，是共和黨落選主因。擔心美國走向歐洲式分配路線，扼殺創新。</span></div>
+        </div>
+
+  <div class="footer">由 Claude 自動分析 · 僅供參考，非投資建議</div>
+</div>
+</body>
+</html>
